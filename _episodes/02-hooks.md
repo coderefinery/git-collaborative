@@ -25,6 +25,7 @@ They can be used to enforce nearly any kind of policy for your project.
 
 There are client-side and server-side hooks.
 
+
 #### Client-side hooks
 
 - `pre-commit`: before commit message editor (example: make sure tests run)
@@ -37,6 +38,7 @@ There are client-side and server-side hooks.
 - `post-merge`: after successful merge
 - `pre-push`: runs during `git push` before any objects have been transferred
 - `pre-auto-gc`: invoked just before the garbage collection takes place
+
 
 #### Server-side hooks
 
