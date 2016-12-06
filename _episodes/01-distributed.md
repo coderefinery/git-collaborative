@@ -39,7 +39,7 @@ class: center, middle, inverse
 - Git implements a distributed version control
 - All these topologies are possible
 
-![](/img/intro/topo.jpg)
+![]({{ site.baseurl }}/img/intro/topo.jpg)
 
 - In contrast to other version control tools we do not contribute to a repository
   through a lightweight working copy but rather by cloning the entire repository
