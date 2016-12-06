@@ -256,3 +256,19 @@ $ git commit                  # one single commit
 Rebasing and squashing commits
 
 https://github.com/bast/git-rebase-squash-exercise
+
+---
+
+## Tags
+
+- Tags are also just pointers to commits
+- While branches are mutable, tags are (typically) immutable
+- Tags can carry extra annotation
+- Always tag your releases
+
+```shell
+$ git tag                             # list all tags
+$ git tag -a v1.4 -m 'my version 1.4' # create annotated tag
+$ git tag v1.4                        # create lightweight tag
+$ git push origin v1.5                # share tag to upstream (origin)
+$ git push origin --tags              # push all tags
