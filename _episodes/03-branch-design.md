@@ -1,0 +1,258 @@
+---
+layout: episode
+title: "Branch design"
+teaching: 15
+exercises: 15
+questions:
+  - "A question that this episode will answer?"
+  - "Another question?"
+objectives:
+  - "This is one objective of this episode."
+  - "This is another objective of this episode."
+  - "Yet another objective."
+  - "And not to forget this objective."
+keypoints:
+  - "This is an important key point."
+  - "Another important key point."
+  - "One more key point."
+---
+
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+
+## Branch naming
+
+- Name your local branches such that you will recognize them 3 months later
+- "test", "foo", "debug", "mybranch" are not good
+- Give descriptive names to remote branches
+- For topic branches we recommend to name them "author/topic" (example `radovan/new-integrator`)
+- Then everybody knows who is to be contacted about this branch (e.g. stale branches)
+- Also you can easily find "your" branches
+
+```shell
+$ git branch -r | grep radovan
+```
+
+- Name bugfix branches after the issue/ticket (e.g. `issue-137`)
+- For release branches we recommend `release-2.x` or `release/2.x` or `stable/2.x`
+
+---
+
+## Always have only one main development line
+
+- Document where it is
+- Organize branches according to features, not according to groups of people
+- Good: branches `feature-a`, `feature-b`, `feature-c`
+- Bad: branches `stockholm`, `san_francisco`, `uppsala`
+- Reason: `stockholm`, `san_francisco`, and `uppsala` will either diverge
+  (three main development lines) or somebody will spend a heroic effort to keep
+  them synchronized
+
+---
+
+## Every commit on the main development line should compile
+
+- Sometimes you want to find a commit in the past that broke some functionality
+- When using `git bisect` you will see that it is very helpful if all commits compile
+- On the other hand you will see that it is annoying if you hit a commit that does not compile
+- This is why we insist so much on a compiling main development line with nice history
+- There is no reason to commit broken or unfinished code to the main development line: for this we have branches
+
+---
+
+## Branch hygiene
+
+- You committed 3 commits but would like to squash them into one
+
+```shell
+$ git log --oneline
+
+6e129cf documentation for feature C
+05344f6 small fix for feature C
+bc11c47 save work on feature C
+aa25177 feature B
+6b58ba4 feature A
+```
+
+- We have no uncommitted changes
+- We wish our last 3 commits (6e129cf, 05344f6, bc11c47) were just one
+- We use a soft reset:
+
+```shell
+$ git reset --soft aa25177
+```
+
+- This means that we move our repository back to commit aa25177
+  BUT we keep the working tree of the last commit (6e129cf)
+
+---
+
+## Squashing commits
+
+```shell
+$ git reset --soft aa25177
+```
+
+- Verify the result with `git status`
+- Now we can commit modifications w.r.t. `aa25177` in one single nice commit
+
+```shell
+$ git commit -m 'feature C'
+
+81e100c feature C
+aa25177 feature B
+6b58ba4 feature A
+```
+
+- The history tells us that we committed our work in a single commit `81e100c`
+- The final state of the actual code is identical
+- Alternative to `git reset --soft` is an interactive rebase
+- We recommend to create commits on the main development line which are nice logical
+  units
+- Commits should be pickable (not too large not too small for a `cherry-pick`)
+- Avoid ball-of-mud commits
+
+---
+
+## Develop on feature branches
+
+- Keeps bugs away from the main development line
+- Divide and conquer: do not create a branch for "everything"
+- The more you do on one branch the longer it will take until you can reintegrate it
+- The more granular the branches, the shorter lived
+- Talk with your colleagues to avoid conflicts
+
+---
+
+## How to test combinations of features
+
+- I develop `feature-a`
+- My colleague develops `feature-b`
+- Both are not ready yet to go into the main line
+- How can we test them together?
+
+---
+
+## How to test combinations of features
+
+- Do not cross-merge feature branches
+- Reason: if `feature-a` becomes ready, it cannot be integrated to the main line
+  because it is then diluted with `feature-b`
+- It is easy to make soup out of vegetables, it is difficult to separate a vegetable out of a soup
+- Test combinations on integration branches
+- Integration branches only integrate, we do not "work" on them
+- Same holds for testing combinations with the main line
+- The main line should ideally be an integration branch
+
+---
+
+## A successful Git branching model
+
+- Very popular
+- http://nvie.com/posts/a-successful-git-branching-model/
+- Critique
+    - Naming is IMO unfortunate (rename `develop` to `master` and `master` to `stable`)
+    - Model is not ideal if you need to support past versions
+- Good if you do not distribute the stable release (e.g. if you run it on your servers)
+
+---
+
+## Alternative: separate branch for each major release
+
+- For release branches we recommend `release-2.x` or `release/2.x` or `stable/2.x`
+- It is crystal clear where the main development line is
+- Does not require to create new branches for patches of past versions
+- Good if you distribute code
+- Patches need to be applied to the oldest supported release branch and cherry-picked or merged
+  "up" to the main line
+
+---
+
+## Document and enforce your branch naming and strategies
+
+- Document recommended branch naming
+- Document your branching layout/strategy
+- Require your developers to follow it (code review)
+- Write-protect your main development line and release branch(es)
+- Use semantic versioning: http://semver.org
+
+---
+
+## Rebase vs. merge
+
+- To illustrate rebasing we consider the following situation
+- We want to merge `master`
+
+![](img/git/branches/pre-rebase.svg)
+
+- Now you know how to do it
+
+![](img/git/branches/git-branch-08.svg)
+
+---
+
+## Rebase vs. merge
+
+- But there is an alternative
+
+```shell
+$ git rebase master
+```
+
+![](img/git/branches/rebase.svg)
+
+- `git rebase` replays the branch commits `b1` to `b3` on top of `master`
+- As if they were committed after `c5`
+- It changes history (notice that the commits `b1` to `b3` have been replaced by `b1*` to `b3*`)
+- Discuss advantages and disadvantages
+
+---
+
+## Rebase vs. merge
+
+- `git rebase` makes "merges" producing a linear history
+- When somebody asks you to rebase your work to the work of somebody else you know what this means
+- So far we have not shared commits but we will do so soon
+- When working with others **do not rebase commits that you have shared**
+  (history has changed)
+- Reference: "Treehouse of Horror V: Time and Punishment", The Simpsons (1994)
+
+![](img/git/branches/simpsons.jpg)
+
+---
+
+## My feature branch is ready to merge to master
+
+- Merging a branch incorporates **all** commits of that branch
+- This means that `git log master` then also shows the `b1` to `b3` commits
+- But what if not all commits in the feature branch are presentable (for instance not compiling)
+- We can easily squash them to one commit using `reset --soft` command
+- `git reset --soft` only moves `HEAD` and branch pointer
+- Index and working directory remain without changes
+- So we can commit all the changes in one single commit
+
+![](img/git/branches/git-reset-soft-1.svg)
+
+---
+
+## My feature branch is ready to merge to master
+
+```shell
+$ git checkout master
+$ git merge --no-ff feature
+$ git reset --soft HEAD~1     # we reset to commit one before the merge
+$ git commit                  # one single commit
+```
+
+![](img/git/branches/git-reset-soft-2.svg)
+
+- Discuss alternatives to achieve this
+
+---
+
+Rebasing and squashing commits
+
+https://github.com/bast/git-rebase-squash-exercise
