@@ -186,11 +186,11 @@ aa25177 feature B
 - To illustrate rebasing we consider the following situation
 - We want to merge `master`
 
-![](/img/branches/pre-rebase.svg)
+![]({{ site.baseurl }}/img/branches/pre-rebase.svg)
 
 - Now you know how to do it
 
-![](/img/branches/git-branch-08.svg)
+![]({{ site.baseurl }}/img/branches/git-branch-08.svg)
 
 ---
 
@@ -202,7 +202,7 @@ aa25177 feature B
 $ git rebase master
 ```
 
-![](/img/branches/rebase.svg)
+![]({{ site.baseurl }}/img/branches/rebase.svg)
 
 - `git rebase` replays the branch commits `b1` to `b3` on top of `master`
 - As if they were committed after `c5`
@@ -220,7 +220,7 @@ $ git rebase master
   (history has changed)
 - Reference: "Treehouse of Horror V: Time and Punishment", The Simpsons (1994)
 
-![](/img/branches/simpsons.jpg)
+![]({{ site.baseurl }}/img/branches/simpsons.jpg)
 
 ---
 
@@ -234,7 +234,7 @@ $ git rebase master
 - Index and working directory remain without changes
 - So we can commit all the changes in one single commit
 
-![](/img/branches/git-reset-soft-1.svg)
+![]({{ site.baseurl }}/img/branches/git-reset-soft-1.svg)
 
 ---
 
@@ -247,7 +247,7 @@ $ git reset --soft HEAD~1     # we reset to commit one before the merge
 $ git commit                  # one single commit
 ```
 
-![](/img/branches/git-reset-soft-2.svg)
+![]({{ site.baseurl }}/img/branches/git-reset-soft-2.svg)
 
 - Discuss alternatives to achieve this
 

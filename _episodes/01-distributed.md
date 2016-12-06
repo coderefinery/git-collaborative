@@ -103,7 +103,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 - We will see what the "plus" means
 - By cloning we clone all commits, all branches, entire history
 
-![](/img/intro/topo.jpg)
+![]({{ site.baseurl }}/img/intro/topo.jpg)
 
 ---
 
@@ -127,7 +127,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ## Cloning repositories
 
-![](/img/distributed/remote-02-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
 
 - Imagine there is a remote repository on host1
 - We are ready to clone the repository
@@ -136,8 +136,8 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ## Cloning repositories
 
-![](/img/distributed/remote-02-remote.svg)
-![](/img/distributed/remote-03-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
 
 ```shell
 host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
@@ -152,8 +152,8 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
 
 ## Cloning repositories
 
-![](/img/distributed/remote-02-remote.svg)
-![](/img/distributed/remote-03-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
 
 - `origin/master` and `origin/dev` are read-only pointers
 - They only move during `git pull` or `git fetch` or `git push`
@@ -164,8 +164,8 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
 
 ## Working with remote repositories
 
-![](/img/distributed/remote-06-remote.svg)
-![](/img/distributed/remote-03-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
 
 - Remote repository receives a new commit
 - Pointer is moved (pushed) by someone else (could be you)
@@ -175,8 +175,8 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
 
 ## Fetching updates
 
-![](/img/distributed/remote-06-remote.svg)
-![](/img/distributed/remote-04-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-04-local.svg)
 
 ```shell
 $ git fetch origin
@@ -188,8 +188,8 @@ $ git fetch origin
 
 ## Fetching updates
 
-![](/img/distributed/remote-06-remote.svg)
-![](/img/distributed/remote-05-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-05-local.svg)
 
 ```shell
 $ git merge origin/master
@@ -220,8 +220,8 @@ $ git pull origin master
 
 ---
 
-![](/img/distributed/remote-06-remote.svg)
-![](/img/distributed/remote-06-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-06-local.svg)
 
 - We can commit locally
 - These commits are not visible to others until we `git push`
@@ -229,8 +229,8 @@ $ git pull origin master
 
 ---
 
-![](/img/distributed/remote-07-remote.svg)
-![](/img/distributed/remote-07-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-07-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-07-local.svg)
 
 ```shell
 $ git push origin master
@@ -240,16 +240,16 @@ $ git push origin master
 
 ---
 
-![](/img/distributed/remote-12-remote.svg)
-![](/img/distributed/remote-08-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-08-local.svg)
 
 - We commit `d7` and in the meantime remote receives commit `c7` from someone else
 - What happens if we `git pull origin master`?
 
 ---
 
-![](/img/distributed/remote-12-remote.svg)
-![](/img/distributed/remote-09-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-09-local.svg)
 
 ```shell
 $ git pull origin master
@@ -262,8 +262,8 @@ $ git pull origin master
 
 ---
 
-![](/img/distributed/remote-12-remote.svg)
-![](/img/distributed/remote-10-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-10-local.svg)
 
 ```shell
 $ git pull --rebase origin master
@@ -275,8 +275,8 @@ $ git pull --rebase origin master
 
 ---
 
-![](/img/distributed/remote-12-remote.svg)
-![](/img/distributed/remote-11-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-11-local.svg)
 
 ```shell
 $ git checkout -b dev origin/dev
@@ -301,15 +301,15 @@ $ git checkout dev
 
 ---
 
-![](/img/distributed/remote-12-remote.svg)
-![](/img/distributed/remote-12-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-12-local.svg)
 
 - As we commit to `dev` the pointer moves while `origin/dev` does not
 
 ---
 
-![](/img/distributed/remote-13-remote.svg)
-![](/img/distributed/remote-13-local.svg)
+![]({{ site.baseurl }}/img/distributed/remote-13-remote.svg)
+![]({{ site.baseurl }}/img/distributed/remote-13-local.svg)
 
 ```shell
 $ git push origin dev
@@ -358,7 +358,7 @@ origin	user@somehost:somerepo (push)
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-1.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-1.svg)
 
 - Branches are just pointers to commits
 - `master` and `origin/master` are two different branches
@@ -368,7 +368,7 @@ origin	user@somehost:somerepo (push)
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-2.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-2.svg)
 
 - We do some work on the local `master` and create two commits
 - Time arrow goes from left to right (commit arrows point to their parents)
@@ -378,7 +378,7 @@ origin	user@somehost:somerepo (push)
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-3a.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3a.svg)
 
 - In this case `origin/master` received no other commits
 - First we see a fast-forward merge (pointer `origin/master` simply moves)
@@ -388,7 +388,7 @@ origin	user@somehost:somerepo (push)
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-3b.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b.svg)
 
 - However, what if `origin/master` receives other commits in the meantime?
 - `git push` is rejected:
@@ -407,7 +407,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-3b-merge.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b-merge.svg)
 
 - We now have two options to integrate the commits on `origin/master`
 - First option: `git pull`
@@ -418,7 +418,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 ## Recap about pull merges
 
-![](/img/distributed/git-pull-rebase-3b-rebase.svg)
+![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b-rebase.svg)
 
 - Second option: `git pull --rebase`
 - This moves our local commits after the commits on `origin/master`
@@ -582,10 +582,10 @@ This talk is a live demo, list below serves as memory help
 - We copy all commits, all branches
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 ---
 
@@ -596,13 +596,13 @@ $ git clone https://github.com/user/foo.git
 ```
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **local repo**
-![](/img/github/github-local-01.svg)
+![]({{ site.baseurl }}/img/github/github-local-01.svg)
 
 ---
 
@@ -611,13 +611,13 @@ $ git clone https://github.com/user/foo.git
 - We do some work and make a commit
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **local repo**
-![](/img/github/github-local-02.svg)
+![]({{ site.baseurl }}/img/github/github-local-02.svg)
 
 ---
 
@@ -628,13 +628,13 @@ $ git push origin master
 ```
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-03.svg)
+![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ---
 
@@ -644,13 +644,13 @@ $ git push origin master
 - A pull-request means: "please review my changes and if you agree, merge them with a mouseclick"
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-01.svg)
+![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-03.svg)
+![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ---
 
@@ -659,13 +659,13 @@ $ git push origin master
 - If the pull-request is accepted, the change is incorporated
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-03.svg)
+![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ---
 
@@ -675,13 +675,13 @@ $ git push origin master
 - How do we get these changes to the forked repo?
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-03.svg)
+![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-03.svg)
+![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ---
 
@@ -693,13 +693,13 @@ $ git fetch upstream
 ```
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-03.svg)
+![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-04.svg)
+![]({{ site.baseurl }}/img/github/github-local-04.svg)
 
 ---
 
@@ -711,13 +711,13 @@ $ git merge upstream/master
 ```
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-03.svg)
+![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-02.svg)
+![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 **local repo**
-![](/img/github/github-local-05.svg)
+![]({{ site.baseurl }}/img/github/github-local-05.svg)
 
 ---
 
@@ -728,13 +728,13 @@ $ git push origin master
 ```
 
 **https://github.com/foo/foo.git**
-![](/img/github/github-remote-03.svg)
+![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 **https://github.com/user/foo.git**
-![](/img/github/github-remote-03.svg)
+![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 **local repo**
-![](/img/github/github-local-06.svg)
+![]({{ site.baseurl }}/img/github/github-local-06.svg)
 
 ---
 
@@ -790,7 +790,7 @@ https://github.com/bast/forking-workflow-exercise
 - To clarify what is meant by "fast-forward" imagine that you are on `master` and want to merge `devel`
 - What will happen if we `git merge devel`?
 
-![](/img/branches/pre-ff.svg)
+![]({{ site.baseurl }}/img/branches/pre-ff.svg)
 
 ---
 
@@ -801,7 +801,7 @@ https://github.com/bast/forking-workflow-exercise
   without creating a merge commit
 - This is a fast-forward merge
 
-![](/img/branches/ff.svg)
+![]({{ site.baseurl }}/img/branches/ff.svg)
 
 - The default in Git is to fast-forward merge when possible
 
@@ -815,7 +815,7 @@ https://github.com/bast/forking-workflow-exercise
 $ git merge --no-ff devel
 ```
 
-![](/img/branches/no-ff.svg)
+![]({{ site.baseurl }}/img/branches/no-ff.svg)
 
 - Both is fine, the resulting code is the same, not the history
 - It is a matter of taste or convention
