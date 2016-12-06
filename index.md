@@ -3,7 +3,7 @@ layout: lesson
 permalink: /
 ---
 
-# Collaborative distributed version control lesson
+# Collaborative distributed version control
 
 In this lesson we will learn how to keep repositories in sync and how to work
 with remote repositories on GitHub and other services. We will discover and
