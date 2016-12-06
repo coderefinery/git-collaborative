@@ -4,8 +4,7 @@ title: "Interrupted work"
 teaching: 15
 exercises: 0
 questions:
-  - "A question that this episode will answer?"
-  - "Another question?"
+  - "How can Git help us to deal with interrupted work and context switching?"
 objectives:
   - "This is one objective of this episode."
   - "This is another objective of this episode."

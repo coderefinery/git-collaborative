@@ -4,8 +4,8 @@ title: "Branch design"
 teaching: 15
 exercises: 15
 questions:
-  - "A question that this episode will answer?"
-  - "Another question?"
+  - "How should we organize branches to avoid conflicts?"
+  - "What is a good branch layout to simplify maintenance and release preparation?"
 objectives:
   - "This is one objective of this episode."
   - "This is another objective of this episode."

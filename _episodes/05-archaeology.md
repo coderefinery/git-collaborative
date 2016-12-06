@@ -4,8 +4,8 @@ title: "Archaeology with Git"
 teaching: 15
 exercises: 15
 questions:
-  - "A question that this episode will answer?"
-  - "Another question?"
+  - "How can we find out who introduced a line of code and when exactly?"
+  - "How can we find out which commit broke a functionality?"
 objectives:
   - "This is one objective of this episode."
   - "This is another objective of this episode."
