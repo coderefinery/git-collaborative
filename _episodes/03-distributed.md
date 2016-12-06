@@ -80,10 +80,7 @@ This talk is a live demo, list below serves as memory help
 - Fork/pull-request mechanism: like peer review
 - Autoclosing issues
 - Discussing with mentions
-- GitHub Pages
-- Hooks
 - Gist
-- KTH has GitHub Enterprise
 
 ---
 
