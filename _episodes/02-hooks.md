@@ -1,34 +1,31 @@
 ---
 layout: episode
 title: "Hooks"
-teaching: 0
+teaching: 5
 exercises: 0
 questions:
   - "How can we automate tasks depending on events in the Git repository?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
-keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
+  - "Learn how to couple scripts to Git repository events."
 ---
 
-## Hooks
+### Hooks
+
+Sometimes you would like Git events (commits, pushes, etc.) to trigger scripts which take care of some tasks.
+
+Hooks are scripts that are executed before/after certain events.
+
+You can find and edit them here:
 
 ```shell
 $ ls -l .git/hooks/
 ```
 
-- Hooks are scripts that are executed before/after certain events
-- They can be used to enforce nearly any kind of policy for your project
-- There are client-side and server-side hooks
+They can be used to enforce nearly any kind of policy for your project.
 
----
+There are client-side and server-side hooks.
 
-### Client-side hooks
+#### Client-side hooks
 
 - `pre-commit`: before commit message editor (example: make sure tests run)
 - `prepare-commit-msg`: before commit message editor (example: modify default messages)
@@ -41,9 +38,7 @@ $ ls -l .git/hooks/
 - `pre-push`: runs during `git push` before any objects have been transferred
 - `pre-auto-gc`: invoked just before the garbage collection takes place
 
----
-
-### Server-side hooks
+#### Server-side hooks
 
 - `pre-receive`: before accepting any references
 - `update`: like `pre-receive` but runs once per pushed branch
@@ -56,6 +51,3 @@ $ ls -l .git/hooks/
     - Code style checks
     - Email notification
     - Rebuilding software packages
-name: inverse
-layout: true
-class: center, middle, inverse
