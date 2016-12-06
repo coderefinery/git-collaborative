@@ -3,27 +3,18 @@ layout: lesson
 permalink: /
 ---
 
-# Example lesson
+# Collaborative distributed version control lesson
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+In this lesson we will learn how to keep repositories in sync and how to work
+with remote repositories on GitHub and other services. We will discover and
+exercise the fork-pull request (or merge request) workflow. We will discuss how
+to organize branches to avoid conflicts and to simplify maintenance and release
+preparation.  We will also exercise how to do some archaeology in the Git
+history to find important commits for debugging and reproducibility.
+
 
 ## Prerequisites
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-   culpa qui officia deserunt mollit anim id est laborum.
+1. Basic understanding of Git.
 
-2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-   culpa qui officia deserunt mollit anim id est laborum.
+2. You need a [GitHub](https://github.com) account.
