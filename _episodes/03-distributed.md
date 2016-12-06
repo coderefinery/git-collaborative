@@ -24,7 +24,13 @@ keypoints:
 - Git implements a distributed version control
 - All these topologies are possible
 
-![]({{ site.baseurl }}/img/intro/topo.jpg)
+![]({{ site.baseurl }}/img/distributed/centralized.svg)
+
+![]({{ site.baseurl }}/img/distributed/forking-overview.svg)
+
+![]({{ site.baseurl }}/img/distributed/forking-1.svg)
+![]({{ site.baseurl }}/img/distributed/forking-2.svg)
+![]({{ site.baseurl }}/img/distributed/forking-3.svg)
 
 - Typically we create a star-topology or tree-topologies or triangular topologies
 
