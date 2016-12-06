@@ -4,7 +4,7 @@ title: "Distributed version control"
 teaching: 30
 exercises: 30
 questions:
-  - "How can we collaborate with people we might not know?"
+  - "How can we collaborate with people who we might not know yet?"
   - "What is a fork?"
   - "What is a pull request or merge request?"
   - "How do teams collaborate on GitHub or GitLab or Bitbucket?"

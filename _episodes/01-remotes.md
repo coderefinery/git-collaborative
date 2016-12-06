@@ -5,6 +5,7 @@ teaching: 15
 exercises: 15
 questions:
   - "How can we keep repositories in sync?"
+  - "How can we share repositories with others?"
 objectives:
   - "This is one objective of this episode."
   - "This is another objective of this episode."
