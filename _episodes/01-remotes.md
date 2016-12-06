@@ -263,7 +263,7 @@ Note how `d8` changed to `d8*`
 
 ---
 
-## Recap about pull merges
+### Recap about pull merges
 
 - **FIXME merge with above to avoid repetition**
 
@@ -319,7 +319,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 ---
 
-## Tracking branches
+### Tracking branches
 
 We want to make changes to `origin/dev`:
 
@@ -384,7 +384,7 @@ $ git push origin --delete cool-branch
 
 ---
 
-## When is a good moment to pull?
+### When is a good moment to pull?
 
 - Real example
     - A developer committed big changes to local master
