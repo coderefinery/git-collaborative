@@ -19,6 +19,19 @@ keypoints:
   - "One more key point."
 ---
 
+## Distributed version control
+
+- Git implements a distributed version control
+- All these topologies are possible
+
+![]({{ site.baseurl }}/img/intro/topo.jpg)
+
+- In contrast to other version control tools we do not contribute to a repository
+  through a lightweight working copy but rather by cloning the entire repository
+- Typically we create a star-topology or tree-topologies or triangular topologies
+
+---
+
 ## Working with multiple remotes
 
 - There is nothing special about the name `origin`

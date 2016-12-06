@@ -28,18 +28,6 @@ keypoints:
 
 ---
 
-## Distributed version control
-
-- Git implements a distributed version control
-- All these topologies are possible
-
-![]({{ site.baseurl }}/img/intro/topo.jpg)
-
-- In contrast to other version control tools we do not contribute to a repository
-  through a lightweight working copy but rather by cloning the entire repository
-
----
-
 ## Non-bare and bare repositories
 
 ### Work: Non-bare repository
@@ -87,7 +75,6 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 - A clone is a full-fledged repository
 - We can clone again and again
-- Typically we create a star-topology or tree-topologies or triangular topologies
 
 ---
 
@@ -96,8 +83,6 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 - Think of `git clone` as a `scp -r` "plus"
 - We will see what the "plus" means
 - By cloning we clone all commits, all branches, entire history
-
-![]({{ site.baseurl }}/img/intro/topo.jpg)
 
 ---
 
