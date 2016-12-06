@@ -9,30 +9,71 @@ questions:
   - "What is a pull request or merge request?"
   - "How do teams collaborate on GitHub or GitLab or Bitbucket?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
+  - "Get a mental representation of what is happening on GitHub."
+  - "Get comfortable with the forking workflow."
 keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
+  - "Working with multiple remotes is not as scary as it looks."
+  - "`origin` is just an alias."
+  - "We can add and remove remotes."
+  - "We can call these aliases as we like."
+  - "We synchronize remotes via the local clone."
+  - "To see all remotes use `git remote -v`."
 ---
 
 ## Distributed version control
 
-- Git implements a distributed version control
-- All these topologies are possible
+Git implements a distributed version control.
+Basically any repository topology that you can think of can be implemented.
+
+Two topologies are very frequent:
+
+
+### Centralized layout
 
 ![]({{ site.baseurl }}/img/distributed/centralized.svg)
 
+In Git all repositories are in principle equivalent but typically we consider one repository
+as the main development line and this is marked as "central".
+The "central" is a role, not a technical difference.
+
+Features:
+
+- Typically all developers have both read and write permissions (double-headed arrows)
+
+Advantages:
+
+- More familiar for Subversion or CVS users
+- Easier: for each clone there is only one remote
+
+Disadvantages:
+
+- Maintainer needs to trust the developers to not break things
+
+
+### Forking layout
+
 ![]({{ site.baseurl }}/img/distributed/forking-overview.svg)
 
-![]({{ site.baseurl }}/img/distributed/forking-1.svg)
-![]({{ site.baseurl }}/img/distributed/forking-2.svg)
-![]({{ site.baseurl }}/img/distributed/forking-3.svg)
+Again we call one repository the "central" repository.
 
-- Typically we create a star-topology or tree-topologies or triangular topologies
+Features:
+
+- Typically all developers have only read access
+- For a public repository everybody has read access
+- Typically only very few people have write access
+- Typically nobody pushes directly to the central repo
+
+Advantages:
+
+- Code is integrated via code review (during pull request)
+- Maintainer has full control over what goes in
+- Allows contributions from people you don't know yet (in practice not possible in centralized layout)
+- Allows to implement peer review in coding (code review)
+- Allows to couple code review with automated testing
+
+Disadvantages:
+
+- Learning curve: we need to deal at least with two remotes (fork and central repo)
 
 ---
 
@@ -40,7 +81,7 @@ keypoints:
 
 - There is nothing special about the name `origin`
 - `origin` is just an alias
-- Working with multiple remotes is not scary
+- Working with multiple remotes is not scary as we will see
 - We can call these aliases as we like
 - We can add and remove remotes
 
@@ -60,196 +101,195 @@ $ git remote -v
 
 ---
 
-## Repository layouts
+## Exercise to practice collaborative forking workflow
 
-- Centralized layout
-- Decentralized layout
-- Fork/pull-request layout
+We will run this exercise in groups and we number the groups
+1, 2, ..., etc.
 
----
+Objectives:
 
-# Working with GitHub
+- Learn how to fork, modify the fork, and file a pull request towards forked repo
+- Learn how to update your fork with upstream changes
 
-This talk is a live demo, list below serves as memory help
+We will do this exercise on GitHub but also GitLab and Bitbucket allow similar
+workflows and everything that we will discuss is transferable.
 
-- Over 3 million users
-- Over 10 million repositories
-- Largest code host in the world
-- Today the de facto standard
-- GitHub activity good for your CV
-- Overview
-- Creating and deleting projects
-- Accessing projects (https or ssh)
-- README.md
-- Issues (tickets)
-- Wiki
-- Fork/pull-request mechanism: like peer review
-- Autoclosing issues
-- Discussing with mentions
-- Gist
 
----
+### Part A: Fork and clone
 
-## Forking a repository
+First fork [this repository](https://github.com/coderefinery/forking-workflow-exercise)
+on GitHub into your namespace and then clone the fork to your computer.
+
+Here is a pictorial representation of this part:
+
+![]({{ site.baseurl }}/img/distributed/forking-1.svg)
+
+This is how it looks after we fork:
+
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
 - A fork is basically a (bare) clone
 - The upstream repo and the fork are in principle independent repositories
-- We copy all commits, all branches
+- When forking we copy all commits, all branches
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+After we clone the fork we have three in principle independent repositories:
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
----
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-## Cloning a fork to work on it
+*central*: ![]({{ site.baseurl }}/img/github/github-local-01.svg)
 
-```shell
-$ git clone https://github.com/user/foo.git
+
+### Part B: Modify and commit
+
+Then add a file `groupN.py` where N is your group number, e.g. `group17.py`.
+
+This file should contain a function called `tweet()` which returns
+a string of maximum 140 characters, for instance:
+
+```python
+def tweet():
+    return "please replace this boring sentence with something more fun"
 ```
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+The file `main.py` automatically calls all `tweet()` functions defined in files
+`groupN.py` (1 <= N <= 50). You do not need to edit `main.py`.
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+You can test it:
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-01.svg)
+```shell
+$ python main.py
 
----
+group 17 says: please replace this boring sentence with something more fun
+```
 
-## Working with the local repo
+And here is a picture of what just happened:
 
-- We do some work and make a commit
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*local*: ![]({{ site.baseurl }}/img/github/github-local-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-02.svg)
 
----
+### Part C: Push your changes to the fork
 
-## Pushing the change to origin
+Once you see your sentence correctly printed, commit and push to your fork. Don't worry
+nothing gets out to Twitter but please mind that your changes will be public on
+GitHub (but you can delete them later).
 
 ```shell
 $ git push origin master
 ```
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-03.svg)
+*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
----
 
-## Pull-request
+### Part D: File a pull request
 
-- We can file a pull-request
-- A pull-request means: "please review my changes and if you agree, merge them with a mouseclick"
+Then file a pull request towards the repository where you forked from.
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+Wait until we integrate all pull requests into the central repo
+together on the big screen.
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+Here is a pictorial representation for parts C and D:
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-03.svg)
+![]({{ site.baseurl }}/img/distributed/forking-2.svg)
 
----
+A pull-request means: "please review my changes and if you agree, merge them with a mouseclick".
 
-## Pull-request
+Once the pull-request is accepted, the change is incorporated:
 
-- If the pull-request is accepted, the change is incorporated
+**FIXME central repo typically contains a merge commit**
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-03.svg)
+*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
----
 
-## Updating the fork with upstream changes
+### Part E: Update your fork
+
+We do this part **after the contributions from all groups have been integrated**.
+
+Once this is done, practice to update your forked repo with the upstream
+changes and verify that you got the files created by other groups:
+
+```shell
+$ python main.py
+```
+
+Here is a pictorial representation of this part:
+
+![]({{ site.baseurl }}/img/distributed/forking-3.svg)
+
+We will discuss two solutions:
+
+#### Longer route
+
+**FIXME central repo typically contains a merge commit**
 
 - Upstream repo receives other changes (other merged pull-requests)
 - How do we get these changes to the forked repo?
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-03.svg)
-
----
-
-## Updating the fork with upstream changes
+*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ```shell
 $ git remote add upstream https://github.com/foo/foo.git
 $ git fetch upstream
 ```
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-04.svg)
-
----
-
-## Updating the fork with upstream changes
+*local*: ![]({{ site.baseurl }}/img/github/github-local-04.svg)
 
 ```shell
 $ git checkout master
 $ git merge upstream/master
 ```
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-05.svg)
-
----
-
-## Updating the fork with upstream changes
+*local*: ![]({{ site.baseurl }}/img/github/github-local-05.svg)
 
 ```shell
 $ git push origin master
 ```
 
-**https://github.com/foo/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-**https://github.com/user/foo.git**
-![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-**local repo**
-![]({{ site.baseurl }}/img/github/github-local-06.svg)
+*local*: ![]({{ site.baseurl }}/img/github/github-local-06.svg)
+
+
+#### Shorter route
+
+Remotes are aliases. We can use remote URLs directly.
+
+Here we pull from the central repo and push to our fork:
+
+```shell
+$ git checkout master
+$ git pull https://github.com/coderefinery/forking-workflow-exercise.git master
+$ git push https://github.com/user/forking-workflow-exercise.git master
+```
 
 ---
 
@@ -258,8 +298,8 @@ $ git push origin master
 - Different URLs for fetch and push
 
 ```shell
-$ git remote add origin https://github.com/foo/foo.git
-$ git remote set-url --push origin https://github.com/user/foo.git
+$ git remote add origin https://github.com/project/project.git
+$ git remote set-url --push origin https://github.com/user/project.git
 ```
 
 - Now we always fetch from the central repo and push to forked repo
@@ -267,33 +307,17 @@ $ git remote set-url --push origin https://github.com/user/foo.git
 ```shell
 $ git remote -v
 
-origin	https://github.com/foo/foo.git (fetch)
-origin	https://github.com/user/foo.git (push)
+origin	https://github.com/project/project.git (fetch)
+origin	https://github.com/user/project.git (push)
 ```
 
 ---
 
-## Summary
+## FIXME Accommodate somewhere
 
-- Working with multiple remotes is not scary
-- `origin` and `upstream` are just aliases
-- We can call these aliases as we like
-- We can add and remove remotes
-
-```shell
-$ git remote add upstream https://github.com/foo/foo.git
-$ git remote rm upstream
-```
-
-- We synchronize remotes via the local clone
-- To see all remotes
-
-```shell
-$ git remote -v
-```
-
----
-
-Collaborative GitHub workflow exercise
-
-https://github.com/bast/forking-workflow-exercise
+- Accessing projects (https or ssh)
+- README.md
+- Issues (tickets)
+- Fork/pull-request mechanism: like peer review
+- Autoclosing issues
+- Discussing with mentions
