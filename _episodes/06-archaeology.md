@@ -190,68 +190,6 @@ $ git branch -d museum
 
 ---
 
-## Finding out when something broke
-
-Git bisect exercise:
-
-https://github.com/bast/bisect-me
-
-- Sometimes you realize that something broke
-- You know that it used to work
-- You do not know when it broke
-- First find out a commit in past when it worked
-- Then bisect your way until you find the commit that broke it
-
-```shell
-$ git bisect start
-$ git bisect good 75c737cf5c9 # this is a commit that worked
-$ git bisect bad HEAD         # last commit is broken
-  # now compile and test
-  # after that decide whether
-$ git bisect good
-  # or
-$ git bisect bad
-  # now compile and test
-  # after that decide whether
-$ git bisect good
-  # or
-$ git bisect bad
-  # iterate until commit is found
-```
-
-- This can even be automatized with `git bisect run <script>`
-- For this you write the script that returns zero/non-zero (success/failure)
-
----
-
-## Finding out when something broke
-
-- Example
-
-```shell
-$ git bisect start
-$ git bisect bad HEAD
-$ git bisect good 234aa131972cc11e8f4216dcc2b9d6dd0a76f8ea
-
-Bisecting: 499 revisions left to test after this (roughly 9 steps)
-[e811288ff07a13aa712532516720da6a81f19cb2] commit number 503
-```
-
-- Then roughly 9 steps later we see
-
-```shell
-$ git bisect good
-
-59507147fad403e63dd2252dae29fb842e67167f is the first bad commit
-commit 59507147fad403e63dd2252dae29fb842e67167f
-Author: Radovan Bast <bast@users.noreply.github.com>
-Date:   Fri Sep 5 00:23:24 2014 +0200
-
-implement this and that
-```
-
----
-
 ## Finding commits not merged upstream
 
 - So you would like to know which commits from current branch have
@@ -275,3 +213,75 @@ $ git cherry master
 ```
 
 These six commits are on `haiku` but are not on `master`.
+
+---
+
+## Finding out when something broke
+
+- Sometimes you realize that something broke
+- You know that it used to work
+- You do not know when it broke
+- First find out a commit in past when it worked
+- Then bisect your way until you find the commit that broke it
+
+```shell
+$ git bisect start
+$ git bisect good 75c737cf5c9  # this is a commit that worked
+$ git bisect bad HEAD          # last commit is broken
+  # now compile and test
+  # after that decide whether
+$ git bisect good
+  # or
+$ git bisect bad
+  # now compile and test
+  # after that decide whether
+$ git bisect good
+  # or
+$ git bisect bad
+  # iterate until commit is found
+```
+
+- This can even be automatized with `git bisect run <script>`
+- For this you write the script that returns zero/non-zero (success/failure)
+
+---
+
+## Git bisect exercise
+
+- Clone or fork it from [here](https://github.com/bast/git-bisect-exercise)
+
+
+### Motivation
+
+The motivation for this exercise is to be able to do archaeology with Git on a
+source code where the bug is difficult to see visually. Finding the offending
+commit is often more than half the debugging. In this particular example the
+knowledge about the offending commit will not help us but in reality mastering
+`git bisect` is often a huge time saver.
+
+
+### Background
+
+The script `get_pi.py` calculates pi using the 100 first terms of the
+Nilakantha series. It should produce 3.141592 but it does not. The script broke
+and produces 3.264592 using the last commit:
+```
+$ python get_pi.py
+
+3.2645924109719804
+```
+
+At each commit, the 100 terms were reshuffled. At some point within the 500
+first commits, an error was introduced. The only thing we know is that the
+first commit worked correctly.
+
+
+### Your task
+
+Use `git bisect` to find the commit which broke the computation.
+
+
+### Bonus exercise
+
+Write a script that checks for a correct result and use `git bisect run` to
+find the offending commit automatically.
