@@ -87,7 +87,7 @@ Disadvantages:
 - We can add and remove remotes
 
 ```shell
-$ git remote add upstream https://github.com/foo/foo.git
+$ git remote add upstream https://github.com/project/project.git
 $ git remote rm upstream
 $ git remote add group-repo https://example.com/exciting-project.git
 $ git remote rm group-repo
@@ -251,7 +251,7 @@ We will discuss two solutions:
 *local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
 
 ```shell
-$ git remote add upstream https://github.com/foo/foo.git
+$ git remote add upstream https://github.com/coderefinery/forking-workflow-exercise.git
 $ git fetch upstream
 ```
 
