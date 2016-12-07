@@ -7,10 +7,8 @@ questions:
   - "How should we organize branches to avoid conflicts?"
   - "What is a good branch layout to simplify maintenance and release preparation?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
+  - "Learn how to name branches."
+  - "Discuss typical branch layouts."
 keypoints:
   - "This is an important key point."
   - "Another important key point."
@@ -37,7 +35,7 @@ $ git branch -r | grep radovan
 ```
 
 - Name bugfix branches after the issue/ticket (e.g. `issue-137`)
-- For release branches we recommend `release-2.x` or `release/2.x` or `stable/2.x`
+- For release branches we recommend e.g. `release-2.x` or `stable-2.x`
 
 ---
 
@@ -46,8 +44,8 @@ $ git branch -r | grep radovan
 - Document where it is
 - Organize branches according to features, not according to groups of people
 - Good: branches `feature-a`, `feature-b`, `feature-c`
-- Bad: branches `stockholm`, `san_francisco`, `uppsala`
-- Reason: `stockholm`, `san_francisco`, and `uppsala` will either diverge
+- Bad: branches `stockholm`, `san_francisco`, `helsinki`
+- Reason: `stockholm`, `san_francisco`, and `helsinki` will either diverge
   (three main development lines) or somebody will spend a heroic effort to keep
   them synchronized
 
@@ -60,6 +58,64 @@ $ git branch -r | grep radovan
 - On the other hand you will see that it is annoying if you hit a commit that does not compile
 - This is why we insist so much on a compiling main development line with nice history
 - There is no reason to commit broken or unfinished code to the main development line: for this we have branches
+
+---
+
+## Rebase vs. merge
+
+- To illustrate rebasing we consider the following situation
+- We want to merge `master`
+
+![]({{ site.baseurl }}/img/branches/pre-rebase.svg)
+
+Now you know how to do it:
+
+```shell
+$ git checkout devel
+$ git merge master
+```
+
+This creates a merge commit:
+
+![]({{ site.baseurl }}/img/branches/git-branch-08.svg)
+
+
+But there is an alternative:
+
+```shell
+$ git rebase master
+```
+
+![]({{ site.baseurl }}/img/branches/rebase.svg)
+
+- `git rebase` replays the branch commits `b1` to `b3` on top of `master`
+- As if they were committed after `c5`
+- It changes history (notice that the commits `b1` to `b3` have been replaced by `b1*` to `b3*`)
+- Discuss advantages and disadvantages
+
+### Advantages and disadvantages
+
+- `git rebase` makes "merges" producing a linear history
+- When somebody asks you to rebase your work to the work of somebody else you know what this means
+- When working with others **do not rebase commits that you have shared**
+  (history has changed)
+- Reference: "Treehouse of Horror V: Time and Punishment", The Simpsons (1994)
+
+![]({{ site.baseurl }}/img/branches/simpsons.jpg)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -178,49 +234,6 @@ aa25177 feature B
 - Require your developers to follow it (code review)
 - Write-protect your main development line and release branch(es)
 - Use semantic versioning: http://semver.org
-
----
-
-## Rebase vs. merge
-
-- To illustrate rebasing we consider the following situation
-- We want to merge `master`
-
-![]({{ site.baseurl }}/img/branches/pre-rebase.svg)
-
-- Now you know how to do it
-
-![]({{ site.baseurl }}/img/branches/git-branch-08.svg)
-
----
-
-## Rebase vs. merge
-
-- But there is an alternative
-
-```shell
-$ git rebase master
-```
-
-![]({{ site.baseurl }}/img/branches/rebase.svg)
-
-- `git rebase` replays the branch commits `b1` to `b3` on top of `master`
-- As if they were committed after `c5`
-- It changes history (notice that the commits `b1` to `b3` have been replaced by `b1*` to `b3*`)
-- Discuss advantages and disadvantages
-
----
-
-## Rebase vs. merge
-
-- `git rebase` makes "merges" producing a linear history
-- When somebody asks you to rebase your work to the work of somebody else you know what this means
-- So far we have not shared commits but we will do so soon
-- When working with others **do not rebase commits that you have shared**
-  (history has changed)
-- Reference: "Treehouse of Horror V: Time and Punishment", The Simpsons (1994)
-
-![]({{ site.baseurl }}/img/branches/simpsons.jpg)
 
 ---
 
