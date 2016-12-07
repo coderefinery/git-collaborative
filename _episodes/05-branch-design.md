@@ -240,11 +240,6 @@ Verify the history and also that the script still works after the operation.
 - My colleague develops `feature-b`
 - Both are not ready yet to go into the main line
 - How can we test them together?
-
----
-
-## How to test combinations of features
-
 - Do not cross-merge feature branches
 - Reason: if `feature-a` becomes ready, it cannot be integrated to the main line
   because it is then diluted with `feature-b`
@@ -256,23 +251,33 @@ Verify the history and also that the script still works after the operation.
 
 ---
 
-## A successful Git branching model
+## [Vincent Driessen model](http://nvie.com/posts/a-successful-git-branching-model/)
 
+
+<img src="{{ site.baseurl }}/img/branches/nvie-model.png" style="height: 600px;"/>
+
+(c) Vincent Driessen, licensed under CC BY-SA.
+
+- [Link to original post](http://nvie.com/posts/a-successful-git-branching-model/).
 - Very popular
-- http://nvie.com/posts/a-successful-git-branching-model/
-- Critique
-    - Naming is IMO unfortunate (rename `develop` to `master` and `master` to `stable`)
-    - Model is not ideal if you need to support past versions
+- Two long-lived branches: `develop` and `master`
+- New features are developed on feature branches
+- Feature branches branch off from `develop`
+- `master` is the latest stable release by definition
+- Everything merged to `develop` is ready to be released
+- Critique (personal opinion)
+    - Naming is unfortunate and often confuses coworkers (rename `develop` to `master` and `master` to `stable`)
+    - Model is not ideal if you need to support past versions and publish patches for past versions
 - Good if you do not distribute the stable release (e.g. if you run it on your servers)
 
 ---
 
 ## Alternative: separate branch for each major release
 
-- For release branches we recommend `release-2.x` or `release/2.x` or `stable/2.x`
-- It is crystal clear where the main development line is
+- For release branches we recommend e.g. `release-2.x` or `stable-2.x`
+- It is then crystal clear where the main development line is
 - Does not require to create new branches for patches of past versions
-- Good if you distribute code
+- Good if you distribute code and support past versions
 - Patches need to be applied to the oldest supported release branch and cherry-picked or merged
   "up" to the main line
 
@@ -284,11 +289,10 @@ Verify the history and also that the script still works after the operation.
 - Document your branching layout/strategy
 - Require your developers to follow it (code review)
 - Write-protect your main development line and release branch(es)
-- Use semantic versioning: http://semver.org
 
 ---
 
-## Tags
+## Tag your releases
 
 - Tags are also just pointers to commits
 - While branches are mutable, tags are (typically) immutable
@@ -297,7 +301,14 @@ Verify the history and also that the script still works after the operation.
 
 ```shell
 $ git tag                             # list all tags
-$ git tag -a v1.4 -m 'my version 1.4' # create annotated tag
-$ git tag v1.4                        # create lightweight tag
+$ git tag -a v1.5 -m 'my version 1.4' # create annotated tag
+$ git tag v1.5                        # create lightweight tag
 $ git push origin v1.5                # share tag to upstream (origin)
 $ git push origin --tags              # push all tags
+```
+
+---
+
+## Use meaningful version numbers
+
+- Use semantic versioning: http://semver.org
