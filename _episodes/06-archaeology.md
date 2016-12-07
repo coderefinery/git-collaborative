@@ -103,9 +103,9 @@ e6cfa2cf (Radovan Bast      2012-03-01 10:06:39 +0100) ! Fock matrix F = H1 + G
 - "Who the %&!@!!! wrote this?!?"
 - In 90% of cases you yourself
 
-Who edited this file and when and why?
+Who edited the source file for `git grep` and when and why?
 
-[https://github.com/coderefinery/git-collaborative/blame/gh-pages/_episodes/06-archaeology.md](https://github.com/coderefinery/git-collaborative/blame/gh-pages/_episodes/06-archaeology.md)
+- [https://github.com/git/git/blame/master/grep.c](https://github.com/git/git/blame/master/grep.c)
 
 ---
 
