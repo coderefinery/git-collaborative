@@ -7,69 +7,81 @@ questions:
   - "How can we find out who introduced a line of code and when exactly?"
   - "How can we find out which commit broke a functionality?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
+  - "Quickly find a line of code, find out who introduced it, when, and why."
+  - "Quickly find the commit that changed a behavior."
 keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
----
-
-## Archaeology with Git
-
-- Inspecting commits
-- Finding out who introduced a modification
-- Finding out when a modification has been introduced
-- Grepping code
-- Finding removed code
-- Finding a developer to talk to (large projects)
-- Going back in time
-- Finding out when something broke
-- Finding commits not merged upstream
-
+  - "`git bisect`, `git grep`, `git blame`, `git show` are a powerful combination when doing archaeology in a project."
 ---
 
 ## Inspecting commits
 
-- At any moment we can inspect individual commits
+At any moment we can inspect individual commits with `git show`:
 
 ```shell
-$ git show 49dc419
+$ git show 47a00
 
-commit 49dc419c8a44051cfe7826b85ee0a23e5faf3975
+commit 47a007d563adb03aeedbddeb483d3c6c0301c10a
 Author: Radovan Bast <bast@users.noreply.github.com>
-Date:   Sat Nov 22 15:33:15 2014 +0100
+Date:   Wed Dec 7 17:27:04 2016 +0100
 
-    do not recompute powers
+    completed the haiku
 
-diff --git a/triangle.py b/triangle.py
-index cc52fe2..fa35eab 100644
---- a/triangle.py
-+++ b/triangle.py
-@@ -6,7 +6,10 @@ m = int(sys.argv[1])
+diff --git a/haiku.py b/haiku.py
+index dd98a4c..a2f8de8 100644
+--- a/haiku.py
++++ b/haiku.py
+@@ -1,4 +1,9 @@
+ def get_haiku():
 
- # loop over all a < b < c <= m
- for c in xrange(1, m+1):
-+    cp = c*c
-     for b in xrange(1, c):
-+        bp = b*b
-         for a in xrange(1, b):
--            if a*a + b*b == c*c:
-+            ap = a*a
-+            if ap + bp == cp:
-                 print("(%i, %i, %i)" % (a, b, c))
+     return '''On a branch ...
+-                  by Kobayashi Issa'''
++                  by Kobayashi Issa
++
++              On a branch
++              floating downriver
++              floating downriver
++              a cricket, singing.'''
 ```
 
-- We see that the start of the hash is enough if it is unique
+We see that the start of the hash is enough if it is unique.
+
+Compare this with: [https://github.com/bast/git-rebase-squash-exercise/commit/47a007d563adb03aeedbddeb483d3c6c0301c10a](https://github.com/bast/git-rebase-squash-exercise/commit/47a007d563adb03aeedbddeb483d3c6c0301c10a)
+
+---
+
+## Grepping code
+
+```shell
+$ git grep -i fixme
+
+densfit/df_vxc.F:!fixme call XC integrator
+dirac/dirgrd.F:!FIXME: there is some issue with one-step - investigate later
+dirac/dirrdn.F:!       fixme num grid report should be independent of DFT
+dirac/dirscf.F:        !fixme: michal for InteRest
+dirac/dirscf.F:          !fixme: michal for InteRest
+dirac/dirscf.F:          !fixme: michal for InteRest
+embedding/get_vemb_mat.F:!fixme irep can be < 0 in NONREL runs
+eri/eri2out.F:!fixme
+eri/eri2out.F:!fixme
+eri/eri2out.F:!fixme
+gp/gpkrmc.F:C     FIXME: dette ser ikke ud til at virke for complex groups.
+interest/module_interest_hrr.f90:  !-- fixme --!
+interest/module_interest_interface.F90:    !> fixme: contracted basis sets
+```
+
+- Greps entire repository below current directory
+- Super fast
 
 ---
 
 ## Finding out who introduced a modification and when
 
 - `git blame` is a fun and useful command to find out when a specific line got introduced and by whom
-- This is important to judge the impact of a bug (When was it introduced? For how long has this bug been around? Has this bug been released?)
+- This is important to judge the impact of a bug:
+  - When was it introduced?
+  - For how long has this bug been around?
+  - Has this bug been released?
+  - Has this buggy code been used by others?
 
 ```shell
 $ git blame <filename>
@@ -90,38 +102,16 @@ e6cfa2cf (Radovan Bast      2012-03-01 10:06:39 +0100) ! Fock matrix F = H1 + G
 
 - "Who the %&!@!!! wrote this?!?"
 - In 90% of cases you yourself
-- It is useful for projects with 20+ people where you do not have complete overview
 
----
+Who edited this file and when and why?
 
-## Grepping code
-
-```shell
-$ git grep fixme
-
-densfit/df_vxc.F:!fixme call XC integrator
-dirac/dirgrd.F:!fixme: there is some issue with one-step - investigate later
-dirac/dirrdn.F:!       fixme num grid report should be independent of DFT
-dirac/dirscf.F:        !fixme: michal for InteRest
-dirac/dirscf.F:          !fixme: michal for InteRest
-dirac/dirscf.F:          !fixme: michal for InteRest
-embedding/get_vemb_mat.F:!fixme irep can be < 0 in NONREL runs
-eri/eri2out.F:!fixme
-eri/eri2out.F:!fixme
-eri/eri2out.F:!fixme
-gp/gpkrmc.F:C     fixme: dette ser ikke ud til at virke for complex groups.
-interest/module_interest_hrr.f90:  !-- fixme --!
-interest/module_interest_interface.F90:    !> fixme: contracted basis sets
-```
-
-- Greps entire repository below current directory
-- Super fast
+[https://github.com/coderefinery/git-collaborative/blame/gh-pages/_episodes/06-archaeology.md](https://github.com/coderefinery/git-collaborative/blame/gh-pages/_episodes/06-archaeology.md)
 
 ---
 
 ## Finding removed code
 
-- There used to be a line containing "break"
+- I remember there used to be a line containing the word "break"
 - Now it is gone
 - We can figure out when it disappeared
 
@@ -141,9 +131,7 @@ Date:   Sat Nov 22 15:33:37 2014 +0100
     break loop a if triple found
 ```
 
----
-
-## Finding removed code
+Now let us have a look at that commit:
 
 ```shell
 $ git show 41997df
@@ -164,6 +152,8 @@ index c693105..fa35eab 100644
                  print("(%i, %i, %i)" % (a, b, c))
 -                break # no need to continue loop a
 ```
+
+Indeed!
 
 ---
 
@@ -189,10 +179,10 @@ $ git checkout -b <name> <hash>
 - This is the recommended mechanism to inspect old code (hash abc123):
 
 ```shell
-$ git checkout -b museum abc123 # create branch called "museum" from hash abc123
+$ git checkout -b museum abc123  # create branch called "museum" from hash abc123
   # do some archaeology ...
   # "what was I thinking back then!?"
-$ git checkout master           # after you are done switch back to "master"
+$ git checkout master            # after you are done switch back to "master"
 $ git branch -d museum
 ```
 
@@ -201,6 +191,10 @@ $ git branch -d museum
 ---
 
 ## Finding out when something broke
+
+Git bisect exercise:
+
+https://github.com/bast/bisect-me
 
 - Sometimes you realize that something broke
 - You know that it used to work
@@ -262,14 +256,22 @@ implement this and that
 
 - So you would like to know which commits from current branch have
   not been merged to `<branch>`
-- No problem
+- No problem with `git cherry`
+
+Here is an example:
 
 ```shell
-$ git cherry <branch>
+$ git clone https://github.com/bast/git-rebase-squash-exercise.git
+$ cd git-rebase-squash-exercise
+$ git checkout haiku
+$ git cherry master
+
++ 7e1f903f77d2b6d8ac2b9a403e30367b5b7eeb4a
++ 3ff39a18a24074e83ee30e4e959d3863ae05ed82
++ 54fba2116e74af3170314d0e2be85b34c6f27490
++ a3278e36ddbbd8b1feff38ba973ede4b3d9323c9
++ 47a007d563adb03aeedbddeb483d3c6c0301c10a
++ 65870f9c4147bace639a92b08250911b541364fe
 ```
 
----
-
-Git bisect exercise
-
-https://github.com/bast/bisect-me
+These six commits are on `haiku` but are not on `master`.
