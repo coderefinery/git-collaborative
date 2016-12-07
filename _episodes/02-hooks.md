@@ -9,7 +9,7 @@ objectives:
   - "Learn how to couple scripts to Git repository events."
 ---
 
-### Hooks
+## Hooks
 
 Sometimes you would like Git events (commits, pushes, etc.) to trigger scripts which take care of some tasks.
 
@@ -26,7 +26,7 @@ They can be used to enforce nearly any kind of policy for your project.
 There are client-side and server-side hooks.
 
 
-#### Client-side hooks
+### Client-side hooks
 
 - `pre-commit`: before commit message editor (example: make sure tests run)
 - `prepare-commit-msg`: before commit message editor (example: modify default messages)
@@ -40,7 +40,7 @@ There are client-side and server-side hooks.
 - `pre-auto-gc`: invoked just before the garbage collection takes place
 
 
-#### Server-side hooks
+### Server-side hooks
 
 - `pre-receive`: before accepting any references
 - `update`: like `pre-receive` but runs once per pushed branch

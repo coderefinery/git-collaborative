@@ -20,7 +20,7 @@ keypoints:
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
-### From local repositories to remote repositories
+## From local repositories to remote repositories
 
 - In contrast to other version control tools we do not contribute to a repository
   through a lightweight working copy
@@ -29,9 +29,9 @@ keypoints:
 
 ---
 
-### Non-bare and bare repositories
+## Non-bare and bare repositories
 
-#### Work: Non-bare repository
+### Work: Non-bare repository
 
 - Until now we have met only non-bare repositories
 
@@ -43,7 +43,7 @@ $ git init  # creates a non-bare repository
 - We can checkout local branches
 - We can and do work inside non-bare repositories
 
-#### Archive: Bare repository
+### Archive: Bare repository
 
 - We can create a bare repository
 
@@ -56,7 +56,7 @@ $ git init --bare  # creates a bare repository
 
 ---
 
-### Cloning repositories
+## Cloning repositories
 
 - **FIXME replace these examples with GitHub examples**
 - We can clone repositories
@@ -83,7 +83,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ---
 
-### When push comes to pull
+## When push comes to pull
 
 - We need a mechanism to communicate changes between the repositories
 - We will **pull** or **fetch** updates **from** remote repositories
@@ -92,7 +92,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ---
 
-### Working with others
+## Working with others
 
 - We collaborate with other people through clones by pulling/fetching and pushing changes
 - Everybody typically works on own clones
@@ -103,7 +103,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ---
 
-### Cloning repositories
+## Cloning repositories
 
 - **FIXME replace these examples with GitHub examples**
 
@@ -141,7 +141,7 @@ origin  user@somehost:somerepo (push)
 
 ---
 
-### Fetching updates
+## Fetching updates
 
 - Let us imagine that the remote repository receives a new commit:
 
@@ -176,7 +176,7 @@ This updates the local branches:
 
 ---
 
-### Fetch vs. pull
+## Fetch vs. pull
 
 What is the difference between `git fetch` and `git pull`?
 
@@ -201,7 +201,7 @@ $ git pull origin master
 
 ---
 
-### Publishing local commits
+## Publishing local commits
 
 - We can commit locally
 - These commits are not visible to others until we `git push`
@@ -263,7 +263,7 @@ Note how `d8` changed to `d8*`
 
 ---
 
-### Recap about pull merges
+## Recap about pull merges
 
 - **FIXME merge with above to avoid repetition**
 
@@ -319,7 +319,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 ---
 
-### Tracking branches
+## Tracking branches
 
 We want to make changes to `origin/dev`:
 
@@ -338,7 +338,7 @@ $ git checkout -b dev origin/dev
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-11-local.svg)
 
 
-#### Shortcut to checkout tracking branches
+### Shortcut to checkout tracking branches
 
 If there is no local branch `dev` and there is a remote branch `origin/dev`, then both are equivalent:
 
@@ -384,7 +384,7 @@ $ git push origin --delete cool-branch
 
 ---
 
-### When is a good moment to pull?
+## When is a good moment to pull?
 
 - Real example
     - A developer committed big changes to local master
@@ -408,7 +408,7 @@ $ git push origin --delete cool-branch
 
 - **FIXME need to move this to some good place**
 
-### Fast-forward vs. non-fast-forward merges
+## Fast-forward vs. non-fast-forward merges
 
 It is useful to understand the difference between fast-forward vs. non-fast-forward merges.
 
