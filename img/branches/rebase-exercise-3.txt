@@ -1,0 +1,8 @@
+
+     [master]
+      |
+c1----c2
+        \
+         h1
+         |
+        [haiku,HEAD]
