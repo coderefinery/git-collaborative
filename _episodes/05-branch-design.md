@@ -212,43 +212,6 @@ and later squashing them.
 Verify the steps and the result with `git status` and `git log`.
 Verify the history and also that the script still works after the operation.
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Develop on feature branches
-
-- Keeps bugs away from the main development line
-- Divide and conquer: do not create a branch for "everything"
-- The more you do on one branch the longer it will take until you can reintegrate it
-- The more granular the branches, the shorter lived
-- Talk with your colleagues to avoid conflicts
-
----
-
-## How to test combinations of features
-
-- I develop `feature-a`
-- My colleague develops `feature-b`
-- Both are not ready yet to go into the main line
-- How can we test them together?
-- Do not cross-merge feature branches
-- Reason: if `feature-a` becomes ready, it cannot be integrated to the main line
-  because it is then diluted with `feature-b`
-- It is easy to make soup out of vegetables, it is difficult to separate a vegetable out of a soup
-- Test combinations on integration branches
-- Integration branches only integrate, we do not "work" on them
-- Same holds for testing combinations with the main line
-- The main line should ideally be an integration branch
-
 ---
 
 ## [Vincent Driessen model](http://nvie.com/posts/a-successful-git-branching-model/)
@@ -417,3 +380,28 @@ $ git reset --hard c2 # on master
     - It is good to merge `master` to your topic branch often to stay in sync with main development line
     - Merge `master` to your branch ideally should never conflict
     - But it will sometimes, resolve conflicts early
+
+---
+
+## Develop on feature branches
+
+- Keeps bugs away from the main development line
+- Divide and conquer: do not create a branch for "everything"
+- The more you do on one branch the longer it will take until you can reintegrate it
+- The more granular the branches, the shorter lived
+- Talk with your colleagues to avoid conflicts
+
+How to test combinations of features?
+
+- I develop `feature-a`
+- My colleague develops `feature-b`
+- Both are not ready yet to go into the main line
+- How can we test them together?
+- Do not cross-merge feature branches
+- Reason: if `feature-a` becomes ready, it cannot be integrated to the main line
+  because it is then diluted with `feature-b`
+- It is easy to make soup out of vegetables, it is difficult to separate a vegetable out of a soup
+- Test combinations on integration branches
+- Integration branches only integrate, we do not "work" on them
+- Same holds for testing combinations with the main line
+- The main line should ideally be an integration branch

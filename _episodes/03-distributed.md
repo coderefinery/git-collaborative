@@ -204,7 +204,7 @@ Here is a pictorial representation for parts C and D:
 
 ![]({{ site.baseurl }}/img/distributed/forking-2.svg)
 
-A pull-request means: "please review my changes and if you agree, merge them with a mouseclick".
+A pull-request means: "please review my changes and if you agree, merge them with a mouse-click".
 
 Once the pull-request is accepted, the change is incorporated:
 
