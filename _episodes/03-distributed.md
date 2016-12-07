@@ -167,7 +167,7 @@ $ python main.py
 group 17 says: please replace this boring sentence with something more fun
 ```
 
-And here is a picture of what just happened:
+If it works, commit the change. And here is a picture of what just happened:
 
 *central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
