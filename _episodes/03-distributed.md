@@ -141,7 +141,7 @@ After we clone the fork we have three in principle independent repositories:
 
 *fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-*central*: ![]({{ site.baseurl }}/img/github/github-local-01.svg)
+*local*: ![]({{ site.baseurl }}/img/github/github-local-01.svg)
 
 
 ### Part B: Modify and commit
