@@ -1,7 +1,7 @@
 ---
 layout: episode
-title: "Interrupted work"
-teaching: 15
+title: "Bonus: Interrupted work"
+teaching: 20
 exercises: 0
 questions:
   - "How can Git help us to deal with interrupted work and context switching?"

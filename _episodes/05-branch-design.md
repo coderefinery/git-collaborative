@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: "Branch design"
-teaching: 15
-exercises: 15
+teaching: 20
+exercises: 20
 questions:
   - "How should we organize branches to avoid conflicts?"
   - "What is a good branch layout to simplify maintenance and release preparation?"

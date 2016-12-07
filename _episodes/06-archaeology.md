@@ -2,7 +2,7 @@
 layout: episode
 title: "Archaeology with Git"
 teaching: 15
-exercises: 15
+exercises: 20
 questions:
   - "How can we find out who introduced a line of code and when exactly?"
   - "How can we find out which commit broke a functionality?"
