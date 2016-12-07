@@ -105,23 +105,9 @@ $ git rebase master
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
----
-
 ## Branch hygiene
 
-- You committed 3 commits but would like to squash them into one
+Often we have this situation:
 
 ```shell
 $ git log --oneline
@@ -133,45 +119,110 @@ aa25177 feature B
 6b58ba4 feature A
 ```
 
-- We have no uncommitted changes
-- We wish our last 3 commits (6e129cf, 05344f6, bc11c47) were just one
-- We use a soft reset:
+But we would prefer to have this history:
 
 ```shell
-$ git reset --soft aa25177
-```
-
-- This means that we move our repository back to commit aa25177
-  BUT we keep the working tree of the last commit (6e129cf)
-
----
-
-## Squashing commits
-
-```shell
-$ git reset --soft aa25177
-```
-
-- Verify the result with `git status`
-- Now we can commit modifications w.r.t. `aa25177` in one single nice commit
-
-```shell
-$ git commit -m 'feature C'
+$ git log --oneline
 
 81e100c feature C
 aa25177 feature B
 6b58ba4 feature A
 ```
 
-- The history tells us that we committed our work in a single commit `81e100c`
+- We can use `git reset --soft aa25177`
+- This means that we move our repository back to commit aa25177
+  BUT we keep the working tree of the last committed state
 - The final state of the actual code is identical
 - Alternative to `git reset --soft` is an interactive rebase
-- We recommend to create commits on the main development line which are nice logical
-  units
+- We recommend to create commits on the main development line which are nice logical units
 - Commits should be pickable (not too large not too small for a `cherry-pick`)
 - Avoid ball-of-mud commits
 
 ---
+
+## Git rebase and commit squashing exercise
+
+### Objective
+
+In this exercise we will practice how to squash incomplete commits into one
+nice commit and replay it on top of the master branch.
+
+
+### Motivation
+
+This technique is useful in situations where you need to make changes to a pull
+request before it can be integrated.
+
+
+### Exercise
+
+Start the exercise by forking and cloning [this repository](https://github.com/bast/git-rebase-squash-exercise).
+
+The `haiku` branch represents a feature branch that is to be rebased (moved) and squashed.
+
+On the `haiku` branch you find a script that prints a haiku:
+
+```shell
+$ python main.py
+
+This is our haiku:
+
+On a branch ...
+                  by Kobayashi Issa
+
+              On a branch
+              floating downriver
+              a cricket, singing.
+```
+
+The haiku is great but the
+commit history on
+the `haiku` branch is not (on purpose):
+
+```shell
+$ git log --oneline
+
+65870f9 fix a copy-paste error
+47a007d completed the haiku
+a3278e3 another incomplete commit
+54fba21 startign to work on it (commit with a typo)
+3ff39a1 forgot to add a file
+7e1f903 starting working on the haiku
+c50a463 initial commit
+```
+
+Your task is to rebase the `haiku` branch on top
+of `master` and squash the several small "incomplete" commits into one single
+self-contained cherry-pickable commit.
+
+In other words instead of this history:
+
+![]({{ site.baseurl }}/img/branches/rebase-exercise-1.svg)
+
+we wish to arrive at this history:
+
+![]({{ site.baseurl }}/img/branches/rebase-exercise-3.svg)
+
+by first rebasing the commits:
+
+![]({{ site.baseurl }}/img/branches/rebase-exercise-2.svg)
+
+and later squashing them.
+
+Verify the steps and the result with `git status` and `git log`.
+Verify the history and also that the script still works after the operation.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Develop on feature branches
 
@@ -234,41 +285,6 @@ aa25177 feature B
 - Require your developers to follow it (code review)
 - Write-protect your main development line and release branch(es)
 - Use semantic versioning: http://semver.org
-
----
-
-## My feature branch is ready to merge to master
-
-- Merging a branch incorporates **all** commits of that branch
-- This means that `git log master` then also shows the `b1` to `b3` commits
-- But what if not all commits in the feature branch are presentable (for instance not compiling)
-- We can easily squash them to one commit using `reset --soft` command
-- `git reset --soft` only moves `HEAD` and branch pointer
-- Index and working directory remain without changes
-- So we can commit all the changes in one single commit
-
-![]({{ site.baseurl }}/img/branches/git-reset-soft-1.svg)
-
----
-
-## My feature branch is ready to merge to master
-
-```shell
-$ git checkout master
-$ git merge --no-ff feature
-$ git reset --soft HEAD~1     # we reset to commit one before the merge
-$ git commit                  # one single commit
-```
-
-![]({{ site.baseurl }}/img/branches/git-reset-soft-2.svg)
-
-- Discuss alternatives to achieve this
-
----
-
-Rebasing and squashing commits
-
-https://github.com/bast/git-rebase-squash-exercise
 
 ---
 
