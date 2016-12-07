@@ -274,12 +274,14 @@ Verify the history and also that the script still works after the operation.
 
 ## Alternative: separate branch for each major release
 
-- For release branches we recommend e.g. `release-2.x` or `stable-2.x`
+![]({{ site.baseurl }}/img/branches/tree-model.svg)
+
+- We recommend to name release branches e.g. `release-2.x` or `stable-2.x`
 - It is then crystal clear where the main development line is
 - Does not require to create new branches for patches of past versions
 - Good if you distribute code and support past versions
 - Patches need to be applied to the oldest supported release branch and cherry-picked or merged
-  "up" to the main line
+  "up" to the main line and all supported release branches
 
 ---
 
