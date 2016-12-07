@@ -228,6 +228,9 @@ changes and verify that you got the files created by other groups:
 $ python main.py
 ```
 
+Make sure that the contributions from other groups are not only on your local repository
+but really also end up in your fork.
+
 Here is a pictorial representation of this part:
 
 ![]({{ site.baseurl }}/img/distributed/forking-3.svg)
