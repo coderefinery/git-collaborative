@@ -265,6 +265,7 @@ knowledge about the offending commit will not help us but in reality mastering
 The script `get_pi.py` calculates pi using the 100 first terms of the
 Nilakantha series. It should produce 3.141592 but it does not. The script broke
 and produces 3.264592 using the last commit:
+
 ```
 $ python get_pi.py
 
