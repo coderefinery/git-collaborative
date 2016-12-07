@@ -62,6 +62,7 @@ Features:
 - For a public repository everybody has read access
 - Typically only very few people have write access
 - Typically nobody pushes directly to the central repo
+- Central repo and the forks typically reside in the "cloud"
 
 Advantages:
 
@@ -296,6 +297,7 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 ## Pro-tip
 
 - Different URLs for fetch and push
+- Makes sense if you are the only person pushing to the fork
 
 ```shell
 $ git remote add origin https://github.com/project/project.git
