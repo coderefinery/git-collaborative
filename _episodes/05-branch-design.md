@@ -282,6 +282,8 @@ Verify the history and also that the script still works after the operation.
 - Good if you distribute code and support past versions
 - Patches need to be applied to the oldest supported release branch and cherry-picked or merged
   "up" to the main line and all supported release branches
+- We never merge `master` to release branches
+- The `master` branch ideally only receives merges and no direct commits
 
 ---
 
