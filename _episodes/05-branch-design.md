@@ -258,7 +258,7 @@ Verify the history and also that the script still works after the operation.
 
 (c) Vincent Driessen, licensed under CC BY-SA.
 
-- [Link to original post](http://nvie.com/posts/a-successful-git-branching-model/).
+- [Link to original post](http://nvie.com/posts/a-successful-git-branching-model/)
 - Very popular
 - Two long-lived branches: `develop` and `master`
 - New features are developed on feature branches
