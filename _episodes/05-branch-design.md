@@ -14,11 +14,11 @@ keypoints:
   - "Another important key point."
   - "One more key point."
 ---
-
+<!--
 name: inverse
 layout: true
 class: center, middle, inverse
-
+-->
 ---
 
 ## Branch naming
