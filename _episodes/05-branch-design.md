@@ -14,11 +14,11 @@ keypoints:
   - "Another important key point."
   - "One more key point."
 ---
-
+<!--
 name: inverse
 layout: true
 class: center, middle, inverse
-
+-->
 ---
 
 ## Branch naming
@@ -294,7 +294,6 @@ $ git push origin --tags              # push all tags
 - One branch for one task only
 - Resolve conflicts early
 - If the branch affects code that is likely to be modified by others, the branch should be short-lived and/or merge often to the main development line
-- If the branch affects code that is likely to be modified by others, the branch should merge the main development line often to stay up-to-date
 
 ---
 
