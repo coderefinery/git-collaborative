@@ -111,46 +111,63 @@ Who edited the source file for `git grep` and when and why?
 
 ## Finding removed code
 
-- I remember there used to be a line containing the word "break"
-- Now it is gone
-- We can figure out when it disappeared
+I remember there used to be a line containing the word "great idea".
+Now it is gone:
 
 ```shell
-$ git log -c -S'break'
+$ git grep 'great idea'
 
-commit 41997dffb4c5dd47c81adb1fd1b616e72415e6e5
+[no output]
+```
+
+Sometimes also the log does not help because the commit messages are not helpful:
+
+```shell
+$ git log --oneline
+
+2bc6228 even more ideas
+bad55db more ideas
+81191b5 this is not a useful commit message
+baae463 initial layout
+```
+
+We can figure out when it disappeared:
+
+```shell
+$ git log -S 'great idea'
+
+commit 81191b5407687745e7f36b8ae4d78b7ea2377ff0
 Author: Radovan Bast <bast@users.noreply.github.com>
-Date:   Sun Nov 23 22:44:31 2014 +0100
+Date:   Tue Dec 13 22:27:06 2016 +0200
 
-    remove line
+    this is not a useful commit message
 
-commit bf39f9d3f2b2867e1c66d58d3c4a32842c7f80d5
+commit baae463ee30ff07a2e346852817cbd2038bd05df
 Author: Radovan Bast <bast@users.noreply.github.com>
-Date:   Sat Nov 22 15:33:37 2014 +0100
+Date:   Tue Dec 13 22:26:48 2016 +0200
 
-    break loop a if triple found
+    initial layout
 ```
 
 Now let us have a look at that commit:
 
 ```shell
-$ git show 41997df
+$ git show 81191b5
 
-commit 41997dffb4c5dd47c81adb1fd1b616e72415e6e5
+commit 81191b5407687745e7f36b8ae4d78b7ea2377ff0
 Author: Radovan Bast <bast@users.noreply.github.com>
-Date:   Sun Nov 23 22:44:31 2014 +0100
+Date:   Tue Dec 13 22:27:06 2016 +0200
 
-    remove line
+    this is not a useful commit message
 
-diff --git a/triangle.py b/triangle.py
-index c693105..fa35eab 100644
---- a/triangle.py
-+++ b/triangle.py
-@@ -13,4 +13,3 @@ for c in xrange(1, m+1):
-             ap = a*a
-             if ap + bp == cp:
-                 print("(%i, %i, %i)" % (a, b, c))
--                break # no need to continue loop a
+diff --git a/ideas.txt b/ideas.txt
+index a09af89..a657b2b 100644
+--- a/ideas.txt
++++ b/ideas.txt
+@@ -1,3 +1,2 @@
+-great idea
+ bad idea
+ mediocre idea
 ```
 
 Indeed!
@@ -160,7 +177,7 @@ Indeed!
 ## Finding a developer to talk to (large projects)
 
 - Example: you want to know who implemented a specific keyword/functionality
-- `git grep` for the keyword
+- `git grep` for the keyword or screen message
 - Then with `git blame` find the person who introduced it
 - With `git show` check the commit that introduced the change (it could be a file rename done by someone else)
 - In the latter case check out a version prior to the move and `git grep` and `git blame` there
@@ -169,14 +186,14 @@ Indeed!
 
 ## Going back in time
 
-- We do not have to branch from the tip of the branch (HEAD)
-- We can branch from arbitrary (earlier) hash
+We do not have to branch from the tip of the branch (HEAD).
+We can branch from arbitrary (earlier) hash:
 
 ```shell
 $ git checkout -b <name> <hash>
 ```
 
-- This is the recommended mechanism to inspect old code (hash abc123):
+This is the recommended mechanism to inspect old code (hash abc123):
 
 ```shell
 $ git checkout -b museum abc123  # create branch called "museum" from hash abc123
@@ -186,15 +203,14 @@ $ git checkout master            # after you are done switch back to "master"
 $ git branch -d museum
 ```
 
-- Branches help us to keep the repository organized
+Branches help us to keep the repository organized.
 
 ---
 
 ## Finding commits not merged upstream
 
-- So you would like to know which commits from current branch have
-  not been merged to `<branch>`
-- No problem with `git cherry`
+So you would like to know which commits from current branch have not been
+merged to `<branch>`. No problem with `git cherry`:
 
 Here is an example:
 
@@ -218,11 +234,11 @@ These six commits are on `haiku` but are not on `master`.
 
 ## Finding out when something broke
 
-- Sometimes you realize that something broke
-- You know that it used to work
-- You do not know when it broke
-- First find out a commit in past when it worked
-- Then bisect your way until you find the commit that broke it
+- Sometimes you realize that something broke.
+- You know that it used to work.
+- You do not know when it broke.
+- First find out a commit in past when it worked.
+- Then bisect your way until you find the commit that broke it.
 
 ```shell
 $ git bisect start
@@ -241,14 +257,14 @@ $ git bisect bad
   # iterate until commit is found
 ```
 
-- This can even be automatized with `git bisect run <script>`
-- For this you write the script that returns zero/non-zero (success/failure)
+- This can even be automatized with `git bisect run <script>`.
+- For this you write the script that returns zero/non-zero (success/failure).
 
 ---
 
 ## Git bisect exercise
 
-- Clone or fork it from [here](https://github.com/bast/git-bisect-exercise)
+Clone or fork it from [here](https://github.com/bast/git-bisect-exercise).
 
 
 ### Motivation
