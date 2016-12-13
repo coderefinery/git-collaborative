@@ -39,16 +39,16 @@ The "central" is a role, not a technical difference.
 
 Features:
 
-- Typically all developers have both read and write permissions (double-headed arrows)
+- Typically all developers have both read and write permissions (double-headed arrows).
 
 Advantages:
 
-- More familiar for Subversion or CVS users
-- Easier: for each clone there is only one remote
+- More familiar for Subversion or CVS users.
+- Easier: for each clone there is only one remote.
 
 Disadvantages:
 
-- Maintainer needs to trust the developers to not break things
+- Maintainer needs to trust the developers to not break things.
 
 
 ### Forking layout
@@ -59,33 +59,31 @@ Again we call one repository the "central" repository.
 
 Features:
 
-- Typically all developers have only read access
-- For a public repository everybody has read access
-- Typically only very few people have write access
-- Typically nobody pushes directly to the central repo
-- Central repo and the forks typically reside in the "cloud"
+- Typically all developers have only read access.
+- For a public repository everybody has read access.
+- Typically only very few people have write access.
+- Typically nobody pushes directly to the central repo.
+- Central repo and the forks typically reside in the "cloud".
 
 Advantages:
 
-- Code is integrated via code review (during pull request)
-- Maintainer has full control over what goes in
-- Allows contributions from people you don't know yet (in practice not possible in centralized layout)
-- Allows to implement peer review in coding (code review)
-- Allows to couple code review with automated testing
+- Code is integrated via code review (during pull/merge request).
+- Maintainer has full control over what goes in.
+- Allows contributions from people you don't know yet (in practice not possible in centralized layout).
+- Allows to implement peer review in coding (code review).
+- Allows to couple code review with automated testing.
 
 Disadvantages:
 
-- Learning curve: we need to deal at least with two remotes (fork and central repo)
+- Learning curve: we need to deal at least with two remotes (fork and central repo).
 
 ---
 
 ## Working with multiple remotes
 
-- There is nothing special about the name `origin`
-- `origin` is just an alias
-- Working with multiple remotes is not scary as we will see
-- We can call these aliases as we like
-- We can add and remove remotes
+- There is nothing special about the name `origin`- `origin` is just an alias.
+- We can call these aliases as we like.
+- We can add and remove remotes.
 
 ```shell
 $ git remote add upstream https://github.com/project/project.git
@@ -94,8 +92,9 @@ $ git remote add group-repo https://example.com/exciting-project.git
 $ git remote rm group-repo
 ```
 
-- We synchronize remotes via the local clone
-- To see all remotes
+We synchronize remotes via the local clone.
+
+To see all remotes:
 
 ```shell
 $ git remote -v
@@ -110,8 +109,8 @@ We will run this exercise in groups and we number the groups
 
 Objectives:
 
-- Learn how to fork, modify the fork, and file a pull request towards forked repo
-- Learn how to update your fork with upstream changes
+- Learn how to fork, modify the fork, and file a pull request towards forked repo.
+- Learn how to update your fork with upstream changes.
 
 We will do this exercise on GitHub but also GitLab and Bitbucket allow similar
 workflows and everything that we will discuss is transferable.
@@ -132,9 +131,9 @@ This is how it looks after we fork:
 
 *fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
 
-- A fork is basically a (bare) clone
-- The upstream repo and the fork are in principle independent repositories
-- When forking we copy all commits, all branches
+- A fork is basically a (bare) clone.
+- The upstream repo and the fork are in principle independent repositories.
+- When forking we copy all commits, all branches.
 
 After we clone the fork we have three in principle independent repositories:
 
@@ -198,9 +197,6 @@ $ git push origin master
 
 Then file a pull request towards the repository where you forked from.
 
-Wait until we integrate all pull requests into the central repo
-together on the big screen.
-
 Here is a pictorial representation for parts C and D:
 
 ![]({{ site.baseurl }}/img/distributed/forking-2.svg)
@@ -214,6 +210,9 @@ Once the pull-request is accepted, the change is incorporated:
 *fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 *local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
+
+Wait here until we integrate all pull requests into the central repo
+together on the big screen.
 
 
 ### Part E: Update your fork
@@ -296,15 +295,14 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 
 ## Pro-tip
 
-- Different URLs for fetch and push
-- Makes sense if you are the only person pushing to the fork
+Use Different URLs for fetch and push. Makes sense if you are the only person pushing to the fork:
 
 ```shell
 $ git remote add origin https://github.com/project/project.git
 $ git remote set-url --push origin https://github.com/user/project.git
 ```
 
-- Now we always fetch from the central repo and push to forked repo
+Now we always fetch from the central repo and push to forked repo.
 
 ```shell
 $ git remote -v
