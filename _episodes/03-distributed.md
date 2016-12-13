@@ -208,8 +208,6 @@ A pull-request means: "please review my changes and if you agree, merge them wit
 
 Once the pull-request is accepted, the change is incorporated:
 
-**FIXME central repo typically contains a merge commit**
-
 *central*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
 *fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
@@ -238,8 +236,6 @@ Here is a pictorial representation of this part:
 We will discuss two solutions:
 
 #### Longer route
-
-**FIXME central repo typically contains a merge commit**
 
 - Upstream repo receives other changes (other merged pull-requests)
 - How do we get these changes to the forked repo?
@@ -315,14 +311,3 @@ $ git remote -v
 origin	https://github.com/project/project.git (fetch)
 origin	https://github.com/user/project.git (push)
 ```
-
----
-
-## FIXME Accommodate somewhere
-
-- Accessing projects (https or ssh)
-- README.md
-- Issues (tickets)
-- Fork/pull-request mechanism: like peer review
-- Autoclosing issues
-- Discussing with mentions
