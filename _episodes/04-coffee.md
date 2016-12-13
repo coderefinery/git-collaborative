@@ -6,5 +6,5 @@ break: 15
 
 ## Food for thought
 
-- Question one?
-- Question two?
+- What is the advantage of distributed version control?
+- What is the advantage of centralized version control?

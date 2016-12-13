@@ -6,5 +6,5 @@ break: 60
 
 ## Food for thought
 
-- Question one?
-- Question two?
+- What is the advantage of merging?
+- What is the advantage of rebasing?
