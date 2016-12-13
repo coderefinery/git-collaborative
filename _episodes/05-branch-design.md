@@ -9,16 +9,6 @@ questions:
 objectives:
   - "Learn how to name branches."
   - "Discuss typical branch layouts."
-keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
----
-
-name: inverse
-layout: true
-class: center, middle, inverse
-
 ---
 
 ## Branch naming

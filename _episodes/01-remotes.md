@@ -7,10 +7,7 @@ questions:
   - "How can we keep repositories in sync?"
   - "How can we share repositories with others?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
+  - "Understand the difference between local branch, origin/branch, and remote branch."
 keypoints:
   - "`git clone` copies everything and sets some pointers to remember where the clone came from."
   - "You communicate commits with `git fetch`/`git pull` and `git push`."
