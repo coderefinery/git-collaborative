@@ -7,6 +7,7 @@ questions:
   - "How can we collaborate with people who we might not know yet?"
   - "What is a fork?"
   - "What is a pull request or merge request?"
+  - "What is code review?"
   - "How do teams collaborate on GitHub or GitLab or Bitbucket?"
 objectives:
   - "Get a mental representation of what is happening on GitHub."
