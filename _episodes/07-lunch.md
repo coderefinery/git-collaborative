@@ -8,3 +8,4 @@ break: 60
 
 - What is the advantage of merging?
 - What is the advantage of rebasing?
+- How does rebasing affect testing?
