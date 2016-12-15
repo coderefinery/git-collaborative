@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: "Working with remotes"
-teaching: 15
-exercises: 15
+teaching: 30
+exercises: 0
 questions:
   - "How can we keep repositories in sync?"
   - "How can we share repositories with others?"
@@ -55,25 +55,11 @@ $ git init --bare  # creates a bare repository
 
 ## Cloning repositories
 
-- **FIXME replace these examples with GitHub examples**
-- We can clone repositories
-- We can clone on the same host
-
 ```shell
-host1$ cd /path/to/repo
-host1$ git init                                           # creates non-bare
-host1$ git clone /path/to/repo /path/to/clone             # creates non-bare
-host1$ git clone --bare /path/to/repo /path/to/clone-bare # creates bare
-```
-
-- Or you clone from another machine via ssh (or via other protocols)
-
-```shell
-host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
+$ git clone https://host.com/user/project.git project
 ```
 
 - A clone is a full-fledged repository
-- We can clone again and again
 - Think of `git clone` as a `scp -r` "plus"
 - We will see what the "plus" means
 - By cloning we clone all commits, all branches, entire history
@@ -102,17 +88,7 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone] # non-bare
 
 ## Cloning repositories
 
-- **FIXME replace these examples with GitHub examples**
-
-![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
-
-- Imagine there is a remote repository on host1
-- We are ready to clone the repository:
-
-```shell
-host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
-```
-- This is a representation of what just happened (top is remote, bottom is local):
+This is a representation of what happens when you clone:
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
 
@@ -120,27 +96,18 @@ host2$ git clone ssh://user@host1/path/to/repo [/path/to/clone]
 
 - We clone the entire history, all branches, all commits
 - `git clone` creates pointers `origin/master` and `origin/dev`
-- `origin` refers to where we cloned from
-- It is a shortcut for `ssh://user@host1/path/to/repo`
+- `origin` refers to where we cloned from - try `git remote -v`
+- It is a shortcut for the full URL
 - `origin/master` and `origin/dev` are read-only pointers
 - They only move during `git pull` or `git fetch` or `git push`
 - Only `git pull` or `git fetch` or `git push` require network
 - All other operations are local operations
 
-- **FIXME place git remote -v**
-
-```shell
-$ git remote -v
-
-origin  user@somehost:somerepo (fetch)
-origin  user@somehost:somerepo (push)
-```
-
 ---
 
 ## Fetching updates
 
-- Let us imagine that the remote repository receives a new commit:
+Let us imagine that the remote repository receives a new commit:
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
 
@@ -221,13 +188,29 @@ Only now the remote `master` as well as `origin/master` move:
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-07-local.svg)
 
 We commit `d8` (the color is to signal that we differ, we are still on
-`master`)and in the meantime remote receives commit `c8` from someone else
+`master`)
+and in the meantime remote receives commit `c8` from someone else
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
 
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-08-local.svg)
 
-What happens if we `git pull origin master`?
+What happens if we try to `git push origin master`?
+
+`git push` is rejected:
+
+```shell
+$ git push
+To https://github.com/user/repo.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/user/repo.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+```
+
+The natural reflex is now to `git pull` first but
+what happens if we `git pull origin master`?
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
 
@@ -260,59 +243,24 @@ Note how `d8` changed to `d8*`
 
 ---
 
-## Recap about pull merges
+## When is a good moment to pull?
 
-- **FIXME merge with above to avoid repetition**
+- Real example
+    - A developer committed big changes to local master
+    - But he did not pull or push for several weeks
+    - When he tried to push, he could not because origin/master was out of date
+    - When he tried to pull in order to update origin/master there were conflicts everywhere
+    - After this experience he hated Git
 
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-1.svg)
-
-- Branches are just pointers to commits
-- `master` and `origin/master` are two different branches
-- `HEAD` points to where we currently are
-
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-2.svg)
-
-- We do some work on the local `master` and create two commits
-- Time arrow goes from left to right (commit arrows point to their parents)
-- What happens if we try to `git push`?
-
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3a.svg)
-
-- In this case `origin/master` received no other commits
-- First we see a fast-forward merge (pointer `origin/master` simply moves)
-- This is followed by a successful push
-
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b.svg)
-
-- However, what if `origin/master` receives other commits in the meantime?
-- `git push` is rejected:
-
-```shell
-$ git push
-To https://github.com/user/repo.git
- ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/user/repo.git'
-To prevent you from losing history, non-fast-forward updates were rejected
-Merge the remote changes (e.g. 'git pull') before pushing again.  See the
-'Note about fast-forwards' section of 'git push --help' for details.
-```
-
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b-merge.svg)
-
-- We now have two options to integrate the commits on `origin/master`
-- First option: `git pull`
-- A `git pull` always consists of `git fetch` and `git merge`
-- In this case a fast-forward merge was not possible and a **merge commit is automatically created**
-
-![]({{ site.baseurl }}/img/distributed/git-pull-rebase-3b-rebase.svg)
-
-- Second option: `git pull --rebase`
-- This moves our local commits after the commits on `origin/master`
-- This operation creates **new** commits (marked asterisk)
-- The new commits are **rebased**
-- The source code after `git pull` and `git pull --rebase` is the **same**
-- The history is **different** (no merge commit for `git pull --rebase`)
-- It is possible to make `git pull --rebase` default with `git config`
+- Explanation
+    - Local master and remote master are two different branches
+    - Local feature branch and remote feature branch are two different branches
+    - `git pull` fetches and merges
+    - If you never pull then the branches may diverge
+    - `git pull` often to stay in sync with upstream development
+    - `git push` whenever you want other people to know about your changes
+    - If you never `git push` others will not see your changes
+    - Nontrivial changes should not be done on master
 
 ---
 
@@ -380,30 +328,6 @@ $ git push origin --delete cool-branch
 ```
 
 ---
-
-## When is a good moment to pull?
-
-- Real example
-    - A developer committed big changes to local master
-    - But he did not pull or push for several weeks
-    - When he tried to push, he could not because origin/master was out of date
-    - When he tried to pull in order to update origin/master there were conflicts everywhere
-    - After this experience he hated Git
-
-- Explanation
-    - Local master and remote master are two different branches
-    - Local feature branch and remote feature branch are two different branches
-    - `git pull` fetches and merges
-    - If you never pull then the branches may diverge
-    - `git pull` often to stay in sync with upstream development
-    - `git push` whenever you want other people to know about your changes
-    - If you never `git push` others will not see your changes
-    - Nontrivial changes should not be done on master
-
-
----
-
-- **FIXME need to move this to some good place**
 
 ## Fast-forward vs. non-fast-forward merges
 
