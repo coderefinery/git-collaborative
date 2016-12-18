@@ -286,9 +286,9 @@ Use [semantic versioning](http://semver.org).
 - One branch for one task only.
 - Resolve conflicts early.
 - If the branch affects code that is likely to be modified by others, the
-  branch should be short-lived and/or merge often to the main development line.
-- If the branch affects code that is likely to be modified by others, the
-  branch should merge the main development line often to stay up-to-date.
+  branch should:
+  - be short-lived and/or merge often to the main development line
+  - merge the main development line often to stay up-to-date
 
 ---
 
