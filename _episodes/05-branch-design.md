@@ -16,12 +16,12 @@ objectives:
 - Name your local branches such that you will recognize them 3 months later.
 - "test", "foo", "debug", "mybranch" are not good branch names.
 - Give descriptive names to remote branches.
-- For topic branches we recommend to name them "author/topic" (example `radovan/new-integrator`).
+- For topic branches we recommend to name them "author/topic" (example `joe/new-integrator`).
 - Then everybody knows who is to be contacted about this branch (e.g. stale branches).
 - Also you can easily find "your" branches:
 
 ```shell
-$ git branch -r | grep radovan
+$ git branch -r | grep joe
 ```
 
 - Name bugfix branches after the issue/ticket (e.g. `issue-137`).
@@ -213,7 +213,7 @@ Verify the history and also that the script still works after the operation.
 
 (c) Vincent Driessen, licensed under CC BY-SA.
 
-- [Link to original post](http://nvie.com/posts/a-successful-git-branching-model/)
+- [Link to original post](http://nvie.com/posts/a-successful-git-branching-model/).
 - Very popular.
 - Two long-lived branches: `develop` and `master`.
 - New features are developed on feature branches.
@@ -242,10 +242,19 @@ Verify the history and also that the script still works after the operation.
 
 ---
 
+## Alternative: separate branch for each minor release
+
+- [https://github.com/robertodr/branching-model-discussion](https://github.com/robertodr/branching-model-discussion)
+- API-preserving changes are submitted towards minor or major release branches
+- API-breaking changes are submitted towards `master`
+
+---
+
 ## Document and enforce your branch naming and strategies
 
 - Document recommended branch naming.
 - Document your branching layout/strategy.
+- Use meaningful version numbers: e.g. [semantic versioning](http://semver.org).
 - Require your developers to follow it (code review).
 - Write-protect your main development line and release branch(es).
 
@@ -266,11 +275,7 @@ $ git push origin v1.5                 # share tag to upstream (origin)
 $ git push origin --tags               # push all tags
 ```
 
----
-
-## Use meaningful version numbers
-
-Use [semantic versioning](http://semver.org).
+- Use annotated tags (then it is clear who created the tag).
 
 ---
 
@@ -335,9 +340,9 @@ OK I made a commit to the "wrong" branch and it is a public branch, what now?
 
 ---
 
-## Rewinding the master branch
+## Rewinding the local master branch
 
-You made few commits to the `master` branch.
+You made few commits to the local `master` branch.
 You then realize that it broke some tests but you have no time now to fix them.
 So you wish you had committed them to an experimental branch instead.
 
@@ -357,8 +362,8 @@ Now reset `master` back three commits:
 
 ```shell
 $ git checkout master
-$ git branch feature  # create feature branch but stay on master
-$ git reset --hard c2 # on master
+$ git branch feature   # create feature branch but stay on master
+$ git reset --hard c2  # on master
 ```
 
 ![]({{ site.baseurl }}/img/confict-resolution/git-split-branch-3.svg)
