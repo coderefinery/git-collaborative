@@ -26,7 +26,7 @@ keypoints:
 Git implements a distributed version control.
 Basically any repository topology that you can think of can be implemented.
 
-Two topologies are very frequent:
+Two topologies are very frequent: centralized and forking layout.
 
 
 ### Centralized layout
@@ -48,6 +48,7 @@ Advantages:
 
 Disadvantages:
 
+- No code review.
 - Maintainer needs to trust the developers to not break things.
 
 
@@ -59,9 +60,9 @@ Again we call one repository the "central" repository.
 
 Features:
 
-- Typically all developers have only read access.
+- Most developers have only read access.
 - For a public repository everybody has read access.
-- Typically only very few people have write access.
+- Only very few people (the maintainers) have write access.
 - Typically nobody pushes directly to the central repo.
 - Central repo and the forks typically reside in the "cloud".
 
@@ -81,7 +82,7 @@ Disadvantages:
 
 ## Working with multiple remotes
 
-- There is nothing special about the name `origin`- `origin` is just an alias.
+- There is nothing special about the name `origin`. The `origin` is just an alias.
 - We can call these aliases as we like.
 - We can add and remove remotes.
 
@@ -112,8 +113,9 @@ Objectives:
 - Learn how to fork, modify the fork, and file a pull request towards forked repo.
 - Learn how to update your fork with upstream changes.
 
-We will do this exercise on GitHub but also GitLab and Bitbucket allow similar
-workflows and everything that we will discuss is transferable.
+We will do this exercise on [GitHub](https://github.com) but also
+[GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
+similar workflows and basically everything that we will discuss is transferable.
 
 
 ### Part A: Fork and clone
