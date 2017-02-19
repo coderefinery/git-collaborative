@@ -149,6 +149,7 @@ After we clone the fork we have three in principle independent repositories:
 ### Part B: Modify and commit
 
 Then add a file `groupN.py` where N is your group number, e.g. `group17.py`.
+**Add only one file per group**. (Why?)
 
 This file should contain a function called `tweet()` which returns
 a string of maximum 140 characters, for instance:
@@ -161,7 +162,7 @@ def tweet():
 The file `main.py` automatically calls all `tweet()` functions defined in files
 `groupN.py` (1 <= N <= 50). You do not need to edit `main.py`.
 
-You can test it:
+Test it before you commit your change:
 
 ```shell
 $ python main.py
