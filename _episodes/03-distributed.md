@@ -19,6 +19,7 @@ keypoints:
   - "We can call these aliases as we like."
   - "We synchronize remotes via the local clone."
   - "To see all remotes use `git remote -v`."
+  - "If you are more than one person contributing to a project, implement code review."
 ---
 
 ## Distributed version control
