@@ -373,6 +373,14 @@ However this should not be done if the commits have already been shared with oth
 
 ---
 
+## How do we correct public commits?
+
+- **Not** with `git reset` because we do not want to change the history for commits that others depend on.
+- We use `git revert` which creates **new** commits that revert changes.
+- `git revert` does not modify past commits.
+
+---
+
 ## When is a good moment to merge?
 
 - Feature branch merges to `master` typically once (at the end of its lifetime).
