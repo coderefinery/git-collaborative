@@ -36,7 +36,7 @@ keypoints:
 $ git init  # creates a non-bare repository
 ```
 
-- A non-bare repository contains `.git` and "the normal files"
+- A non-bare repository contains `.git` as well as a snapshot of your tracked files that you can directly edit
 - We can checkout local branches
 - We can and do work inside non-bare repositories
 
@@ -62,7 +62,7 @@ $ git clone https://host.com/user/project.git project
 - A clone is a full-fledged repository
 - Think of `git clone` as a `scp -r` "plus"
 - We will see what the "plus" means
-- By cloning we clone all commits, all branches, entire history
+- By cloning we clone all commits, all branches and tags, **entire history**
 
 ---
 
@@ -70,7 +70,7 @@ $ git clone https://host.com/user/project.git project
 
 - We need a mechanism to communicate changes between the repositories
 - We will **pull** or **fetch** updates **from** remote repositories
-- There is a difference between pull and fetch and we will see what the difference is
+- There is a difference between pull and fetch and we will soon discuss what the difference is
 - We will **push** updates **to** remote repositories
 
 ---
@@ -94,10 +94,10 @@ This is a representation of what happens when you clone:
 
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
 
-- We clone the entire history, all branches, all commits
+- We clone the entire history, all branches, all commits (in this example two branches, four commits)
 - `git clone` creates pointers `origin/master` and `origin/dev`
-- `origin` refers to where we cloned from - try `git remote -v`
-- It is a shortcut for the full URL
+- `origin` refers to where we cloned from, try: `git remote -v`
+- `origin` is a shortcut for the full URL
 - `origin/master` and `origin/dev` are read-only pointers
 - They only move during `git pull` or `git fetch` or `git push`
 - Only `git pull` or `git fetch` or `git push` require network
@@ -127,7 +127,7 @@ $ git fetch origin
 
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-04-local.svg)
 
-In a second step we merge `origin/master` (in this case fast-forward):
+In a second step we merge `origin/master` (in this case fast-forward; further below we explain what fast-forward means):
 
 ```shell
 $ git merge origin/master
@@ -239,7 +239,7 @@ This will replay your unpublished local master commits at the end of `origin/mas
 
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-10-local.svg)
 
-Note how `d8` changed to `d8*`
+Note how `d8` changed to `d8*`.
 
 ---
 
