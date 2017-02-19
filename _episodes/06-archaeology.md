@@ -100,8 +100,8 @@ e6cfa2cf (Radovan Bast      2012-03-01 10:06:39 +0100) ! Fock matrix F = H1 + G
 761d5c27 (Radovan Bast      2012-05-18 16:28:34 +0200) F = H1 + G
 ```
 
-- "Who the %&!@!!! wrote this?!?"
-- In 90% of cases you yourself
+- "Who the %&!@!!! wrote this crap?!?"
+- "Oh, it was me. Nevermind :-)"
 
 Who edited the source file for `git grep` and when and why?
 
@@ -180,7 +180,7 @@ Indeed!
 - `git grep` for the keyword or screen message
 - Then with `git blame` find the person who introduced it
 - With `git show` check the commit that introduced the change (it could be a file rename done by someone else)
-- In the latter case check out a version prior to the move and `git grep` and `git blame` there
+- In the latter case check out a version prior to the move or rename and `git grep` and `git blame` there
 
 ---
 
@@ -198,7 +198,8 @@ This is the recommended mechanism to inspect old code (hash abc123):
 ```shell
 $ git checkout -b museum abc123  # create branch called "museum" from hash abc123
   # do some archaeology ...
-  # "what was I thinking back then!?"
+  # "What was I thinking back then!?"
+  # "Aha!"
 $ git checkout master            # after you are done switch back to "master"
 $ git branch -d museum
 ```
@@ -229,6 +230,8 @@ $ git cherry master
 ```
 
 These six commits are on `haiku` but are not on `master`.
+
+Sometimes branches received different commits, then you will see hashes with "+" and "-" in front of them.
 
 ---
 
