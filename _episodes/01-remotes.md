@@ -36,7 +36,7 @@ keypoints:
 $ git init  # creates a non-bare repository
 ```
 
-- A non-bare repository contains `.git` as well as a snapshot of your tracked files that you can directly edit
+- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**
 - We can checkout local branches
 - We can and do work inside non-bare repositories
 
@@ -49,6 +49,9 @@ $ git init --bare  # creates a bare repository
 ```
 
 - A bare repository contains only the `.git` part
+- By convention the names of bare repositories end with `.git.` to emphasize
+  this
+  - e.g. myrepo.git
 - We never do actual work inside a bare repository
 
 ---
@@ -261,6 +264,12 @@ Note how `d8` changed to `d8*`.
     - `git push` whenever you want other people to know about your changes
     - If you never `git push` others will not see your changes
     - Nontrivial changes should not be done on master
+
+---
+
+## When is a good moment to fetch?
+
+- Whenever, you can always decide whether or not to merge
 
 ---
 

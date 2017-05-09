@@ -24,6 +24,9 @@ keypoints:
 
 ## Distributed version control
 
+![The GitHub Octocat]({{ site.baseurl }}/img/distributed/github_octocat.jpeg)
+
+
 Git implements a distributed version control.
 Basically any repository topology that you can think of can be implemented.
 
@@ -41,15 +44,20 @@ The "central" is a role, not a technical difference.
 Features:
 
 - Typically all developers have both read and write permissions (double-headed arrows).
+- Suited for cases where all developers should have the same rights, are in
+  the same organization etc.
 
 Advantages:
 
 - More familiar for Subversion or CVS users.
 - Easier: for each clone there is only one remote.
+- Gives more freedom to the individual developer
 
 Disadvantages:
 
-- No code review.
+- Gives more freedom to the individual developer
+- No code review enforced by the model
+  - Can be done with other arrangements, GitHub, GitLab support this
 - Maintainer needs to trust the developers to not break things.
 
 
@@ -61,7 +69,7 @@ Again we call one repository the "central" repository.
 
 Features:
 
-- Most developers have only read access.
+- Most developers have only read access to the main project.
 - For a public repository everybody has read access.
 - Only very few people (the maintainers) have write access.
 - Typically nobody pushes directly to the central repo.
@@ -72,12 +80,13 @@ Advantages:
 - Code is integrated via code review (during pull/merge request).
 - Maintainer has full control over what goes in.
 - Allows contributions from people you don't know yet (in practice not possible in centralized layout).
-- Allows to implement peer review in coding (code review).
-- Allows to couple code review with automated testing.
+- Structurally helps to implement peer review in coding (code review).
+- It is simple to couple code review with automated testing.
 
 Disadvantages:
 
 - Learning curve: we need to deal at least with two remotes (fork and central repo).
+- Efficiency: each developer needs to have their own repository.
 
 ---
 
@@ -99,7 +108,7 @@ We synchronize remotes via the local clone.
 To see all remotes:
 
 ```shell
-$ git remote -v
+$ git remote --verbose
 ```
 
 ---
@@ -314,3 +323,11 @@ $ git remote -v
 origin	https://github.com/project/project.git (fetch)
 origin	https://github.com/user/project.git (push)
 ```
+
+## Discussion point: naming
+
+In GitHub or BitBucket asking someone to bring code from a forked repo or
+branch to the main repo is called a **pull request**. In GitLab it is called a
+**merge request**. Which one do you feel is more appropriate and in which
+context.
+

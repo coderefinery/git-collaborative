@@ -28,3 +28,8 @@ choose to host your Git repository on another platform.
 1. Basic understanding of Git.
 
 2. You need a [GitHub](https://github.com) account.
+
+## Notes to teacher
+
+"Interrupted work" and "Aliases" are not a part of the main narrative and can
+be skipped if time is tight.
