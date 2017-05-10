@@ -59,6 +59,7 @@ Disadvantages:
 - No code review enforced by the model
   - Can be done with other arrangements, GitHub, GitLab support this
 - Maintainer needs to trust the developers to not break things.
+- Everybody who wants to contribute needs write access.
 
 
 ### Forking layout
