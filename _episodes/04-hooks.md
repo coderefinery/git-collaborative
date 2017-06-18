@@ -1,12 +1,12 @@
 ---
 layout: episode
-title: "Hooks"
+title: Hooks
 teaching: 5
 exercises: 0
 questions:
-  - "How can we automate tasks depending on events in the Git repository?"
+  - How can we automate tasks depending on events in the Git repository?
 objectives:
-  - "Learn how to couple scripts to Git repository events."
+  - Learn how to couple scripts to Git repository events.
 ---
 
 ## Hooks
