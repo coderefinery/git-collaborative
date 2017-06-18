@@ -337,36 +337,3 @@ We can also delete remote branches:
 ```shell
 $ git push origin --delete cool-branch
 ```
-
----
-
-## Fast-forward vs. non-fast-forward merges
-
-It is useful to understand the difference between fast-forward vs. non-fast-forward merges.
-
-To clarify what is meant by "fast-forward" imagine that you are on `master` and want to merge `devel`:
-
-![]({{ site.baseurl }}/img/branches/pre-ff.svg)
-
-What will happen if we `git merge devel`?
-
-If you now type `git merge devel`, Git will recognize that it can simply move
-the `master` pointer to `b3` without creating a merge commit
-
-This is a fast-forward merge:
-
-![]({{ site.baseurl }}/img/branches/ff.svg)
-
-The default in Git is to fast-forward merge when possible.
-
-If you do not like this you can tell Git to merge with no fast-forward:
-
-```shell
-$ git merge --no-ff devel
-```
-
-Both is fine, the resulting code is the same, not the history:
-
-![]({{ site.baseurl }}/img/branches/no-ff.svg)
-
-It is a matter of taste or convention.
