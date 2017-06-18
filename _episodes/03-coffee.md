@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Morning Coffee"
+title: Morning Coffee
 break: 20
 ---
 
