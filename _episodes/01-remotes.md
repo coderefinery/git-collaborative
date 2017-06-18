@@ -1,17 +1,17 @@
 ---
 layout: episode
-title: "Working with remotes"
+title: Working with remotes
 teaching: 30
 exercises: 0
 questions:
-  - "How can we keep repositories in sync?"
-  - "How can we share repositories with others?"
+  - How can we keep repositories in sync?
+  - How can we share repositories with others?
 objectives:
-  - "Understand the difference between local branch, origin/branch, and remote branch."
+  - Understand the difference between local branch, origin/branch, and remote branch.
 keypoints:
   - "`git clone` copies everything and sets some pointers to remember where the clone came from."
-  - "You communicate commits with `git fetch`/`git pull` and `git push`."
-  - "All other Git operations are offline: you can work on a plane while your coworker is on vacation in North Korea."
+  - You communicate commits with `git fetch`/`git pull` and `git push`.
+  - All other Git operations are offline - you can work on a plane while your coworker is on vacation in North Korea.
   - "`origin` refers to where you cloned from (but you can relocate it)."
   - "`origin/foo` is a read-only pointer to branch `foo` on origin."
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
@@ -20,9 +20,9 @@ keypoints:
 ## From local repositories to remote repositories
 
 - In contrast to other version control tools we do not contribute to a repository
-  through a lightweight working copy
-- In Git we often work within a clone
-- Contributing to a repository often starts by cloning the entire repository
+  through a lightweight working copy.
+- In Git we often work within a clone.
+- Contributing to a repository often starts by cloning the entire repository.
 
 ---
 
@@ -30,7 +30,7 @@ keypoints:
 
 ### Work: Non-bare repository
 
-- Until now we have met only non-bare repositories
+Until now we have met only non-bare repositories:
 
 ```shell
 $ git init  # creates a non-bare repository
@@ -40,9 +40,10 @@ $ git init  # creates a non-bare repository
 - We can checkout local branches
 - We can and do work inside non-bare repositories
 
+
 ### Archive: Bare repository
 
-- We can create a bare repository
+We can create a bare repository:
 
 ```shell
 $ git init --bare  # creates a bare repository
@@ -62,30 +63,30 @@ $ git init --bare  # creates a bare repository
 $ git clone https://host.com/user/project.git project
 ```
 
-- A clone is a full-fledged repository
-- Think of `git clone` as a `scp -r` "plus"
-- We will see what the "plus" means
-- By cloning we clone all commits, all branches and tags, **entire history**
+- A clone is a full-fledged repository.
+- Think of `git clone` as a `scp -r` "plus".
+- We will see what the "plus" means.
+- By cloning we clone all commits, all branches and tags, **entire history**.
 
 ---
 
 ## When push comes to pull
 
-- We need a mechanism to communicate changes between the repositories
-- We will **pull** or **fetch** updates **from** remote repositories
-- There is a difference between pull and fetch and we will soon discuss what the difference is
-- We will **push** updates **to** remote repositories
+- We need a mechanism to communicate changes between the repositories.
+- We will **pull** or **fetch** updates **from** remote repositories.
+- There is a difference between pull and fetch and we will soon discuss what the difference is.
+- We will **push** updates **to** remote repositories.
 
 ---
 
 ## Working with others
 
-- We collaborate with other people through clones by pulling/fetching and pushing changes
-- Everybody typically works on own clones
-- Sometimes one person works on several clones (typically on different machines)
-- We will only push to bare repositories
+- We collaborate with other people through clones by pulling/fetching and pushing changes.
+- Everybody typically works on own clones.
+- Sometimes one person works on several clones (typically on different machines).
+- We will only push to bare repositories.
 - Think of Dropbox as a clone which automatically pulls/pushes from/to a bare clone sitting somewhere on
-  Dropbox servers
+  Dropbox servers.
 
 ---
 
@@ -97,14 +98,14 @@ This is a representation of what happens when you clone:
 
 *local*: ![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
 
-- We clone the entire history, all branches, all commits (in this example two branches, four commits)
-- `git clone` creates pointers `origin/master` and `origin/dev`
-- `origin` refers to where we cloned from, try: `git remote -v`
-- `origin` is a shortcut for the full URL
-- `origin/master` and `origin/dev` are read-only pointers
-- They only move during `git pull` or `git fetch` or `git push`
-- Only `git pull` or `git fetch` or `git push` require network
-- All other operations are local operations
+- We clone the entire history, all branches, all commits (in this example two branches, four commits).
+- `git clone` creates pointers `origin/master` and `origin/dev`.
+- `origin` refers to where we cloned from, try: `git remote -v`.
+- `origin` is a shortcut for the full URL.
+- `origin/master` and `origin/dev` are read-only pointers.
+- They only move during `git pull` or `git fetch` or `git push`.
+- Only `git pull` or `git fetch` or `git push` require network.
+- All other operations are local operations.
 
 ---
 
@@ -160,19 +161,20 @@ This is equivalent to:
 $ git pull origin master
 ```
 
-- `git pull` consists of two operations: a `git fetch` followed by a `git merge`
-- Summary: `git pull origin master` fetches `master` from `origin` and merges it
-- There is always a `git merge` "hidden" in `git pull`
-- Many people will simply `git pull`, very careful people first `git fetch` and inspect the commits before merging them
-- With Git you typically merge several times a day without even noticing
+- `git pull` consists of two operations: a `git fetch` followed by a `git merge`.
+- Summary: `git pull origin master` fetches `master` from `origin` and merges it.
+- There is always a `git merge` "hidden" in `git pull`.
+- Many people will simply `git pull`, very careful people first `git fetch` and inspect the commits before merging them.
+- With Git you typically merge several times a day without even noticing.
 
 ---
 
 ## Publishing local commits
 
-- We can commit locally
-- These commits are not visible to others until we `git push`
-- Observe that `master`, `origin/master`, and `master` on remote repository are 3 different pointers:
+We can commit locally and
+these commits are not visible to others until we `git push`.
+
+Observe that `master`, `origin/master`, and `master` on remote repository are 3 different pointers:
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
 
@@ -192,7 +194,7 @@ Only now the remote `master` as well as `origin/master` move:
 
 We commit `d8` (the color is to signal that we differ, we are still on
 `master`)
-and in the meantime remote receives commit `c8` from someone else
+and in the meantime remote receives commit `c8` from someone else:
 
 *remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
 
@@ -226,9 +228,9 @@ $ git pull origin master
 Explanation:
 
 - First we fetched (`origin/master` moved),
-  then we merged `origin/master` to `master` (`master` moved)
-- Local master and remote master are two different branches
-- If they diverge, Git will merge them during `git pull`
+  then we merged `origin/master` to `master` (`master` moved).
+- Local master and remote master are two different branches.
+- If they diverge, Git will merge them during `git pull`.
 
 You can avoid the merge commits using `--rebase`:
 
@@ -269,7 +271,7 @@ Note how `d8` changed to `d8*`.
 
 ## When is a good moment to fetch?
 
-- Whenever, you can always decide whether or not to merge
+Whenever, you can always decide whether or not to merge.
 
 ---
 
@@ -325,9 +327,9 @@ With the result:
 What if you have created a local branch and want to make it public? Push it upstream:
 
 ```shell
-$ git checkout -b cool-branch    # create and switch to cool-branch
-$ git commit                     # work and commit
-$ git push -u origin cool-branch # push to origin and set as upstream
+$ git checkout -b cool-branch     # create and switch to cool-branch
+$ git commit                      # work and commit
+$ git push -u origin cool-branch  # push to origin and set as upstream
 ```
 
 We can also delete remote branches:
