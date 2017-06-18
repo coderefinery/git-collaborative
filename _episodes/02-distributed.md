@@ -354,3 +354,24 @@ context.
 
 - Can you implement code review without forking?
 - What would be the advantages or disadvantages?
+
+---
+
+## Exercise 2: collaborative work and communication
+
+### Objectives
+
+- Promote atomic minimal pull requests against `master`.
+- Promote communication with other contributors while working and while orchestrating merging.
+- Create understanding of what leads to hairy merge situations.
+
+### Rules
+
+- Form groups of 3-4 people.
+- The most Git-experienced person creates a simple repository (can be a cooking recipe but feel free to improvise).
+- The others in your group fork this repository and work on features and submit pull requests.
+- Always submit pull requests from feature branches towards `master` (not `master` towards `master`).
+- Talk about what you will do to avoid conflicts.
+- Exercise updating forks with changes from your colleagues.
+- Finally, after the "clean" way has been done, try doing any of a
+  number of things that will cause merge conflicts and try to resolve them.
