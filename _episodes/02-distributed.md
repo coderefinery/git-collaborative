@@ -325,6 +325,14 @@ origin	https://github.com/user/project.git (push)
 
 ---
 
+## Luke Skywalker: *You know, I did feel something. I could almost see the remote.*
+
+## Ben Kenobi: *That's good. You've taken your first step into a larger world.*
+
+(from Star Wars Episode IV - A New Hope)
+
+---
+
 ## Discussion point: naming
 
 In GitHub or BitBucket asking someone to bring code from a forked repo or
