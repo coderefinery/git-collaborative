@@ -17,7 +17,6 @@ keypoints:
 - You are in the middle of a Jackson-Pollock-style debugging spree with 27 modified files
   and debugging prints everywhere.
 - What to do?
-- What to do with uncommitted code?
 
 ---
 
