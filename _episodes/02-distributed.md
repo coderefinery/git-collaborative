@@ -1,25 +1,25 @@
 ---
 layout: episode
-title: "Distributed version control"
+title: Distributed version control
 teaching: 20
 exercises: 40
 questions:
-  - "How can we collaborate with people who we might not know yet?"
-  - "What is a fork?"
-  - "What is a pull request or merge request?"
-  - "What is code review?"
-  - "How do teams collaborate on GitHub or GitLab or Bitbucket?"
+  - How can we collaborate with people who we might not know yet?
+  - What is a fork?
+  - What is a pull request or merge request?
+  - What is code review?
+  - How do teams collaborate on GitHub or GitLab or Bitbucket?
 objectives:
-  - "Get a mental representation of what is happening on GitHub."
-  - "Get comfortable with the forking workflow."
+  - Get a mental representation of what is happening on GitHub.
+  - Get comfortable with the forking workflow.
 keypoints:
-  - "Working with multiple remotes is not as scary as it looks."
+  - Working with multiple remotes is not as scary as it looks.
   - "`origin` is just an alias."
-  - "We can add and remove remotes."
-  - "We can call these aliases as we like."
-  - "We synchronize remotes via the local clone."
+  - We can add and remove remotes.
+  - We can call these aliases as we like.
+  - We synchronize remotes via the local clone.
   - "To see all remotes use `git remote -v`."
-  - "If you are more than one person contributing to a project, implement code review."
+  - If you are more than one person contributing to a project, implement code review.
 ---
 
 ## Distributed version control
@@ -51,13 +51,11 @@ Advantages:
 
 - More familiar for Subversion or CVS users.
 - Easier: for each clone there is only one remote.
-- Gives more freedom to the individual developer
+- Gives more freedom to the individual developer.
 
 Disadvantages:
 
 - Gives more freedom to the individual developer
-- No code review enforced by the model
-  - Can be done with other arrangements, GitHub, GitLab support this
 - Maintainer needs to trust the developers to not break things.
 - Everybody who wants to contribute needs write access.
 
@@ -114,7 +112,7 @@ $ git remote --verbose
 
 ---
 
-## Exercise to practice collaborative forking workflow
+## Exercise 1: practice collaborative forking workflow
 
 We will run this exercise in groups and we number the groups
 1, 2, ..., etc.
@@ -160,10 +158,10 @@ After we clone the fork we have three in principle independent repositories:
 ### Part B: Modify and commit
 
 Then add a file `groupN.py` where N is your group number, e.g. `group17.py`.
-**Add only one file per group**. (Why?)
+**Add only one file per group**. (Why? - if you are adventurous, add both a file with the same name to see what happens)
 
 This file should contain a function called `tweet()` which returns
-a string of maximum 140 characters, for instance:
+a string of maximum 140 characters, for instance (don't worry, nothing gets out to Twitter):
 
 ```python
 def tweet():
@@ -325,6 +323,8 @@ origin	https://github.com/project/project.git (fetch)
 origin	https://github.com/user/project.git (push)
 ```
 
+---
+
 ## Discussion point: naming
 
 In GitHub or BitBucket asking someone to bring code from a forked repo or
@@ -332,3 +332,9 @@ branch to the main repo is called a **pull request**. In GitLab it is called a
 **merge request**. Which one do you feel is more appropriate and in which
 context.
 
+---
+
+## Questions
+
+- Can you implement code review without forking?
+- What would be the advantages or disadvantages?
