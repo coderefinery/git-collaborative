@@ -346,7 +346,7 @@ origin	https://github.com/user/project.git (push)
 In GitHub or BitBucket asking someone to bring code from a forked repo or
 branch to the main repo is called a **pull request**. In GitLab it is called a
 **merge request**. Which one do you feel is more appropriate and in which
-context.
+context?
 
 ---
 
@@ -356,6 +356,16 @@ context.
 - What would be the advantages or disadvantages?
 
 ---
+
+## Protected branches
+
+A common alternative to the forking workflow for a group of collaborators 
+is to use a protected (master) branch:
+
+- Only designated "code owners" have write access to the protected branch.
+- Other collaborators contribute code changes via pull requests from other branches.
+- Pull requests need to be reviewed and approved by a code owner.
+- How is this different from the "centralized layout" depicted above?
 
 ## Exercise 2: collaborative work and communication
 
