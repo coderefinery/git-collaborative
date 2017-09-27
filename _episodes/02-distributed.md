@@ -360,12 +360,14 @@ context?
 ## Protected branches
 
 A common alternative to the forking workflow for a group of collaborators 
-is to use a protected (master) branch:
+is to use a protected (`master`) branch:
 
 - Only designated "code owners" have write access to the protected branch.
 - Other collaborators contribute code changes via pull requests from other branches.
 - Pull requests need to be reviewed and approved by a code owner.
 - How is this different from the "centralized layout" depicted above?
+
+---
 
 ## Exercise 2: collaborative work and communication
 
