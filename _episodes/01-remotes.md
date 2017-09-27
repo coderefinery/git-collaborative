@@ -50,10 +50,11 @@ $ git init --bare  # creates a bare repository
 ```
 
 - A bare repository contains only the `.git` part
-- By convention the names of bare repositories end with `.git.` to emphasize
+- By convention the names of bare repositories end with `.git` to emphasize
   this
   - e.g. myrepo.git
 - We never do actual work inside a bare repository
+- What are bare repositories then used for?
 
 ---
 
