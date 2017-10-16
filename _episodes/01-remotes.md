@@ -68,7 +68,7 @@ $ git clone https://host.com/user/project.git project
 - Think of `git clone` as a `scp -r` "plus".
 - We will see what the "plus" means.
 - By cloning we clone all commits, all branches and tags, **entire history**.
-- Exercise: Try cloning ![this repository](https://github.com/coderefinery/guacamole) 
+- Exercise: Try cloning [this repository](https://github.com/coderefinery/guacamole) 
 and inspect its history.
 
 ---
