@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: Working with remotes
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
   - How can we keep repositories in sync?
   - How can we share repositories with others?
@@ -338,3 +338,33 @@ We can also delete remote branches:
 ```shell
 $ git push origin --delete cool-branch
 ```
+
+## Exercise: practice working with remote repository
+
+Objectives:
+
+- Practice cloning, pulling and pushing
+- Get used to working with remotes
+
+This exercise involves setting up a (bare) remote repository on your local machine. In the 
+next episode, we look at more realistic scenarios involving remote repositories on GitHub.
+All Git commands needed for this exercise have been covered in this lesson.
+
+1. First clone an example repository for a guacamole recipe [from here](https://github.com/coderefinery/guacamole).
+2. After cloning, inspect the full URL behind the alias `origin` (if you don't know how to, try to find the answer with `git help remote`).
+3. Now create a new directory on your laptop in which to create a bare repository, for example `/somepath/guacamole.git`.
+4. Go to that directory, and create a bare repository.
+5. Now push the cloned directory from step 1 to the bare repository you created, using the command 
+`git push file:///home/user/guacamole.git master` (notice how we can use an explicit path instead of a 
+shortcut like `origin`). 
+6. Try cloning the new "remote" repository that you just created to a new location: 
+`git clone file:///home/user/guacamole.git`. Inspect the remote repository using `git remote -v`.
+
+### EXTRA: 
+
+If you have time and want to practice resolving conflicts you can experiment with the following steps:
+7. Make a commit in the repository cloned in step 1 above, and push it to your "remote" repository (`somepath/guacamole.git`). Note that you have to specify the path you want to push to explicitly.
+8. Do another commit in your second cloned repository from step 6 above. Try pushing it. 
+Your push will be rejected since the remote repository has commits that you haven't pulled yet.
+9. Do a `git pull` instead. If you get merge conflicts, try to resolve them, commit again and push. 
+Notice how you get a merge commit in your history.
