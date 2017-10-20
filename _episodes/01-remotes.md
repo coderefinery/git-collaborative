@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: Working with remotes
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
   - How can we keep repositories in sync?
   - How can we share repositories with others?
@@ -23,38 +23,6 @@ keypoints:
   through a lightweight working copy.
 - In Git we often work within a clone.
 - Contributing to a repository often starts by cloning the entire repository.
-
----
-
-## Non-bare and bare repositories
-
-### Work: Non-bare repository
-
-Until now we have met only non-bare repositories:
-
-```shell
-$ git init  # creates a non-bare repository
-```
-
-- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**
-- We can checkout local branches
-- We can and do work inside non-bare repositories
-
-
-### Archive: Bare repository
-
-We can create a bare repository:
-
-```shell
-$ git init --bare  # creates a bare repository
-```
-
-- A bare repository contains only the `.git` part
-- By convention the names of bare repositories end with `.git` to emphasize
-  this
-  - e.g. myrepo.git
-- We never do actual work inside a bare repository
-- What are bare repositories then used for?
 
 ---
 
@@ -85,9 +53,6 @@ $ git clone https://host.com/user/project.git project
 - We collaborate with other people through clones by pulling/fetching and pushing changes.
 - Everybody typically works on own clones.
 - Sometimes one person works on several clones (typically on different machines).
-- We will only push to bare repositories.
-- Think of Dropbox as a clone which automatically pulls/pushes from/to a bare clone sitting somewhere on
-  Dropbox servers.
 
 ---
 
@@ -330,3 +295,56 @@ We can also delete remote branches:
 ```shell
 $ git push origin --delete cool-branch
 ```
+
+---
+
+## Two types of repositories
+
+### Non-bare repository
+
+- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**.
+- This is where we work.
+
+### Bare repository
+
+- A bare repository contains only the `.git` part.
+- By convention the names of bare repositories end with `.git` to emphasize this.
+- We only push to bare repositories.
+- We never do actual work inside a bare repository.
+
+---
+
+## Exercise: practice working with remote repository
+
+Objectives:
+
+- Practice cloning, pulling and pushing
+- Get used to working with remotes
+
+This exercise involves setting up a remote repository on your local machine. In the 
+next episode, we look at more realistic scenarios involving remote repositories on GitHub.
+
+1. Set up a "remote" repository for a [guacamole recipe](https://github.com/coderefinery/guacamole) on your local machine:
+   - Clone a *mirror* using the `git clone --mirror` command.
+   - This creates a fully-fledged "remote" repository on your machine.
+   - Note the `.git` part of the directory name. This is how bare repositories are usually named.
+   - Inspect the contents of the `guacamole.git` directory. Is it possible to work there?
+2. After mirror cloning, try to clone in the normal way with `git clone /your/local/path/guacamole.git`.
+   - Enter the (normally) cloned repository, and inspect the remotes using the `git remote -v` command.
+3. Make a commit in your cloned repository, and push it to your (local) remote.
+
+![]({{ site.baseurl }}/img/distributed/mirroring-1.svg)
+
+### EXTRA: 
+
+If you have time and want to practice resolving conflicts you can experiment with the following steps:
+7. Clone your remote (`/your/local/path/guacamole.git`) to another location on your machine.
+8. Make a commit in this clone, and push it.
+9. Go back to your first clone, make a different commit, and try pushing. Your push will be rejected since the remote repository has commits that you haven't pulled yet.
+10. Do a `git pull` instead. If you get merge conflicts, try to resolve them, commit again and push. 
+Notice how you get a merge commit in your history.
+
+![]({{ site.baseurl }}/img/distributed/mirroring-2.svg)
+
+---
+
