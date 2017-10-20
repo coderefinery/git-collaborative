@@ -251,22 +251,14 @@ Note how `d8` changed to `d8*`.
 
 ## When is a good moment to pull?
 
-- Real example
-    - A developer committed big changes to local master
-    - But he did not pull or push for several weeks
-    - When he tried to push, he could not because origin/master was out of date
-    - When he tried to pull in order to update origin/master there were conflicts everywhere
-    - After this experience he hated Git
-
-- Explanation
-    - Local master and remote master are two different branches
-    - Local feature branch and remote feature branch are two different branches
-    - `git pull` fetches and merges
-    - If you never pull then the branches may diverge
-    - `git pull` often to stay in sync with upstream development
-    - `git push` whenever you want other people to know about your changes
-    - If you never `git push` others will not see your changes
-    - Nontrivial changes should not be done on master
+- Local master and remote master are two different branches
+- Local feature branch and remote feature branch are two different branches
+- `git pull` fetches and merges
+- If you never pull then the branches may diverge
+- `git pull` often to stay in sync with upstream development
+- `git push` whenever you want other people to know about your changes
+- If you never `git push` others will not see your changes
+- Nontrivial changes should not be done on master
 
 ---
 
