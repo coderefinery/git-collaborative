@@ -26,38 +26,6 @@ keypoints:
 
 ---
 
-## Non-bare and bare repositories
-
-### Work: Non-bare repository
-
-Until now we have met only non-bare repositories:
-
-```shell
-$ git init  # creates a non-bare repository
-```
-
-- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**
-- We can checkout local branches
-- We can and do work inside non-bare repositories
-
-
-### Archive: Bare repository
-
-We can create a bare repository:
-
-```shell
-$ git init --bare  # creates a bare repository
-```
-
-- A bare repository contains only the `.git` part
-- By convention the names of bare repositories end with `.git` to emphasize
-  this
-  - e.g. myrepo.git
-- We never do actual work inside a bare repository
-- What are bare repositories then used for?
-
----
-
 ## Cloning repositories
 
 ```shell
@@ -85,9 +53,6 @@ $ git clone https://host.com/user/project.git project
 - We collaborate with other people through clones by pulling/fetching and pushing changes.
 - Everybody typically works on own clones.
 - Sometimes one person works on several clones (typically on different machines).
-- We will only push to bare repositories.
-- Think of Dropbox as a clone which automatically pulls/pushes from/to a bare clone sitting somewhere on
-  Dropbox servers.
 
 ---
 
@@ -339,6 +304,24 @@ We can also delete remote branches:
 $ git push origin --delete cool-branch
 ```
 
+---
+
+## Two types of repositories
+
+### Non-bare repository
+
+- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**.
+- This is where we work.
+
+### Bare repository
+
+- A bare repository contains only the `.git` part.
+- By convention the names of bare repositories end with `.git` to emphasize this.
+- We only push to bare repositories.
+- We never do actual work inside a bare repository.
+
+---
+
 ## Exercise: practice working with remote repository
 
 Objectives:
@@ -370,3 +353,6 @@ If you have time and want to practice resolving conflicts you can experiment wit
 Notice how you get a merge commit in your history.
 
 ![]({{ site.baseurl }}/img/distributed/mirroring-2.svg)
+
+---
+
