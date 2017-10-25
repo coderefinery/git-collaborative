@@ -156,7 +156,7 @@ After we clone the fork we have three in principle independent repositories:
 
 ### Part B: Modify and commit
 
-Then add a file `group-X.py` where X is your group number or group name (can be badass), e.g. `group-17.py`.
+Then add a file `group-X.py` where X is your group number or group name, e.g. `group-17.py`.
 **Add only one file per group**.
 (Why? - if you are adventurous, add both a file with the same name to see what happens)
 
