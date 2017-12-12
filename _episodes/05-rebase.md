@@ -87,6 +87,8 @@ You can make the pull request to the original repo or just to the
 master inside your own. The main point here is that you rebased the changes in
 master to your own branch and used the much vaunted Force Push.
 
+![]({{ site.baseurl }}/img/rebase/force_push.jpg)
+
 ### Food for thought
 
 `git rebase -i` will permit you to, among other things `squash` a number of
