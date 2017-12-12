@@ -161,7 +161,7 @@ Then add a file `group-X.py` where X is your group number or group name, e.g. `g
 (Why? - if you are adventurous, add both a file with the same name to see what happens)
 
 This file should contain a function called `tweet()` which returns
-a string of maximum 140 characters, for instance (don't worry, nothing gets out to Twitter):
+a string of maximum 280 characters, for instance (don't worry, nothing gets out to Twitter):
 
 ```python
 def tweet():
