@@ -328,7 +328,7 @@ origin	https://github.com/user/project.git (push)
 <br>
 <br>
 <br>
-
+![]({{ site.baseurl }}/img/distributed/remote.jpg)
 ## Luke Skywalker: *You know, I did feel something. I could almost see the remote.*
 
 ## Ben Kenobi: *That's good. You've taken your first step into a larger world.*
