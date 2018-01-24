@@ -3,7 +3,7 @@ The files in this directory can be converted using [gitink](https://github.com/b
 Installation:
 
 ```shell
-virtualenv venv
+virtualenv --python=python3 venv
 source venv/bin/activate
 pip install --upgrade git+https://github.com/bast/gitink@master
 ```
