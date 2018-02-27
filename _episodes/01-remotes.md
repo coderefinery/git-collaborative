@@ -314,11 +314,11 @@ $ git push origin --delete cool-branch
 
 ---
 
-## Exercise: practice working with remote repository
+## Exercise: practice working with a remote repository
 
 Objectives:
 
-- Practice cloning, pulling and pushing
+- Practice cloning, pulling, and pushing
 - Get used to working with remotes
 
 This exercise involves setting up a remote repository on your local machine. In the 
@@ -326,7 +326,7 @@ next episode, we look at more realistic scenarios involving remote repositories 
 
 1. Set up a "remote" repository for a [guacamole recipe](https://github.com/coderefinery/guacamole) on your local machine:
    - Clone a *mirror* using the `git clone --mirror` command.
-   - This creates a fully-fledged "remote" repository on your machine.
+   - This creates a full-fledged "remote" repository on your machine.
    - Note the `.git` part of the directory name. This is how bare repositories are usually named.
    - Inspect the contents of the `guacamole.git` directory. Is it possible to work there?
 2. After mirror cloning, try to clone in the normal way with `git clone /your/local/path/guacamole.git`.
