@@ -2,7 +2,7 @@
 layout: episode
 title: Distributed version control
 teaching: 20
-exercises: 45
+exercises: 65
 questions:
   - How can we collaborate with people who we might not know yet?
   - What is a fork?
