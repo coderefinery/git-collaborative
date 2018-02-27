@@ -212,6 +212,8 @@ This will replay your unpublished local master commits at the end of `origin/mas
 
 Note how `d8` changed to `d8*`.
 
+How does rebasing affect testing?
+
 ---
 
 ## When is a good moment to pull?
