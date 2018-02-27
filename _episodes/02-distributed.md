@@ -2,7 +2,7 @@
 layout: episode
 title: Distributed version control
 teaching: 20
-exercises: 40
+exercises: 45
 questions:
   - How can we collaborate with people who we might not know yet?
   - What is a fork?
@@ -350,13 +350,6 @@ context?
 
 ---
 
-## Questions
-
-- Can you implement code review without forking?
-- What would be the advantages or disadvantages?
-
----
-
 ## Protected branches
 
 A common alternative to the forking workflow for a group of collaborators 
@@ -366,6 +359,7 @@ is to use a protected (`master`) branch:
 - Other collaborators contribute code changes via pull requests from other branches.
 - Pull requests need to be reviewed and approved by a code owner.
 - How is this different from the "centralized layout" depicted above?
+- What would be the advantages or disadvantages of this workflow?
 
 ---
 
