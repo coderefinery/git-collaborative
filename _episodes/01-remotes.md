@@ -286,14 +286,15 @@ $ git push origin --delete cool-branch
 ### Non-bare repository
 
 - A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**.
-- This is where we work.
+- **This is where we edit and commit changes**.
 
 ### Bare repository
 
-- A bare repository contains only the `.git` part.
+- A bare repository contains only the `.git/` part.
 - By convention the names of bare repositories end with `.git` to emphasize this.
-- We only push to bare repositories.
-- We never do actual work inside a bare repository.
+- We never do actual editing work inside a bare repository.
+- GitHub, GitLab, etc. store a bare repository.
+- You can also create a bare repository on your computer/server to store your private repository.
 
 ---
 
@@ -328,6 +329,3 @@ If you have time and want to practice resolving conflicts you can experiment wit
 Notice how you get a merge commit in your history.
 
 ![]({{ site.baseurl }}/img/distributed/mirroring-2.svg)
-
----
-
