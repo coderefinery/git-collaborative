@@ -117,7 +117,7 @@ We will run this exercise in groups. Groups can choose a number or a name.
 
 Objectives:
 
-- Learn how to fork, modify the fork, and file a pull request towards forked repo.
+- Learn how to fork, modify the fork, and file a pull request towards the forked repo.
 - Learn how to update your fork with upstream changes.
 
 We will do this exercise on [GitHub](https://github.com) but also
@@ -155,7 +155,8 @@ After we clone the fork we have three in principle independent repositories:
 
 ### Part B: Modify and commit
 
-Then add a file `group-X.py` where X is your group number or group name, e.g. `group-17.py`.
+Before we do any modification, we create a new branch and switch to it - this is a good reflex and a good practice.
+On the new branch add a file `group-X.py` where X is your group number or group name, e.g. `group-17.py`.
 **Add only one file per group**.
 (Why? - if you are adventurous, add both a file with the same name to see what happens)
 
@@ -189,12 +190,14 @@ If it works, commit the change. And here is a picture of what just happened:
 
 ### Part C: Push your changes to the fork
 
-Once you see your sentence correctly printed, commit and push to your fork. Don't worry
+Once you see your sentence correctly printed, commit and push the branch to your fork.
+
+Don't worry
 nothing gets out to Twitter but please mind that your changes will be public on
 GitHub (but you can delete them later).
 
 ```shell
-$ git push origin master
+$ git push origin feature
 ```
 
 *central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
@@ -206,7 +209,7 @@ $ git push origin master
 
 ### Part D: File a pull request
 
-Then file a pull request towards the repository where you forked from.
+Then file a pull request from the branch on your fork towards the master branch on the repository where you forked from.
 
 Here is a pictorial representation for parts C and D:
 
@@ -214,9 +217,9 @@ Here is a pictorial representation for parts C and D:
 
 A pull-request means: "please review my changes and if you agree, merge them with a mouse-click".
 
-Once the pull-request is accepted, the change is incorporated:
+Once the pull-request is accepted, the change is merged:
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
 *fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
 
@@ -251,12 +254,6 @@ We will discuss two solutions:
 - Upstream repo receives other changes (other merged pull-requests)
 - How do we get these changes to the forked repo?
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
-
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
-
-*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
-
 ```shell
 $ git remote add upstream https://github.com/coderefinery/forking-workflow-exercise.git
 $ git fetch upstream
@@ -285,7 +282,7 @@ $ git push origin master
 
 *central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*fork*: ![]({{ site.baseurl }}/img/github/github-remote-04.svg)
 
 *local*: ![]({{ site.baseurl }}/img/github/github-local-06.svg)
 

@@ -8,8 +8,8 @@
                  xmlns="http://www.w3.org/2000/svg"
                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                 width="168.0"
-                 height="160.0"
+                 width="172.0"
+                 height="225.0"
                  id="svg2"
                  version="1.1"
                  inkscape:version="0.48.3.1 r9886"
@@ -44,7 +44,7 @@
                 </defs>
                 <g inkscape:label="layer1"
                    inkscape:groupmode="layer"
-                   transform="translate(-0.0,65.0) rotate(0)"
+                   transform="translate(-0.0,130.0) rotate(0)"
                    id="layer1">
                    
            <line x1="76.0"
@@ -71,30 +71,6 @@
                         stroke-dasharray:none"
                  width="32.0"
                  height="30.0"
-                 x="60.0"
-                 y="0.0"
-                 ry="5.0" />
-           <text style="font-size:12.5px;
-                        font-style:normal;
-                        font-weight:normal;
-                        line-height:125%%;
-                        letter-spacing:0px;
-                        word-spacing:0px;
-                        fill:#000000;
-                        fill-opacity:1.0;
-                        stroke:none;
-                        font-family:DejaVu Sans Mono"
-                 x="67.5"
-                 y="20.5">c2</text>
-           
-           <rect style="fill:#c7b8f8;
-                        stroke:#8172B2;
-                        stroke-width:1.25;
-                        stroke-miterlimit:4;
-                        stroke-opacity:1.0;
-                        stroke-dasharray:none"
-                 width="32.0"
-                 height="30.0"
                  x="120.0"
                  y="0.0"
                  ry="5.0" />
@@ -110,6 +86,30 @@
                         font-family:DejaVu Sans Mono"
                  x="127.5"
                  y="20.5">c3</text>
+           
+           <rect style="fill:#c7b8f8;
+                        stroke:#8172B2;
+                        stroke-width:1.25;
+                        stroke-miterlimit:4;
+                        stroke-opacity:1.0;
+                        stroke-dasharray:none"
+                 width="32.0"
+                 height="30.0"
+                 x="60.0"
+                 y="0.0"
+                 ry="5.0" />
+           <text style="font-size:12.5px;
+                        font-style:normal;
+                        font-weight:normal;
+                        line-height:125%%;
+                        letter-spacing:0px;
+                        word-spacing:0px;
+                        fill:#000000;
+                        fill-opacity:1.0;
+                        stroke:none;
+                        font-family:DejaVu Sans Mono"
+                 x="67.5"
+                 y="20.5">c2</text>
            
            <rect style="fill:#c7b8f8;
                         stroke:#8172B2;
@@ -144,42 +144,6 @@
                  marker-end:url(#fullmarker);
                  stroke-miterlimit:4;
                  stroke-dasharray:none"
-                 d="M 76.0,-50.0 76.0,-0.5999999999999996"
-                 inkscape:connector-curvature="0" />
-           
-           <rect style="fill:#dddddd;
-                        stroke:#000000;
-                        stroke-width:1.25;
-                        stroke-miterlimit:4;
-                        stroke-opacity:1.0;
-                        stroke-dasharray:none"
-                 width="120.0"
-                 height="30.0"
-                 x="16.0"
-                 y="-65.0"
-                 ry="0.0" />
-           <text style="font-size:12.5px;
-                        font-style:normal;
-                        font-weight:normal;
-                        line-height:125%%;
-                        letter-spacing:0px;
-                        word-spacing:0px;
-                        fill:#000000;
-                        fill-opacity:1.0;
-                        stroke:none;
-                        font-family:DejaVu Sans Mono"
-                 x="23.5"
-                 y="-44.5">origin/master</text>
-           
-           <path style="fill:none;
-                 stroke:#000000;
-                 stroke-width:2.5;
-                 stroke-linecap:butt;
-                 stroke-linejoin:miter;
-                 stroke-opacity:1.0;
-                 marker-end:url(#fullmarker);
-                 stroke-miterlimit:4;
-                 stroke-dasharray:none"
                  d="M 136.0,80.0 136.0,30.6"
                  inkscape:connector-curvature="0" />
            
@@ -189,9 +153,9 @@
                         stroke-miterlimit:4;
                         stroke-opacity:1.0;
                         stroke-dasharray:none"
-                 width="64.0"
+                 width="72.0"
                  height="30.0"
-                 x="104.0"
+                 x="100.0"
                  y="65.0"
                  ry="0.0" />
            <text style="font-size:12.5px;
@@ -204,8 +168,80 @@
                         fill-opacity:1.0;
                         stroke:none;
                         font-family:DejaVu Sans Mono"
-                 x="111.5"
-                 y="85.5">master</text>
+                 x="107.5"
+                 y="85.5">feature</text>
+           
+           <path style="fill:none;
+                 stroke:#000000;
+                 stroke-width:2.5;
+                 stroke-linecap:butt;
+                 stroke-linejoin:miter;
+                 stroke-opacity:1.0;
+                 marker-end:url(#fullmarker);
+                 stroke-miterlimit:4;
+                 stroke-dasharray:none"
+                 d="M 76.0,-50.0 76.0,-0.5999999999999996"
+                 inkscape:connector-curvature="0" />
+           
+           <rect style="fill:#dddddd;
+                        stroke:#000000;
+                        stroke-width:1.25;
+                        stroke-miterlimit:4;
+                        stroke-opacity:1.0;
+                        stroke-dasharray:none"
+                 width="64.0"
+                 height="30.0"
+                 x="44.0"
+                 y="-65.0"
+                 ry="0.0" />
+           <text style="font-size:12.5px;
+                        font-style:normal;
+                        font-weight:normal;
+                        line-height:125%%;
+                        letter-spacing:0px;
+                        word-spacing:0px;
+                        fill:#000000;
+                        fill-opacity:1.0;
+                        stroke:none;
+                        font-family:DejaVu Sans Mono"
+                 x="51.5"
+                 y="-44.5">master</text>
+           
+           <path style="fill:none;
+                 stroke:#000000;
+                 stroke-width:2.5;
+                 stroke-linecap:butt;
+                 stroke-linejoin:miter;
+                 stroke-opacity:1.0;
+                 marker-end:url(#fullmarker);
+                 stroke-miterlimit:4;
+                 stroke-dasharray:none"
+                 d="M 76.0,-115.0 76.0,-65.6"
+                 inkscape:connector-curvature="0" />
+           
+           <rect style="fill:#dddddd;
+                        stroke:#000000;
+                        stroke-width:1.25;
+                        stroke-miterlimit:4;
+                        stroke-opacity:1.0;
+                        stroke-dasharray:none"
+                 width="120.0"
+                 height="30.0"
+                 x="16.0"
+                 y="-130.0"
+                 ry="0.0" />
+           <text style="font-size:12.5px;
+                        font-style:normal;
+                        font-weight:normal;
+                        line-height:125%%;
+                        letter-spacing:0px;
+                        word-spacing:0px;
+                        fill:#000000;
+                        fill-opacity:1.0;
+                        stroke:none;
+                        font-family:DejaVu Sans Mono"
+                 x="23.5"
+                 y="-109.5">origin/master</text>
            
                 </g>
               </svg>

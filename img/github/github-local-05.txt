@@ -1,5 +1,10 @@
-           [origin/master]
-            |
-c1----c2----c3----c4----c5
-                        |
-                       [master,upstream/master]
+     [origin/master]
+      |
+      |      [master,upstream/master]
+      |       |
+c1----c2------m1
+        \    /
+         \  /
+          c3
+          |
+         [feature,origin/feature]
