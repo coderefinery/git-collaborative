@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Working with remotes
+title: Working with remotes and centralized workflow
 teaching: 20
 exercises: 10
 questions:
