@@ -4,8 +4,8 @@ title: Working with remotes
 teaching: 20
 exercises: 10
 questions:
-  - How can we keep repositories in sync?
   - How can we share repositories with others?
+  - How can we keep repositories in sync?
 objectives:
   - Understand the difference between local branch, origin/branch, and remote branch.
 keypoints:
@@ -17,42 +17,23 @@ keypoints:
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
-## From local repositories to remote repositories
-
-- In contrast to other version control tools we do not contribute to a repository
-  through a lightweight working copy.
-- In Git we often work within a clone.
-- Contributing to a repository often starts by cloning the entire repository.
-
----
-
 ## Cloning repositories
 
 ```shell
 $ git clone https://host.com/user/project.git project
 ```
 
-- A clone is a full-fledged repository.
-- Think of `git clone` as a `scp -r` "plus".
-- We will see what the "plus" means.
+- Contributing to a repository often starts by cloning the entire repository.
 - By cloning we clone all commits, all branches and tags, **entire history**.
+- A clone is a full-fledged repository.
 
 ---
 
-## When push comes to pull
+## Synchronizing changes between repositories
 
 - We need a mechanism to communicate changes between the repositories.
-- We will **pull** or **fetch** updates **from** remote repositories.
-- There is a difference between pull and fetch and we will soon discuss what the difference is.
+- We will **pull** or **fetch** updates **from** remote repositories (we will soon discuss the difference between pull and fetch).
 - We will **push** updates **to** remote repositories.
-
----
-
-## Working with others
-
-- We collaborate with other people through clones by pulling/fetching and pushing changes.
-- Everybody typically works on own clones.
-- Sometimes one person works on several clones (typically on different machines).
 
 ---
 
