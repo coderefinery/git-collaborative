@@ -1,4 +1,0 @@
-
-     [master,HEAD]
-      |
-c1----c2
