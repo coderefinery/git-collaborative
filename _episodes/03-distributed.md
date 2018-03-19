@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Distributed version control
+title: Distributed version control and forking workflow
 teaching: 20
 exercises: 65
 questions:
