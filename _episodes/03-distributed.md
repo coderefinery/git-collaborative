@@ -44,20 +44,19 @@ The "central" is a role, not a technical difference.
 Features:
 
 - Typically all developers have both read and write permissions (double-headed arrows).
-- Suited for cases where all developers should have the same rights, are in
-  the same organization etc.
+- Suited for cases where all developers are in the same group or organization etc.
+- Code review workflow is possible.
+- Code review can be coupled with with automated testing.
 
 Advantages:
 
 - More familiar for Subversion or CVS users.
 - Easier: for each clone there is only one remote.
-- Gives more freedom to the individual developer.
 
 Disadvantages:
 
-- Gives more freedom to the individual developer
-- Maintainer needs to trust the developers to not break things.
 - Everybody who wants to contribute needs write access.
+- Maintainer needs to trust the developers to not break things (but you can protect branches).
 
 
 ### Forking layout
@@ -72,6 +71,7 @@ Features:
 - For a public repository everybody has read access.
 - Only very few people (the maintainers) have write access.
 - Typically nobody pushes directly to the central repo.
+- Code review can be coupled with with automated testing.
 - Central repo and the forks typically reside in the "cloud".
 
 Advantages:
@@ -80,12 +80,11 @@ Advantages:
 - Maintainer has full control over what goes in.
 - Allows contributions from people you don't know yet (in practice not possible in centralized layout).
 - Structurally helps to implement peer review in coding (code review).
-- It is simple to couple code review with automated testing.
 
 Disadvantages:
 
 - Learning curve: we need to deal at least with two remotes (fork and central repo).
-- Efficiency: each developer needs to have their own repository.
+- Introduces additional steps (to e.g. update the fork).
 
 ---
 
@@ -93,7 +92,7 @@ Disadvantages:
 
 - There is nothing special about the name `origin`. The `origin` is just an alias.
 - We can call these aliases as we like.
-- We can add and remove remotes.
+- We can add and remove remotes:
 
 ```shell
 $ git remote add upstream https://github.com/project/project.git
