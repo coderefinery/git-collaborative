@@ -346,6 +346,18 @@ context?
 
 ---
 
+## Always create a feature branch
+
+- Never commit to the branch you wish to submit the pull request towards.
+- For each pull request create a new branch.
+
+Motivation:
+
+- Limits the risk that commits get accidentally appended to an open pull request.
+- History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
+
+---
+
 ## Protected branches
 
 A common alternative to the forking workflow for a group of collaborators 
