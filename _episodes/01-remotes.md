@@ -296,36 +296,14 @@ $ git push origin --delete cool-branch
 - GitHub, GitLab, etc. store a bare repository.
 - You can also create a bare repository on your computer/server to store your private repository.
 
----
+If we have enough time, the instructor demonstrates how to create a bare repository on the local computer:
 
-## Exercise: practice working with a remote repository
-
-Objectives:
-
-- Practice cloning, pulling, and pushing
-- Get used to working with remotes
-
-This exercise involves setting up a remote repository on your local machine. In the 
-next episode, we look at more realistic scenarios involving remote repositories on GitHub.
-
-1. Set up a "remote" repository for a [guacamole recipe](https://github.com/coderefinery/guacamole) on your local machine:
-   - Clone a *mirror* using the `git clone --mirror` command.
-   - This creates a full-fledged "remote" repository on your machine.
-   - Note the `.git` part of the directory name. This is how bare repositories are usually named.
-   - Inspect the contents of the `guacamole.git` directory. Is it possible to work there?
-2. After mirror cloning, try to clone in the normal way with `git clone /your/local/path/guacamole.git`.
-   - Enter the (normally) cloned repository, and inspect the remotes using the `git remote -v` command.
-3. Make a commit in your cloned repository, and push it to your (local) remote.
-
-![]({{ site.baseurl }}/img/distributed/mirroring-1.svg)
-
-### EXTRA: 
-
-If you have time and want to practice resolving conflicts you can experiment with the following steps:
-7. Clone your remote (`/your/local/path/guacamole.git`) to another location on your machine.
-8. Make a commit in this clone, and push it.
-9. Go back to your first clone, make a different commit, and try pushing. Your push will be rejected since the remote repository has commits that you haven't pulled yet.
-10. Do a `git pull` instead. If you get merge conflicts, try to resolve them, commit again and push. 
-Notice how you get a merge commit in your history.
-
-![]({{ site.baseurl }}/img/distributed/mirroring-2.svg)
+- Create a new local repository with `git init`.
+- Populate it with a file and a commit or two.
+- Create one or two branches.
+- Clone this repository on the same computer with either `--bare` or `--mirror`.
+- Inspect the bare repository.
+- Clone the bare repository.
+- Inside the clone inspect `git remote -v`.
+- Inside the clone create a commit and push the commit to `origin`.
+- The bare repository can be cloned several times and one can exercise pushing and pulling changes.
