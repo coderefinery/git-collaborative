@@ -136,9 +136,9 @@ Here is a pictorial representation of this part:
 
 This is how it looks after we fork:
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
 - A fork is basically a (bare) clone.
 - The upstream repo and the fork are in principle independent repositories.
@@ -146,11 +146,11 @@ This is how it looks after we fork:
 
 After we clone the fork we have three in principle independent repositories:
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-01.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-01.svg)
 
 
 ### Part B: Modify and commit
@@ -181,11 +181,11 @@ group 17 says: please replace this boring sentence with something more fun
 
 If it works, commit the change. And here is a picture of what just happened:
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-02.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-02.svg)
 
 
 ### Part C: Push your changes to the fork
@@ -200,11 +200,11 @@ GitHub (but you can delete them later).
 $ git push origin feature
 ```
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-01.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-01.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-02.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-03.svg)
 
 
 ### Part D: File a pull request
@@ -219,11 +219,11 @@ A pull-request means: "please review my changes and if you agree, merge them wit
 
 Once the pull-request is accepted, the change is merged:
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-03.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-02.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-03.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-03.svg)
 
 Wait here until we integrate all pull requests into the central repo
 together on the big screen.
@@ -259,32 +259,32 @@ $ git remote add upstream https://github.com/coderefinery/forking-workflow-exerc
 $ git fetch upstream
 ```
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-03.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-02.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-04.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-04.svg)
 
 ```shell
 $ git checkout master
 $ git merge upstream/master
 ```
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-03.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-02.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-02.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-05.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-05.svg)
 
 ```shell
 $ git push origin master
 ```
 
-*central*: ![]({{ site.baseurl }}/img/github/github-remote-03.svg)
+*central*: ![]({{ site.baseurl }}/img/forking/github-remote-03.svg)
 
-*fork*: ![]({{ site.baseurl }}/img/github/github-remote-04.svg)
+*fork*: ![]({{ site.baseurl }}/img/forking/github-remote-04.svg)
 
-*local*: ![]({{ site.baseurl }}/img/github/github-local-06.svg)
+*local*: ![]({{ site.baseurl }}/img/forking/github-local-06.svg)
 
 
 #### Shorter route
