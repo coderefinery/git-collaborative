@@ -24,7 +24,7 @@ keypoints:
 
 ## Distributed version control
 
-![The GitHub Octocat]({{ site.baseurl }}/img/distributed/github_octocat.jpeg)
+![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
 
 
 Git implements a distributed version control.
@@ -35,7 +35,7 @@ Two topologies are very frequent: centralized and forking layout.
 
 ### Centralized layout
 
-![]({{ site.baseurl }}/img/distributed/centralized.svg)
+![]({{ site.baseurl }}/img/forking/centralized.svg)
 
 In Git all repositories are in principle equivalent but typically we consider one repository
 as the main development line and this is marked as "central".
@@ -61,7 +61,7 @@ Disadvantages:
 
 ### Forking layout
 
-![]({{ site.baseurl }}/img/distributed/forking-overview.svg)
+![]({{ site.baseurl }}/img/forking/forking-overview.svg)
 
 Again we call one repository the "central" repository.
 
@@ -132,7 +132,7 @@ on GitHub into your namespace and then clone the fork to your computer.
 
 Here is a pictorial representation of this part:
 
-![]({{ site.baseurl }}/img/distributed/forking-1.svg)
+![]({{ site.baseurl }}/img/forking/forking-1.svg)
 
 This is how it looks after we fork:
 
@@ -213,7 +213,7 @@ Then file a pull request from the branch on your fork towards the master branch 
 
 Here is a pictorial representation for parts C and D:
 
-![]({{ site.baseurl }}/img/distributed/forking-2.svg)
+![]({{ site.baseurl }}/img/forking/forking-2.svg)
 
 A pull-request means: "please review my changes and if you agree, merge them with a mouse-click".
 
@@ -245,7 +245,7 @@ but really also end up in your fork.
 
 Here is a pictorial representation of this part:
 
-![]({{ site.baseurl }}/img/distributed/forking-3.svg)
+![]({{ site.baseurl }}/img/forking/forking-3.svg)
 
 We will discuss two solutions:
 
@@ -324,7 +324,7 @@ origin	https://github.com/user/project.git (push)
 <br>
 <br>
 <br>
-![]({{ site.baseurl }}/img/distributed/remote.jpg)
+![]({{ site.baseurl }}/img/forking/remote.jpg)
 ## Luke Skywalker: *You know, I did feel something. I could almost see the remote.*
 
 ## Ben Kenobi: *That's good. You've taken your first step into a larger world.*
