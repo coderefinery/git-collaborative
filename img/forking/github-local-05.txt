@@ -1,0 +1,10 @@
+     [origin/master]
+      |
+      |      [master,upstream/master]
+      |       |
+c1----c2------m1
+        \    /
+         \  /
+          c3
+          |
+         [feature,origin/feature]

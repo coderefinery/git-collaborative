@@ -6,8 +6,8 @@ permalink: /
 # Collaborative distributed version control
 
 In this lesson we will learn how to keep repositories in sync and how to work
-with remote repositories on GitHub and other services. We will discover 
-and exercise the fork-pull request (or merge request) workflow, and finally 
+with remote repositories on GitHub and other services. We will discover
+and exercise the forking workflow, and finally
 look into how to automate tasks using Git hooks.
 
 We will do this exercise on [GitHub](https://github.com) but also

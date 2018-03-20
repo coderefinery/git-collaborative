@@ -1,0 +1,7 @@
+           [master]
+            |
+c1----c2----d1
+        \
+         b1
+         |
+        [experiment]

@@ -1,11 +1,11 @@
 ---
 layout: episode
-title: Working with remotes
+title: Working with remotes and centralized workflow
 teaching: 20
 exercises: 10
 questions:
-  - How can we keep repositories in sync?
   - How can we share repositories with others?
+  - How can we keep repositories in sync?
 objectives:
   - Understand the difference between local branch, origin/branch, and remote branch.
 keypoints:
@@ -17,158 +17,103 @@ keypoints:
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
-## From local repositories to remote repositories
-
-- In contrast to other version control tools we do not contribute to a repository
-  through a lightweight working copy.
-- In Git we often work within a clone.
-- Contributing to a repository often starts by cloning the entire repository.
-
----
-
 ## Cloning repositories
 
 ```shell
 $ git clone https://host.com/user/project.git project
 ```
 
-- A clone is a full-fledged repository.
-- Think of `git clone` as a `scp -r` "plus".
-- We will see what the "plus" means.
+- Contributing to a repository often starts by cloning the entire repository.
 - By cloning we clone all commits, all branches and tags, **entire history**.
+- A clone is a full-fledged repository.
 
 ---
 
-## When push comes to pull
+## Synchronizing changes between repositories
 
 - We need a mechanism to communicate changes between the repositories.
-- We will **pull** or **fetch** updates **from** remote repositories.
-- There is a difference between pull and fetch and we will soon discuss what the difference is.
+- We will **pull** or **fetch** updates **from** remote repositories (we will soon discuss the difference between pull and fetch).
 - We will **push** updates **to** remote repositories.
 
 ---
 
-## Working with others
+# Centralized workflow exercise
 
-- We collaborate with other people through clones by pulling/fetching and pushing changes.
-- Everybody typically works on own clones.
-- Sometimes one person works on several clones (typically on different machines).
+Exercise to practice collaborative centralized workflow. On the way to a pull request
+and code review we will meet and discuss a number of typical pitfalls.
 
----
 
-## Cloning repositories
+## Before we start
+
+1. Participants add their usernames to a shared document.
+2. Instructor adds participants as collaborators to this project.
+
+
+## After participants have been added as collaborators
+
+
+### 1. Clone [this repository](https://github.com/coderefinery/centralized-workflow-exercise)
+
+If you have set up ssh keys:
+```
+$ git clone git@github.com:coderefinery/centralized-workflow-exercise.git
+```
+
+If you have not set up ssh keys:
+```
+$ git clone https://github.com/coderefinery/centralized-workflow-exercise.git
+```
 
 This is a representation of what happens when you clone:
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-02-remote.svg)
+*remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
 
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
+*local*: ![]({{ site.baseurl }}/img/centralized/01-local.svg)
 
-- We clone the entire history, all branches, all commits (in this example two branches, four commits).
-- `git clone` creates pointers `origin/master` and `origin/dev`.
+- We clone the entire history, all branches, all commits.
+- `git clone` creates pointers `origin/master` and `origin/experiment`.
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
-- `origin/master` and `origin/dev` are read-only pointers.
+- `origin/master` and `origin/experiment` are read-only pointers.
 - They only move during `git pull` or `git fetch` or `git push`.
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
 
----
 
-## Fetching updates
+### 2. Step into the newly created directory:
 
-Let us imagine that the remote repository receives a new commit:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-03-local.svg)
-
-Pointer is moved (pushed) by someone else (could be you).
-
-Nothing changes on the local repository until we pull/fetch these changes over the network:
-
-```shell
-$ git fetch origin
+```
+$ cd centralized-workflow-exercise
 ```
 
-`git fetch origin` updates `origin/master` and `origin/dev`:
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
+### 3. Create a file with a unique name, e.g.: `yourusername.txt`
 
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-04-local.svg)
+In this file share your favourite cooking recipe or haiku or Git trick or whatever.
 
-In a second step we merge `origin/master` (in this case fast-forward; further below we explain what fast-forward means):
 
-```shell
-$ git merge origin/master
+### 4. Stage and commit the change
+
 ```
-This updates the local branches:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-05-local.svg)
-
----
-
-## Fetch vs. pull
-
-What is the difference between `git fetch` and `git pull`?
-
-So far we have fetched and merged in two steps:
-
-```shell
-$ git fetch origin
-$ git merge origin/master
+$ git add yourusername.txt
+$ git commit
 ```
 
-This is equivalent to:
+*remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
 
-```shell
-$ git pull origin master
+*local*: ![]({{ site.baseurl }}/img/centralized/04-local.svg)
+
+
+### 5. Try to push the change to the upstream repository
+
 ```
-
-- `git pull` consists of two operations: a `git fetch` followed by a `git merge`.
-- Summary: `git pull origin master` fetches `master` from `origin` and merges it.
-- There is always a `git merge` "hidden" in `git pull`.
-- Many people will simply `git pull`, very careful people first `git fetch` and inspect the commits before merging them.
-- With Git you typically merge several times a day without even noticing.
-
----
-
-## Publishing local commits
-
-We can commit locally and
-these commits are not visible to others until we `git push`.
-
-Observe that `master`, `origin/master`, and `master` on remote repository are 3 different pointers:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-06-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-06-local.svg)
-
-Now let us push the local commits upstream:
-
-```shell
 $ git push origin master
 ```
 
-Only now the remote `master` as well as `origin/master` move:
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-07-remote.svg)
+### 6. **Stop here** and discuss why push for most participants was rejected
 
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-07-local.svg)
-
-We commit `d8` (the color is to signal that we differ, we are still on
-`master`)
-and in the meantime remote receives commit `c8` from someone else:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-08-local.svg)
-
-What happens if we try to `git push origin master`?
-
-`git push` is rejected:
+You probably see something like this:
 
 ```shell
 $ git push
@@ -180,173 +125,117 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 'Note about fast-forwards' section of 'git push --help' for details.
 ```
 
+It will work only for one participant. Why?
+
+*remote*: ![]({{ site.baseurl }}/img/centralized/06-remote.svg)
+
+*local*: ![]({{ site.baseurl }}/img/centralized/04-local.svg)
+
 The natural reflex is now to `git pull` first but
 what happens if we `git pull origin master`?
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
 
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-09-local.svg)
+### 7. Pull updates from the upstream repository
+
+```
+$ git pull origin master
+```
+
+*remote*: ![]({{ site.baseurl }}/img/centralized/06-remote.svg)
+
+*local*: ![]({{ site.baseurl }}/img/centralized/07-local.svg)
+
+
+### 8. **Stop here** and discuss why we obtained a merge commit locally
+
+Ideas? What happened under the hood? Discuss `git fetch` as an alternative to `git pull`.
+Discuss `git pull --rebase` as an alternative to avoid merge commits.
+
+What is the difference between `git fetch` and `git pull`?
+
+This is equivalent to:
 
 ```shell
 $ git pull origin master
 ```
 
-Explanation:
+is equivalent to:
 
-- First we fetched (`origin/master` moved),
-  then we merged `origin/master` to `master` (`master` moved).
-- Local master and remote master are two different branches.
-- If they diverge, Git will merge them during `git pull`.
+```shell
+$ git fetch origin
+$ git merge origin/master
+```
 
-You can avoid the merge commits using `--rebase`:
+- `git pull` consists of two operations: a `git fetch` followed by a `git merge`.
+- Summary: `git pull origin master` fetches `master` from `origin` and merges it.
+- There is always a `git merge` "hidden" in `git pull`.
+- Many people will simply `git pull`, very careful people first `git fetch` and inspect the commits before merging them.
+- With Git you typically merge several times a day without even noticing.
 
 ```shell
 $ git pull --rebase origin master
 ```
 
-This will replay your unpublished local master commits at the end of `origin/master`:
+would have produced:
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
+*remote*: ![]({{ site.baseurl }}/img/centralized/06-remote.svg)
 
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-10-local.svg)
+*local*: ![]({{ site.baseurl }}/img/centralized/08-local.svg)
 
-Note how `d8` changed to `d8*`.
 
-How does rebasing affect testing?
+### 9. Try to push again
+
+It will work for one more person.
+
+
+### 10. Create a branch `yourname/somefeature` pointing at your commit
+
+```
+$ git branch yourname/somefeature
+```
+
+
+### 11. Push your change as a new branch
+
+```
+$ git push origin -u yourname/somefeature
+```
+
+Can we leave out the `-u`?
+
+
+### 12. Submit a pull request
+
+Submit a pull request from your branch towards the `master` branch.
+Do this through the web interface.
+
+Finally also discuss https://github.com/coderefinery/centralized-workflow-exercise/network.
 
 ---
 
-## When is a good moment to pull?
+## How to make changes to remote branches
 
-- Local master and remote master are two different branches
-- Local feature branch and remote feature branch are two different branches
-- `git pull` fetches and merges
-- If you never pull then the branches may diverge
-- `git pull` often to stay in sync with upstream development
-- `git push` whenever you want other people to know about your changes
-- If you never `git push` others will not see your changes
-- Nontrivial changes should not be done on master
-
----
-
-## When is a good moment to fetch?
-
-Whenever, you can always decide whether or not to merge.
-
----
-
-## Tracking branches
-
-We want to make changes to `origin/dev`:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-10-local.svg)
-
-For this we create and switch to local branch `dev` tracking `origin/dev`:
+Create a local branch `somefeature` tracking `origin/somefeature`:
 
 ```shell
-$ git checkout -b dev origin/dev
+$ git checkout -b somefeature origin/somefeature
 ```
 
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-11-local.svg)
-
-
-### Shortcut to checkout tracking branches
-
-If there is no local branch `dev` and there is a remote branch `origin/dev`, then both are equivalent:
+If there is no local branch `somefeature` and there is a remote branch `origin/somefeature`, then this is enough:
 
 ```shell
-$ git checkout -b dev origin/dev
+$ git checkout somefeature
 ```
 
-```shell
-$ git checkout dev
-```
-
-As we commit to `dev` the pointer moves while `origin/dev` does not:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-12-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-12-local.svg)
-
-We can now push `origin/dev` "forward":
+Once we track a remote branch, we can pull from it and push to it:
 
 ```shell
-$ git push origin dev
-```
-
-With the result:
-
-*remote*: ![]({{ site.baseurl }}/img/distributed/remote-13-remote.svg)
-
-*local*: ![]({{ site.baseurl }}/img/distributed/remote-13-local.svg)
-
-What if you have created a local branch and want to make it public? Push it upstream:
-
-```shell
-$ git checkout -b cool-branch     # create and switch to cool-branch
-$ git commit                      # work and commit
-$ git push -u origin cool-branch  # push to origin and set as upstream
+$ git pull origin somefeature
+$ git push origin somefeature
 ```
 
 We can also delete remote branches:
 
 ```shell
-$ git push origin --delete cool-branch
+$ git push origin --delete somefeature
 ```
-
----
-
-## Two types of repositories
-
-### Non-bare repository
-
-- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**.
-- This is where we work.
-
-### Bare repository
-
-- A bare repository contains only the `.git` part.
-- By convention the names of bare repositories end with `.git` to emphasize this.
-- We only push to bare repositories.
-- We never do actual work inside a bare repository.
-
----
-
-## Exercise: practice working with a remote repository
-
-Objectives:
-
-- Practice cloning, pulling, and pushing
-- Get used to working with remotes
-
-This exercise involves setting up a remote repository on your local machine. In the 
-next episode, we look at more realistic scenarios involving remote repositories on GitHub.
-
-1. Set up a "remote" repository for a [guacamole recipe](https://github.com/coderefinery/guacamole) on your local machine:
-   - Clone a *mirror* using the `git clone --mirror` command.
-   - This creates a full-fledged "remote" repository on your machine.
-   - Note the `.git` part of the directory name. This is how bare repositories are usually named.
-   - Inspect the contents of the `guacamole.git` directory. Is it possible to work there?
-2. After mirror cloning, try to clone in the normal way with `git clone /your/local/path/guacamole.git`.
-   - Enter the (normally) cloned repository, and inspect the remotes using the `git remote -v` command.
-3. Make a commit in your cloned repository, and push it to your (local) remote.
-
-![]({{ site.baseurl }}/img/distributed/mirroring-1.svg)
-
-### EXTRA: 
-
-If you have time and want to practice resolving conflicts you can experiment with the following steps:
-7. Clone your remote (`/your/local/path/guacamole.git`) to another location on your machine.
-8. Make a commit in this clone, and push it.
-9. Go back to your first clone, make a different commit, and try pushing. Your push will be rejected since the remote repository has commits that you haven't pulled yet.
-10. Do a `git pull` instead. If you get merge conflicts, try to resolve them, commit again and push. 
-Notice how you get a merge commit in your history.
-
-![]({{ site.baseurl }}/img/distributed/mirroring-2.svg)
-
----
-
