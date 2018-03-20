@@ -1,0 +1,9 @@
+           [master,HEAD]
+            |
+c1----c2----c3
+      | \
+      |  b1
+      |  |
+      | [origin/experiment]
+      |
+     [origin/master]
