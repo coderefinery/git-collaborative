@@ -1,7 +1,0 @@
-
-
-c1----c2      [origin/master]
-        \      |
-         c3----c4
-               |
-              [master,HEAD]
