@@ -209,6 +209,8 @@ Can we leave out the `-u`?
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
 
+Finally also discuss https://github.com/coderefinery/centralized-workflow-exercise/network.
+
 ---
 
 ## How to make changes to remote branches
