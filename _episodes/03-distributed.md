@@ -368,3 +368,12 @@ is to use a protected (`master`) branch:
 - Pull requests need to be reviewed and approved by a code owner.
 - How is this different from the "centralized layout" depicted above?
 - What would be the advantages or disadvantages of this workflow?
+
+---
+
+## Code review
+
+- You see what others are working on
+- Collaborative learning
+- OK if students and junior researchers review senior researchers
+- Improves quality of the code
