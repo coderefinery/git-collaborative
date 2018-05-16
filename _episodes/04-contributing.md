@@ -15,7 +15,7 @@ keypoints:
 ## Very minor changes
 
 - Fork repository
-- Create branch
+- Create a branch
 - Commit and push change
 - File a pull request
 
