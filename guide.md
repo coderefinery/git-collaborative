@@ -41,6 +41,7 @@ wake participants up.>
 - The bare vs non-bare episode can be skipped over without any harm done
 - The hooks episode is typically skipped
 
+
 ### Typical pitfalls
 
 <Document here with what participants often struggle.>
@@ -49,3 +50,20 @@ wake participants up.>
   pull requests are a different mechanism specific to GitHub, GitLab...
 - The behavior that additional commits to a branch from which a pull request has been created get appended
   to the pull request needs to be explained
+
+
+### Centralized workflow exercise
+
+Remind participants to not rush ahead but do one step at
+a time collectively and discuss after each step. The effect
+is then better.
+
+If some participants already go ahead, they will manage to push
+changes and the history will be different than what is expected.
+
+
+### Both centralized and forking exercises
+
+It is practical if instructor forks the repo first and then we use
+the fork as a base. This makes it easier to clean up afterwards
+(fork can simply be deleted afterwards).
