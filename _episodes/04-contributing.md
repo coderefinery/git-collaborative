@@ -50,3 +50,22 @@ keypoints:
 
 - Get agreement and feedback before writing 5000 lines of code which might be rejected
 - If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
+
+---
+
+## WIP (work in progress) pull/merge requests
+
+- Convention: Pull requests or merge requests starting with "WIP" are not to be merged yet
+- They are there to collect feedback on unfinished work
+
+- Open an issue in the repository you wish to contribute to
+- Write a short proposal for your suggested change or new feature
+- Motivate why and how you wish to do this
+- Discuss and get feedback before you code
+- Once you start coding, indicate that you are working on it
+- Once you are done, submit your new feature as pull request which references/closes the issue/proposal
+
+**Motivation**:
+
+- Get agreement and feedback before writing 5000 lines of code which might be rejected
+- If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
