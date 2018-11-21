@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: How to contribute changes to somebody else's project
-teaching: 10
+teaching: 15
 exercises: 0
 questions:
   - What steps can we recommend to contribute changes to somebody else's project?

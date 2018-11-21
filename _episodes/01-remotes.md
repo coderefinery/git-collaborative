@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: Working with remotes and centralized workflow
-teaching: 20
-exercises: 10
+teaching: 30
+exercises: 40
 questions:
   - How can we share repositories with others?
   - How can we keep repositories in sync?
