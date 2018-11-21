@@ -64,6 +64,10 @@ If you have not set up ssh keys:
 $ git clone https://github.com/coderefinery/centralized-workflow-exercise.git
 ```
 
+If you decide to set up ssh keys later:
+- https://help.github.com/articles/connecting-to-github-with-ssh/
+- https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html
+
 This is a representation of what happens when you clone:
 
 *remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
