@@ -31,9 +31,25 @@ If we have enough time, the instructor demonstrates how to create a bare reposit
 - Create a new local repository with `git init`.
 - Populate it with a file and a commit or two.
 - Create one or two branches.
-- Clone this repository on the same computer with either `--bare` or `--mirror`.
+- Clone this repository on the same computer with either `--bare` or `--mirror`:
+
+```shell
+$ cd /path/to/example
+$ git init
+
+# now add some commits and branches ...
+
+$ git clone --bare /path/to/example /path/to/example-bare
+```
+
 - Inspect the bare repository.
-- Clone the bare repository.
+- Clone the bare repository:
+
+```shell
+$ git clone /path/to/example-bare /path/to/example-clone
+$ cd /path/to/example-clone
+```
+
 - Inside the clone inspect `git remote -v`.
 - Inside the clone create a commit and push the commit to `origin`.
 - The bare repository can be cloned several times and one can exercise pushing and pulling changes.
