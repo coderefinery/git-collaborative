@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: Working with remotes and centralized workflow
-teaching: 30
+teaching: 40
 exercises: 40
 questions:
   - How can we share repositories with others?
