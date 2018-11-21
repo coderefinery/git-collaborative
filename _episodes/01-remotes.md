@@ -243,3 +243,15 @@ We can also delete remote branches:
 ```shell
 $ git push origin --delete somefeature
 ```
+
+---
+
+## Centralized workflow with protected branches
+
+- Forking workflow may be overkill for small closed-source projects.
+- A good alternative to the forking workflow for a group of collaborators
+  is to use a protected (`master`) branch.
+- Only designated "code owners" have write access to the protected branch.
+- All project members contribute code changes via pull requests from feature branches.
+- Pull requests need to be approved by a code owner.
+- Discuss the advantages or disadvantages of this workflow.
