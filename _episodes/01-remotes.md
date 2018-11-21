@@ -110,6 +110,10 @@ $ git commit
 $ git push origin master
 ```
 
+By "upstream" we mean here the repository which we have cloned.
+Imagine "upstream" being closer to the main development and your local
+clone to be "downstream".
+
 
 ### 6. **Stop here** and discuss why push for most participants was rejected
 
