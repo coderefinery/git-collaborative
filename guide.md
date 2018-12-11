@@ -5,7 +5,7 @@ permalink: /guide/
 
 # Instructor guide
 
-### Before you start
+### Prepare at the latest the day before
 
 First verify that these repos exist:
 - https://github.com/bast/centralized-workflow-exercise
@@ -41,6 +41,9 @@ $ cd ..
 The motivation is:
 - start with a clean repository without contributions
 - avoid participants forking a fork which sets a confusing merge base
+
+After inviting participants as collaborators, give them the invite link, otherwise
+the invitations can be swallowed by spam filters.
 
 
 ### Before you start teaching, check https://github.com/coderefinery/centralized-workflow-exercise
