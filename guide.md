@@ -43,6 +43,20 @@ The motivation is:
 - avoid participants forking a fork which sets a confusing merge base
 
 
+### Before you start teaching, check https://github.com/coderefinery/centralized-workflow-exercise
+
+- If you see changes from last workshop, stop and apply the above steps.
+
+Compare:
+- https://github.com/bast/centralized-workflow-exercise/network
+- https://github.com/coderefinery/centralized-workflow-exercise/network
+
+- If they are not the same and you see new changes from this workshop
+  (participants who race ahead), move the repo back with `reset --hard`.
+- Remind participants that we have to do all steps of the centralized workflow
+  exercise together for minimum confusion.
+
+
 ### How to start
 
 <Here can be a starting anecdote or a starting question.>
