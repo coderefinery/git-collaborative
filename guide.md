@@ -83,7 +83,9 @@ wake participants up.>
 
 ### Core aspects
 
-<Main points we need to give across. List also goals for the lesson.>
+- Be able to submit a change to another project.
+- Understand how to update a fork.
+- Be able to contribute in code review.
 
 
 ### Sessions which can be skipped if time is tight
