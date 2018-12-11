@@ -114,3 +114,9 @@ is then better.
 
 If some participants already go ahead, they will manage to push
 changes and the history will be different than what is expected.
+
+
+### Other practical aspects
+
+- Participants really have to sit next to someone, so that they can see the screens. From the beginning.
+- Emphasize use of `git graph` a lot, just like in git-intro.
