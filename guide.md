@@ -11,8 +11,18 @@ First verify that these repos exist:
 - https://github.com/bast/centralized-workflow-exercise
 - https://github.com/bast/forking-workflow-exercise
 
-If yes, then delete these repos:
+If yes, first
+deactive Travis for https://github.com/coderefinery/forking-workflow-exercise
+
+Then delete these repos:
 - https://github.com/coderefinery/centralized-workflow-exercise
+- https://github.com/coderefinery/forking-workflow-exercise
+
+Then create the empty repositories:
+- https://github.com/coderefinery/centralized-workflow-exercise
+- https://github.com/coderefinery/forking-workflow-exercise
+
+Now re-activate Travis CI for this repo before you push changes to it:
 - https://github.com/coderefinery/forking-workflow-exercise
 
 Then mirror the repositories fresh:
@@ -27,9 +37,6 @@ $ cd forking-workflow-exercise.git
 $ git push --mirror git@github.com:coderefinery/forking-workflow-exercise.git
 $ cd ..
 ```
-
-Make sure to deactivate and re-activate Travis CI for this repo:
-- https://github.com/coderefinery/forking-workflow-exercise
 
 The motivation is:
 - start with a clean repository without contributions
