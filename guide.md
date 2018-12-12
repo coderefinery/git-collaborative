@@ -38,6 +38,10 @@ $ git push --mirror git@github.com:coderefinery/forking-workflow-exercise.git
 $ cd ..
 ```
 
+Add at least one other helper as an admin on the repository (let the
+other helpers know who that is), so that someone can give latecomers
+write access without asking the main presenter.
+
 The motivation is:
 - start with a clean repository without contributions
 - avoid participants forking a fork which sets a confusing merge base
