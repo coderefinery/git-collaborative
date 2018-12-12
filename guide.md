@@ -55,7 +55,7 @@ Compare:
 - https://github.com/coderefinery/centralized-workflow-exercise/network
 
 - If they are not the same and you see new changes from this workshop
-  (participants who race ahead), move the repo back with `reset --hard`.
+  (participants who race ahead), reset the repository with the `--mirror` steps above.
 - Remind participants that we have to do all steps of the centralized workflow
   exercise together for minimum confusion.
 
