@@ -5,14 +5,24 @@ permalink: /guide/
 
 # Instructor guide
 
-### Before you start
+### Prepare at the latest the day before
 
 First verify that these repos exist:
 - https://github.com/bast/centralized-workflow-exercise
 - https://github.com/bast/forking-workflow-exercise
 
-If yes, then delete these repos:
+If yes, first
+deactive Travis for https://github.com/coderefinery/forking-workflow-exercise
+
+Then delete these repos:
 - https://github.com/coderefinery/centralized-workflow-exercise
+- https://github.com/coderefinery/forking-workflow-exercise
+
+Then create the empty repositories:
+- https://github.com/coderefinery/centralized-workflow-exercise
+- https://github.com/coderefinery/forking-workflow-exercise
+
+Now re-activate Travis CI for this repo before you push changes to it:
 - https://github.com/coderefinery/forking-workflow-exercise
 
 Then mirror the repositories fresh:
@@ -28,12 +38,26 @@ $ git push --mirror git@github.com:coderefinery/forking-workflow-exercise.git
 $ cd ..
 ```
 
-Make sure to deactivate and re-activate Travis CI for this repo:
-- https://github.com/coderefinery/forking-workflow-exercise
-
 The motivation is:
 - start with a clean repository without contributions
 - avoid participants forking a fork which sets a confusing merge base
+
+After inviting participants as collaborators, give them the invite link, otherwise
+the invitations can be swallowed by spam filters.
+
+
+### Before you start teaching, check https://github.com/coderefinery/centralized-workflow-exercise
+
+- If you see changes from last workshop, stop and apply the above steps.
+
+Compare:
+- https://github.com/bast/centralized-workflow-exercise/network
+- https://github.com/coderefinery/centralized-workflow-exercise/network
+
+- If they are not the same and you see new changes from this workshop
+  (participants who race ahead), move the repo back with `reset --hard`.
+- Remind participants that we have to do all steps of the centralized workflow
+  exercise together for minimum confusion.
 
 
 ### How to start
@@ -62,7 +86,9 @@ wake participants up.>
 
 ### Core aspects
 
-<Main points we need to give across. List also goals for the lesson.>
+- Be able to submit a change to another project.
+- Understand how to update a fork.
+- Be able to contribute in code review.
 
 
 ### Sessions which can be skipped if time is tight
@@ -91,3 +117,9 @@ is then better.
 
 If some participants already go ahead, they will manage to push
 changes and the history will be different than what is expected.
+
+
+### Other practical aspects
+
+- Participants really have to sit next to someone, so that they can see the screens. From the beginning.
+- Emphasize use of `git graph` a lot, just like in git-intro.
