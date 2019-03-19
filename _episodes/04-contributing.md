@@ -69,3 +69,20 @@ keypoints:
 
 - Get agreement and feedback before writing 5000 lines of code which might be rejected
 - If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
+
+---
+
+## How to make sure that you don't merge malicious code
+
+- Since commit hashes depend on all their parents you cannot modify the past
+  without all future hashes changing
+- Projects like
+  [https://github.com/torvalds/linux](https://github.com/torvalds/linux)
+  or
+  [https://github.com/bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
+  have to be extremely careful what they accept
+- Do not blindly merge submitted pull requests
+- Browse the code changes before merging them
+- If you get an extremely large changeset, ask for more information
+- Possibly verify whether the submitter is not trying to impersonate somebody you know
+- Git commits can be PGP signed to verify authenticity
