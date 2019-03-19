@@ -53,10 +53,14 @@ keypoints:
 
 ---
 
-## WIP (work in progress) pull/merge requests
+## WIP (work in progress) merge requests and draft pull requests
 
 - Convention: Pull requests or merge requests starting with "WIP" are not to be merged yet
 - They are there to collect feedback on unfinished work
+- On GitHub you can create [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
+  which cannot be merged until marked ready for review.
+
+**Typical workflow**:
 
 - Open an issue in the repository you wish to contribute to
 - Write a short proposal for your suggested change or new feature
