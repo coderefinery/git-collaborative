@@ -48,6 +48,17 @@ The motivation for the above steps:
 - Avoid participants forking a fork which sets a confusing merge base.
 
 
+### Adjust URLs in the material in case you used different exercise URLs
+
+In case you have copied/imported the exercise templates into a different location,
+you can adjust the addresses in `_config.yml` to your liking:
+
+```yaml
+centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
+forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
+```
+
+
 ### Make it easier for participants to join the centralized exercise
 
 Add at least one other helper as an admin to the newly copied centralized-workflow-exercise (let the
