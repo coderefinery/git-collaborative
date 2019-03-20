@@ -124,6 +124,15 @@ We will do this exercise on [GitHub](https://github.com) but also
 [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
 similar workflows and basically everything that we will discuss is transferable.
 
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">We will work with a new repository for this exercise!</h4>
+  <p>
+    For this exercise we will fork a different repository compared to earlier today.
+    Please step out of the repository and check that you fork the <b>forking</b>-workflow-exercise.
+  </p>
+</div>
+
 
 ### Part A: Fork and clone
 
