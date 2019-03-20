@@ -5,79 +5,99 @@ permalink: /guide/
 
 # Instructor guide
 
-### Prepare at the latest the day before
+## Prepare at the latest the day before
 
-First verify that these repos exist:
-- https://github.com/bast/centralized-workflow-exercise
-- https://github.com/bast/forking-workflow-exercise
+### Prepare exercise repositories
 
-If yes, first
-deactive Travis for https://github.com/coderefinery/forking-workflow-exercise
+First verify that these repos exist - **never remove these**, **never use these directly during a course**:
+- [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
+- [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
-Then delete these repos:
-- https://github.com/coderefinery/centralized-workflow-exercise
-- https://github.com/coderefinery/forking-workflow-exercise
+In a previous workshop you may have used
+[https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise).
+If yes, deactivate Travis for this repository. If you have used a different
+exercise repository (in your own workshop), please make sure that Travis is not
+activated for that repository before we continue.
 
-Then create the empty repositories:
-- https://github.com/coderefinery/centralized-workflow-exercise
-- https://github.com/coderefinery/forking-workflow-exercise
+Then delete the copied exercise repositories from a previous workshop. They may be at a
+different location. **Make sure to not remove the templates above**. You only want to remove their copies:
+- [https://github.com/coderefinery/centralized-workflow-exercise](https://github.com/coderefinery/centralized-workflow-exercise)
+- [https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise)
 
-Now re-activate Travis CI for this repo before you push changes to it:
-- https://github.com/coderefinery/forking-workflow-exercise
+Now use the [GitHub importer](https://github.com/new/import) to create new copies:
 
-Then mirror the repositories fresh:
+Centralized exercise (you are welcome to use a different target address):
+- Your old repository’s clone URL: [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
+- Your new repository details: coderefinery / centralized-workflow-exercise
 
+Forking exercise (you are welcome to use a different target address):
+- Your old repository’s clone URL: [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
+- Your new repository details: coderefinery / forking-workflow-exercise
+
+Now re-activate
+[Travis CI](https://travis-ci.org/organizations/coderefinery/repositories)
+for the forking-workflow-exercise repository before you push changes to it.
+
+To test that Travis CI is correctly set up,
+fork [https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise),
+submit a pull request, and
+verify that testing is triggered by the pull request, then you can close the pull request again.
+
+The motivation for the above steps:
+- Start with a clean repository without contributions.
+- Avoid participants forking a fork which sets a confusing merge base.
+
+
+### Adjust URLs in the material in case you used different exercise URLs
+
+In case you have copied/imported the exercise templates into a different location,
+you can adjust the addresses in `_config.yml` to your liking:
+
+```yaml
+centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
+forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
 ```
-$ git clone --mirror https://github.com/bast/centralized-workflow-exercise.git
-$ cd centralized-workflow-exercise.git
-$ git push --mirror git@github.com:coderefinery/centralized-workflow-exercise.git
-$ cd ..
-$ git clone --mirror https://github.com/bast/forking-workflow-exercise.git
-$ cd forking-workflow-exercise.git
-$ git push --mirror git@github.com:coderefinery/forking-workflow-exercise.git
-$ cd ..
-```
 
-Add at least one other helper as an admin on the repository (let the
+
+### Make it easier for participants to join the centralized exercise
+
+Add at least one other helper as an admin to the newly copied centralized-workflow-exercise (let the
 other helpers know who that is), so that someone can give latecomers
 write access without asking the main presenter.
-
-The motivation is:
-- start with a clean repository without contributions
-- avoid participants forking a fork which sets a confusing merge base
 
 After inviting participants as collaborators, give them the invite link, otherwise
 the invitations can be swallowed by spam filters.
 
 
-### Before you start teaching, check https://github.com/coderefinery/centralized-workflow-exercise
+## Before you start teaching, check the centralized workflow exercise
+
+Check [https://github.com/coderefinery/centralized-workflow-exercise](https://github.com/coderefinery/centralized-workflow-exercise)
+(or the location which you chose to use instead).
 
 - If you see changes from last workshop, stop and apply the above steps.
 
 Compare:
-- https://github.com/bast/centralized-workflow-exercise/network
-- https://github.com/coderefinery/centralized-workflow-exercise/network
+- [https://github.com/coderefinery/template-centralized-workflow-exercise/network](https://github.com/coderefinery/template-centralized-workflow-exercise/network) (the template)
+- [https://github.com/coderefinery/centralized-workflow-exercise/network](https://github.com/coderefinery/centralized-workflow-exercise/network) (the copy you have created)
 
 - If they are not the same and you see new changes from this workshop
-  (participants who race ahead), reset the repository with the `--mirror` steps above.
+  (participants who race ahead), reset the repository with a hard reset to its initial state.
 - Remind participants that we have to do all steps of the centralized workflow
   exercise together for minimum confusion.
 
 
-### How to start
+## How to start
 
-<Here can be a starting anecdote or a starting question.>
-
-
-### Questions to involve participants
-
-<Here list a couple of questions that can be asked to
-wake participants up.>
+(Here can be a starting anecdote or a starting question.)
 
 
-### Timing
+## Questions to involve participants
 
-<Give hints on timing.>
+(Here list a couple of questions that can be asked to
+wake participants up.)
+
+
+## Timing
 
 - The first episode is densest and introduces many new concepts,
   so at least an hour is required for it.
@@ -85,32 +105,28 @@ wake participants up.>
   introduces forking and distributed workflows), and it takes maybe half the
   time of the first episode.
 - The "How to contribute changes to somebody else's project" episode can be
-  covered really quickly
+  covered really quickly and offers room for discussion if you have time left.
 
 
-### Core aspects
+## Core aspects
 
 - Be able to submit a change to another project.
 - Understand how to update a fork.
 - Be able to contribute in code review.
 
 
-### Sessions which can be skipped if time is tight
+## Sessions which can be skipped if time is tight
 
-<List optional sessions here.>
-
-- The bare vs non-bare episode can be skipped over without any harm done
-- The hooks episode is typically skipped
+- The bare vs non-bare episode can be skipped over without any harm done.
+- The hooks episode is typically skipped.
 
 
-### Typical pitfalls
-
-<Document here with what participants often struggle.>
+## Typical pitfalls
 
 - The difference between pull and pull requests can be confusing, explain clearly that
-  pull requests are a different mechanism specific to GitHub, GitLab...
+  pull requests are a different mechanism specific to GitHub, GitLab, etc.
 - The behavior that additional commits to a branch from which a pull request has been created get appended
-  to the pull request needs to be explained
+  to the pull request needs to be explained.
 
 
 ### Centralized workflow exercise
@@ -123,7 +139,7 @@ If some participants already go ahead, they will manage to push
 changes and the history will be different than what is expected.
 
 
-### Other practical aspects
+## Other practical aspects
 
 - Participants really have to sit next to someone, so that they can see the screens. From the beginning.
-- Emphasize use of `git graph` a lot, just like in git-intro.
+- Emphasize use of `git graph` a lot, just like in the git-solo lesson.
