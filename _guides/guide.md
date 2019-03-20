@@ -5,6 +5,22 @@ permalink: /guide/
 
 # Instructor guide
 
+## How to customize the lesson for your workshop
+
+You can adjust the location of the exercises in case you plan to copy/import them to a different place.
+
+This is the default:
+
+```yaml
+centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
+forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
+```
+
+But you can change these in `_config.yml`
+and this will change the locations in this instructor guide
+but also in the lesson episodes.
+
+
 ## Prepare at the latest the day before
 
 ### Prepare exercise repositories
@@ -14,49 +30,36 @@ First verify that these repos exist - **never remove these**, **never use these 
 - [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
 In a previous workshop you may have used
-[https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise).
-If yes, deactivate Travis for this repository. If you have used a different
-exercise repository (in your own workshop), please make sure that Travis is not
-activated for that repository before we continue.
+[{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }}).
+If yes, deactivate Travis for this repository.
 
-Then delete the copied exercise repositories from a previous workshop. They may be at a
-different location. **Make sure to not remove the templates above**. You only want to remove their copies:
-- [https://github.com/coderefinery/centralized-workflow-exercise](https://github.com/coderefinery/centralized-workflow-exercise)
-- [https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise)
+Then delete the copied exercise repositories from a previous workshop.
+**Make sure to not remove the templates above** - you only want to remove their copies:
+- [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
+- [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
 Now use the [GitHub importer](https://github.com/new/import) to create new copies:
 
-Centralized exercise (you are welcome to use a different target address):
+Centralized exercise:
 - Your old repository’s clone URL: [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
-- Your new repository details: coderefinery / centralized-workflow-exercise
+- Your new repository details: [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
 
-Forking exercise (you are welcome to use a different target address):
+Forking exercise:
 - Your old repository’s clone URL: [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
-- Your new repository details: coderefinery / forking-workflow-exercise
+- Your new repository details: [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
-Now re-activate
-[Travis CI](https://travis-ci.org/organizations/coderefinery/repositories)
-for the forking-workflow-exercise repository before you push changes to it.
+Now re-activate Travis CI for
+[{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
+before you push changes to it.
 
 To test that Travis CI is correctly set up,
-fork [https://github.com/coderefinery/forking-workflow-exercise](https://github.com/coderefinery/forking-workflow-exercise),
+fork [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }}),
 submit a pull request, and
 verify that testing is triggered by the pull request, then you can close the pull request again.
 
 The motivation for the above steps:
 - Start with a clean repository without contributions.
 - Avoid participants forking a fork which sets a confusing merge base.
-
-
-### Adjust URLs in the material in case you used different exercise URLs
-
-In case you have copied/imported the exercise templates into a different location,
-you can adjust the addresses in `_config.yml` to your liking:
-
-```yaml
-centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
-forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
-```
 
 
 ### Make it easier for participants to join the centralized exercise
@@ -71,14 +74,12 @@ the invitations can be swallowed by spam filters.
 
 ## Before you start teaching, check the centralized workflow exercise
 
-Check [https://github.com/coderefinery/centralized-workflow-exercise](https://github.com/coderefinery/centralized-workflow-exercise)
-(or the location which you chose to use instead).
-
+Check [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }}):
 - If you see changes from last workshop, stop and apply the above steps.
 
 Compare:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise/network](https://github.com/coderefinery/template-centralized-workflow-exercise/network) (the template)
-- [https://github.com/coderefinery/centralized-workflow-exercise/network](https://github.com/coderefinery/centralized-workflow-exercise/network) (the copy you have created)
+- [{{ site.centralized_workflow_exercise_url }}/network]({{ site.centralized_workflow_exercise_url }}/network) (the copy you have created)
 
 - If they are not the same and you see new changes from this workshop
   (participants who race ahead), reset the repository with a hard reset to its initial state.
