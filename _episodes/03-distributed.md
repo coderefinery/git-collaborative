@@ -127,8 +127,8 @@ similar workflows and basically everything that we will discuss is transferable.
 
 ### Part A: Fork and clone
 
-First fork [this repository](https://github.com/coderefinery/forking-workflow-exercise)
-on GitHub into your namespace and then clone the fork to your computer.
+First fork [this repository]({{ site.forking_workflow_exercise_url }})
+into your namespace and then clone the fork to your computer.
 
 Here is a pictorial representation of this part:
 
@@ -255,7 +255,7 @@ We will discuss two solutions:
 - How do we get these changes to the forked repo?
 
 ```shell
-$ git remote add upstream https://github.com/coderefinery/forking-workflow-exercise.git
+$ git remote add upstream {{ site.forking_workflow_exercise_url }}.git
 $ git fetch upstream
 ```
 
@@ -295,7 +295,7 @@ Here we pull from the central repo and push to our fork:
 
 ```shell
 $ git checkout master
-$ git pull https://github.com/coderefinery/forking-workflow-exercise.git master
+$ git pull {{ site.forking_workflow_exercise_url }}.git master
 $ git push https://github.com/user/forking-workflow-exercise.git master
 ```
 

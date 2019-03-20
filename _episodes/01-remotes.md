@@ -52,21 +52,15 @@ and code review we will meet and discuss a number of typical pitfalls.
 ## After participants have been added as collaborators
 
 
-### 1. Clone [this repository](https://github.com/coderefinery/centralized-workflow-exercise)
+### 1. Clone [this repository]({{ site.centralized_workflow_exercise_url }})
 
-If you have set up ssh keys:
 ```
-$ git clone git@github.com:coderefinery/centralized-workflow-exercise.git
-```
-
-If you have not set up ssh keys:
-```
-$ git clone https://github.com/coderefinery/centralized-workflow-exercise.git
+$ git clone {{ site.centralized_workflow_exercise_url }}.git centralized-workflow-exercise
 ```
 
-If you decide to set up ssh keys later:
-- https://help.github.com/articles/connecting-to-github-with-ssh/
-- https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html
+Instead of using https you can also clone using ssh keys:
+- [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
+- [https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
 
 This is a representation of what happens when you clone:
 
@@ -84,7 +78,7 @@ This is a representation of what happens when you clone:
 - All other operations are local operations.
 
 
-### 2. Step into the newly created directory:
+### 2. Step into the newly created directory
 
 ```
 $ cd centralized-workflow-exercise
@@ -217,7 +211,7 @@ Can we leave out the `-u`?
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
 
-Finally also discuss https://github.com/coderefinery/centralized-workflow-exercise/network.
+Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 ---
 
