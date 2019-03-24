@@ -1,44 +1,30 @@
 fork_me_ribbon_url: https://github.com/coderefinery/git-collaborative
+baseurl: "/git-collaborative"
 title: "Collaborative distributed version control"
 start_time: 540  # 9:00
 centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
 forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
 
-# where things are
 source: .
 destination: ./_site
 layouts_dir: ./jekyll-common/layouts
 includes_dir: ./jekyll-common/includes
-data_dir: ./_data
 
-# filtering content
-show_drafts: null
-limit_posts: 0
-future: true
-unpublished: false
-
-# conversion
 markdown: kramdown
-highlighter: rouge
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'codehilite'
 
-lsi: false
-excerpt_separator: "\n\n"
-
-# serving
-detach: false
-port: 4000
-host: 127.0.0.1
-baseurl: "/git-collaborative"
-
 include: ['jekyll-common/pages']
 
 collections:
   episodes:
+    output: true
+    permalink: /:name/
+  # guides are in a collection, otherwise site variables
+  # like centralized_workflow_exercise_url are not understood
+  guides:
     output: true
     permalink: /:name/
