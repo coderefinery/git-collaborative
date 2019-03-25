@@ -98,6 +98,13 @@ Compare:
 wake participants up.)
 
 
+## Interesting questions you might get
+
+If participants run `git graph` they might notice `origin/HEAD`.
+This has been omitted from the figures to not overload them.
+This pointer represents the default branch of the remote repository.
+
+
 ## Timing
 
 - The first episode is densest and introduces many new concepts,
