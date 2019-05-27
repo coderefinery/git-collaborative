@@ -51,11 +51,14 @@ Forking exercise:
 Now re-activate Travis CI for
 [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 before you push changes to it.
+Sometimes Travis shows an error when activating. In this case, please reload the page and try again.
 
 To test that Travis CI is correctly set up,
 fork [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }}),
 submit a pull request, and
 verify that testing is triggered by the pull request, then you can close the pull request again.
+
+Finally give all instructors admin rights to the two newly created exercise repositories.
 
 The motivation for the above steps:
 - Start with a clean repository without contributions.
