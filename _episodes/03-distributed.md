@@ -27,8 +27,9 @@ keypoints:
 ![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
 
 
-Git implements a distributed version control.
-Basically any repository topology that you can think of can be implemented.
+Git implements a **distributed** version control.
+This means that any type of repository links that you can think of can be
+implemented - not just "everything connects to one central server.
 
 Two topologies are very frequent: centralized and forking layout.
 
@@ -37,7 +38,7 @@ Two topologies are very frequent: centralized and forking layout.
 
 ![]({{ site.baseurl }}/img/forking/centralized.svg)
 
-In Git all repositories are in principle equivalent but typically we consider one repository
+In Git, all repositories are equivalent but in the typical **centralized** style, we consider one repository
 as the main development line and this is marked as "central".
 The "central" is a role, not a technical difference.
 
@@ -63,7 +64,9 @@ Disadvantages:
 
 ![]({{ site.baseurl }}/img/forking/forking-overview.svg)
 
-Again we call one repository the "central" repository.
+In the **forking layout**, again we call one repository the "central"
+repository but people push to **forks** (their own copies of the
+repository on Github).
 
 Features:
 
@@ -73,6 +76,8 @@ Features:
 - Typically nobody pushes directly to the central repo.
 - Code review can be coupled with with automated testing.
 - Central repo and the forks typically reside in the "cloud".
+- Naturally grows out the centralized model once more people begin
+  contributing.
 
 Advantages:
 
@@ -113,7 +118,9 @@ $ git remote --verbose
 
 ## Exercise 1: practice collaborative forking workflow
 
-We will run this exercise in groups. Groups can choose a number or a name.
+In this exercise, we make a fork, push to that fork, and make a pull
+request to the master repository.  We will run this exercise in
+groups. Groups can choose a number or a name.
 
 Objectives:
 
