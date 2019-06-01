@@ -19,6 +19,7 @@ keypoints:
 
 ## Cloning repositories
 
+The `git clone` command make a copy of a repository.  For example,
 ```shell
 $ git clone https://host.com/user/project.git project
 ```
@@ -39,11 +40,19 @@ $ git clone https://host.com/user/project.git project
 
 # Centralized workflow exercise
 
-Exercise to practice collaborative centralized workflow. On the way to a pull request
-and code review we will meet and discuss a number of typical pitfalls.
+In this exercise, we practice collaborative centralized workflow.
+First, we all **clone** (make a local copy) and try to **push** (send
+code to) the main repository.  We'll see a small problem with that,
+and then make a **pull request** (sending code so that others can
+review and accept later).  We'll discuss how this leads to code review
+and discuss a number of typical pitfalls.
 
+Please don't go too far ahead, because we will learn from problems
+that come up.
 
 ## Before we start
+
+Everyone needs their GitHub account to be added to our central repository.
 
 1. Participants add their usernames to a shared document.
 2. Instructor adds participants as collaborators to this project.
@@ -108,7 +117,7 @@ $ git commit
 $ git push origin master
 ```
 
-By "upstream" we mean here the repository which we have cloned.
+By **"upstream"** we mean here the repository which we have cloned.
 Imagine "upstream" being closer to the main development and your local
 clone to be "downstream".
 
@@ -127,7 +136,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 'Note about fast-forwards' section of 'git push --help' for details.
 ```
 
-It will work only for one participant. Why?
+The push only worked for one participant. Why?
 
 *remote*: ![]({{ site.baseurl }}/img/centralized/06-remote.svg)
 
@@ -192,12 +201,15 @@ It will work for one more person.
 
 ### 10. Create a branch `yourname/somefeature` pointing at your commit
 
-First find out the hash of your commit, then create a branch "in the past" pointing to that
-hash:
+First find out the hash of your commit (using `git graph` or `git
+log`), then create a branch "in the past" pointing to that hash:
 
 ```
 $ git branch yourname/somefeature [hash]
 ```
+
+The `yourname/` prefix has no special meaning: it is just part of a
+branch name to indicate who made it.
 
 
 ### 11. Push your change as a new branch
@@ -251,8 +263,9 @@ $ git push origin --delete somefeature
 
 - Forking workflow may be overkill for small closed-source projects.
 - A good alternative to the forking workflow for a group of collaborators
-  is to use a protected (`master`) branch.
+  is to use a **protected** (only certain people may directly push to
+  it) `master` branch.
 - Only designated "code owners" have write access to the protected branch.
-- All project members contribute code changes via pull requests from feature branches.
+- Anyone else may contribute code changes via pull requests from feature branches.
 - Pull requests need to be approved by a code owner.
 - Discuss the advantages or disadvantages of this workflow.

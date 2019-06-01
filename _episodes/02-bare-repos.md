@@ -15,12 +15,12 @@ keypoints:
 
 ### Non-bare repository
 
-- A non-bare repository contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree**.
+- A **non-bare repository** contains `.git/` as well as a snapshot of your tracked files that you can directly edit called **the working tree** (the actual files you can edit).
 - **This is where we edit and commit changes**.
 
 ### Bare repository
 
-- A bare repository contains only the `.git/` part.
+- A **bare repository** contains only the `.git/` part, no files you can directly edit.
 - By convention the names of bare repositories end with `.git` to emphasize this.
 - We never do actual editing work inside a bare repository.
 - GitHub, GitLab, etc. store a bare repository.
