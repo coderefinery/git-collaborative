@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Hooks
+title: (Optional) Hooks
 teaching: 5
 exercises: 0
 questions:
