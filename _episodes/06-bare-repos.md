@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Non-bare and bare repositories
+title: (Optional) Non-bare and bare repositories
 teaching: 10
 exercises: 0
 questions:
