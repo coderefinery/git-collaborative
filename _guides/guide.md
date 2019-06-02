@@ -128,7 +128,8 @@ This pointer represents the default branch of the remote repository.
 
 ## Sessions which can be skipped if time is tight
 
-- The bare vs non-bare episode can be skipped over without any harm done.
+- The bare vs non-bare episode can be skipped over without any harm done. We have discussed this episode
+  in only one workshop so far and I think it was more confusing than helpful.
 - The hooks episode is typically skipped.
 
 
