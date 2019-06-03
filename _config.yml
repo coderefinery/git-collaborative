@@ -1,7 +1,6 @@
 fork_me_ribbon_url: https://github.com/coderefinery/git-collaborative
 baseurl: "/git-collaborative"
 title: "Collaborative distributed version control"
-start_time: 540  # 9:00
 centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
 forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
 
