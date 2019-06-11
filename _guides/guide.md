@@ -58,7 +58,8 @@ fork [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercis
 submit a pull request, and
 verify that testing is triggered by the pull request, then you can close the pull request again.
 
-Finally give all instructors admin rights to the two newly created exercise repositories.
+Finally give all instructors admin rights to the two newly created exercise repositories and write-protect the
+`master` branch until we really start pushing to the repository.
 
 The motivation for the above steps:
 - Start with a clean repository without contributions.
