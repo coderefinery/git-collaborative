@@ -91,17 +91,6 @@ Compare:
   exercise together for minimum confusion.
 
 
-## How to start
-
-(Here can be a starting anecdote or a starting question.)
-
-
-## Questions to involve participants
-
-(Here list a couple of questions that can be asked to
-wake participants up.)
-
-
 ## Interesting questions you might get
 
 If participants run `git graph` they might notice `origin/HEAD`.
