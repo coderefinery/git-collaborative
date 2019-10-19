@@ -20,6 +20,7 @@ But you can change these in `_config.yml`
 and this will change the locations in this instructor guide
 but also in the lesson episodes.
 
+---
 
 ## Prepare at the latest the day before
 
@@ -75,6 +76,7 @@ write access without asking the main presenter.
 After inviting participants as collaborators, give them the invite link, otherwise
 the invitations can be swallowed by spam filters.
 
+---
 
 ## Before you start teaching, check the centralized workflow exercise
 
@@ -90,6 +92,7 @@ Compare:
 - Remind participants that we have to do all steps of the centralized workflow
   exercise together for minimum confusion.
 
+---
 
 ## Interesting questions you might get
 
@@ -97,6 +100,7 @@ If participants run `git graph` they might notice `origin/HEAD`.
 This has been omitted from the figures to not overload them.
 This pointer represents the default branch of the remote repository.
 
+---
 
 ## Timing
 
@@ -108,6 +112,7 @@ This pointer represents the default branch of the remote repository.
 - The "How to contribute changes to somebody else's project" episode can be
   covered really quickly and offers room for discussion if you have time left.
 
+---
 
 ## Core aspects
 
@@ -115,6 +120,7 @@ This pointer represents the default branch of the remote repository.
 - Understand how to update a fork.
 - Be able to contribute in code review.
 
+---
 
 ## Sessions which can be skipped if time is tight
 
@@ -122,6 +128,7 @@ This pointer represents the default branch of the remote repository.
   in only one workshop so far and I think it was more confusing than helpful.
 - The hooks episode is typically skipped.
 
+---
 
 ## Typical pitfalls
 
@@ -129,7 +136,6 @@ This pointer represents the default branch of the remote repository.
   pull requests are a different mechanism specific to GitHub, GitLab, etc.
 - The behavior that additional commits to a branch from which a pull request has been created get appended
   to the pull request needs to be explained.
-
 
 ### Centralized workflow exercise
 
@@ -140,6 +146,7 @@ is then better.
 If some participants already go ahead, they will manage to push
 changes and the history will be different than what is expected.
 
+---
 
 ## Other practical aspects
 
