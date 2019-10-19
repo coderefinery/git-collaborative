@@ -42,6 +42,16 @@ $ ls -l .git/hooks/
 See also [pre-commit](https://pre-commit.com),
 a framework for managing and maintaining multi-language pre-commit hooks.
 
+Example for a `pre-commit` hook which checks whether a Python code is [PEP 8](https://www.python.org/dev/peps/pep-0008/)-compliant
+using [pycodestyle](http://pycodestyle.pycqa.org):
+
+```shell
+#!/usr/bin/env bash
+
+# ignore errors due to too long lines
+pycodestyle --ignore=E501 myproject/
+```
+
 
 ### Server-side hooks
 
