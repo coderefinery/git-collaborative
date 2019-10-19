@@ -7,7 +7,8 @@ permalink: /guide/
 
 ## Preparing the exercises
 
-You need to prepare the exercises at least one day before.
+- You need to prepare the exercises at least one day before by importing them from a template.
+- For the forking exercise you need to enable Travis CI after you have imported the exercise.
 
 
 ### How to customize the lesson for your workshop
