@@ -42,6 +42,8 @@ $ ls -l .git/hooks/
 
 ### Server-side hooks
 
+You can typically edit them through a web interface on GitHub/GitLab.
+
 - `pre-receive`: before accepting any references
 - `update`: like `pre-receive` but runs once per pushed branch
 - `post-receive`: after entire process is completed
