@@ -7,6 +7,8 @@ permalink: /guide/
 
 ## Preparing the exercises and cleaning up
 
+- Exercises are templates but we do not use the templates directly but
+  [import exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
 - You need to prepare the exercises at least one day before by importing them from a template.
 - For the forking exercise you need to enable Travis CI after you have imported the exercise.
 - After the workshop please remove the imported exercises (if created under
@@ -16,7 +18,7 @@ permalink: /guide/
 
 ### How to customize the lesson for your workshop
 
-You can adjust the location of the exercises in case you plan to copy/import them to a custom place.
+You can adjust the location of the exercises in case you plan to import them to a custom place.
 
 This is the default:
 
@@ -45,15 +47,10 @@ Then delete the copied exercise repositories from a previous workshop.
 - [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
 - [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
-Now use the [GitHub importer](https://github.com/new/import) to create new copies:
-
-Centralized exercise:
-- Your old repository’s clone URL: [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
-- Your new repository details: [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
-
-Forking exercise:
-- Your old repository’s clone URL: [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
-- Your new repository details: [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
+Now create the two exercises by [importing](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+these two templates:
+- [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
+- [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
 Now re-activate Travis CI for
 [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
