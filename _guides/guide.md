@@ -5,10 +5,13 @@ permalink: /guide/
 
 # Instructor guide
 
-## Preparing the exercises
+## Preparing the exercises and cleaning up
 
 - You need to prepare the exercises at least one day before by importing them from a template.
 - For the forking exercise you need to enable Travis CI after you have imported the exercise.
+- After the workshop please remove the imported exercises (if created under
+  https://github.com/coderefinery), otherwise the instructor in a future
+  workshop may not have the permissions to do so.
 
 
 ### How to customize the lesson for your workshop
