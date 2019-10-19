@@ -15,18 +15,18 @@ Sometimes you would like Git events (commits, pushes, etc.) to trigger scripts w
 
 Hooks are scripts that are executed before/after certain events.
 
-You can find and edit them here:
-
-```shell
-$ ls -l .git/hooks/
-```
-
 They can be used to enforce nearly any kind of policy for your project.
 
 There are client-side and server-side hooks.
 
 
 ### Client-side hooks
+
+You can find and edit them here:
+
+```shell
+$ ls -l .git/hooks/
+```
 
 - `pre-commit`: before commit message editor (example: make sure tests pass)
 - `prepare-commit-msg`: before commit message editor (example: modify default messages)
