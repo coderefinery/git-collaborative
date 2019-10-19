@@ -5,9 +5,14 @@ permalink: /guide/
 
 # Instructor guide
 
-## How to customize the lesson for your workshop
+## Preparing the exercises
 
-You can adjust the location of the exercises in case you plan to copy/import them to a different place.
+You need to prepare the exercises at least one day before.
+
+
+### How to customize the lesson for your workshop
+
+You can adjust the location of the exercises in case you plan to copy/import them to a custom place.
 
 This is the default:
 
@@ -20,9 +25,6 @@ But you can change these in `_config.yml`
 and this will change the locations in this instructor guide
 but also in the lesson episodes.
 
----
-
-## Prepare at the latest the day before
 
 ### Prepare exercise repositories
 
