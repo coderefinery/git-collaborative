@@ -39,6 +39,9 @@ $ ls -l .git/hooks/
 - `pre-push`: runs during `git push` before any objects have been transferred
 - `pre-auto-gc`: invoked just before the garbage collection takes place
 
+See also [pre-commit](https://pre-commit.com),
+a framework for managing and maintaining multi-language pre-commit hooks.
+
 
 ### Server-side hooks
 
