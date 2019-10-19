@@ -138,10 +138,17 @@ This pointer represents the default branch of the remote repository.
 
 ## Typical pitfalls
 
-- The difference between pull and pull requests can be confusing, explain clearly that
-  pull requests are a different mechanism specific to GitHub, GitLab, etc.
-- The behavior that additional commits to a branch from which a pull request has been created get appended
-  to the pull request needs to be explained.
+### Difference between pull and pull requests
+
+The difference between pull and pull requests can be confusing, explain clearly that
+pull requests are a different mechanism specific to GitHub, GitLab, etc.
+
+
+### Pull requests are from branch to branch, not from commit to branch
+
+The behavior that additional commits to a branch from which a pull request has been created get appended
+to the pull request needs to be explained.
+
 
 ### Centralized workflow exercise
 
