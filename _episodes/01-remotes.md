@@ -201,11 +201,10 @@ It will work for one more person.
 
 ### 10. Create a branch `yourname/somefeature` pointing at your commit
 
-First find out the hash of your commit. You can do this using `git graph` or `git log`
-but another nice way of finding your commit is to use `git blame` on the file which you have added:
+First find out the hash of your commit. You can do this using `git graph` or `git log`:
 
 ```
-$ git blame yourusername.txt
+$ git log yourusername.txt
 ```
 
 Then create a branch "in the past" pointing to that hash:
