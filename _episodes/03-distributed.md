@@ -372,6 +372,8 @@ Motivation:
 - Limits the risk that commits get accidentally appended to an open pull request.
 - History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
 
+See also [this blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/) for an explanation.
+
 ---
 
 ## Code review
