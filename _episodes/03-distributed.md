@@ -59,6 +59,11 @@ Disadvantages:
 - Everybody who wants to contribute needs write access.
 - Maintainer needs to trust the developers to not break things (but you can protect branches).
 
+Real life examples:
+
+- Within the CodeRefinery team we mostly use this approach: [https://github.com/coderefinery](https://github.com/coderefinery)
+- [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
+
 
 ### Forking layout
 
@@ -90,6 +95,11 @@ Disadvantages:
 
 - Learning curve: we need to deal at least with two remotes (fork and central repo).
 - Introduces additional steps (to e.g. update the fork).
+
+Real life examples:
+
+- NumPy: [https://numpy.org/devdocs/dev/index.html](https://numpy.org/devdocs/dev/index.html)
+- [https://github.com/jupyterlab/jupyterlab](https://github.com/jupyterlab/jupyterlab)
 
 ---
 
