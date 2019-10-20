@@ -47,7 +47,7 @@ Then delete the copied exercise repositories from a previous workshop.
 - [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
 - [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
-Now create the two exercises by [importing](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+Now create the two above exercises by [importing](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 these two templates:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
 - [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
