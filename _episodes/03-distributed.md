@@ -317,26 +317,6 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 
 ---
 
-## Pro-tip
-
-Use Different URLs for fetch and push. Makes sense if you are the only person pushing to the fork:
-
-```shell
-$ git remote add origin https://github.com/project/project.git
-$ git remote set-url --push origin https://github.com/user/project.git
-```
-
-Now we always fetch from the central repo and push to forked repo.
-
-```shell
-$ git remote -v
-
-origin	https://github.com/project/project.git (fetch)
-origin	https://github.com/user/project.git (push)
-```
-
----
-
 <br>
 <br>
 <br>
