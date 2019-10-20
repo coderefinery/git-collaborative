@@ -119,7 +119,7 @@ $ git remote --verbose
 ## Exercise 1: practice collaborative forking workflow
 
 In this exercise, we make a fork, push to that fork, and make a pull
-request to the master repository.  We will run this exercise in
+request to the "central" repository.  We will run this exercise in
 groups. Groups can choose a number or a name.
 
 Objectives:
