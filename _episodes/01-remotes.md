@@ -201,8 +201,13 @@ It will work for one more person.
 
 ### 10. Create a branch `yourname/somefeature` pointing at your commit
 
-First find out the hash of your commit (using `git graph` or `git
-log`), then create a branch "in the past" pointing to that hash:
+First find out the hash of your commit. You can do this using `git graph` or `git log`:
+
+```
+$ git log yourusername.txt
+```
+
+Then create a branch "in the past" pointing to that hash:
 
 ```
 $ git branch yourname/somefeature [hash]
