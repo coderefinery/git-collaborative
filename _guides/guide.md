@@ -5,9 +5,20 @@ permalink: /guide/
 
 # Instructor guide
 
-## How to customize the lesson for your workshop
+## Preparing the exercises and cleaning up
 
-You can adjust the location of the exercises in case you plan to copy/import them to a different place.
+- Exercises are templates but we do not use the templates directly but
+  [import exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
+- You need to prepare the exercises at least one day before by importing them from a template.
+- For the forking exercise you need to enable Travis CI after you have imported the exercise.
+- After the workshop please remove the imported exercises (if created under
+  https://github.com/coderefinery), otherwise the instructor in a future
+  workshop may not have the permissions to do so.
+
+
+### How to customize the lesson for your workshop
+
+You can adjust the location of the exercises in case you plan to import them to a custom place.
 
 This is the default:
 
@@ -20,8 +31,6 @@ But you can change these in `_config.yml`
 and this will change the locations in this instructor guide
 but also in the lesson episodes.
 
-
-## Prepare at the latest the day before
 
 ### Prepare exercise repositories
 
@@ -38,15 +47,10 @@ Then delete the copied exercise repositories from a previous workshop.
 - [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
 - [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
-Now use the [GitHub importer](https://github.com/new/import) to create new copies:
-
-Centralized exercise:
-- Your old repository’s clone URL: [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
-- Your new repository details: [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
-
-Forking exercise:
-- Your old repository’s clone URL: [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
-- Your new repository details: [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
+Now create the two above exercises by [importing](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+these two templates:
+- [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
+- [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
 Now re-activate Travis CI for
 [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
@@ -75,11 +79,12 @@ write access without asking the main presenter.
 After inviting participants as collaborators, give them the invite link, otherwise
 the invitations can be swallowed by spam filters.
 
+---
 
 ## Before you start teaching, check the centralized workflow exercise
 
-Check [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }}):
-- If you see changes from last workshop, stop and apply the above steps.
+Check [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }}) (adjust the URL if you have imported the exercise into another custom location):
+- If you see changes from last workshop, stop and apply the above steps ("Preparing the exercises").
 
 Compare:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise/network](https://github.com/coderefinery/template-centralized-workflow-exercise/network) (the template)
@@ -89,18 +94,10 @@ Compare:
   (participants who race ahead), reset the repository with a hard reset to its initial state.
 - Remind participants that we have to do all steps of the centralized workflow
   exercise together for minimum confusion.
+- We recommend to disable push access to the repository at the beginning and re-enable it at the moment when all participants are expected
+  to push changes.
 
-
-## How to start
-
-(Here can be a starting anecdote or a starting question.)
-
-
-## Questions to involve participants
-
-(Here list a couple of questions that can be asked to
-wake participants up.)
-
+---
 
 ## Interesting questions you might get
 
@@ -108,6 +105,7 @@ If participants run `git graph` they might notice `origin/HEAD`.
 This has been omitted from the figures to not overload them.
 This pointer represents the default branch of the remote repository.
 
+---
 
 ## Timing
 
@@ -119,6 +117,7 @@ This pointer represents the default branch of the remote repository.
 - The "How to contribute changes to somebody else's project" episode can be
   covered really quickly and offers room for discussion if you have time left.
 
+---
 
 ## Core aspects
 
@@ -126,6 +125,7 @@ This pointer represents the default branch of the remote repository.
 - Understand how to update a fork.
 - Be able to contribute in code review.
 
+---
 
 ## Sessions which can be skipped if time is tight
 
@@ -133,13 +133,20 @@ This pointer represents the default branch of the remote repository.
   in only one workshop so far and I think it was more confusing than helpful.
 - The hooks episode is typically skipped.
 
+---
 
 ## Typical pitfalls
 
-- The difference between pull and pull requests can be confusing, explain clearly that
-  pull requests are a different mechanism specific to GitHub, GitLab, etc.
-- The behavior that additional commits to a branch from which a pull request has been created get appended
-  to the pull request needs to be explained.
+### Difference between pull and pull requests
+
+The difference between pull and pull requests can be confusing, explain clearly that
+pull requests are a different mechanism specific to GitHub, GitLab, etc.
+
+
+### Pull requests are from branch to branch, not from commit to branch
+
+The behavior that additional commits to a branch from which a pull request has been created get appended
+to the pull request needs to be explained.
 
 
 ### Centralized workflow exercise
@@ -151,6 +158,7 @@ is then better.
 If some participants already go ahead, they will manage to push
 changes and the history will be different than what is expected.
 
+---
 
 ## Other practical aspects
 
