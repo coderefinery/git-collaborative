@@ -7,6 +7,19 @@ permalink: /guide/
 
 ## Why we teach this lesson
 
+In order to collaborate efficiently using Git, it's essential to have a solid understanding of 
+how remotes work, and how to contribute changes through pull requests. 
+The git-intro lesson teaches participants how to work efficiently with Git when there is only 
+one developer. This lesson dives into the collaborative aspects of Git and focuses on the possible 
+collaborative workflows enabled by web-based repository hosting platforms like GitHub.
+
+This lesson is meant to directly benefit workshop participants who have prior experience with Git, 
+enabling them to put collaborative workflows involving code review directly into practice 
+when they return to their normal work. For novice Git users (who may have learned a lot in the git-intro 
+lesson) this lesson is somewhat challenging, but the lesson aims to introduce them to the concepts
+and give them confidence to start using these workflows later when they have gained some further experience 
+in working with Git.
+
 ## Intended learning outcomes
 
 By the end of this lesson, learners should:
