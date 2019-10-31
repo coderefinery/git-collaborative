@@ -5,7 +5,13 @@ permalink: /guide/
 
 # Instructor guide
 
-## Preparing the exercises and cleaning up
+## Why we teach this lesson
+
+## Intended learning outcomes
+
+## How to teach this lesson
+
+### Preparing the exercises and cleaning up
 
 - Exercises are templates but we do not use the templates directly but
   [import exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
@@ -16,7 +22,7 @@ permalink: /guide/
   workshop may not have the permissions to do so.
 
 
-### How to customize the lesson for your workshop
+#### How to customize the lesson for your workshop
 
 You can adjust the location of the exercises in case you plan to import them to a custom place.
 
@@ -32,7 +38,7 @@ and this will change the locations in this instructor guide
 but also in the lesson episodes.
 
 
-### Prepare exercise repositories
+#### Prepare exercise repositories
 
 First verify that these repos exist - **never remove these**, **never use these directly during a course**:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
@@ -70,7 +76,7 @@ The motivation for the above steps:
 - Avoid participants forking a fork which sets a confusing merge base.
 
 
-### Make it easier for participants to join the centralized exercise
+#### Make it easier for participants to join the centralized exercise
 
 Add at least one other helper as an admin to the newly copied centralized-workflow-exercise (let the
 other helpers know who that is), so that someone can give latecomers
@@ -81,7 +87,7 @@ the invitations can be swallowed by spam filters.
 
 ---
 
-## Before you start teaching, check the centralized workflow exercise
+### Before you start teaching, check the centralized workflow exercise
 
 Check [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }}) (adjust the URL if you have imported the exercise into another custom location):
 - If you see changes from last workshop, stop and apply the above steps ("Preparing the exercises").
@@ -99,7 +105,7 @@ Compare:
 
 ---
 
-## Interesting questions you might get
+### Interesting questions you might get
 
 If participants run `git graph` they might notice `origin/HEAD`.
 This has been omitted from the figures to not overload them.
@@ -107,7 +113,7 @@ This pointer represents the default branch of the remote repository.
 
 ---
 
-## Timing
+### Timing
 
 - The first episode is densest and introduces many new concepts,
   so at least an hour is required for it.
@@ -119,7 +125,7 @@ This pointer represents the default branch of the remote repository.
 
 ---
 
-## Core aspects
+### Core aspects
 
 - Be able to submit a change to another project.
 - Understand how to update a fork.
@@ -127,7 +133,7 @@ This pointer represents the default branch of the remote repository.
 
 ---
 
-## Sessions which can be skipped if time is tight
+### Sessions which can be skipped if time is tight
 
 - The bare vs non-bare episode can be skipped over without any harm done. We have discussed this episode
   in only one workshop so far and I think it was more confusing than helpful.
@@ -135,21 +141,21 @@ This pointer represents the default branch of the remote repository.
 
 ---
 
-## Typical pitfalls
+### Typical pitfalls
 
-### Difference between pull and pull requests
+#### Difference between pull and pull requests
 
 The difference between pull and pull requests can be confusing, explain clearly that
 pull requests are a different mechanism specific to GitHub, GitLab, etc.
 
 
-### Pull requests are from branch to branch, not from commit to branch
+#### Pull requests are from branch to branch, not from commit to branch
 
 The behavior that additional commits to a branch from which a pull request has been created get appended
 to the pull request needs to be explained.
 
 
-### Centralized workflow exercise
+#### Centralized workflow exercise
 
 Remind participants to not rush ahead but do one step at
 a time collectively and discuss after each step. The effect
@@ -160,7 +166,7 @@ changes and the history will be different than what is expected.
 
 ---
 
-## Other practical aspects
+### Other practical aspects
 
 - Participants really have to sit next to someone, so that they can see the screens. From the beginning.
 - Emphasize use of `git graph` a lot, just like in the git-solo lesson.
