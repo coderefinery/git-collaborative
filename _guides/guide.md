@@ -9,6 +9,15 @@ permalink: /guide/
 
 ## Intended learning outcomes
 
+By the end of this lesson, learners should:
+- understand the concept of remotes
+- be able to describe the difference between local and remote branches
+- be able to describe the difference between centralized and forking workflows
+- know how to use pull requests to submit changes to another projects
+- know how to reference issues in commits or pull requests and how to auto-close issues
+- know how to update a fork.
+- be able to contribute in code review.
+
 ## How to teach this lesson
 
 ### Preparing the exercises and cleaning up
@@ -123,13 +132,6 @@ This pointer represents the default branch of the remote repository.
 - The "How to contribute changes to somebody else's project" episode can be
   covered really quickly and offers room for discussion if you have time left.
 
----
-
-### Core aspects
-
-- Be able to submit a change to another project.
-- Understand how to update a fork.
-- Be able to contribute in code review.
 
 ---
 
