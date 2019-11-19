@@ -264,6 +264,19 @@ Observe how the issues automatically close after the pull requests are merged
 (provided the commit messages contain [the right keywords](https://help.github.com/en/articles/closing-issues-using-keywords)).
 
 
+> ## (Optional) Exercise: try to send a conflicting pull request
+>
+> If you complete parts A-E much earlier than others, try to send another pull request
+> where you anticipate a conflict with your first pull request.
+{: .challenge}
+
+> ## (Optional) Exercise: practice making changes to your pull request
+>
+> You can do that by pushing new commits to the branch where you sent the pull
+> request from. Observe how they end up added to your pull request.
+{: .challenge}
+
+
 ### Part F: Update your fork
 
 We do this part **after the contributions from all participants have been integrated**.
@@ -330,6 +343,14 @@ $ git checkout master
 $ git pull {{ site.forking_workflow_exercise_url }}.git master
 $ git push https://github.com/user/forking-workflow-exercise.git master
 ```
+
+> ## (Optional) Exercise: squash merge a pull request
+>
+> If you complete this exercise much earlier than others, pair up with somebody,
+> create a new repository, fork it, and send a pull request with several
+> small commits. On the other computer accept these with "Squash and merge" and later compare the source
+> and target repositories/branches how they differ after the small commits got squashed into one.
+{: .challenge}
 
 ---
 
