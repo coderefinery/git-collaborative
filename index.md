@@ -5,6 +5,21 @@ permalink: /
 
 # Collaborative distributed version control
 
+We have learned how to make a git repository for a single person.
+What about sharing?
+* Sharing by email or manually: isn't fun and doesn't scale, projects
+  are limited to the time and cognition of one person.
+* One person's repository on the web: allows one person to keep track
+  of more projects, gain visibility, feedback, and recognition.
+* Centralized: everyone can directly update the same repository.  Good
+  for small groups.
+* Distributed: anyone can suggest changes, even without advance
+  permission.  Maintainers approve what they agree with.
+
+Being able to share more easily (going down the list here)
+is *transformative* because it allows projects to scale to a new
+level.  This can't be done without proper tools.
+
 In this lesson we will learn how to keep repositories in sync and how to work
 with remote repositories on GitHub and other services. We will discover
 and exercise the centralized as well as the forking workflows, and finally
