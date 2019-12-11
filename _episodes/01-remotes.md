@@ -17,6 +17,17 @@ keypoints:
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
+# Motivation
+
+- Let's say that someone has given you access to a repository online
+- ... and you want to contribute to it.
+- It is quite easy to make a copy and send a change back
+- First, we do this a relatively simple way: get repository and send
+  code directly back.
+- Then, we make a "pull request" that allows a review.
+
+# Basics
+
 ## Cloning repositories
 
 The `git clone` command make a copy of a repository.  For example,
