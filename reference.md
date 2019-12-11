@@ -1,4 +1,9 @@
-Collaborative git:  reference
+---
+layout: default
+permalink: /reference/
+---
+
+# git-collaborative: quick reference
 
 ## Other cheatsheets
 
