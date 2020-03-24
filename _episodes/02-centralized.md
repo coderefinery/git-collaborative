@@ -15,17 +15,57 @@ keypoints:
   - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
+## Distributed version control
+
+![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
+
+
+Git implements a **distributed** version control.
+This means that any type of repository links that you can think of can be
+implemented - not just "everything connects to one central server.
+
+In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a github project.
+
+### Centralized layout
+
+![]({{ site.baseurl }}/img/forking/centralized.svg)
+
+In Git, all repositories are equivalent but in the typical **centralized** style, we consider one repository
+as the main development line and this is marked as "central".
+The "central" is a role, not a technical difference.
+
+Features:
+
+- Typically all developers have both read and write permissions (double-headed arrows).
+- Suited for cases where all developers are in the same group or organization etc.
+- Code review workflow is possible.
+- Code review can be coupled with with automated testing.
+
+Advantages:
+
+- More familiar for Subversion or CVS users.
+- Easier: for each clone there is only one remote.
+
+Disadvantages:
+
+- Everybody who wants to contribute needs write access.
+- Maintainer needs to trust the developers to not break things (but you can protect branches).
+
+Real life examples:
+
+- Within the CodeRefinery team we mostly use this approach: [https://github.com/coderefinery](https://github.com/coderefinery)
+- [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
+
+
 # Centralized workflow exercise
 
 In this exercise, we practice collaborative centralized workflow.
-First, we all **clone** (make a local copy) and try to **push** (send
-code to) the main repository.  We'll see a small problem with that,
-and then make a **pull request** (sending code so that others can
-review and accept later).  We'll discuss how this leads to code review
+Centralized workflow
+First, we all **clone** (make a local copy) and create a new branch 
+to add our changes and then make a **pull request** (sending code so that
+others can review and accept later). 
+We'll discuss how this leads to code review
 and discuss a number of typical pitfalls.
-
-Please don't go too far ahead, because we will learn from problems
-that come up.
 
 ## Before we start
 

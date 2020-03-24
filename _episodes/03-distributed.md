@@ -22,47 +22,6 @@ keypoints:
   - If you are more than one person contributing to a project, implement code review.
 ---
 
-## Distributed version control
-
-![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
-
-
-Git implements a **distributed** version control.
-This means that any type of repository links that you can think of can be
-implemented - not just "everything connects to one central server.
-
-Two topologies are very frequent: centralized and forking layout.
-
-
-### Centralized layout
-
-![]({{ site.baseurl }}/img/forking/centralized.svg)
-
-In Git, all repositories are equivalent but in the typical **centralized** style, we consider one repository
-as the main development line and this is marked as "central".
-The "central" is a role, not a technical difference.
-
-Features:
-
-- Typically all developers have both read and write permissions (double-headed arrows).
-- Suited for cases where all developers are in the same group or organization etc.
-- Code review workflow is possible.
-- Code review can be coupled with with automated testing.
-
-Advantages:
-
-- More familiar for Subversion or CVS users.
-- Easier: for each clone there is only one remote.
-
-Disadvantages:
-
-- Everybody who wants to contribute needs write access.
-- Maintainer needs to trust the developers to not break things (but you can protect branches).
-
-Real life examples:
-
-- Within the CodeRefinery team we mostly use this approach: [https://github.com/coderefinery](https://github.com/coderefinery)
-- [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
 
 
 ### Forking layout
