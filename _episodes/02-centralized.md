@@ -5,15 +5,14 @@ teaching: 20
 exercises: 40
 questions:
   - How can we collaborate with others within one repository?
-#objectives:
-#  - Understand the difference between local branch, origin/branch, and remote branch.
-#keypoints:
-#  - "`git clone` copies everything and sets some pointers to remember where the clone came from."
-#  - You communicate commits with `git fetch`/`git pull` and `git push`.
-#  - All other Git operations are offline - you can work on a plane while your coworker is on vacation in North Korea.
-#  - "`origin` refers to where you cloned from (but you can relocate it)."
-#  - "`origin/foo` is a read-only pointer to branch `foo` on origin."
-#  - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
+objectives:
+  - Understand how to collaborate using a centralized workflow
+  - Understand the difference between local branch, origin/branch, and remote branch.
+keypoints:
+  - Centralized workflow for remote collaborative work
+  - "`origin` refers to where you cloned from (but you can relocate it)."
+  - "`origin/foo` is a read-only pointer to branch `foo` on origin."
+  - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
 # Centralized workflow exercise
