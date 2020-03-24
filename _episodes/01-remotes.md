@@ -1,20 +1,19 @@
 ---
 layout: episode
-title: Working with remotes
+title: Copying, sharing, and synchronizing repositories
 teaching: 20
 exercises: 0
 questions:
+  - How can we backup repositories?
   - How can we share repositories with others?
   - How can we keep repositories in sync?
+  - What are different ways to make a copy of the entire repository?
 objectives:
-  - Understand the difference between local branch, origin/branch, and remote branch.
+  - Be able to decide whether to divide work at the branch level or at the repository level.
 keypoints:
-  - "`git clone` copies everything and sets some pointers to remember where the clone came from."
-  - You communicate commits with `git fetch`/`git pull` and `git push`.
-  - All other Git operations are offline - you can work on a plane while your coworker is on vacation in North Korea.
-  - "`origin` refers to where you cloned from (but you can relocate it)."
-  - "`origin/foo` is a read-only pointer to branch `foo` on origin."
-  - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
+  - "`git clone` copies everything: all commits and all branches."
+  - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
+  - Repositories that are shared online often synchronize via pull requests or merge requests.
 ---
 
 # Motivation
