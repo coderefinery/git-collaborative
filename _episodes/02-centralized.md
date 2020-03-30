@@ -164,7 +164,8 @@ Can we leave out the `-u`?
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
 
-A pull-request means: "please review my changes and if you agree, merge them with a mouse-click".
+A pull-request means: "please review my changes and if you agree, merge them with a mouse-click". In a popular project, it means that anyone can
+contribute with *almost no work* on the maintainer's side - a big win.
 
 > ## Code Review
 > In a centralized workflow, everyone has write access to the "central" repository and you could merge yourself your own pull-request. However, we usually recommend to get your own pull-request to be reviewed and accepted by someone else in your group.
