@@ -108,7 +108,7 @@ This is a representation of what happens when you clone:
 *local*: ![]({{ site.baseurl }}/img/centralized/01-local.svg)
 
 - We clone the entire history, all branches, all commits.
-- `git clone` creates pointers `origin/master`.
+- `git clone` creates pointers `origin/master` so you can see the branches of the origin.
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
 - `origin/master` is read-only pointers.
