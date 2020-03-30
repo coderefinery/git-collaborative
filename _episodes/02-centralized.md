@@ -84,7 +84,7 @@ and discuss a number of typical pitfalls.
 2. Everyone in your group needs their GitHub account to be added to your central repository.
     - Participants give their GitHub usernames to their chosen administrator (in their respective group).
     - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
-    - Administrator adds participants as collaborators to their project.
+    - Administrator adds participants as collaborators to their project.  Settings → Manage Access → Invite a collaborator.
 
 ## After participants have been added as collaborators
 
