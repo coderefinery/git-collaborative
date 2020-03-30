@@ -129,6 +129,7 @@ Create a branch from the current `master`:
 
 ```
 $ git branch yourname/somefeature
+$ git checkout yourname/somefeature
 ```
 
 The `yourname/` prefix has no special meaning: it is just part of a
