@@ -132,7 +132,7 @@ $ git branch yourname/somefeature
 $ git checkout yourname/somefeature
 ```
 
-The `yourname/` prefix has no special meaning: it is just part of a
+The `yourname/` prefix has no special meaning here (not like `origin/`): it is just part of a
 branch name to indicate who made it.
 
 ### 4. Create a file with a unique name, e.g.: `yourusername.txt`
