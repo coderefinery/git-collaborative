@@ -82,8 +82,8 @@ and discuss a number of typical pitfalls.
 1. Each group administrator generate a new repository from [template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise) called `centralized-workflow-exercise`:
 <img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
 2. Everyone in your group needs their GitHub account to be added to your central repository.
-    - Participants add their usernames to a shared document (in their respective group).
-    - Administrator writes down their newly created github repository URL.
+    - Participants give their GitHub usernames to their chosen administrator (in their respective group).
+    - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
     - Administrator adds participants as collaborators to their project.
 
 ## After participants have been added as collaborators
