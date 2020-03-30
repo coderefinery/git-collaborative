@@ -1,10 +1,8 @@
-         [origin/master]
+             [origin/master]
+              |
+c1----c2------m1
+        \    /|
+         \  / [master,HEAD]
+          b1
           |
-          d1---m1
-         /    /|
-        /    /[master,HEAD]
-c1----c2----c3
-        \
-         b1
-         |
-        [origin/experiment]
+          [yourname/somefeature]

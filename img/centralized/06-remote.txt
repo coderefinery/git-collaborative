@@ -1,7 +1,8 @@
-           [master]
-            |
-c1----c2----d1
-        \
-         b1
-         |
-        [experiment]
+             [master]
+              |
+c1----c2------m1
+        \    /
+         \  /
+          b1
+          |
+          [yourname/somefeature]
