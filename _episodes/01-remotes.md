@@ -17,7 +17,7 @@ keypoints:
   - Repositories that are shared online often synchronize via pull requests or merge requests.
 ---
 
-# Motivation
+## Motivation
 
 - Let's say that someone has given you access to a repository online
 - ... and you want to contribute to it.
@@ -31,18 +31,15 @@ keypoints:
 
 ---
 
-# Basics
+## Commits, branches, repositories, forks, clones
 
-## Cloning repositories
-
-The `git clone` command make a copy of a repository.  For example,
-```shell
-$ git clone https://host.com/user/project.git project
-```
-
-- Contributing to a repository often starts by cloning the entire repository.
-- By cloning we clone all commits, all branches and tags, **entire history**.
-- A clone is a full-fledged repository.
+- **repository**: The project, contains all data and history (commits, branches, tags).
+- **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
+- **branch**: Independent development line, often we call the main development line `master`.
+- **tag**: A pointer to one commit, to be able to refer to it later. Like a sticky note that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
+- **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
+- **forking**: Taking a copy of a repository (which is typically not yours) - your
+  copy (fork) stays on GitHub and you can make changes to your copy.
 
 ---
 
