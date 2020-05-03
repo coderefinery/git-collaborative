@@ -55,6 +55,11 @@ There are two more ways to create "copies" of repositories into your user space:
 
 ---
 
+(Here it would be nice to have drawings that "show" cloning, forking,
+generating, importing. Maybe you can suggest a figure?)
+
+---
+
 ## Synchronizing changes between repositories
 
 - We need a mechanism to communicate changes between the repositories.
