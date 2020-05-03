@@ -43,6 +43,18 @@ keypoints:
 
 ---
 
+## Generating from templates and importing
+
+There are two more ways to create "copies" of repositories into your user space:
+- A repository can be marked as **template** and new repositories can be
+  **generated** from it, like using a cookie-cutter.
+  The newly created repository will start with a new history, only one commit, and not
+  inherit the history of the template.
+- You can **import** a repository from another hosting service or web address.
+  This will preserve the history of the imported project.
+
+---
+
 ## Synchronizing changes between repositories
 
 - We need a mechanism to communicate changes between the repositories.
