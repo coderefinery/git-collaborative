@@ -21,10 +21,15 @@ keypoints:
 
 - Let's say that someone has given you access to a repository online
 - ... and you want to contribute to it.
-- It is quite easy to make a copy and send a change back
-- First, we do this a relatively simple way: get repository and send
-  code directly back.
+- It is quite easy to make a copy and send a change back.
+- First, we do this a relatively simple way: get repository, make a change
+  locally, and send the change directly back.
 - Then, we make a "pull request" that allows a review.
+- Once we know how code review works, we will be able to propose changes
+  to repositories of others and review changes submitted by external
+  contributors.
+
+---
 
 # Basics
 
