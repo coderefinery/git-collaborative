@@ -2,7 +2,7 @@ fork_me_ribbon_url: https://github.com/coderefinery/git-collaborative
 baseurl: "/git-collaborative"
 title: "Collaborative distributed version control"
 centralized_workflow_exercise_url: https://github.com/coderefinery/centralized-workflow-exercise
-forking_workflow_exercise_url: https://github.com/coderefinery/forking-workflow-exercise
+forking_workflow_exercise_url: https://github.com/blindij/forking-workflow-exercise-may.git 
 
 source: .
 destination: ./_site
