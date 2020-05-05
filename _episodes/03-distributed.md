@@ -73,6 +73,8 @@ $ git remote add upstream https://github.com/project/project.git
 $ git remote rm upstream
 $ git remote add group-repo https://example.com/exciting-project.git
 $ git remote rm group-repo
+$ git remote add upstream https://github.com/project/project.git
+$ git remote add downstream https://github.com/userX/project.git
 ```
 
 We synchronize remotes via the local clone.
