@@ -12,7 +12,7 @@ objectives:
   - Be able to decide whether to divide work at the branch level or at the repository level.
 keypoints:
   - "`git clone` copies everything: all commits and all branches."
-  - Branches on the remove appear as (read-only) local branches with a prefix, e.g. `origin/master`.
+  - Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
   - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
   - Repositories that are shared online often synchronize via pull requests or merge requests.
 ---
