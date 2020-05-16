@@ -81,6 +81,8 @@ and discuss a number of typical pitfalls.
 
 1. Each group administrator generate a new repository from [template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise) called `centralized-workflow-exercise`:
 <img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
+
+There is no need to tick *"Include all branches"* for this exercise.
 2. Everyone in your group needs their GitHub account to be added to your central repository.
     - Participants give their GitHub usernames to their chosen administrator (in their respective group).
     - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
@@ -107,7 +109,7 @@ This is a representation of what happens when you clone:
 
 *local*: ![]({{ site.baseurl }}/img/centralized/01-local.svg)
 
-- We clone the entire history, all branches, all commits.
+- We clone the entire history, all branches, all commits. In our case, we have one branch (we did not include *all branches* when creating our repository from template) and we have only one commit (*initial commit*).
 - `git clone` creates pointers `origin/master` so you can see the branches of the origin.
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
