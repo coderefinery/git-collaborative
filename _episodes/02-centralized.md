@@ -61,9 +61,9 @@ Real life examples:
 
 > Exercise preparation
 >
-> In this exercise, we practice collaborative centralized workflow in small groups 
-> (4-5 persons). Each group needs to appoint someone who will host the shared 
-> github repository: *an administrator*. 
+> In this exercise, we practice collaborative centralized workflow in small groups
+> (4-5 persons). Each group needs to appoint someone who will host the shared
+> github repository: *an administrator*.
 > For online teaching, use breakout rooms.
 >
 {: .callout}
@@ -183,7 +183,7 @@ Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 ### 7. Update your local copy
 
-Your branch `yourname/somefeature` is not needed anymore but more importantly, you need to sync your local copy: 
+Your branch `yourname/somefeature` is not needed anymore but more importantly, you need to sync your local copy:
 
 ```
 $ git checkout master
@@ -194,9 +194,9 @@ $ git pull origin master
 *local*: ![]({{ site.baseurl }}/img/centralized/07-local.svg)
 
 > ## Why did we create a feature branch `yourname/somefeature`? (optional)
-> 
+>
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
-> Whenever we make update to our repository, we create a new branch and make pull-request. Let's now imagine that everyone in your group makes a new change (create a new file) but without creating a new branch.  
+> Whenever we make update to our repository, we create a new branch and make pull-request. Let's now imagine that everyone in your group makes a new change (create a new file) but without creating a new branch.
 >
 > 1. You all create a new file in the master branch, stage and commit your change locally
 > 2. Try to push the change to the upstream repository
@@ -204,11 +204,11 @@ $ git pull origin master
 > ```
 > git push origin master
 > ```
-> 
+>
 > 3. **Stop here** and discuss why push for most participants was rejected
-> 
+>
 > You probably see something like this:
-> 
+>
 > ```shell
 > $ git push
 > To https://github.com/user/repo.git
@@ -218,9 +218,9 @@ $ git pull origin master
 > Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 > 'Note about fast-forwards' section of 'git push --help' for details.
 > ```
-> 
+>
 > The push only worked for one participant. Why?
-> 
+>
 {: .challenge}
 
 
