@@ -55,8 +55,9 @@ Real life examples:
 - Within the CodeRefinery team we mostly use this approach: [https://github.com/coderefinery](https://github.com/coderefinery)
 - [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
 
+---
 
-# Centralized workflow exercise
+## Centralized workflow exercise
 
 > Exercise preparation
 >
@@ -73,8 +74,8 @@ others can review and accept later).
 We'll discuss how this leads to code review
 and discuss a number of typical pitfalls.
 
-## Before we start
 
+### Before we start
 
 <font color="red">One person per group (administrator):</font>
 
@@ -87,10 +88,11 @@ There is no need to tick *"Include all branches"* for this exercise.
     - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
     - Administrator adds participants as collaborators to their project.  Settings → Manage Access → Invite a collaborator.
 
-## After participants have been added as collaborators
+
+### After participants have been added as collaborators
 
 
-### 1. Clone your administrator's group repository
+#### 1. Clone your administrator's group repository
 
 ```
 $ git clone {{ site.centralized_workflow_exercise_url }}.git centralized-workflow-exercise
@@ -118,13 +120,14 @@ This is a representation of what happens when you clone:
 - All other operations are local operations.
 
 
-### 2. Step into the newly created directory
+#### 2. Step into the newly created directory
 
 ```
 $ cd centralized-workflow-exercise
 ```
 
-### 3. Create a branch `yourname/somefeature` pointing at your commit
+
+#### 3. Create a branch `yourname/somefeature` pointing at your commit
 
 Create a branch from the current `master`:
 
@@ -136,12 +139,13 @@ $ git checkout yourname/somefeature
 The `yourname/` prefix has no special meaning here (not like `origin/`): it is just part of a
 branch name to indicate who made it.
 
-### 4. Create a file with a unique name, e.g.: `yourusername.txt`
+
+#### 4. Create a file with a unique name, e.g.: `yourusername.txt`
 
 In this file share your favourite cooking recipe or haiku or Git trick or whatever.
 
 
-### 5. Stage and commit the change
+#### 5. Stage and commit the change
 
 ```
 $ git add yourusername.txt
@@ -152,7 +156,8 @@ $ git commit
 
 *local*: ![]({{ site.baseurl }}/img/centralized/04-local.svg)
 
-### 5. Push your change as a new branch
+
+#### 6. Push your change as a new branch
 
 ```
 $ git push origin -u yourname/somefeature
@@ -160,7 +165,8 @@ $ git push origin -u yourname/somefeature
 
 Can we leave out the `-u`?
 
-### 6. Submit a pull request
+
+#### 7. Submit a pull request
 
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
@@ -180,7 +186,8 @@ Once the pull-request is accepted, the change is merged:
 
 Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
-### 7. Update your local copy
+
+#### 8. Update your local copy
 
 Your branch `yourname/somefeature` is not needed anymore but more importantly, you need to sync your local copy:
 
@@ -221,7 +228,6 @@ $ git pull origin master
 > The push only worked for one participant. Why?
 >
 {: .challenge}
-
 
 ---
 
