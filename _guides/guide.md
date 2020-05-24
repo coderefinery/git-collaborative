@@ -36,17 +36,17 @@ By the end of this lesson, learners should:
 ### Preparing the exercises and cleaning up
 
 - Exercises are templates but we do not use the templates directly but
-  [import exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
-- You need to prepare the exercises at least one day before by importing them from a template.
+  [generate exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
+- You need to prepare the exercises at least one day before by generating them from a template.
 - For the forking exercise you need to enable Travis CI after you have imported the exercise.
-- After the workshop please remove the imported exercises (if created under
+- After the workshop please remove the generated exercises (if created under
   https://github.com/coderefinery), otherwise the instructor in a future
   workshop may not have the permissions to do so.
 
 
 #### How to customize the lesson for your workshop
 
-You can adjust the location of the exercises in case you plan to import them to a custom place.
+You can adjust the location of the exercises in case you plan to generate/import them to a custom place.
 
 This is the default:
 
@@ -75,7 +75,7 @@ Then delete the copied exercise repositories from a previous workshop.
 - [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
 - [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
 
-Now create the two above exercises by [importing](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+Now create the two above exercises by [generating](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 these two templates:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
 - [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
