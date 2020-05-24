@@ -199,20 +199,17 @@ $ git pull origin master
 
 *local*: ![]({{ site.baseurl }}/img/centralized/07-local.svg)
 
-> ## Why did we create a feature branch `yourname/somefeature`? (optional)
+> ## Exercise/discussion: Why did we create a feature branch `yourname/somefeature`?
 >
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
 > Whenever we make update to our repository, we create a new branch and make pull-request. Let's now imagine that everyone in your group makes a new change (create a new file) but without creating a new branch.
 >
-> 1. You all create a new file in the master branch, stage and commit your change locally
-> 2. Try to push the change to the upstream repository
+> 1. You all create a new file in the master branch, stage and commit your change locally.
+> 2. Try to push the change to the upstream repository:
 >
 > ```
-> git push origin master
+> $ git push origin master
 > ```
->
-> 3. **Stop here** and discuss why push for most participants was rejected
->
 > You probably see something like this:
 >
 > ```shell
@@ -225,8 +222,8 @@ $ git pull origin master
 > 'Note about fast-forwards' section of 'git push --help' for details.
 > ```
 >
-> The push only worked for one participant. Why?
->
+> - The push only worked for one participant.
+> - Discuss why push for everybody else in this group was rejected?
 {: .challenge}
 
 ---
