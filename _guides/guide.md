@@ -114,17 +114,6 @@ the invitations can be swallowed by spam filters.
 Check [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }}) (adjust the URL if you have imported the exercise into another custom location):
 - If you see changes from last workshop, stop and apply the above steps ("Preparing the exercises").
 
-Compare:
-- [https://github.com/coderefinery/template-centralized-workflow-exercise/network](https://github.com/coderefinery/template-centralized-workflow-exercise/network) (the template)
-- [{{ site.centralized_workflow_exercise_url }}/network]({{ site.centralized_workflow_exercise_url }}/network) (the copy you have created)
-
-- If they are not the same and you see new changes from this workshop
-  (participants who race ahead), reset the repository with a hard reset to its initial state.
-- Remind participants that we have to do all steps of the centralized workflow
-  exercise together for minimum confusion.
-- We recommend to disable push access to the repository at the beginning and re-enable it at the moment when all participants are expected
-  to push changes.
-
 ---
 
 ### Interesting questions you might get
