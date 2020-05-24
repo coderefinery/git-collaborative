@@ -228,32 +228,33 @@ $ git pull origin master
 
 ---
 
-## How to make changes to remote branches
-
-Create a local branch `somefeature` tracking `origin/somefeature`:
-
-```shell
-$ git checkout -b somefeature origin/somefeature
-```
-
-If there is no local branch `somefeature` and there is a remote branch `origin/somefeature`, then this is enough:
-
-```shell
-$ git checkout somefeature
-```
-
-Once we track a remote branch, we can pull from it and push to it:
-
-```shell
-$ git pull origin somefeature
-$ git push origin somefeature
-```
-
-We can also delete remote branches:
-
-```shell
-$ git push origin --delete somefeature
-```
+> ## Discussion: How to make changes to remote branches
+>
+> We can create a local branch `somefeature` tracking `origin/somefeature`:
+>
+> ```shell
+> $ git checkout -b somefeature origin/somefeature
+> ```
+>
+> If there is no local branch `somefeature` and there is a remote branch `origin/somefeature`, then this is enough:
+>
+> ```shell
+> $ git checkout somefeature
+> ```
+>
+> Once we track a remote branch, we can pull from it and push to it:
+>
+> ```shell
+> $ git pull origin somefeature
+> $ git push origin somefeature
+> ```
+>
+> We can also delete remote branches:
+>
+> ```shell
+> $ git push origin --delete somefeature
+> ```
+{: .discussion}
 
 ---
 
