@@ -38,7 +38,6 @@ By the end of this lesson, learners should:
 - Exercises are templates but we do not use the templates directly but
   [generate exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
 - You need to prepare the exercises at least one day before by generating them from a template.
-- For the forking exercise you need to enable Travis CI after you have imported the exercise.
 - After the workshop please remove the generated exercises (if created under
   https://github.com/coderefinery), otherwise the instructor in a future
   workshop may not have the permissions to do so.
@@ -66,10 +65,6 @@ First verify that these repos exist - **never remove these**, **never use these 
 - [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
 - [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
-In a previous workshop you may have used
-[{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }}).
-If yes, deactivate Travis for this repository.
-
 Then delete the copied exercise repositories from a previous workshop.
 **Make sure to not remove the templates above** - you only want to remove their copies:
 - [{{ site.centralized_workflow_exercise_url }}]({{ site.centralized_workflow_exercise_url }})
@@ -79,16 +74,6 @@ Now create the two above exercises by [generating](https://help.github.com/en/ar
 these two templates:
 - [https://github.com/coderefinery/template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
 - [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
-
-Now re-activate Travis CI for
-[{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }})
-before you push changes to it.
-Sometimes Travis shows an error when activating. In this case, please reload the page and try again.
-
-To test that Travis CI is correctly set up,
-fork [{{ site.forking_workflow_exercise_url }}]({{ site.forking_workflow_exercise_url }}),
-submit a pull request, and
-verify that testing is triggered by the pull request, then you can close the pull request again.
 
 Finally give all instructors admin rights to the two newly created exercise repositories and write-protect the
 `master` branch until we really start pushing to the repository.
