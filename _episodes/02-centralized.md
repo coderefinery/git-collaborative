@@ -59,34 +59,33 @@ Real life examples:
 
 ## Centralized workflow exercise
 
-> Exercise preparation
+> ## Exercise preparation
 >
 > In this exercise, we practice collaborative centralized workflow in small groups
 > (4-5 persons). Each group needs to appoint someone who will host the shared
 > github repository: *an administrator*.
 > For online teaching, use breakout rooms.
 >
-{: .callout}
-
-First, **one person** per group (*administrator*) **generate** a new repository from a Coderefinery template. Then group members **clone** it (make a local copy) and create a new branch to add changes. Finally each member makes a **pull request** (sending code so that
-others can review and accept later).
-
-We'll discuss how this leads to code review
-and discuss a number of typical pitfalls.
-
-
-### Before we start
-
-<font color="red">One person per group (administrator):</font>
-
-1. Each group administrator generate a new repository from [template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise) called `centralized-workflow-exercise`:
-<img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
-
-There is no need to tick *"Include all branches"* for this exercise.
-2. Everyone in your group needs their GitHub account to be added to your central repository.
-    - Participants give their GitHub usernames to their chosen administrator (in their respective group).
-    - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
-    - Administrator adds participants as collaborators to their project.  Settings → Manage Access → Invite a collaborator.
+> First, **one person** per group (*administrator*) **generate** a new repository from a Coderefinery template. Then group members **clone** it (make a local copy) and create a new branch to add changes. Finally each member makes a **pull request** (sending code so that
+> others can review and accept later).
+>
+> We'll discuss how this leads to code review
+> and discuss a number of typical pitfalls.
+>
+>
+> ### Before we start
+>
+> <font color="red">One person per group (administrator):</font>
+>
+> 1. Each group administrator generate a new repository from [template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise) called `centralized-workflow-exercise`:
+> <img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
+>
+> There is no need to tick *"Include all branches"* for this exercise.
+> 2. Everyone in your group needs their GitHub account to be added to your central repository.
+>     - Participants give their GitHub usernames to their chosen administrator (in their respective group).
+>     - Administrator gives the other group members the newly created github repository URL - if in not online, try writing it in the shared document if in person.
+>     - Administrator adds participants as collaborators to their project.  Settings → Manage Access → Invite a collaborator.
+{: .prereq}
 
 
 ### After participants have been added as collaborators
