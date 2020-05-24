@@ -281,3 +281,9 @@ $ git pull origin master
 > - <https://hub.github.com/>
 > - <https://github.com/NordicHPC/git-pr>
 {: .callout}
+
+> ## How you can find out in which repositories you are a collaborator
+>
+> Visit <https://github.com/settings/repositories> where you will see
+> an overview of all repositories you have write access to.
+{: .callout}
