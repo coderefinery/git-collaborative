@@ -211,6 +211,8 @@ $ git pull origin master
 
 *local*: ![]({{ site.baseurl }}/img/centralized/07-local.svg)
 
+---
+
 > ## Exercise/discussion: Why did we create a feature branch `yourname/somefeature`?
 >
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
@@ -237,8 +239,6 @@ $ git pull origin master
 > - The push only worked for one participant.
 > - Discuss why push for everybody else in this group was rejected?
 {: .challenge}
-
----
 
 > ## Discussion: How to make changes to remote branches
 >
@@ -267,3 +267,11 @@ $ git pull origin master
 > $ git push origin --delete somefeature
 > ```
 {: .discussion}
+
+> ## Creating pull requests from the command line
+>
+> There are several possibilties:
+> - <https://cli.github.com/>
+> - <https://hub.github.com/>
+> - <https://github.com/NordicHPC/git-pr>
+{: .callout}
