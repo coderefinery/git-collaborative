@@ -180,8 +180,14 @@ Do this through the web interface.
 A pull-request means: "please review my changes and if you agree, merge them with a mouse-click". In a popular project, it means that anyone can
 contribute with *almost no work* on the maintainer's side - a big win.
 
-> ## Code Review
-> In a centralized workflow, everyone has write access to the "central" repository and you could merge yourself your own pull-request. However, we usually recommend to get your own pull-request to be reviewed and accepted by someone else in your group.
+> ## Code review and protected branches
+>
+> - Pull requests are like change proposals.
+> - We recommend that pull requests are reviewed by someone else in your group.
+> - In our example everyone has write access to the "central" repository.
+> - A good setting is to make the `master` branch **protected** and all changes to it have to go
+>   through code review.
+> - Centralized workflow with protected branches is a good setup for many projects.
 {: .callout}
 
 Once the pull-request is accepted, the change is merged:
@@ -261,16 +267,3 @@ $ git pull origin master
 > $ git push origin --delete somefeature
 > ```
 {: .discussion}
-
----
-
-## Centralized workflow with protected branches
-
-- Forking workflow may be overkill for small closed-source projects.
-- A good alternative to the forking workflow for a group of collaborators
-  is to use a **protected** (only certain people may directly push to
-  it) `master` branch.
-- Only designated "code owners" have write access to the protected branch.
-- Anyone else may contribute code changes via pull requests from feature branches.
-- Pull requests need to be approved by a code owner.
-- Discuss the advantages or disadvantages of this workflow.
