@@ -137,14 +137,13 @@ This pointer represents the default branch of the remote repository.
 
 ### Timing
 
-- The first episode is densest and introduces many new concepts,
+- The centralized collaboration episode is densest and introduces many new concepts,
   so at least an hour is required for it.
-- The forking-workflow exercise (episode 3) repeats familiar concepts (only
+- The forking-workflow exercise repeats familiar concepts (only
   introduces forking and distributed workflows), and it takes maybe half the
   time of the first episode.
 - The "How to contribute changes to somebody else's project" episode can be
   covered really quickly and offers room for discussion if you have time left.
-
 
 ---
 
