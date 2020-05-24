@@ -6,19 +6,18 @@ exercises: 40
 questions:
   - How can we collaborate with others within one repository?
 objectives:
-  - Understand how to collaborate using a centralized workflow
+  - Understand how to collaborate using a centralized workflow.
   - Understand the difference between local branch, origin/branch, and remote branch.
 keypoints:
-  - Centralized workflow for remote collaborative work
+  - Centralized workflow is often used for remote collaborative work.
   - "`origin` refers to where you cloned from (but you can relocate it)."
-  - "`origin/foo` is a read-only pointer to branch `foo` on origin."
-  - "`origin` pointers only move when you `git fetch`/`git pull` or `git push`."
+  - "`origin/mybranch` is a read-only pointer to branch `mybranch` on `origin`."
+  - "These read-only pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
 ## Distributed version control
 
 ![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
-
 
 Git implements a **distributed** version control.
 This means that any type of repository links that you can think of can be
