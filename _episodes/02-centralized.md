@@ -166,7 +166,13 @@ $ git push origin -u yourname/somefeature
 Can we leave out the `-u`?
 
 
-#### 7. Submit a pull request
+#### 7. Browse the network of branches and commits
+
+After you have pushed your branch and other participants have too, browse the
+network of branches and commits and discuss with others what you see.
+
+
+#### 8. Submit a pull request
 
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
@@ -187,7 +193,7 @@ Once the pull-request is accepted, the change is merged:
 Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 
-#### 8. Update your local copy
+#### 9. Update your local copy
 
 Your branch `yourname/somefeature` is not needed anymore but more importantly, you need to sync your local copy:
 
