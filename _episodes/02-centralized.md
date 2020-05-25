@@ -98,6 +98,15 @@ typical pitfalls.
 ### After participants have been added as collaborators
 
 
+> ## Watching and unwatching repositories
+>
+> - Now that you are a collaborator, you get notified about new issues and pull
+>   requests via email.
+> - If you do not wish this, you can "unwatch" a repository (top of the project page).
+> - However, we recommend watching repositories you are interested in. You can learn things from experts passively.
+{: .callout}
+
+
 #### 1. Clone your administrator's group repository
 
 ```
