@@ -287,3 +287,12 @@ $ git pull origin master
 > Visit <https://github.com/settings/repositories> where you will see
 > an overview of all repositories you have write access to.
 {: .callout}
+
+> ## GitHub/GitLab organizations
+>
+> - Projects often start under a personal namespace.
+> - If you want the project to live beyond the interest or work time of one person,
+>   one can share projects under an "organization".
+> - You can then invite collaborators to an organization.
+> - This is what we do in the CodeRefinery project: <https://github.com/coderefinery>
+{: .callout}
