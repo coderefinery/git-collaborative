@@ -120,7 +120,7 @@ similar workflows and basically everything that we will discuss is transferable.
 ### Part A: Fork and clone
 
 In the **groups/breakout-rooms**, one person like the helper, do a necessary preparatory step. The person creates a repository
-from a template in her or his GitHub user space. We do not use the templates directly but
+from a template in their GitHub user space. We do not use the templates directly but
 [generate exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
 Here is the template for forking workflow exercise:
 [https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
