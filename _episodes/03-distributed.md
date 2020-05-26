@@ -96,7 +96,7 @@ after changes from all participants have been merged.
 As an example we will collaboratively develop a cookbook for taco recipes,
 inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
-We recommend that you discuss with your neighbor throughout the exercise.
+We recommend that you discuss with your neighbor/group throughout the exercise.
 
 Objectives:
 
@@ -119,7 +119,19 @@ similar workflows and basically everything that we will discuss is transferable.
 
 ### Part A: Fork and clone
 
-First fork [this repository]({{ site.forking_workflow_exercise_url }})
+In the **groups/breakout-rooms**, one person like the helper, do a necessary preparatory step. The person creates a repository
+from a template in her or his GitHub user space. We do not use the templates directly but
+[generate exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
+Here is the template for forking workflow exercise:
+[https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
+
+Write the link to the newly created repository in the shared document (hackmd)
+under a subsection with your group number as heading.
+
+The others in **the group** fork the helper's newly created repository. The group members then clone the fork ---
+the repository which is created their GitHub user space --- to their own computer.
+
+For the ones of you who follow the **main** room, you first fork [this repository]({{ site.forking_workflow_exercise_url }})
 into your namespace and then clone the fork to your computer.
 
 Here is a pictorial representation of this part:
