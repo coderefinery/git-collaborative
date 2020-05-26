@@ -98,6 +98,16 @@ typical pitfalls.
 ### After participants have been added as collaborators
 
 
+> ## Watching and unwatching repositories
+>
+> - Now that you are a collaborator, you get notified about new issues and pull
+>   requests via email.
+> - If you do not wish this, you can "unwatch" a repository (top of the project page).
+> - However, we recommend watching repositories you are interested in. You can learn things from experts just by
+>   watching the activity that come through.
+{: .callout}
+
+
 #### 1. Clone your administrator's group repository
 
 ```
@@ -286,4 +296,13 @@ $ git pull origin master
 >
 > Visit <https://github.com/settings/repositories> where you will see
 > an overview of all repositories you have write access to.
+{: .callout}
+
+> ## GitHub/GitLab organizations
+>
+> - Projects often start under a personal namespace.
+> - If you want the project to live beyond the interest or work time of one person,
+>   one can share projects under an "organization".
+> - You can then invite collaborators to an organization.
+> - This is what we do in the CodeRefinery project: <https://github.com/coderefinery>
 {: .callout}
