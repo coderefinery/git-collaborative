@@ -103,7 +103,8 @@ typical pitfalls.
 > - Now that you are a collaborator, you get notified about new issues and pull
 >   requests via email.
 > - If you do not wish this, you can "unwatch" a repository (top of the project page).
-> - However, we recommend watching repositories you are interested in. You can learn things from experts passively.
+> - However, we recommend watching repositories you are interested in. You can learn things from experts just by
+>   watching the activity that come through.
 {: .callout}
 
 
