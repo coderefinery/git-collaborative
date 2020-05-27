@@ -30,7 +30,7 @@ keypoints:
 
 In the **forking layout**, again we call one repository the "central"
 repository but people push to **forks** (their own copies of the
-repository on Github).
+repository on GitHub).
 
 Features:
 
@@ -38,7 +38,7 @@ Features:
 - For a public repository everybody has read access.
 - Only very few people (the maintainers) have write access.
 - Typically nobody pushes directly to the central repo.
-- Code review can be coupled with with automated testing.
+- Code review can be coupled with automated testing.
 - Central repo and the forks typically reside in the "cloud".
 - Naturally grows out the centralized model once more people begin
   contributing.

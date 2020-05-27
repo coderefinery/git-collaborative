@@ -21,7 +21,7 @@ keypoints:
 
 Git implements a **distributed** version control.
 This means that any type of repository links that you can think of can be
-implemented - not just "everything connects to one central server.
+implemented - not just "everything connects to one central server".
 
 In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a github project.
 
@@ -38,7 +38,7 @@ Features:
 - Typically all developers have both read and write permissions (double-headed arrows).
 - Suited for cases where all developers are in the same group or organization etc.
 - Code review workflow is possible.
-- Code review can be coupled with with automated testing.
+- Code review can be coupled with automated testing.
 
 Advantages:
 
