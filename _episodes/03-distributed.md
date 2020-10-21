@@ -22,7 +22,7 @@ keypoints:
   - If you are more than one person contributing to a project, implement code review.
 ---
 
-
+## Distributed version control and forking workflow
 
 ### Forking layout
 
@@ -30,30 +30,13 @@ keypoints:
 
 In the **forking layout**, again we call one repository the "central"
 repository but people push to **forks** (their own copies of the
-repository on GitHub).
+repository on GitHub/GitLab/Bitbucket).
 
 Features:
 
-- Most developers have only read access to the main project.
-- For a public repository everybody has read access.
-- Only very few people (the maintainers) have write access.
-- Typically nobody pushes directly to the central repo.
-- Code review can be coupled with automated testing.
-- Central repo and the forks typically reside in the "cloud".
-- Naturally grows out the centralized model once more people begin
-  contributing.
-
-Advantages:
-
-- Code is integrated via code review (during pull/merge request).
-- Maintainer has full control over what goes in.
-- Allows contributions from people you don't know yet (in practice not possible in centralized layout).
-- Structurally helps to implement peer review in coding (code review).
-
-Disadvantages:
-
-- Learning curve: we need to deal at least with two remotes (fork and central repo).
-- Introduces additional steps (to e.g. update the fork).
+- **Anybody can contribute without asking for permission.** (public projects)
+- Maintainer still has **full control over what is merged**.
+- There is now **more than one remote** to work with.
 
 Real life examples:
 
@@ -62,7 +45,7 @@ Real life examples:
 
 ---
 
-## Working with multiple remotes
+### Working with multiple remotes
 
 - There is nothing special about the name `origin`. The `origin` is just an alias.
 - We can call these aliases as we like.
@@ -337,38 +320,18 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 
 (from Star Wars Episode IV - A New Hope)
 
-<br>
-<br>
-<br>
-
 ---
 
-## Discussion point: naming
-
-In GitHub or BitBucket asking someone to bring code from a forked repo or
-branch to the main repo is called a **pull request**. In GitLab it is called a
-**merge request**. Which one do you feel is more appropriate and in which
-context?
-
----
-
-## Always create a feature branch
-
-- Never commit to the branch you wish to submit the pull request towards.
-- For each pull request create a new branch.
-
-Motivation:
-
-- Limits the risk that commits get accidentally appended to an open pull request.
-- History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
-
-See also [this blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/) for an explanation.
-
----
-
-## Code review
-
-- You see what others are working on
-- Collaborative learning
-- OK if students and junior researchers review senior researchers
-- Improves quality of the code
+> ## Discussion: Always create a feature branch
+>
+> - Never commit to the branch you wish to submit the pull request towards.
+> - For each pull request create a new branch.
+>
+> Motivation:
+> - Limits the risk that commits get accidentally appended to an open pull request.
+> - History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
+>
+> See also [this
+> blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/)
+> for an explanation.
+{: .discussion}

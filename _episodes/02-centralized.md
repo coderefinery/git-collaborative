@@ -205,15 +205,33 @@ pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
 
-> ## Code review and protected branches
+> ## Discussion
+>
+> ### Pull requests can be used for code review
 >
 > - Pull requests are like change proposals.
 > - We recommend that pull requests are reviewed by someone else in your group.
 > - In our example everyone has write access to the "central" repository.
+>
+> ### Code review and protected branches
+>
 > - A good setting is to make the `master` or `main` branch **protected** and all changes to it have to go
 >   through code review.
 > - Centralized workflow with protected branches is a good setup for many projects.
-{: .callout}
+>
+> ### Why code review
+>
+> - You see what others are working on
+> - Collaborative learning
+> - OK if students and junior researchers review senior researchers
+> - Improves quality of the code
+>
+> ### Naming
+>
+> - In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
+> - Which one do you feel is more appropriate and in which
+>   context? (The name **pull request** may make more sense in the forking workflow: next episode).
+{: .discussion}
 
 Once the pull-request is accepted, the change is merged:
 
