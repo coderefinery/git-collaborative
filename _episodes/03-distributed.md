@@ -85,13 +85,13 @@ $ git remote --verbose
 > inspired by [tacofancy](https://github.com/sinker/tacofancy).
 >
 > Objectives:
->
 > - Learn how to fork, modify the fork, and file a pull request towards the forked repo.
 > - Learn how to update your fork with upstream changes.
 >
+> Exercise:
 > - Helper prepares an exercise repository (see below) - this will take 5-10 minutes.
 > - **The exercise group works on steps A-E** (15-20 minutes).
-> - There are two optional steps after step E.
+> - There are two optional steps after step E for those who want more steps.
 > - After step E you can return to the main room. Please ask questions.
 > - **We do step F and G together** (instructor demonstrates, and everybody follows along in their repositories).
 > - If there is a lot of time left, step G can be done back in an exercise room.
