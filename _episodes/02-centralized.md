@@ -15,7 +15,9 @@ keypoints:
   - "These read-only pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
-## Distributed version control
+## Centralized workflow
+
+### Meaning of "central" in a distributed version control
 
 ![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
 
