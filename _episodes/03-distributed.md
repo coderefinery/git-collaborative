@@ -70,26 +70,6 @@ $ git remote --verbose
 
 ---
 
-## Exercise: practice collaborative forking workflow
-
-In this exercise, we make a fork, push to that fork, and make a pull
-request to the "central" repository. Later we will exercise updating the individual forks
-after changes from all participants have been merged.
-
-As an example we will collaboratively develop a cookbook for taco recipes,
-inspired by [tacofancy](https://github.com/sinker/tacofancy).
-
-We recommend that you discuss with your neighbor/group throughout the exercise.
-
-Objectives:
-
-- Learn how to fork, modify the fork, and file a pull request towards the forked repo.
-- Learn how to update your fork with upstream changes.
-
-We will do this exercise on [GitHub](https://github.com) but also
-[GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
-similar workflows and basically everything that we will discuss is transferable.
-
 <div class="alert alert-dismissible alert-warning">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4 class="alert-heading">We will work with a new repository for this exercise!</h4>
@@ -99,23 +79,42 @@ similar workflows and basically everything that we will discuss is transferable.
   </p>
 </div>
 
+> ## Exercise: practice collaborative forking workflow
+>
+> As an example we will collaboratively develop a cookbook for taco recipes,
+> inspired by [tacofancy](https://github.com/sinker/tacofancy).
+>
+> Objectives:
+>
+> - Learn how to fork, modify the fork, and file a pull request towards the forked repo.
+> - Learn how to update your fork with upstream changes.
+>
+> We recommend that you discuss with your neighbor/group throughout the exercise.
+>
+> We will do this exercise on [GitHub](https://github.com) but also
+> [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
+{: .challenge}
+
 
 ### Part A: Fork and clone
 
-In the **groups/breakout-rooms**, one person like the helper, do a necessary preparatory step. The person creates a repository
-from a template in their GitHub user space. We do not use the templates directly but
-[generate exercises from them](https://help.github.com/en/articles/creating-a-repository-from-a-template).
-Here is the template for forking workflow exercise:
-[https://github.com/coderefinery/template-forking-workflow-exercise](https://github.com/coderefinery/template-forking-workflow-exercise)
 
-Write the link to the newly created repository in the shared document (hackmd)
-under a subsection with your group number as heading.
-
-The others in **the group** fork the helper's newly created repository. The group members then clone the fork ---
-the repository which is created their GitHub user space --- to their own computer.
-
-For the ones of you who follow the **main** room, you first fork [this repository]({{ site.forking_workflow_exercise_url }})
-into your namespace and then clone the fork to your computer.
+> ## Exercise preparation
+>
+> **Helpers in breakout-rooms**:
+> - Create an exercise repository by
+>   [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+>   using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
+> - Share the link to the newly created repository in the shared document with your group.
+>
+> **Learners in breakout-rooms**: Fork the helper's newly created repository and clone the fork.
+>
+> **Instructor**: Prepare an exercise repository for participants following via stream (see below).
+>
+> **Learners following via stream**: Fork [this repository]({{ site.forking_workflow_exercise_url }})
+> into your namespace and then clone the
+> fork to your computer.
+{: .prereq}
 
 Here is a pictorial representation of this part:
 
