@@ -62,9 +62,6 @@ There are two more ways to create "copies" of repositories into your user space:
 
 ---
 
-(Here it would be nice to have drawings that "show" cloning, forking,
-generating, importing. Maybe you can suggest a figure?)
-
 > ## Discussion/exercise
 >
 > - Visit one of the repositories/projects that you have used recently and try to find out
