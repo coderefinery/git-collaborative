@@ -23,32 +23,24 @@ Git implements a **distributed** version control.
 This means that any type of repository links that you can think of can be
 implemented - not just "everything connects to one central server".
 
-In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a github project.
+In Git, all repositories are equivalent but we typically we consider one repository
+as the main development line and this is marked as "central".
+The "central" is a role, not a technical difference.
+
+In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
+**within one repository..
+
 
 ### Centralized layout
 
 ![]({{ site.baseurl }}/img/forking/centralized.svg)
 
-In Git, all repositories are equivalent but in the typical **centralized** style, we consider one repository
-as the main development line and this is marked as "central".
-The "central" is a role, not a technical difference.
-
 Features:
 
 - Typically all developers have both read and write permissions (double-headed arrows).
-- Suited for cases where all developers are in the same group or organization etc.
-- Code review workflow is possible.
-- Code review can be coupled with automated testing.
-
-Advantages:
-
-- More familiar for Subversion or CVS users.
-- Easier: for each clone there is only one remote.
-
-Disadvantages:
-
-- Everybody who wants to contribute needs write access.
-- Maintainer needs to trust the developers to not break things (but you can protect branches).
+- Suited for cases where **all developers are in the same group or organization or project**.
+- **Everybody who wants to contribute needs write access**.
+- Good idea to write-protect the main branch (typically `master` or `main`).
 
 Real life examples:
 
