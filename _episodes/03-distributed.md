@@ -89,15 +89,13 @@ $ git remote --verbose
 > - Learn how to fork, modify the fork, and file a pull request towards the forked repo.
 > - Learn how to update your fork with upstream changes.
 >
-> We recommend that you discuss with your neighbor/group throughout the exercise.
->
-> We will do this exercise on [GitHub](https://github.com) but also
-> [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org) allow
+> - Helper prepares an exercise repository (see below) - this will take 5-10 minutes.
+> - **The exercise group works on steps A-E** (15-20 minutes).
+> - There are two optional steps after step E.
+> - After step E you can return to the main room. Please ask questions.
+> - **We do step F and G together** (instructor demonstrates, and everybody follows along in their repositories).
+> - If there is a lot of time left, step G can be done back in an exercise room.
 {: .challenge}
-
-
-### Step A: Fork and clone
-
 
 > ## Exercise preparation
 >
@@ -115,6 +113,9 @@ $ git remote --verbose
 > into your namespace and then clone the
 > fork to your computer.
 {: .prereq}
+
+
+### Step A: Fork and clone
 
 Here is a pictorial representation of this part:
 
@@ -217,7 +218,6 @@ together on the big screen.
 
 Observe how the issues automatically close after the pull requests are merged
 (provided the commit messages contain [the right keywords](https://help.github.com/en/articles/closing-issues-using-keywords)).
-
 
 > ## (Optional) Exercise: try to send a conflicting pull request
 >
