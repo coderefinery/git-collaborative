@@ -60,15 +60,6 @@ keypoints:
 - On GitHub you can create [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
   which cannot be merged until marked ready for review.
 
-**Typical workflow**:
-
-- Open an issue in the repository you wish to contribute to
-- Write a short proposal for your suggested change or new feature
-- Motivate why and how you wish to do this
-- Discuss and get feedback before you code
-- Once you start coding, indicate that you are working on it
-- Once you are done, submit your new feature as pull request which references/closes the issue/proposal
-
 **Motivation**:
 
 - Get agreement and feedback before writing 5000 lines of code which might be rejected
