@@ -188,12 +188,20 @@ Do this through the web interface.
 A pull-request means: "please review my changes and if you agree, merge them with a mouse-click". In a popular project, it means that anyone can
 contribute with *almost no work* on the maintainer's side - a big win.
 
+
+#### 9. Discuss and accept pull requests
+
+**We do this step together on the main screen (in the main room)**. The instructor shows a submitted
+pull request, discusses what features to look at, and how to discuss and review.
+
+At the same time, helpers can review open pull requests from their exercises groups.
+
 > ## Code review and protected branches
 >
 > - Pull requests are like change proposals.
 > - We recommend that pull requests are reviewed by someone else in your group.
 > - In our example everyone has write access to the "central" repository.
-> - A good setting is to make the `master` branch **protected** and all changes to it have to go
+> - A good setting is to make the `master` or `main` branch **protected** and all changes to it have to go
 >   through code review.
 > - Centralized workflow with protected branches is a good setup for many projects.
 {: .callout}
@@ -207,9 +215,11 @@ Once the pull-request is accepted, the change is merged:
 Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 
-#### 9. Update your local copy
+#### 10. Update your local copy
 
 Your branch `yourname-somefeature` is not needed anymore but more importantly, you need to sync your local copy:
+Everybody needs to do this step in their exercise repository but we do this together in the main room
+so that we can discuss this step and ask questions.
 
 ```
 $ git checkout master
