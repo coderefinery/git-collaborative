@@ -86,10 +86,6 @@ typical pitfalls.
 > ```
 {: .prereq}
 
-
-### After participants have been added as collaborators
-
-
 > ## Watching and unwatching repositories
 >
 > - Now that you are a collaborator, you get notified about new issues and pull
@@ -98,6 +94,15 @@ typical pitfalls.
 > - However, we recommend watching repositories you are interested in. You can learn things from experts just by
 >   watching the activity that come through.
 {: .callout}
+
+> ## Exercise description
+>
+> - Helper prepares an exercise repository (see above) - this will take 10 minutes or so.
+> - The exercise group works on steps 1-8 (15-20 minutes).
+> - After step 8 you can return to the main room. Please ask questions.
+> - We do step 9 and 10 together (instructor demonstrates, and everybody follows along in their repositories).
+> - Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
+{: .challenge}
 
 
 #### 1. Clone your administrator's group repository
