@@ -139,6 +139,8 @@ This is a representation of what happens when you clone:
 $ cd centralized-workflow-exercise
 ```
 
+Try to find out where this repository was cloned from using `git remote -v`.
+
 
 #### 3. Create a branch `yourname-somefeature` pointing at your commit
 
