@@ -15,7 +15,9 @@ keypoints:
   - "These read-only pointers only move when you `git fetch`/`git pull` or `git push`."
 ---
 
-## Distributed version control
+## Centralized workflow
+
+### Meaning of "central" in a distributed version control
 
 ![The GitHub Octocat]({{ site.baseurl }}/img/forking/github_octocat.jpeg)
 
@@ -23,32 +25,24 @@ Git implements a **distributed** version control.
 This means that any type of repository links that you can think of can be
 implemented - not just "everything connects to one central server".
 
-In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a github project.
+In Git, all repositories are equivalent but we typically we consider one repository
+as the main development line and this is marked as "central".
+The "central" is a role, not a technical difference.
+
+In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
+**within one repository**.
+
 
 ### Centralized layout
 
 ![]({{ site.baseurl }}/img/forking/centralized.svg)
 
-In Git, all repositories are equivalent but in the typical **centralized** style, we consider one repository
-as the main development line and this is marked as "central".
-The "central" is a role, not a technical difference.
-
 Features:
 
 - Typically all developers have both read and write permissions (double-headed arrows).
-- Suited for cases where all developers are in the same group or organization etc.
-- Code review workflow is possible.
-- Code review can be coupled with automated testing.
-
-Advantages:
-
-- More familiar for Subversion or CVS users.
-- Easier: for each clone there is only one remote.
-
-Disadvantages:
-
-- Everybody who wants to contribute needs write access.
-- Maintainer needs to trust the developers to not break things (but you can protect branches).
+- Suited for cases where **all developers are in the same group or organization or project**.
+- **Everybody who wants to contribute needs write access**.
+- Good idea to write-protect the main branch (typically `master` or `main`).
 
 Real life examples:
 
@@ -76,7 +70,7 @@ typical pitfalls.
 >
 > - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
 >   - Participants give their GitHub usernames to their chosen administrator (in their respective group).
->   - Administrator gives the other group members the newly created github repository URL.
+>   - Administrator gives the other group members the newly created GitHub repository URL.
 >   - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
 >   - Group members need to accept the invitation (GitHub emails you an invitation link).
 > - You can use this template to share this information in the collaborative document:
@@ -94,10 +88,6 @@ typical pitfalls.
 > ```
 {: .prereq}
 
-
-### After participants have been added as collaborators
-
-
 > ## Watching and unwatching repositories
 >
 > - Now that you are a collaborator, you get notified about new issues and pull
@@ -106,6 +96,15 @@ typical pitfalls.
 > - However, we recommend watching repositories you are interested in. You can learn things from experts just by
 >   watching the activity that come through.
 {: .callout}
+
+> ## Exercise description
+>
+> - Helper prepares an exercise repository (see above) - this will take 10 minutes or so.
+> - The exercise group works on steps 1-8 (15-20 minutes).
+> - After step 8 you can return to the main room. Please ask questions.
+> - We do step 9 and 10 together (instructor demonstrates, and everybody follows along in their repositories).
+> - Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
+{: .challenge}
 
 
 #### 1. Clone your administrator's group repository
@@ -142,6 +141,8 @@ This is a representation of what happens when you clone:
 $ cd centralized-workflow-exercise
 ```
 
+Try to find out where this repository was cloned from using `git remote -v`.
+
 
 #### 3. Create a branch `yourname-somefeature` pointing at your commit
 
@@ -152,7 +153,7 @@ $ git branch yourname-somefeature
 $ git checkout yourname-somefeature
 ```
 
-The `yourname/` prefix has no special meaning here (not like `origin/`): it is just part of a
+The `yourname-` prefix has no special meaning here (not like `origin/`): it is just part of a
 branch name to indicate who made it.
 
 
@@ -196,12 +197,20 @@ Do this through the web interface.
 A pull-request means: "please review my changes and if you agree, merge them with a mouse-click". In a popular project, it means that anyone can
 contribute with *almost no work* on the maintainer's side - a big win.
 
+
+#### 9. Discuss and accept pull requests
+
+**We do this step together on the main screen (in the main room)**. The instructor shows a submitted
+pull request, discusses what features to look at, and how to discuss and review.
+
+At the same time, helpers can review open pull requests from their exercises groups.
+
 > ## Code review and protected branches
 >
 > - Pull requests are like change proposals.
 > - We recommend that pull requests are reviewed by someone else in your group.
 > - In our example everyone has write access to the "central" repository.
-> - A good setting is to make the `master` branch **protected** and all changes to it have to go
+> - A good setting is to make the `master` or `main` branch **protected** and all changes to it have to go
 >   through code review.
 > - Centralized workflow with protected branches is a good setup for many projects.
 {: .callout}
@@ -215,9 +224,11 @@ Once the pull-request is accepted, the change is merged:
 Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 
-#### 9. Update your local copy
+#### 10. Update your local copy
 
 Your branch `yourname-somefeature` is not needed anymore but more importantly, you need to sync your local copy:
+Everybody needs to do this step in their exercise repository but we do this together in the main room
+so that we can discuss this step and ask questions.
 
 ```
 $ git checkout master
