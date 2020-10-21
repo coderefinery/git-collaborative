@@ -322,16 +322,7 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 
 ---
 
-> ## Discussion
->
-> ### Naming
->
-> In GitHub or BitBucket asking someone to bring code from a forked repo or
-> branch to the main repo is called a **pull request**. In GitLab it is called a
-> **merge request**. Which one do you feel is more appropriate and in which
-> context?
->
-> ### Always create a feature branch
+> ## Discussion: Always create a feature branch
 >
 > - Never commit to the branch you wish to submit the pull request towards.
 > - For each pull request create a new branch.
@@ -343,11 +334,4 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 > See also [this
 > blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/)
 > for an explanation.
->
-> ### Why code review
->
-> - You see what others are working on
-> - Collaborative learning
-> - OK if students and junior researchers review senior researchers
-> - Improves quality of the code
 {: .discussion}
