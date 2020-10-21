@@ -4,6 +4,6 @@
       | \
       |  b1
       |  |
-      |  [yourname/somefeature,HEAD]
+      |  [yourname-somefeature,HEAD]
       |
       [origin/master]

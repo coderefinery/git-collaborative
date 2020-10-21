@@ -143,13 +143,13 @@ $ cd centralized-workflow-exercise
 ```
 
 
-#### 3. Create a branch `yourname/somefeature` pointing at your commit
+#### 3. Create a branch `yourname-somefeature` pointing at your commit
 
 Create a branch from the current `master`:
 
 ```
-$ git branch yourname/somefeature
-$ git checkout yourname/somefeature
+$ git branch yourname-somefeature
+$ git checkout yourname-somefeature
 ```
 
 The `yourname/` prefix has no special meaning here (not like `origin/`): it is just part of a
@@ -176,7 +176,7 @@ $ git commit
 #### 6. Push your change as a new branch
 
 ```
-$ git push origin -u yourname/somefeature
+$ git push origin -u yourname-somefeature
 ```
 
 Can we leave out the `-u`?
@@ -217,7 +217,7 @@ Finally also discuss {{ site.centralized_workflow_exercise_url }}/network.
 
 #### 9. Update your local copy
 
-Your branch `yourname/somefeature` is not needed anymore but more importantly, you need to sync your local copy:
+Your branch `yourname-somefeature` is not needed anymore but more importantly, you need to sync your local copy:
 
 ```
 $ git checkout master
@@ -229,7 +229,7 @@ $ git pull origin master
 
 ---
 
-> ## Exercise/discussion: Why did we create a feature branch `yourname/somefeature`?
+> ## Exercise/discussion: Why did we create a feature branch `yourname-somefeature`?
 >
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
 > Whenever we make update to our repository, we create a new branch and make pull-request. Let's now imagine that everyone in your group makes a new change (create a new file) but without creating a new branch.

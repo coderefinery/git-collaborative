@@ -4,6 +4,6 @@ c1----c2
       | \
       |  b1
       |  |
-      |  [yourname/somefeature]
+      |  [yourname-somefeature]
       |
       [origin/master]
