@@ -26,13 +26,13 @@ keypoints:
 - Open an issue in the repository you wish to contribute to
 - Describe the problem
 - If you have a suggestion on how to fix it, describe your suggestion
-- Possibly discuss and get feedback
+- Possibly **discuss and get feedback**
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
 - Submit your fix as pull request which references/closes the issue
 
 **Motivation**:
 
-- Inform others about an observed problem
+- **Inform others about an observed problem**
 - Make it clear whether this issue is up for grabs or already being worked on
 
 ---
@@ -42,13 +42,13 @@ keypoints:
 - Open an issue in the repository you wish to contribute to
 - Write a short proposal for your suggested change or new feature
 - Motivate why and how you wish to do this
-- Discuss and get feedback before you code
+- **Discuss and get feedback before you code**
 - Once you start coding, indicate that you are working on it
 - Once you are done, submit your new feature as pull request which references/closes the issue/proposal
 
 **Motivation**:
 
-- Get agreement and feedback before writing 5000 lines of code which might be rejected
+- **Get agreement and feedback before writing 5000 lines of code** which might be rejected
 - If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
 
 ---
@@ -56,18 +56,9 @@ keypoints:
 ## WIP (work in progress) merge requests and draft pull requests
 
 - Convention: Pull requests or merge requests starting with "WIP" are not to be merged yet
-- They are there to collect feedback on unfinished work
+- They are there to **collect feedback on unfinished work**
 - On GitHub you can create [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
   which cannot be merged until marked ready for review.
-
-**Typical workflow**:
-
-- Open an issue in the repository you wish to contribute to
-- Write a short proposal for your suggested change or new feature
-- Motivate why and how you wish to do this
-- Discuss and get feedback before you code
-- Once you start coding, indicate that you are working on it
-- Once you are done, submit your new feature as pull request which references/closes the issue/proposal
 
 **Motivation**:
 
@@ -76,7 +67,16 @@ keypoints:
 
 ---
 
+## Licenses matter
+
+- If you submit code that is derivative work or code somebody else wrote, clarify license
+- If you receive pull requests with a lot of code, **clarify its license and copyright**
+
+---
+
 ## How to make sure that you don't merge malicious code
+
+(this is typically not a problem for most of us but can be a problem for some)
 
 - Since commit hashes depend on all their parents you cannot modify the past
   without all future hashes changing
