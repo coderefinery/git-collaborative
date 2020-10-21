@@ -67,6 +67,13 @@ keypoints:
 
 ---
 
+## Licenses matter
+
+- If you submit code that is derivative work or code somebody else wrote, clarify license
+- If you receive pull requests with a lot of code, **clarify its license and copyright**
+
+---
+
 ## How to make sure that you don't merge malicious code
 
 (this is typically not a problem for most of us but can be a problem for some)
