@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Copying, sharing, and synchronizing repositories
+title: Concepts around collaboration
 teaching: 20
 exercises: 0
 questions:
