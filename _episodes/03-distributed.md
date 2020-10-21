@@ -337,38 +337,34 @@ $ git push https://github.com/user/forking-workflow-exercise.git master
 
 (from Star Wars Episode IV - A New Hope)
 
-<br>
-<br>
-<br>
-
 ---
 
-## Discussion point: naming
-
-In GitHub or BitBucket asking someone to bring code from a forked repo or
-branch to the main repo is called a **pull request**. In GitLab it is called a
-**merge request**. Which one do you feel is more appropriate and in which
-context?
-
----
-
-## Always create a feature branch
-
-- Never commit to the branch you wish to submit the pull request towards.
-- For each pull request create a new branch.
-
-Motivation:
-
-- Limits the risk that commits get accidentally appended to an open pull request.
-- History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
-
-See also [this blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/) for an explanation.
-
----
-
-## Code review
-
-- You see what others are working on
-- Collaborative learning
-- OK if students and junior researchers review senior researchers
-- Improves quality of the code
+> ## Discussion
+>
+> ### Naming
+>
+> In GitHub or BitBucket asking someone to bring code from a forked repo or
+> branch to the main repo is called a **pull request**. In GitLab it is called a
+> **merge request**. Which one do you feel is more appropriate and in which
+> context?
+>
+> ### Always create a feature branch
+>
+> - Never commit to the branch you wish to submit the pull request towards.
+> - For each pull request create a new branch.
+>
+> Motivation:
+> - Limits the risk that commits get accidentally appended to an open pull request.
+> - History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
+>
+> See also [this
+> blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/)
+> for an explanation.
+>
+> ### Why code review
+>
+> - You see what others are working on
+> - Collaborative learning
+> - OK if students and junior researchers review senior researchers
+> - Improves quality of the code
+{: .discussion}
