@@ -28,7 +28,7 @@ as the main development line and this is marked as "central".
 The "central" is a role, not a technical difference.
 
 In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
-**within one repository..
+**within one repository**.
 
 
 ### Centralized layout
