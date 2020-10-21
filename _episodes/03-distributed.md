@@ -22,7 +22,7 @@ keypoints:
   - If you are more than one person contributing to a project, implement code review.
 ---
 
-
+## Distributed version control and forking workflow
 
 ### Forking layout
 
@@ -30,30 +30,13 @@ keypoints:
 
 In the **forking layout**, again we call one repository the "central"
 repository but people push to **forks** (their own copies of the
-repository on GitHub).
+repository on GitHub/GitLab/Bitbucket).
 
 Features:
 
-- Most developers have only read access to the main project.
-- For a public repository everybody has read access.
-- Only very few people (the maintainers) have write access.
-- Typically nobody pushes directly to the central repo.
-- Code review can be coupled with automated testing.
-- Central repo and the forks typically reside in the "cloud".
-- Naturally grows out the centralized model once more people begin
-  contributing.
-
-Advantages:
-
-- Code is integrated via code review (during pull/merge request).
-- Maintainer has full control over what goes in.
-- Allows contributions from people you don't know yet (in practice not possible in centralized layout).
-- Structurally helps to implement peer review in coding (code review).
-
-Disadvantages:
-
-- Learning curve: we need to deal at least with two remotes (fork and central repo).
-- Introduces additional steps (to e.g. update the fork).
+- **Anybody can contribute without asking for permission.** (public projects)
+- Maintainer still has **full control over what is merged**.
+- There is now **more than one remote** to work with.
 
 Real life examples:
 
@@ -62,7 +45,7 @@ Real life examples:
 
 ---
 
-## Working with multiple remotes
+### Working with multiple remotes
 
 - There is nothing special about the name `origin`. The `origin` is just an alias.
 - We can call these aliases as we like.
