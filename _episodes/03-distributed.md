@@ -96,7 +96,7 @@ $ git remote --verbose
 {: .challenge}
 
 
-### Part A: Fork and clone
+### Step A: Fork and clone
 
 
 > ## Exercise preparation
@@ -139,7 +139,7 @@ After we clone the fork we have three in principle independent repositories:
 *local*: ![]({{ site.baseurl }}/img/forking/github-local-01.svg)
 
 
-### Part B: Open an "issue" as a change proposal
+### Step B: Open an "issue" as a change proposal
 
 Before we start any coding, open a new "Issue" on the central repository as a
 "proposal" where you describe your idea for a recipe with the possibility to
@@ -150,7 +150,7 @@ Discuss with your neighbor why it can be useful to open an issue before
 starting the actual coding.
 
 
-### Part C: Modify and commit
+### Step C: Modify and commit
 
 Before we do any modification, we create a new branch and switch to it: this is
 a good reflex and a good practice. Choose a branch name which is descriptive of
@@ -178,7 +178,7 @@ And here is a picture of what just happened:
 *local*: ![]({{ site.baseurl }}/img/forking/github-local-02.svg)
 
 
-### Part D: Push your changes to the fork
+### Step D: Push your changes to the fork
 
 Now push your new branch to your fork. Your branch is probably called something else than "feature". Also verify where
 "origin" points to.
@@ -194,7 +194,7 @@ $ git push origin feature
 *local*: ![]({{ site.baseurl }}/img/forking/github-local-03.svg)
 
 
-### Part E: File a pull request
+### Step E: File a pull request
 
 Then file a pull request from the branch on your fork towards the master branch on the repository where you forked from.
 
@@ -232,7 +232,15 @@ Observe how the issues automatically close after the pull requests are merged
 {: .challenge}
 
 
-### Part F: Update your fork
+### Step F: Discuss and accept pull requests
+
+**We do this step together on the main screen (in the main room)**. The instructor shows a submitted
+pull request, discusses what features to look at, and how to discuss and review.
+
+At the same time, helpers can review open pull requests from their exercises groups.
+
+
+### Step G: Update your fork
 
 We do this part **after the contributions from all participants have been integrated**.
 
