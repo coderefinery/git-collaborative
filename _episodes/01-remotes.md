@@ -15,6 +15,7 @@ keypoints:
   - Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
   - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
   - Repositories that are shared online often synchronize via pull requests or merge requests.
+  - Repositories that are forked or cloned do not automatically synchronize themselves.
 ---
 
 ## Motivation
