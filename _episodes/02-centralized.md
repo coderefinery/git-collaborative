@@ -231,6 +231,10 @@ At the same time, helpers can review open pull requests from their exercises gro
 > - In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
 > - Which one do you feel is more appropriate and in which
 >   context? (The name **pull request** may make more sense in the forking workflow: next episode).
+>
+> ### Read more
+>
+> - This is a great resource: [Practical git PRs for small teams](https://scicomp.aalto.fi/scicomp/practical-git-prs/)
 {: .discussion}
 
 Once the pull-request is accepted, the change is merged:
