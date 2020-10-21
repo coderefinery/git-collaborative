@@ -78,6 +78,8 @@ keypoints:
 
 ## How to make sure that you don't merge malicious code
 
+(this is typically not a problem for most of us but can be a problem for some)
+
 - Since commit hashes depend on all their parents you cannot modify the past
   without all future hashes changing
 - Projects like
