@@ -89,7 +89,7 @@ $ git remote --verbose
 > - Learn how to update your fork with upstream changes.
 >
 > Exercise:
-> - Helper prepares an exercise repository (see below) - this will take 5-10 minutes.
+> - Helper prepares an exercise repository (see below) - in this case we **do not add collaborators** (this will take 5-10 minutes).
 > - **The exercise group works on steps A-E** (15-20 minutes).
 > - There are two optional steps after step E for those who want more steps.
 > - After step E you can return to the main room. Please ask questions.
