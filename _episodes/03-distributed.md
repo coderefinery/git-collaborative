@@ -89,7 +89,7 @@ $ git remote --verbose
 > - Learn how to update your fork with upstream changes.
 >
 > Exercise:
-> - Helper prepares an exercise repository (see below) - in this case we **do not add collaborators** (this will take 5-10 minutes).
+> - Helper prepares an exercise repository (see below; this will take 5-10 minutes).
 > - **The exercise group works on steps A-E** (15-20 minutes).
 > - There are two optional steps after step E for those who want more steps.
 > - After step E you can return to the main room. Please ask questions.
@@ -103,6 +103,7 @@ $ git remote --verbose
 > - Create an exercise repository by
 >   [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 >   using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
+> - In this case we **do not add collaborators** to the repository (this is the point of this example). 
 > - Share the link to the newly created repository in the shared document with your group.
 >
 > **Learners in breakout-rooms**: Fork the helper's newly created repository and clone the fork.
