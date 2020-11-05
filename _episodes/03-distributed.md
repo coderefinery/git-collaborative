@@ -302,7 +302,7 @@ $ git push origin master
 Remotes are aliases. We can use remote URLs directly.
 
 Here we pull from the central repo and push to our fork
-(replace with the repository you forked if neede):
+(replace with the repository you forked if needed):
 
 ```shell
 $ git checkout master
