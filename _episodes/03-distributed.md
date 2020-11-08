@@ -262,6 +262,7 @@ We will discuss two solutions:
 
 - Upstream repo receives other changes (other merged pull-requests)
 - How do we get these changes to the forked repo?
+- Replace below with the repository you forked, if needed
 
 ```shell
 $ git remote add upstream {{ site.forking_workflow_exercise_url }}.git
@@ -300,7 +301,8 @@ $ git push origin master
 
 Remotes are aliases. We can use remote URLs directly.
 
-Here we pull from the central repo and push to our fork:
+Here we pull from the central repo and push to our fork
+(replace with the repository you forked if needed):
 
 ```shell
 $ git checkout master
