@@ -313,6 +313,9 @@ $ git pull origin master
 > $ git checkout somefeature
 > ```
 >
+> The long form is only needed if you have multiple remotes containing a branch called `somefeature`
+> (we will learn about multiple remotes in the next episode).
+>
 > Once we track a remote branch, we can pull from it and push to it:
 >
 > ```shell
