@@ -69,23 +69,12 @@ typical pitfalls.
 > <img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
 >
 > - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
->   - Participants give their GitHub usernames to their chosen administrator (in their respective group).
+>   - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
 >   - Administrator gives the other group members the newly created GitHub repository URL.
 >   - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
->   - Group members need to accept the invitation (GitHub emails you an invitation link).
-> - You can use this template to share this information in the collaborative document:
->
-> ```
-> # Group N
->
-> - administrator: someuser
-> - exercise URL: https://github.com/someuser/centralized-workflow-exercise
-> - collaborators:
->   - anotheruser
->   - yetanotheruser
->   - myusername
->   - otherusername
-> ```
+>   - Group members need to accept the invitation. GitHub emails you an invitation link, but if you don't receive it
+>     you can go to your GitHub notifications in the top right corner. The administrator can also "copy invite link"
+>     and share it within the group.
 {: .prereq}
 
 > ## Watching and unwatching repositories
@@ -124,6 +113,9 @@ This is a representation of what happens when you clone:
 *remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
 
 *local*: ![]({{ site.baseurl }}/img/centralized/01-local.svg)
+
+> Here and in what follows, "c1" is a commit, "b1" etc. are commits on side branches
+> and "m1" is a merge commit.
 
 - We clone the entire history, all branches, all commits. In our case, we have one branch (we did not include *all branches* when creating our repository from template) and we have only one commit (*initial commit*).
 - `git clone` creates pointers `origin/master` so you can see the branches of the origin.
@@ -204,6 +196,14 @@ contribute with *almost no work* on the maintainer's side - a big win.
 pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
+
+> ## Hint for breakout rooms
+>
+> If the helper in the room is the one who sets up the central repository, he/she
+> cannot easily demostrate the steps via screen-sharing as the repository's owner. A
+> good alternative is to have one of the learners screen-share and get advice on the
+> steps from other learners and helpers!
+{: .callout}
 
 > ## Discussion
 >
@@ -287,7 +287,17 @@ $ git pull origin master
 >
 > - The push only worked for one participant.
 > - Discuss why push for everybody else in this group was rejected?
+> 
+> > ## Solution
+> >
+> > The push for everyone except one person fails because they are missing one 
+> > commit in their local repository that exists on the remote. They will first
+> > need to pull the remote changes before pushing their own, which will usually
+> > result in a merge commit.
+> {: .solution}
 {: .challenge}
+
+
 
 > ## Discussion: How to make changes to remote branches
 >
