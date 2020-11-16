@@ -72,7 +72,9 @@ typical pitfalls.
 >   - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
 >   - Administrator gives the other group members the newly created GitHub repository URL.
 >   - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
->   - Group members need to accept the invitation (GitHub emails you an invitation link).
+>   - Group members need to accept the invitation. GitHub emails you an invitation link, but if you don't receive it
+>     you can go to your GitHub notifications in the top right corner. The administrator can also "copy invite link"
+>     and share it within the group.
 {: .prereq}
 
 > ## Watching and unwatching repositories
