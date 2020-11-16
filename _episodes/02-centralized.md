@@ -295,7 +295,17 @@ $ git pull origin master
 >
 > - The push only worked for one participant.
 > - Discuss why push for everybody else in this group was rejected?
+> 
+> > ## Solution
+> >
+> > The push for everyone except one person fails because they are missing one 
+> > commit in their local repository that exists on the remote. They will first
+> > need to pull the remote changes before pushing their own, which will usually
+> > result in a merge commit.
+> {: .solution}
 {: .challenge}
+
+
 
 > ## Discussion: How to make changes to remote branches
 >
