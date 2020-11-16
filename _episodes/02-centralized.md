@@ -69,23 +69,10 @@ typical pitfalls.
 > <img src="{{ site.baseurl }}/img/centralized/generate_repo.png" width="700"/>
 >
 > - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
->   - Participants give their GitHub usernames to their chosen administrator (in their respective group).
+>   - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
 >   - Administrator gives the other group members the newly created GitHub repository URL.
 >   - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
 >   - Group members need to accept the invitation (GitHub emails you an invitation link).
-> - You can use this template to share this information in the collaborative document:
->
-> ```
-> # Group N
->
-> - administrator: someuser
-> - exercise URL: https://github.com/someuser/centralized-workflow-exercise
-> - collaborators:
->   - anotheruser
->   - yetanotheruser
->   - myusername
->   - otherusername
-> ```
 {: .prereq}
 
 > ## Watching and unwatching repositories
