@@ -265,7 +265,15 @@ $ git pull origin master
 > ## Exercise/discussion: Why did we create a feature branch `yourname-somefeature`?
 >
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
-> Whenever we make update to our repository, we create a new branch and make pull-request. Let's now imagine that everyone in your group makes a new change (create a new file) but without creating a new branch.
+> 
+> Pushing directly to the main branch is perfectly fine for simple personal projects -
+> the pull-request workflows covered here are for larger projects or for collaborative development.
+> Guidelines for simpler workflows are given in the
+> [how much git is necessary?](https://coderefinery.github.io/git-intro/14-level/) episode of the git-intro lesson.
+> 
+> In collaborative development, whenever we update our repository we create a new branch
+> and create a pull-request. Let's now imagine that everyone in your group makes a new change (create a new file)
+> but without creating a new branch.
 >
 > 1. You all create a new file in the master branch, stage and commit your change locally.
 > 2. Try to push the change to the upstream repository:
