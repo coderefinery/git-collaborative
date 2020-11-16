@@ -205,6 +205,14 @@ pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
 
+> ## Hint for breakout rooms
+>
+> If the helper in the room is the one who sets up the central repository, he/she
+> cannot easily demostrate the steps via screen-sharing as the repository's owner. A
+> good alternative is to have one of the learners screen-share and get advice on the
+> steps from other learners and helpers!
+{: .callout}
+
 > ## Discussion
 >
 > ### Pull requests can be used for code review
