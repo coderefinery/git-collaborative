@@ -125,6 +125,9 @@ This is a representation of what happens when you clone:
 
 *local*: ![]({{ site.baseurl }}/img/centralized/01-local.svg)
 
+> Here and in what follows, "c1" is a commit, "b1" etc. are commits on side branches
+> and "m1" is a merge commit.
+
 - We clone the entire history, all branches, all commits. In our case, we have one branch (we did not include *all branches* when creating our repository from template) and we have only one commit (*initial commit*).
 - `git clone` creates pointers `origin/master` so you can see the branches of the origin.
 - `origin` refers to where we cloned from, try: `git remote -v`.
