@@ -270,6 +270,28 @@ $ git pull origin master
 
 ---
 
+> ## (Optional) exercise or demo: Cross-referencing issues
+>
+> We will submit another change by a pull request but this time we will **first create an issue**.
+>
+> 1. Open an issue on GitHub and describe your idea for a change. This gives
+>    others the chance to give feedback/suggestions. **Note the issue number**, you
+>    will need it in step 3.
+> 2. Create a new branch and switch to it.
+> 3. On the new branch create a commit and in the commit message write what you
+>    did, but also add that this "closes #1" (if the issue that you refer to had the number
+>    1).
+> 4. Push the branch and open a new pull request. If you forgot to refer to the
+>    issue number in step 3, you can still refer to it in the pull request
+>    form.
+> 5. Note how now commits, pull requests, and issues can be cross-referenced.
+> 6. Notice how after the pull request is merged, the issue gets automatically
+>    closed.
+> 7. Discuss the value of cross-referencing them and of auto-closing issues
+>    with commits or pull requests.
+{: .challenge}
+
+
 > ## Exercise/discussion: Why did we create a feature branch `yourname-somefeature`?
 >
 > This exercise is done in groups of 4-5 persons and can be done through a discussion only.
