@@ -284,9 +284,9 @@ $ git pull origin master
 > 4. Push the branch and open a new pull request. If you forgot to refer to the
 >    issue number in step 3, you can still refer to it in the pull request
 >    form.
-> 5. Note how now commits, pull requests, and issues can be cross-referenced.
+> 5. Note how now commits, pull requests, and issues can be cross-referenced by including `#NNN`.
 > 6. Notice how after the pull request is merged, the issue gets automatically
->    closed.
+>    closed.  This only happens certain keywords like `closes` or `fix`.
 > 7. Discuss the value of cross-referencing them and of auto-closing issues
 >    with commits or pull requests.
 {: .challenge}
