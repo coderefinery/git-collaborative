@@ -207,6 +207,20 @@ At the same time, helpers can review open pull requests from their exercises gro
 
 > ## Discussion
 >
+> ### Naming
+>
+> - In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
+> - Which one do you feel is more appropriate and in which
+>   context? (The name **pull request** may make more sense in the forking workflow: next episode).
+> - It can be useful to think of them as **change proposals**.
+>
+> ### Pull requests are from branch to branch
+>
+> - They originate from a source branch and are directed towards a branch.
+> - Not from commit to branch.
+> - Pull requests create new commits on the target branch.
+> - They do not create new branches.
+>
 > ### Pull requests can be used for code review
 >
 > - Pull requests are like change proposals.
@@ -225,12 +239,6 @@ At the same time, helpers can review open pull requests from their exercises gro
 > - Collaborative learning
 > - OK if students and junior researchers review senior researchers
 > - Improves quality of the code
->
-> ### Naming
->
-> - In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
-> - Which one do you feel is more appropriate and in which
->   context? (The name **pull request** may make more sense in the forking workflow: next episode).
 >
 > ### Read more
 >
