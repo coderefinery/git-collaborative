@@ -103,6 +103,7 @@ $ git remote --verbose
 > - Create an exercise repository by
 >   [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 >   using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
+>   called `forking-workflow-exercise`
 > - In this case we **do not add collaborators** to the repository (this is the point of this example). 
 > - Share the link to the newly created repository in the shared document with your group.
 >
