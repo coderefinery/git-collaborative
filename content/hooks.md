@@ -1,15 +1,13 @@
----
-layout: episode
-title: (Optional) Hooks
-teaching: 5
-exercises: 0
-questions:
-  - How can we automate tasks depending on events in the Git repository?
-objectives:
-  - Learn how to couple scripts to Git repository events.
----
+# Hooks
 
-## Hooks
+```{objectives}
+- Learn how to couple scripts to Git repository events.
+```
+
+```{instructor-note}
+- 10 min teaching/demonstration
+```
+
 
 Sometimes you would like Git events (commits, pushes, etc.) to trigger scripts which take care of some tasks.
 
@@ -20,7 +18,7 @@ They can be used to enforce nearly any kind of policy for your project.
 There are client-side and server-side hooks.
 
 
-### Client-side hooks
+## Client-side hooks
 
 You can find and edit them here:
 
@@ -53,7 +51,7 @@ pycodestyle --ignore=E501 myproject/
 ```
 
 
-### Server-side hooks
+## Server-side hooks
 
 You can typically edit them through a web interface on GitHub/GitLab.
 

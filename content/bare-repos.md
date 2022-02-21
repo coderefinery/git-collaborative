@@ -1,15 +1,14 @@
----
-layout: episode
-title: (Optional) Non-bare and bare repositories
-teaching: 10
-exercises: 0
-questions:
-  - What are bare repositories?
-  - How can we create a common repository for a group on our local computer or server?
-keypoints:
-  - We do programming work inside non-bare repositories.
-  - We can create a local common repository where we can push to and pull from.
----
+# Non-bare and bare repositories
+
+```{objectives}
+- Understanding the difference between non-bare and bare repositories.
+- Being able to create a common repository for a group on our local computer or server.
+```
+
+```{instructor-note}
+- 10 min teaching/demonstration
+```
+
 
 ## Two types of repositories
 
@@ -53,3 +52,8 @@ $ cd /path/to/example-clone
 - Inside the clone inspect `git remote -v`.
 - Inside the clone create a commit and push the commit to `origin`.
 - The bare repository can be cloned several times and one can exercise pushing and pulling changes.
+
+```{keypoints}
+- We do programming work inside non-bare repositories.
+- We can create a local common repository where we can push to and pull from.
+```

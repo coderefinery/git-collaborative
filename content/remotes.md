@@ -1,27 +1,17 @@
----
-layout: episode
-title: Concepts around collaboration
-teaching: 20
-exercises: 0
-questions:
-  - How can we backup repositories?
-  - How can we share repositories with others?
-  - How can we keep repositories in sync?
-  - What are different ways to make a copy of the entire repository?
-objectives:
-  - Be able to decide whether to divide work at the branch level or at the repository level.
-keypoints:
-  - "`git clone` copies everything: all commits and all branches."
-  - Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
-  - We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
-  - Repositories that are shared online often synchronize via pull requests or merge requests.
-  - Repositories that are forked or cloned do not automatically synchronize themselves.
----
+# Concepts around collaboration
+
+```{objectives}
+- Be able to decide whether to divide work at the branch level or at the repository level.
+```
+
+```{instructor-note}
+- 20 min teaching
+```
+
 
 ## Motivation
 
-- Let's say that someone has given you access to a repository online
-- ... and you want to contribute to it.
+- Let's say that someone has given you access to a repository online and you want to contribute to it.
 - It is quite easy to make a copy and send a change back.
 - First, we do this a relatively simple way: get repository, make a change
   locally, and send the change directly back.
@@ -30,7 +20,6 @@ keypoints:
   to repositories of others and review changes submitted by external
   contributors.
 
----
 
 ## Commits, branches, repositories, forks, clones
 
@@ -42,9 +31,14 @@ keypoints:
 - **forking**: Taking a copy of a repository (which is typically not yours) - your
   copy (fork) stays on GitHub and you can make changes to your copy.
 
-<img src="{{ site.baseurl }}/img/overview/fork_PN.png" width="800" style="border:2px solid #000000;"/>
+```{figure} img/overview/fork_PN.png
+:alt: Forking and cloning
+:width: 100%
+:class: with-border
 
----
+Forking and cloning.
+```
+
 
 ## Generating from templates and importing
 
@@ -54,23 +48,32 @@ There are two more ways to create "copies" of repositories into your user space:
   The newly created repository will start with a new history, only one commit, and not
   inherit the history of the template.
 
-<img src="{{ site.baseurl }}/img/overview/generate_PN.png" width="800" style="border:2px solid #000000;"/>
+```{figure} img/overview/generate_PN.png
+:alt: Generating from a template
+:width: 100%
+:class: with-border
+
+Generating from a template.
+```
 
 - You can **import** a repository from another hosting service or web address.
   This will preserve the history of the imported project.
 
-<img src="{{ site.baseurl }}/img/overview/import_PN.png" width="800" style="border:2px solid #000000;"/>
+```{figure} img/overview/import_PN.png
+:alt: Importing a repository
+:width: 100%
+:class: with-border
 
+Importing a repository.
+```
 ---
 
-> ## Discussion/exercise
->
-> - Visit one of the repositories/projects that you have used recently and try to find out
->   how many forks exist and where they are.
-> - In which situations it could be useful to start from a "template" repository by generating?
-{: .discussion}
+```{discussion}
+- Visit one of the repositories/projects that you have used recently and try to find out
+  how many forks exist and where they are.
+- In which situations it could be useful to start from a "template" repository by generating?
+```
 
----
 
 ## Synchronizing changes between repositories
 
@@ -79,3 +82,12 @@ There are two more ways to create "copies" of repositories into your user space:
 - We will **push** updates **to** remote repositories.
 - We will learn how to suggest changes within repositories on GitHub and across repositories.
 - We will learn how to update forks by pulling/fetching changes and pushing them to forks.
+
+
+```{keypoints}
+- `git clone` copies everything: all commits and all branches.
+- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
+- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
+- Repositories that are shared online often synchronize via pull requests or merge requests.
+- Repositories that are forked or cloned do not automatically synchronize themselves.
+```

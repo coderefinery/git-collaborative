@@ -1,9 +1,4 @@
----
-layout: default
-permalink: /reference/
----
-
-# git-collaborative: quick reference
+# Quick reference
 
 ## Other cheatsheets
 
@@ -14,6 +9,7 @@ the basics.
 * [Interactive git cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
 * [Very detailed 2-page git
   cheatsheet](https://users.aalto.fi/~darstr1/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf)
+
 
 ## Glossary
 
@@ -51,7 +47,6 @@ Setup:
 * `git clone <url> [<target-directory>]`: Make a copy of existing
   repository at &lt;url&gt;, containing all history.
 
-
 Status:
 
 * `git status`: Same as in basic git, list status
@@ -75,4 +70,3 @@ General work:
   tracking by default.
 * `git remote add <remote-name> <url>`: Adds a new remote with a
   certain name.
-
