@@ -13,11 +13,6 @@
 
 ## Meaning of "central" in a distributed version control
 
-```{figure} img/forking/github_octocat.jpeg
-:alt: The GitHub Octocat
-:width: 20%
-```
-
 Git implements a **distributed** version control.
 This means that any type of repository links that you can think of can be
 implemented - not just "everything connects to one central server".
