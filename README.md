@@ -1,7 +1,1 @@
-
-
-# Collaborative distributed version control lesson
-
-## Credit and license
-
-- https://coderefinery.github.io/git-collaborative/license/
+# [Collaborative distributed version control](https://coderefinery.github.io/git-collaborative/)
