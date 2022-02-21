@@ -309,7 +309,7 @@ We will submit another change by a pull request but this time we will **first cr
   Pushing directly to the main branch is perfectly fine for simple personal projects -
   the pull-request workflows covered here are for larger projects or for collaborative development.
   Guidelines for simpler workflows are given in the
-  [how much git is necessary?](https://coderefinery.github.io/git-intro/14-level/) episode of the git-intro lesson.
+  [how much git is necessary?](https://coderefinery.github.io/git-intro/level/) episode of the git-intro lesson.
 
   In collaborative development, whenever we update our repository we create a new branch
   and create a pull-request. Let's now imagine that everyone in your group makes a new change (create a new file)
