@@ -31,7 +31,7 @@
 - **forking**: Taking a copy of a repository (which is typically not yours) - your
   copy (fork) stays on GitHub and you can make changes to your copy.
 
-```{figure} img/overview/fork_PN.png
+```{figure} img/overview/fork.png
 :alt: Forking and cloning
 :width: 100%
 :class: with-border
@@ -48,7 +48,7 @@ There are two more ways to create "copies" of repositories into your user space:
   The newly created repository will start with a new history, only one commit, and not
   inherit the history of the template.
 
-```{figure} img/overview/generate_PN.png
+```{figure} img/overview/generate.png
 :alt: Generating from a template
 :width: 100%
 :class: with-border
@@ -59,7 +59,7 @@ Generating from a template.
 - You can **import** a repository from another hosting service or web address.
   This will preserve the history of the imported project.
 
-```{figure} img/overview/import_PN.png
+```{figure} img/overview/import.png
 :alt: Importing a repository
 :width: 100%
 :class: with-border
