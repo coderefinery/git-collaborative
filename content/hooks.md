@@ -22,7 +22,7 @@ There are client-side and server-side hooks.
 
 You can find and edit them here:
 
-```shell
+```console
 $ ls -l .git/hooks/
 ```
 
@@ -43,7 +43,7 @@ a framework for managing and maintaining multi-language pre-commit hooks.
 Example for a `pre-commit` hook which checks whether a Python code is [PEP 8](https://www.python.org/dev/peps/pep-0008/)-compliant
 using [pycodestyle](http://pycodestyle.pycqa.org):
 
-```shell
+```console
 #!/usr/bin/env bash
 
 # ignore errors due to too long lines

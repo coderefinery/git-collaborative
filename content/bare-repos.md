@@ -32,7 +32,7 @@ If we have enough time, the instructor demonstrates how to create a bare reposit
 - Create one or two branches.
 - Clone this repository on the same computer with either `--bare` or `--mirror`:
 
-```shell
+```console
 $ cd /path/to/example
 $ git init
 
@@ -44,7 +44,7 @@ $ git clone --bare /path/to/example /path/to/example-bare
 - Inspect the bare repository.
 - Clone the bare repository:
 
-```shell
+```console
 $ git clone /path/to/example-bare /path/to/example-clone
 $ cd /path/to/example-clone
 ```

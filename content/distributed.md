@@ -42,7 +42,7 @@ Real life examples:
 - We can call these aliases as we like.
 - We can add and remove remotes:
 
-```shell
+```console
 $ git remote add upstream https://github.com/project/project.git
 $ git remote rm upstream
 $ git remote add group-repo https://example.com/exciting-project.git
@@ -55,7 +55,7 @@ We synchronize remotes via the local clone.
 
 To see all remotes:
 
-```shell
+```console
 $ git remote --verbose
 ```
 
@@ -200,7 +200,7 @@ local
 Now push your new branch to your fork. Your branch is probably called something
 else than "feature". Also verify where "origin" points to.
 
-```shell
+```console
 $ git push origin feature
 ```
 
@@ -302,7 +302,7 @@ We will discuss two solutions:
 - How do we get these changes to the forked repo?
 - Replace below with the repository you forked, if needed
 
-```shell
+```console
 $ git remote add upstream <central-repository-url>
 $ git fetch upstream
 ```
@@ -322,7 +322,7 @@ fork
 local
 ```
 
-```shell
+```console
 $ git checkout master
 $ git merge upstream/master
 ```
@@ -342,7 +342,7 @@ fork
 local
 ```
 
-```shell
+```console
 $ git push origin master
 ```
 
@@ -369,7 +369,7 @@ Remotes are aliases. We can use remote URLs directly.
 Here we pull from the central repo and push to our fork
 (replace with the repository you forked if needed):
 
-```shell
+```console
 $ git checkout master
 $ git pull <central-repository-url> master
 $ git push <fork-url> master

@@ -91,7 +91,7 @@ Watching and unwatching repositories:
 
 ### 1. Clone your administrator's group repository
 
-```
+```console
 $ git clone <repository-url> centralized-workflow-exercise
 ```
 
@@ -124,7 +124,7 @@ and "m1" is a merge commit.
 
 ### 2. Step into the newly created directory
 
-```
+```console
 $ cd centralized-workflow-exercise
 ```
 
@@ -135,7 +135,7 @@ Try to find out where this repository was cloned from using `git remote -v`.
 
 Create a branch from the current `master`:
 
-```
+```console
 $ git branch yourname-somefeature
 $ git checkout yourname-somefeature
 ```
@@ -151,7 +151,7 @@ In this file share your favourite cooking recipe or haiku or Git trick or whatev
 
 ### 5. Stage and commit the change
 
-```
+```console
 $ git add yourusername.txt
 $ git commit
 ```
@@ -169,7 +169,7 @@ local
 
 ### 6. Push your change as a new branch
 
-```
+```console
 $ git push origin -u yourname-somefeature
 ```
 
@@ -266,7 +266,7 @@ you need to sync your local copy: Everybody needs to do this step in their
 exercise repository but we do this together in the main room so that we can
 discuss this step and ask questions.
 
-```
+```console
 $ git checkout master
 $ git pull origin master
 ```
@@ -318,12 +318,12 @@ We will submit another change by a pull request but this time we will **first cr
   1. You all create a new file in the master branch, stage and commit your change locally.
   2. Try to push the change to the upstream repository:
 
-  ```
+  ```console
   $ git push origin master
   ```
   You probably see something like this:
 
-  ```shell
+  ```console
   $ git push
   To https://github.com/user/repo.git
    ! [rejected]        master -> master (non-fast-forward)
@@ -347,13 +347,13 @@ We will submit another change by a pull request but this time we will **first cr
 ````{discussion} Discussion: How to make changes to remote branches
   We can create a local branch `somefeature` tracking `origin/somefeature`:
 
-  ```shell
+  ```console
   $ git checkout -b somefeature origin/somefeature
   ```
 
   If there is no local branch `somefeature` and there is a remote branch `origin/somefeature`, then this is enough:
 
-  ```shell
+  ```console
   $ git checkout somefeature
   ```
 
@@ -362,14 +362,14 @@ We will submit another change by a pull request but this time we will **first cr
 
   Once we track a remote branch, we can pull from it and push to it:
 
-  ```shell
+  ```console
   $ git pull origin somefeature
   $ git push origin somefeature
   ```
 
   We can also delete remote branches:
 
-  ```shell
+  ```console
   $ git push origin --delete somefeature
   ```
 ````
