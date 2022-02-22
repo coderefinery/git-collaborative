@@ -66,7 +66,7 @@ You can typically edit them through a web interface on GitHub/GitLab.
     - Rebuilding software packages
 
 
-## Actions, workflows, and continous integration services
+## Actions, workflows, and continuous integration services
 
 GitHub and GitLab let you define workflows/actions/recipes which are triggered
 by e.g. `git push` or by a release (tag creation).  They can be customized and
