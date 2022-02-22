@@ -47,7 +47,7 @@ Real life examples:
 - [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
 
 
-## Exercise: centralized workflow
+## Exercise: Part 1 - creating a pull request
 
 In this exercise we will practice collaborative centralized workflow in small
 groups.  We'll discuss how this leads to code review and discuss a number of
@@ -82,10 +82,16 @@ Watching and unwatching repositories:
 
 ```{exercise} Exercise description
 - Helper prepares an exercise repository (see above) - this will take 10 minutes or so.
+- Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
 - The exercise group works on steps 1-8 (15-20 minutes).
 - After step 8 you can return to the main room. Please ask questions.
-- **We do step 9 and 10 together** (instructor demonstrates, and everybody follows along in their repositories).
-- Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
+```
+
+```{callout} Hint for breakout rooms
+If the helper in the room is the one who sets up the central repository, they
+cannot easily demostrate the steps via screen-sharing as the repository's owner. A
+good alternative is to have one of the learners screen-share and get advice on the
+steps from other learners and helpers!
 ```
 
 
@@ -191,19 +197,18 @@ A pull-request means: "please review my changes and if you agree, merge them wit
 contribute with *almost no work* on the maintainer's side - a big win.
 
 
+## Exercise: Part 2 - code review and merging changes
+
+```{exercise} Exercise description
+- **We do step 9 and 10 together** (instructor demonstrates, and everybody follows along in their repositories).
+```
+
 ### 9. Discuss and accept pull requests
 
 **We do this step together on the main screen (in the main room)**. The instructor shows a submitted
 pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
-
-```{callout} Hint for breakout rooms
-If the helper in the room is the one who sets up the central repository, he/she
-cannot easily demostrate the steps via screen-sharing as the repository's owner. A
-good alternative is to have one of the learners screen-share and get advice on the
-steps from other learners and helpers!
-```
 
 ```{discussion}
 **Naming**
