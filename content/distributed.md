@@ -1,7 +1,7 @@
 # Distributed version control and forking workflow
 
 ```{objectives}
-- Get a mental representation of what is happening on GitHub.
+- Get a mental representation of what is happening on GitHub/GitLab.
 - Get comfortable with the forking workflow.
 ```
 
@@ -26,7 +26,7 @@ repository on GitHub/GitLab/Bitbucket).
 
 Features:
 
-- **Anybody can contribute without asking for permission.** (public projects)
+- **Anybody can contribute without asking for permission** (to public projects).
 - Maintainer still has **full control over what is merged**.
 - There is now **more than one remote** to work with.
 
@@ -38,7 +38,7 @@ Real life examples:
 
 ## Working with multiple remotes
 
-- There is nothing special about the name `origin`. The `origin` is just an alias.
+- There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" refering to an URL).
 - We can call these aliases as we like.
 - We can add and remove remotes:
 
@@ -51,7 +51,7 @@ $ git remote add upstream https://github.com/project/project.git
 $ git remote add downstream https://github.com/userX/project.git
 ```
 
-We synchronize remotes via the local clone.
+We typically synchronize remotes via the local clone on our local computer.
 
 To see all remotes:
 
@@ -389,7 +389,7 @@ and target repositories/branches how they differ after the small commits got squ
 - Luke Skywalker: *You know, I did feel something. I could almost see the remote.*
 - Ben Kenobi: *That's good. You've taken your first step into a larger world.*
 
-(from Star Wars Episode IV - A New Hope)
+[from Star Wars Episode IV - A New Hope]
 
 
 ```{discussion} Discussion: Always create a feature branch
@@ -406,11 +406,11 @@ for an explanation.
 
 
 ```{keypoints}
-- Working with multiple remotes is not as scary as it looks.
-- `origin` is just an alias.
+- Working with multiple remotes is not as scary as it might look.
+- `origin` is just an alias/placeholder.
 - We can add and remove remotes.
-- We can call these aliases as we like.
-- We synchronize remotes via the local clone.
+- We can call these aliases/placeholders as we like.
+- We typically synchronize/updates remotes via the local clone.
 - To see all remotes use `git remote -v`.
-- If you are more than one person contributing to a project, implement code review.
+- If you are more than one person contributing to a project, consider using code review.
 ```
