@@ -295,7 +295,7 @@ Pull followed by push to a different remote.
 We will discuss two solutions:
 
 
-#### Longer route
+### Longer route
 
 - Upstream repo receives other changes (other merged pull-requests)
 - How do we get these changes to the forked repo?
@@ -361,7 +361,7 @@ local
 ```
 
 
-#### Shorter route
+### Shorter route
 
 Remotes are aliases. We can use remote URLs directly.
 
