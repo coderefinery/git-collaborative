@@ -5,16 +5,16 @@
 ```
 
 ```{instructor-note}
-- 15 min teaching
+- 15 min teaching/discussion
 ```
 
 
-## Very minor changes
+## Contributing very minor changes
 
 - Fork repository
 - Create a branch
 - Commit and push change
-- File a pull request
+- File a pull request or merge request
 
 
 ## If you observe an issue and have an idea how to fix it
@@ -24,7 +24,7 @@
 - If you have a suggestion on how to fix it, describe your suggestion
 - Possibly **discuss and get feedback**
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
-- Submit your fix as pull request which references/closes the issue
+- Submit your fix as pull request or merge request which references/closes the issue
 
 **Motivation**:
 
@@ -37,14 +37,16 @@
 - Open an issue in the repository you wish to contribute to
 - Write a short proposal for your suggested change or new feature
 - Motivate why and how you wish to do this
+- Also indicate where you are unsure and where you would like feedback
 - **Discuss and get feedback before you code**
 - Once you start coding, indicate that you are working on it
-- Once you are done, submit your new feature as pull request which references/closes the issue/proposal
+- Once you are done, submit your new feature as pull request or merge request which references/closes the issue/proposal
 
 **Motivation**:
 
 - **Get agreement and feedback before writing 5000 lines of code** which might be rejected
-- If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
+- If we later wonder why something was done, we have the issue/proposal as
+  reference and can read up on the reasoning behind a code change
 
 
 ## WIP (work in progress) merge requests and draft pull requests
@@ -53,17 +55,19 @@
 - They are there to **collect feedback on unfinished work**
 - On GitHub you can create [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
   which cannot be merged until marked ready for review.
+- Also GitLab offers same mechanism (merge request starting with "WIP" or "Draft")
 
 **Motivation**:
 
-- Get agreement and feedback before writing 5000 lines of code which might be rejected
-- If we later wonder why something was done, we have the proposal as reference and can read up on the reasoning behind a code change
+- Collect feedback before it is finished and before it becomes more difficult to change
+- Communicate to others what is partially done if it affects their work
 
 
 ## Licenses matter
 
 - If you submit code that is derivative work or code somebody else wrote, clarify license
-- If you receive pull requests with a lot of code, **clarify its license and copyright**
+- If you receive pull requests with a lot of code, **clarify its license and
+  copyright** with the submitter, before merging
 
 
 ## How to make sure that you don't merge malicious code
@@ -83,5 +87,5 @@
 
 ```{keypoints}
 - Communicate and discuss before coding massive changes.
-- Cross-reference discussions, proposals, and code changes.
+- **Cross-reference discussions, proposals, and code changes**.
 ```
