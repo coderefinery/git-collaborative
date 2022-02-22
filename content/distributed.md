@@ -67,7 +67,7 @@ Please step out of the repository and check that you fork the **forking**-workfl
 ```
 
 
-## Exercise: practice collaborative forking workflow
+## Exercise: Part 1 - creating a pull request
 
 ```{exercise} Exercise description
 As an example we will collaboratively develop a cookbook for taco recipes,
@@ -81,9 +81,8 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 - Helper prepares an exercise repository (see below; this will take 5-10 minutes).
 - **The exercise group works on steps A-E** (15-20 minutes).
 - There are two optional steps after step E for those who want more steps.
-- After step E you can return to the main room. Please ask questions.
-- **We do step F and G together** (instructor demonstrates, and everybody follows along in their repositories).
-- If there is a lot of time left, step G can be done back in an exercise room.
+- After step E you can return to the main room. Please ask questions both during group work and in main room.
+- **We will review the pull requests and update forks together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
 ```{prereq} Exercise preparation
@@ -267,7 +266,7 @@ request from. Observe how they end up added to your pull request.
 ```
 
 
-### Step F: Discuss and accept pull requests
+## Exercise: Part 2 - code review and merging changes
 
 **We do this step together on the main screen (in the main room)**. The instructor shows a submitted
 pull request, discusses what features to look at, and how to discuss and review.
@@ -275,7 +274,7 @@ pull request, discusses what features to look at, and how to discuss and review.
 At the same time, helpers can review open pull requests from their exercises groups.
 
 
-### Step G: Update your fork
+## Exercise: Part 3 - Updating forks
 
 We do this part **after the contributions from all participants have been
 integrated**.
