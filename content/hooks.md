@@ -9,13 +9,10 @@
 ```
 
 
-Sometimes you would like Git events (commits, pushes, etc.) to trigger scripts which take care of some tasks.
-
-Hooks are scripts that are executed before/after certain events.
-
-They can be used to enforce nearly any kind of policy for your project.
-
-There are client-side and server-side hooks.
+Sometimes you would like Git events (commits, pushes, etc.) to **trigger scripts**
+which take care of some tasks.  **Hooks are scripts that are executed
+before/after certain Git events**.  They can be used to enforce nearly any kind of
+policy for your project.  There are client-side and server-side hooks.
 
 
 ## Client-side hooks
@@ -37,7 +34,7 @@ $ ls -l .git/hooks/
 - `pre-push`: runs during `git push` before any objects have been transferred
 - `pre-auto-gc`: invoked just before the garbage collection takes place
 
-See also [pre-commit](https://pre-commit.com),
+See also <https://pre-commit.com>,
 a framework for managing and maintaining multi-language pre-commit hooks.
 
 Example for a `pre-commit` hook which checks whether a Python code is [PEP 8](https://www.python.org/dev/peps/pep-0008/)-compliant
@@ -67,3 +64,25 @@ You can typically edit them through a web interface on GitHub/GitLab.
     - Code style checks
     - Email notification
     - Rebuilding software packages
+
+
+## Actions, workflows, and continous integration services
+
+GitHub and GitLab let you define workflows/actions/recipes which are triggered
+by e.g. `git push` or by a release (tag creation).  They can be customized and
+almost any automation you can think of becomes possible.
+
+These services use hooks under the hood. These days, project are more likely to
+use these higher-level services rather than Git hooks directly.
+
+You can read more about these services here:
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [GitLab CI](https://docs.gitlab.com/ee/ci/)
+
+In our projects we use these services to:
+- Build websites
+- Build documentation
+- Run tests
+- Create containers
+- Package and upload packages
+- Spellchecking
