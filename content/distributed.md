@@ -38,7 +38,7 @@ Real life examples:
 
 ## Working with multiple remotes
 
-- There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" refering to an URL).
+- There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" referring to an URL).
 - We can call these aliases as we like.
 - We can add and remove remotes:
 
