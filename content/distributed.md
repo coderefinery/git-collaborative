@@ -292,7 +292,14 @@ Here is a pictorial representation of this part:
 Pull followed by push to a different remote.
 ```
 
-We will discuss two solutions:
+We will discuss three solutions:
+
+```{instructor-note}
+It would be great to present both the "shorter route" and the updating fork via
+the web interface. One way to do this is to encourage a participant to share
+screen while they demonstrate the "shorter route" and then to also demonstrate
+the web interface fork update on the instructor computer.
+```
 
 
 ### Longer route
@@ -379,6 +386,18 @@ If you complete this exercise much earlier than others, pair up with somebody,
 create a new repository, fork it, and send a pull request with several
 small commits. On the other computer accept these with "Squash and merge" and later compare the source
 and target repositories/branches how they differ after the small commits got squashed into one.
+```
+
+
+### Using the web interface (GitHub)
+
+On GitHub it is now also possible to update the fork by pressing a button (see
+screenshot below):
+
+```{figure} img/forking/fetch-and-merge.png
+:alt: Updating the fork via GitHub web interface
+
+Updating the fork via GitHub web interface.
 ```
 
 ---
