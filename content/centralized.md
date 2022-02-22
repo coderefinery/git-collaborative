@@ -181,7 +181,21 @@ local
 $ git push origin -u yourname-somefeature
 ```
 
-Can we leave out the `-u`?
+```{note}
+**Meaning of -u | --set-upstream**
+
+The `-u` or `--set-upstream` will connect the local branch with the newly created upstream/remote branch
+and track it. This has the following advantages:
+- If you from here on only type `git push` or `git pull` without branchname, Git will know what branch you
+  refer to (depending also on your Git configuration). However, we still recommend to explicitly type where
+  you want to push/pull to/from and which branch explicitly.
+- When you type `git status`, Git will inform you whether your local branch is ahead or behind the upstream branch
+  that it tracks.
+
+However, also without the `-u` this step and the rest of the exercise will
+work. The fact that the local and remote branch are not connected is not a
+problem if you explicitly type out the remote and branch name every time.
+```
 
 
 ### 7. Browse the network of branches and commits
