@@ -58,7 +58,7 @@ typical pitfalls.
 - Each group needs to appoint someone who will host the shared GitHub repository: *an administrator*.
 - For online teaching, use breakout rooms.
 - **One person per group (administrator)** generates a new repository
-  from the template [template-centralized-workflow-exercise](https://github.com/coderefinery/template-centralized-workflow-exercise)
+  from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
   called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
   ```{figure} img/centralized/generate_repo.png
   :alt: Screenshot of generating the exercise repository
