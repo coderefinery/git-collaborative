@@ -280,6 +280,12 @@ local
 
 Finally also discuss the "network" on GitHub.
 
+```{instructor-note}
+At this stage demonstrate how to suggest small changes to pull/merge requests:
+- [GitHub](http://haacked.com/archive/2019/06/03/suggested-changes/)
+- [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/reviews/suggestions.html)
+```
+
 
 ### 10. Update your local copy
 
