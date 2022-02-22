@@ -4,10 +4,12 @@
 
 In order to collaborate efficiently using Git, it's essential to have a solid
 understanding of how remotes work, and how to contribute changes through pull
-requests.  The git-intro lesson teaches participants how to work efficiently
-with Git when there is only one developer. This lesson dives into the
-collaborative aspects of Git and focuses on the possible collaborative
-workflows enabled by web-based repository hosting platforms like GitHub.
+requests or merge requests. The git-intro lesson teaches participants how to
+work efficiently with Git when there is only one developer (more precisely: how
+to work when there are no remote Git repositories yet in the picture). This
+lesson dives into the collaborative aspects of Git and focuses on the possible
+collaborative workflows enabled by web-based repository hosting platforms like
+GitHub.
 
 This lesson is meant to directly benefit workshop participants who have prior
 experience with Git, enabling them to put collaborative workflows involving
@@ -21,19 +23,19 @@ they have gained some further experience in working with Git.
 ## Intended learning outcomes
 
 By the end of this lesson, learners should:
-- understand the concept of remotes
-- be able to describe the difference between local and remote branches
-- be able to describe the difference between centralized and forking workflows
-- know how to use pull requests to submit changes to another projects
-- know how to reference issues in commits or pull requests and how to auto-close issues
-- know how to update a fork.
-- be able to contribute in code review.
+- Understand the concept of remotes
+- Be able to describe the difference between local and remote branches
+- Be able to describe the difference between centralized and forking workflows
+- Know how to use pull requests or merge requests to submit changes to another projects
+- Know how to reference issues in commits or pull/merge requests and how to auto-close issues
+- Know how to update a fork
+- Be able to contribute in code review as submitter or reviewer
 
 
 ## Interesting questions you might get
 
 If participants run `git graph` they might notice `origin/HEAD`.  This has been
-omitted from the figures to not overload them.  This pointer represents the
+omitted from the figures to not overload the presentation. This pointer represents the
 default branch of the remote repository.
 
 
@@ -45,7 +47,19 @@ default branch of the remote repository.
   introduces forking and distributed workflows), and it takes maybe half the
   time of the first episode.
 - The "How to contribute changes to somebody else's project" episode can be
-  covered really quickly and offers room for discussion if you have time left.
+  covered relatively quickly and offers room for discussion if you have time left.
+
+
+## Preparing exercises
+
+Exercise leads typically prepare exercise repositories for the exercise group
+(although the material speaks about "administrator" who can also be one of the
+learners). Preparing the first exercise (centralized workflow) will take more
+time than preparing the second (forking workflow). Most preparation time is not
+the generating part but will go into communicating the URL to the exercise
+group, communicating their usernames, adding them as collaborators, and waiting
+until everybody accepts the GitHub invitation to join the newly created
+exercise repository.
 
 
 ## Typical pitfalls
@@ -53,7 +67,8 @@ default branch of the remote repository.
 ### Difference between pull and pull requests
 
 The difference between pull and pull requests can be confusing, explain clearly
-that pull requests are a different mechanism specific to GitHub, GitLab, etc.
+that pull requests or merge requests are a different mechanism specific to
+GitHub, GitLab, etc.
 
 
 ### Pull requests are from branch to branch, not from commit to branch
