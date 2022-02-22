@@ -72,19 +72,21 @@ typical pitfalls.
     you can go to your GitHub notifications in the top right corner. The administrator can also "copy invite link"
     and share it within the group.
 
-Watching and unwatching repositories:
-- Now that you are a collaborator, you get notified about new issues and pull
-  requests via email.
-- If you do not wish this, you can "unwatch" a repository (top of the project page).
-- However, we recommend watching repositories you are interested in. You can learn things from experts just by
-  watching the activity that come through.
+- Watching and unwatching repositories:
+  - Now that you are a collaborator, you get notified about new issues and pull
+    requests via email.
+  - If you do not wish this, you can "unwatch" a repository (top of the project page).
+  - However, we recommend watching repositories you are interested in. You can learn things from experts just by
+    watching the activity that come through.
 ````
 
 ```{exercise} Exercise description
-- Helper prepares an exercise repository (see above) - this will take 10 minutes or so.
+- Helper prepares an exercise repository (see above) - this will take 10 minutes or so. Most of the time will
+  go into **communicating the usernames of the exercise group** and to add them as collaborators and for them to **accept
+  the invitation** to the exercise repository.
 - Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
 - The exercise group works on steps 1-8 (15-20 minutes).
-- After step 8 you can return to the main room. Please ask questions.
+- After step 8 you can return to the main room. Please ask questions both during group work and in main room.
 ```
 
 ```{callout} Hint for breakout rooms
@@ -139,10 +141,10 @@ Try to find out where this repository was cloned from using `git remote -v`.
 
 ### 3. Create a branch `yourname-somefeature` pointing at your commit
 
-Create a branch from the current `master`:
+Create a branch from the current `master`. Also adapt "yourname-somefeature" to a better name:
 
 ```console
-$ git branch yourname-somefeature
+$ git branch yourname-somefeature master
 $ git checkout yourname-somefeature
 ```
 
@@ -185,7 +187,8 @@ Can we leave out the `-u`?
 ### 7. Browse the network of branches and commits
 
 After you have pushed your branch and other participants have too, browse the
-network of branches and commits and discuss with others what you see.
+network of branches and commits (on GitHub click on Insights -> Network) and
+discuss with others what you see.
 
 
 ### 8. Submit a pull request
