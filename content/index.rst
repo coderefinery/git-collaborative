@@ -70,5 +70,6 @@ and finally look into how to automate tasks using Git hooks.
    :maxdepth: 1
    :caption: Reference
 
+   exercises
    guide
    reference
