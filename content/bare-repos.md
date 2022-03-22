@@ -30,7 +30,7 @@
 If we have enough time, the instructor demonstrates how to create a bare
 repository on the local computer:
 
-````{exercise} Demonstration/exercise
+````{exercise} Bare-1: Create and use a bare repository
 - Create a new local repository with `git init`.
   ```console
   $ cd /path/to/example
