@@ -80,13 +80,15 @@ typical pitfalls.
     watching the activity that come through.
 ````
 
-```{exercise} Exercise description
+```{exercise} Centralized-1: Clone a repository, add a file, push changes as a branch, and create a pull request
 - Helper prepares an exercise repository (see above) - this will take 10 minutes or so. Most of the time will
   go into **communicating the usernames of the exercise group** and to add them as collaborators and for them to **accept
   the invitation** to the exercise repository.
 - Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
 - The exercise group works on steps 1-8 (15-20 minutes).
 - After step 8 you can return to the main room. Please ask questions both during group work and in main room.
+
+Full exercise is below.
 ```
 
 ```{callout} Hint for breakout rooms
@@ -216,7 +218,7 @@ contribute with *almost no work* on the maintainer's side - a big win.
 
 ## Exercise: Part 2 - code review and merging changes
 
-```{exercise} Exercise description
+```{exercise} Centralized-2: Merge the pull requests (together)
 - **We do step 9 and 10 together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
@@ -311,7 +313,7 @@ local
 
 ## Optional exercises
 
-```{exercise} Exercise or demo: Cross-referencing issues
+```{exercise} Centralized-3: Cross-referencing issues using `#NNN`
 We will submit another change by a pull request but this time we will **first create an issue**.
 
 1. Open an issue on GitHub and describe your idea for a change. This gives
@@ -331,7 +333,7 @@ We will submit another change by a pull request but this time we will **first cr
    with commits or pull requests.
 ```
 
-````{exercise} Exercise/discussion: Why did we create a feature branch "yourname-somefeature"?
+````{exercise} Centralized-3: Why did we create a feature branch "yourname-somefeature"? (exercise/discussion)
   This exercise is done in groups of 4-5 persons and can be done through a discussion only.
 
   Pushing directly to the main branch is perfectly fine for simple personal projects -

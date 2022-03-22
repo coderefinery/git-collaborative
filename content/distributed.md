@@ -69,7 +69,7 @@ Please step out of the repository and check that you fork the **forking**-workfl
 
 ## Exercise: Part 1 - creating a pull request
 
-```{exercise} Exercise description
+```{exercise} Distributed-1: Fork a repository and create a pull request
 As an example we will collaboratively develop a cookbook for taco recipes,
 inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
@@ -255,12 +255,12 @@ together on the big screen.
 Observe how the issues automatically close after the pull requests are merged
 (provided the commit messages contain [the right keywords](https://help.github.com/en/articles/closing-issues-using-keywords)).
 
-```{exercise} Optional exercise: Try to send a conflicting pull request
+```{exercise} (optional) Distributed-2: Send a conflicting pull request
 If you complete parts A-E much earlier than others, try to send another pull request
 where you anticipate a conflict with your first pull request.
 ```
 
-```{exercise} Optional exercise: Practice making changes to your pull request
+```{exercise} (optional) Distributed-3: Making changes to your pull request after it has been opened.
 You can do that by pushing new commits to the branch where you sent the pull
 request from. Observe how they end up added to your pull request.
 ```
@@ -381,7 +381,7 @@ $ git pull <central-repository-url> master
 $ git push <fork-url> master
 ```
 
-```{exercise} Optional exercise: Squash merge a pull request
+```{exercise} (optional) Distributed-4: Squash merge a pull request
 If you complete this exercise much earlier than others, pair up with somebody,
 create a new repository, fork it, and send a pull request with several
 small commits. On the other computer accept these with "Squash and merge" and later compare the source
