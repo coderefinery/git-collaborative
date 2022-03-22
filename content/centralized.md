@@ -184,7 +184,7 @@ $ git push origin -u yourname-somefeature
 ```
 
 ```{note}
-**Meaning of -u | --set-upstream**
+**Meaning of `-u` | `--set-upstream`**
 
 The `-u` or `--set-upstream` will connect the local branch with the newly created upstream/remote branch
 and track it. This has the following advantages:
