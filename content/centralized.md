@@ -313,7 +313,7 @@ local
 
 ## Optional exercises
 
-```{exercise} Centralized-3: Cross-referencing issues using `#NNN`
+```{exercise} Centralized-3: Cross-referencing issues using "#NNN"
 We will submit another change by a pull request but this time we will **first create an issue**.
 
 1. Open an issue on GitHub and describe your idea for a change. This gives
