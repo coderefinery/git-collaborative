@@ -328,7 +328,7 @@ We will submit another change by a pull request but this time we will **first cr
    form.
 5. Note how now commits, pull requests, and issues can be cross-referenced by including `#NNN`.
 6. Notice how after the pull request is merged, the issue gets automatically
-   closed.  This only happens certain keywords like `closes` or `fix`.
+   closed.  This only happens for certain keywords like `closes` or `fix`.
 7. Discuss the value of cross-referencing them and of auto-closing issues
    with commits or pull requests.
 ```
