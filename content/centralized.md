@@ -313,7 +313,7 @@ local
 
 ## Optional exercises
 
-```{exercise} Centralized-3: Cross-referencing issues using "#NNN"
+```{exercise} (optional) Centralized-3: Cross-referencing issues using "#NNN"
 We will submit another change by a pull request but this time we will **first create an issue**.
 
 1. Open an issue on GitHub and describe your idea for a change. This gives
@@ -333,7 +333,7 @@ We will submit another change by a pull request but this time we will **first cr
    with commits or pull requests.
 ```
 
-````{exercise} Centralized-4: Why did we create a feature branch "yourname-somefeature"? (exercise/discussion)
+````{exercise} (optional) Centralized-4: Why did we create a feature branch "yourname-somefeature"? (exercise/discussion)
   This exercise is done in groups of 4-5 persons and can be done through a discussion only.
 
   Pushing directly to the main branch is perfectly fine for simple personal projects -
