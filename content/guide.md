@@ -62,6 +62,10 @@ until everybody accepts the GitHub invitation to join the newly created
 exercise repository.
 
 
+- Livestream: Create the centralized exercises in an organization so
+  that you can give others admin access to add collaborators.
+
+
 ## Typical pitfalls
 
 ### Difference between pull and pull requests
