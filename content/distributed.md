@@ -324,7 +324,10 @@ Updating the fork via GitHub web interface.
 
 ### Shorter route
 
-Remotes are aliases. We can use remote URLs directly.
+`Remote` are aliases. We can use the URLs a remote directly.
+
+A remote is tracked repository. `remote` is a Git keyword as in `git remote`.
+We can use the URL of a tracked repository directly instead of aliases like `origin` or `upstream`.
 
 Here we pull from the central repo and push to our fork
 (replace with the repository you forked if needed):
@@ -343,8 +346,8 @@ $ git push <fork-url> master
 - Replace below with the repository you forked, if needed
 
 ```console
-$ git remote add upstream <central-repository-url>
-$ git fetch upstream
+$ git remote add central <central-repository-url>
+$ git fetch central
 ```
 
 ```{figure} img/forking/github-remote-03.svg
@@ -364,7 +367,7 @@ local
 
 ```console
 $ git checkout master
-$ git merge upstream/master
+$ git merge central/master
 ```
 
 ```{figure} img/forking/github-remote-03.svg
