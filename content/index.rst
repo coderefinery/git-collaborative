@@ -16,8 +16,9 @@ about sharing?
 - Folks or copies with different owners: anyone can suggest changes, even without
   advance permission. Maintainers approve what they agree with.
 
-Being able to share more easily (going down the list here) is
-*transformative* because it allows projects to scale to a new level.
+Being able to share more easily (going down the above list) is
+*transformative* (easier to change something, that is you are not the sole owner)
+because it allows projects to scale to a new level.
 This can’t be done without proper tools.
 
 In this lesson we will learn how to keep repositories in sync and how to
