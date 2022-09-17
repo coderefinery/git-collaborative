@@ -13,7 +13,7 @@ about sharing?
   more projects, gain visibility, feedback, and recognition.
 - Common repository for a group: everyone can directly update the same repository. 
   Good for small groups.
-- Folks or copies with different owners: anyone can suggest changes, even without
+- Forks or copies with different owners: anyone can suggest changes, even without
   advance permission. Maintainers approve what they agree with.
 
 Being able to share more easily (going down the above list) is
