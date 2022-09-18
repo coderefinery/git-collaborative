@@ -38,6 +38,10 @@ Real life examples:
 
 ## Working with multiple remotes
 
+In the forking layout described above we work with **multiple remotes**,
+in this case **two remotes**: One remote refers to the "central" repository, and the other
+remote refers to the fork.
+
 - There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" referring to an URL).
 - We can call these aliases as we like.
 - We can add and remove remotes:
