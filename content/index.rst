@@ -2,21 +2,23 @@
 
 Collaborative distributed version control
 =========================================
-
+ 
 We have learned how to make a Git repository for a single person. What
 about sharing?
 
-- Sharing by email or manually: isn’t fun and doesn’t scale,
-  projects are limited to the time and cognition of one person.
+- Share the folder using email or using some file sharing service:
+  This would lead to many back and forth emails and would be difficult
+  keep all copies synchronized. 
 - One person’s repository on the web: allows one person to keep track of
   more projects, gain visibility, feedback, and recognition.
-- Centralized: everyone can directly update the same repository. Good for
-  small groups.
-- Distributed: anyone can suggest changes, even without
+- Common repository for a group: everyone can directly update the same repository. 
+  Good for small groups.
+- Forks or copies with different owners: anyone can suggest changes, even without
   advance permission. Maintainers approve what they agree with.
 
-Being able to share more easily (going down the list here) is
-*transformative* because it allows projects to scale to a new level.
+Being able to share more easily (going down the above list) is
+*transformative* (easier to change something, that is you are not the sole owner)
+because it allows projects to scale to a new level.
 This can’t be done without proper tools.
 
 In this lesson we will learn how to keep repositories in sync and how to
