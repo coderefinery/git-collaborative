@@ -127,7 +127,7 @@ and "m1" is a merge commit.
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
 - `origin/master` is a read-only pointer.
-- They only move during `git pull` or `git fetch` or `git push`.
+- The branches starting with `origin/` only move during `git pull` or `git fetch` or `git push`.
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
 
