@@ -74,7 +74,7 @@ As an example we will collaboratively develop a cookbook for taco recipes,
 inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Objectives**:
-- Learn how to fork, modify the fork, and file a pull request towards the forked repo.
+- Learn how to fork, modify the fork, and file a pull request towards the central repo.
 - Learn how to update your fork with upstream changes.
 
 **Exercise**:
@@ -221,7 +221,7 @@ local
 
 ### Step E: File a pull request
 
-Then file a pull request from the branch on your fork towards the master branch on the repository where you forked from.
+Then file a pull request from the branch on your fork towards the master branch on the central repository.
 
 Here is a pictorial representation for parts D and E:
 
@@ -287,8 +287,9 @@ and target repositories/branches how they differ after the small commits got squ
 We do this part **after the contributions from all participants have been
 integrated**.
 
-Once this is done, practice to update your forked repo with the upstream
-changes and verify that you got the files created by other participants.
+Once this is done, practice to update your fork repo with the
+changes merged to the central repository
+and verify that you got the files created by other participants.
 
 Make sure that the contributions from other participants are not only on your
 local repository but really also end up in your fork.
@@ -329,8 +330,7 @@ Updating the fork via GitHub web interface.
 A remote is tracked repository. `remote` is a Git keyword as in `git remote`.
 We can use the URL of a tracked repository directly instead of aliases like `origin` or `upstream`.
 
-Here we pull from the central repo and push to our fork
-(replace with the repository you forked if needed):
+Here we pull from the central repo and push to our fork:
 
 ```console
 $ git checkout master
@@ -342,8 +342,7 @@ $ git push <fork-url> master
 ### Longer route
 
 - Upstream repo receives other changes (other merged pull-requests)
-- How do we get these changes to the forked repo?
-- Replace below with the repository you forked, if needed
+- How do we get these changes to the fork?
 
 ```console
 $ git remote add central <central-repository-url>
