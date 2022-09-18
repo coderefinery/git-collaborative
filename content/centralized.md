@@ -111,12 +111,12 @@ This is a representation of what happens when you clone:
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/01-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 Here and in what follows, "c1" is a commit, "b1" etc. are commits on side branches
@@ -168,12 +168,12 @@ $ git commit
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/04-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 
@@ -272,12 +272,12 @@ Once the pull-request is accepted, the change is merged:
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/04-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 Finally also discuss the "network" on GitHub.
@@ -303,12 +303,12 @@ $ git pull origin master
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/07-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 ## Optional exercises
