@@ -75,7 +75,7 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Objectives**:
 - Learn how to fork, modify the fork, and file a pull request towards the forked repo.
-- Learn how to update your fork with upstream changes.
+- Learn how to update your fork with changes to the forked repository from others.
 
 **Exercise**:
 - Helper prepares an exercise repository (see below; this will take 5-10 minutes).
@@ -125,7 +125,7 @@ fork
 ```
 
 - A fork is basically a (bare) clone.
-- The upstream repo and the fork are in principle independent repositories.
+- The forked repo and the fork are in principle independent repositories.
 - When forking we copy all commits, all branches.
 
 After we clone the fork we have three in principle independent repositories:
@@ -287,8 +287,8 @@ and target repositories/branches how they differ after the small commits got squ
 We do this part **after the contributions from all participants have been
 integrated**.
 
-Once this is done, practice to update your forked repo with the upstream
-changes and verify that you got the files created by other participants.
+Once this is done, practice to update your fork with the
+merged changes from others and verify that you got the files created by other participants.
 
 Make sure that the contributions from other participants are not only on your
 local repository but really also end up in your fork.
@@ -341,8 +341,8 @@ $ git push <fork-url> master
 
 ### Longer route
 
-- Upstream repo receives other changes (other merged pull-requests)
-- How do we get these changes to the forked repo?
+- Upstream/central repo receives other changes (other merged pull-requests)
+- How do we get these changes to the fork?
 - Replace below with the repository you forked, if needed
 
 ```console
