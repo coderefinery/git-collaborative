@@ -111,7 +111,7 @@ This is a representation of what happens when you clone:
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central
 ```
 
 ```{figure} img/centralized/01-local.svg
@@ -168,7 +168,7 @@ $ git commit
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central
 ```
 
 ```{figure} img/centralized/04-local.svg
@@ -272,7 +272,7 @@ Once the pull-request is accepted, the change is merged:
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central
 ```
 
 ```{figure} img/centralized/04-local.svg
@@ -303,7 +303,7 @@ $ git pull origin master
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central
 ```
 
 ```{figure} img/centralized/07-local.svg
