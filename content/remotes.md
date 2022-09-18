@@ -26,7 +26,8 @@
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
 - **branch**: Independent development line, often we call the main development line `master` or `main`.
-- **tag**: A pointer to one commit, to be able to refer to it later. Like a sticky note that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
+- **tag**: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
+  that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
 - **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
 - **forking**: Taking a copy of a repository (which is typically not yours) - your
   copy (fork) stays on GitHub and you can make changes to your copy.
