@@ -74,6 +74,7 @@ exercise repository.
   - forking-workflow-exercise-recorded
   - forking-workflow-exercise
 - We have collected usernames of people who want to contribute via email.
+- The exercises were placed under <https://github.com/cr-workshop-exercises>.
 
 
 ## Typical pitfalls
