@@ -183,6 +183,16 @@ local (time arrow is left to right)
 $ git push origin -u yourname-somefeature
 ```
 
+```{figure} img/centralized/04-remote.svg
+
+remote or central (time arrow is left to right)
+```
+
+```{figure} img/centralized/04-local.svg
+
+local (time arrow is left to right)
+```
+
 ```{note}
 **Meaning of `-u` | `--set-upstream`**
 
