@@ -44,7 +44,7 @@ and finally look into how to automate tasks using Git hooks.
    `GitHub <https://github.com>`__-based repositories even if you choose
    to host your Git repository on another platform.
 
-   We also encourage course participants to use our new `Nordic research
+   We also encourage course participants to use our `Nordic research
    software repository platform <https://source.coderefinery.org>`__,
    for more information see
    `https://coderefinery.org/repository/ <http://coderefinery.org/repository/>`__.
