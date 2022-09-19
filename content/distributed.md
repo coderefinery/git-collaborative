@@ -89,7 +89,7 @@ Please step out of the repository and check that you fork the **forking**-workfl
 
   ````{tab} Participating via stream
   We create(d) these the day before hopefully:
-  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream)
+  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
   - <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
 
   Here we don't need your GitHub usernames because the point of this exercise
