@@ -49,47 +49,63 @@ Real life examples:
 
 ## Exercise preparation
 
-In this exercise we will practice collaborative centralized workflow in small
+In this exercise we will practice collaborative centralized workflow in
 groups.  We'll discuss how this leads to code review and discuss a number of
 typical pitfalls.
 
-````{prereq} Exercise preparation
-- We form small groups (4-5 persons).
-- Each group needs to appoint someone who will host the shared GitHub repository: *an administrator*.
-- For online teaching, use breakout rooms.
-- **One person per group (administrator)** generates a new repository
-  from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
-  called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
-  ```{figure} img/centralized/generate_repo.png
-  :alt: Screenshot of generating the exercise repository
-  :width: 100%
-  ```
-- Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
-  - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
-  - Administrator gives the other group members the newly created GitHub repository URL.
-  - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
-  - Group members need to accept the invitation. GitHub emails you an invitation link, but if you don't receive it
-    you can go to your GitHub notifications in the top right corner. The administrator can also "copy invite link"
-    and share it within the group.
+``````{prereq} Exercise preparation
+`````{tabs}
+  ````{tab} Part of team/ exercise room
+  - In-person: We form small groups (4-5 persons). Video: use breakout rooms.
+  - Each group needs to appoint someone who will host the shared GitHub repository: *an administrator*.
+    This is typically the exercise lead (if available).
+  - **One person per group (administrator)** generates a new repository
+    from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
+    called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
+    ```{figure} img/centralized/generate_repo.png
+    :alt: Screenshot of generating the exercise repository
+    :width: 100%
+    ```
+  - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
+    - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
+    - Administrator gives the other group members the newly created GitHub repository URL.
+    - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
+  ````
 
-- Watching and unwatching repositories:
+  ````{tab} Participating via stream
+  We create(d) these the day before hopefully:
+  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream)
+  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded)
+
+  The preparation typically happens already the day before where we ask
+  participants to send us their usernames and we add them all.
+  ````
+`````
+
+- **Don't forget to accept the invitation**
+  - Check <https://github.com/settings/organizations/>
+  - Alternatively check the inbox for the email account you registered with
+    GitHub. GitHub emails you an invitation link, but if you don't receive it
+    you can go to your GitHub notifications in the top right corner. The
+    administrator can also "copy invite link" and share it within the group.
+
+- **Watching and unwatching repositories**
   - Now that you are a collaborator, you get notified about new issues and pull
     requests via email.
   - If you do not wish this, you can "unwatch" a repository (top of the project page).
   - However, we recommend watching repositories you are interested in. You can learn things from experts just by
     watching the activity that come through.
-````
+``````
 
 
 ## Exercise: Part 1 - creating a pull request
 
 ```{exercise} Centralized-1: Clone a repository, add a file, push changes as a branch, and create a pull request
-- Helper prepares an exercise repository (see above) - this will take 10 minutes or so. Most of the time will
-  go into **communicating the usernames of the exercise group** and to add them as collaborators and for them to **accept
-  the invitation** to the exercise repository.
-- Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
+- Before we start with the exercise, instructor points to the preparation (above).
 - The exercise group works on steps A-H (15-20 minutes).
-- After step H you can return to the main room. Please ask questions both during group work and in main room.
+- **After step H you can either return to the main room or take a break or help
+  others**. Please ask questions both during group work and in the collaborative document.  There
+  are also optional exercises.
 
 Full exercise is below.
 ```
@@ -235,9 +251,17 @@ contribute with *almost no work* on the maintainer's side - a big win.
 - **We do step 2A and 2B together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
+```{instructor-note}
+At this stage it might be good to show how to submit and how to review a pull request.
+- When co-teaching change roles and switch screenshares also.
+- Discuss what you look at when submitting.
+- Discuss what you look at when reviewing.
+```
+
+
 ### Step 2A. Discuss and accept pull requests
 
-**We do this step together on the main screen (in the main room)**. The instructor shows a submitted
+**We do this step together on the main screen (in the main room) or on stream**. The instructor shows a submitted
 pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
@@ -263,13 +287,13 @@ At the same time, helpers can review open pull requests from their exercises gro
 - We recommend that pull requests are reviewed by someone else in your group.
 - In our example everyone has write access to the "central" repository.
 
-**Code review and protected branches**
+**Protected branches**
 
 - A good setting is to make the `master` or `main` branch **protected** and all changes to it have to go
   through code review.
 - Centralized workflow with protected branches is a good setup for many projects.
 
-**code review**
+**Code review**
 
 - You see what others are working on
 - Collaborative learning
@@ -368,6 +392,7 @@ We will submit another change by a pull request but this time we will **first cr
 
   ```console
   $ git push
+
   To https://github.com/user/repo.git
    ! [rejected]        master -> master (non-fast-forward)
   error: failed to push some refs to 'https://github.com/user/repo.git'
