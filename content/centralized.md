@@ -47,7 +47,7 @@ Real life examples:
 - [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
 
 
-## Exercise: Part 1 - creating a pull request
+## Exercise preparation
 
 In this exercise we will practice collaborative centralized workflow in small
 groups.  We'll discuss how this leads to code review and discuss a number of
@@ -80,13 +80,16 @@ typical pitfalls.
     watching the activity that come through.
 ````
 
+
+## Exercise: Part 1 - creating a pull request
+
 ```{exercise} Centralized-1: Clone a repository, add a file, push changes as a branch, and create a pull request
 - Helper prepares an exercise repository (see above) - this will take 10 minutes or so. Most of the time will
   go into **communicating the usernames of the exercise group** and to add them as collaborators and for them to **accept
   the invitation** to the exercise repository.
 - Before we start with the exercise, instructor mentions all steps and explains what happens during a `git clone`.
-- The exercise group works on steps 1-8 (15-20 minutes).
-- After step 8 you can return to the main room. Please ask questions both during group work and in main room.
+- The exercise group works on steps A-H (15-20 minutes).
+- After step H you can return to the main room. Please ask questions both during group work and in main room.
 
 Full exercise is below.
 ```
@@ -99,7 +102,7 @@ steps from other learners and helpers!
 ```
 
 
-### 1. Clone your administrator's group repository
+### Step A. Clone your administrator's group repository
 
 ```console
 $ git clone <repository-url> centralized-workflow-exercise
@@ -132,7 +135,7 @@ and "m1" is a merge commit.
 - All other operations are local operations.
 
 
-### 2. Step into the newly created directory
+### Step B. Change directory into the newly created directory
 
 ```console
 $ cd centralized-workflow-exercise
@@ -141,7 +144,7 @@ $ cd centralized-workflow-exercise
 Try to find out where this repository was cloned from using `git remote -v`.
 
 
-### 3. Create a branch `yourname-somefeature` pointing at your commit
+### Step C. Create a branch `yourname-somefeature` pointing at your commit
 
 Create a branch from the current `master`. Also adapt "yourname-somefeature" to a better name:
 
@@ -154,12 +157,12 @@ The `yourname-` prefix has no special meaning here (not like `origin/`): it is j
 branch name to indicate who made it.
 
 
-### 4. Create a file with a unique name, e.g.: `yourusername.txt`
+### Step D. Create a file with a unique name, e.g.: `yourusername.txt`
 
 In this file share your favourite cooking recipe or haiku or Git trick or whatever.
 
 
-### 5. Stage and commit the change
+### Step E. Stage and commit the change
 
 ```console
 $ git add yourusername.txt
@@ -177,7 +180,7 @@ local (time arrow is left to right)
 ```
 
 
-### 6. Push your change as a new branch
+### Step F. Push your change as a new branch
 
 ```console
 $ git push origin -u yourname-somefeature
@@ -210,14 +213,14 @@ problem if you explicitly type out the remote and branch name every time.
 ```
 
 
-### 7. Browse the network of branches and commits
+### Step G. Browse the network of branches and commits
 
 After you have pushed your branch and other participants have too, browse the
 network of branches and commits (on GitHub click on Insights -> Network) and
 discuss with others what you see.
 
 
-### 8. Submit a pull request
+### Step H. Submit a pull request
 
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
@@ -229,10 +232,10 @@ contribute with *almost no work* on the maintainer's side - a big win.
 ## Exercise: Part 2 - code review and merging changes
 
 ```{exercise} Centralized-2: Merge the pull requests (together)
-- **We do step 9 and 10 together** (instructor demonstrates, and everybody follows along in their repositories).
+- **We do step 2A and 2B together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
-### 9. Discuss and accept pull requests
+### Step 2A. Discuss and accept pull requests
 
 **We do this step together on the main screen (in the main room)**. The instructor shows a submitted
 pull request, discusses what features to look at, and how to discuss and review.
@@ -299,7 +302,7 @@ At this stage demonstrate how to suggest small changes to pull/merge requests:
 ```
 
 
-### 10. Update your local copy
+### Step 2B. Update your local copy
 
 Your branch `yourname-somefeature` is not needed anymore but more importantly,
 you need to sync your local copy: Everybody needs to do this step in their

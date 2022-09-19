@@ -71,6 +71,26 @@ Please step out of the repository and check that you fork the **forking**-workfl
 ```
 
 
+## Exercise preparation
+
+```{prereq} Exercise preparation
+**Helpers in breakout-rooms**:
+- Create an exercise repository by
+  [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+  using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
+  called `forking-workflow-exercise`
+- In this case we **do not add collaborators** to the repository (this is the point of this example).
+- Share the link to the newly created repository in the shared document with your group.
+
+**Learners in breakout-rooms**: Fork the helper's newly created repository and clone the fork.
+
+**Instructor**: Prepare an exercise repository for participants following via stream (see below).
+
+**Learners following via stream**: Fork the repository created by the
+instructor on stream and then clone the fork to your computer.
+```
+
+
 ## Exercise: Part 1 - creating a pull request
 
 ```{exercise} Distributed-1: Fork a repository and create a pull request
@@ -88,23 +108,6 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 - There are two optional steps after step E for those who want more steps.
 - After step E you can return to the main room. Please ask questions both during group work and in main room.
 - **We will review the pull requests and update forks together** (instructor demonstrates, and everybody follows along in their repositories).
-```
-
-```{prereq} Exercise preparation
-**Helpers in breakout-rooms**:
-- Create an exercise repository by
-  [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
-  using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
-  called `forking-workflow-exercise`
-- In this case we **do not add collaborators** to the repository (this is the point of this example).
-- Share the link to the newly created repository in the shared document with your group.
-
-**Learners in breakout-rooms**: Fork the helper's newly created repository and clone the fork.
-
-**Instructor**: Prepare an exercise repository for participants following via stream (see below).
-
-**Learners following via stream**: Fork the repository created by the
-instructor on stream and then clone the fork to your computer.
 ```
 
 
