@@ -44,7 +44,7 @@
                 </defs>
                 <g inkscape:label="layer1"
                    inkscape:groupmode="layer"
-                   transform="translate(-0.0,130.0) rotate(0)"
+                   transform="translate(-0.0,65.0) rotate(0)"
                    id="layer1">
                    
            <line x1="16.0"
@@ -148,7 +148,7 @@
                  marker-end:url(#fullmarker);
                  stroke-miterlimit:4;
                  stroke-dasharray:none"
-                 d="M 76.0,-115.0 76.0,-65.6"
+                 d="M 76.0,80.0 76.0,30.6"
                  inkscape:connector-curvature="0" />
            
            <rect style="fill:#dddddd;
@@ -160,7 +160,7 @@
                  width="120.0"
                  height="30.0"
                  x="16.0"
-                 y="-130.0"
+                 y="65.0"
                  ry="0.0" />
            <text style="font-size:12.5px;
                         font-style:normal;
@@ -173,7 +173,7 @@
                         stroke:none;
                         font-family:DejaVu Sans Mono"
                  x="23.5"
-                 y="-109.5">origin/master</text>
+                 y="85.5">origin/master</text>
            
                 </g>
               </svg>
