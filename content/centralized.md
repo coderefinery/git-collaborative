@@ -111,12 +111,12 @@ This is a representation of what happens when you clone:
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/01-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 Here and in what follows, "c1" is a commit, "b1" etc. are commits on side branches
@@ -127,7 +127,7 @@ and "m1" is a merge commit.
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
 - `origin/master` is a read-only pointer.
-- They only move during `git pull` or `git fetch` or `git push`.
+- The branches starting with `origin/` only move during `git pull` or `git fetch` or `git push`.
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
 
@@ -168,12 +168,12 @@ $ git commit
 
 ```{figure} img/centralized/01-remote.svg
 
-remote
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/04-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 
@@ -272,12 +272,12 @@ Once the pull-request is accepted, the change is merged:
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/04-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 Finally also discuss the "network" on GitHub.
@@ -303,12 +303,12 @@ $ git pull origin master
 
 ```{figure} img/centralized/06-remote.svg
 
-central
+remote or central (time arrow is left to right)
 ```
 
 ```{figure} img/centralized/07-local.svg
 
-local
+local (time arrow is left to right)
 ```
 
 ## Optional exercises

@@ -38,6 +38,10 @@ Real life examples:
 
 ## Working with multiple remotes
 
+In the forking layout described above we work with **multiple remotes**,
+in this case **two remotes**: One remote refers to the "central" repository, and the other
+remote refers to the fork.
+
 - There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" referring to an URL).
 - We can call these aliases as we like.
 - We can add and remove remotes:
@@ -74,7 +78,7 @@ As an example we will collaboratively develop a cookbook for taco recipes,
 inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Objectives**:
-- Learn how to fork, modify the fork, and file a pull request towards the forked repo.
+- Learn how to fork, modify the fork, and file a pull request towards the central repo.
 - Learn how to update your fork with changes that others have already made to the
   forked repository.
 
@@ -222,7 +226,7 @@ local
 
 ### Step E: File a pull request
 
-Then file a pull request from the branch on your fork towards the master branch on the repository where you forked from.
+Then file a pull request from the branch on your fork towards the master branch on the central repository.
 
 Here is a pictorial representation for parts D and E:
 
@@ -330,8 +334,7 @@ Updating the fork via GitHub web interface.
 A remote is tracked repository. `remote` is a Git keyword as in `git remote`.
 We can use the URL of a tracked repository directly instead of aliases like `origin` or `upstream`.
 
-Here we pull from the central repo and push to our fork
-(replace with the repository you forked if needed):
+Here we pull from the central repo and push to our fork:
 
 ```console
 $ git checkout master
@@ -344,7 +347,6 @@ $ git push <fork-url> master
 
 - Upstream/central repo receives other changes (other merged pull-requests)
 - How do we get these changes to the fork?
-- Replace below with the repository you forked, if needed
 
 ```console
 $ git remote add central <central-repository-url>
