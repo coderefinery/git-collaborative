@@ -74,7 +74,7 @@ typical pitfalls.
 
   ````{tab} Participating via stream
   We create(d) these the day before hopefully:
-  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream)
+  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
   - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
 
   The preparation typically happens already the day before where we ask
