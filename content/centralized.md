@@ -13,16 +13,16 @@
 
 ## Meaning of "central" in a distributed version control
 
-Git implements a **distributed** version control.
+In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
+**within one repository on Github**.  This means that everyone has
+access to that **central repository** - convenient (but doesn't scale to a huge
+project).
+
+In {doc}`the next section <distributed>`, we will see that Git is
+**distributed** version control.
 This means that any type of repository links that you can think of can be
 implemented - not just "everything connects to one central server".
 
-In Git, all repositories are equivalent but we typically we consider one repository
-as the main development line and this is marked as "central".
-The "central" is a role, not a technical difference.
-
-In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
-**within one repository**.
 
 
 ## Centralized layout
@@ -31,7 +31,8 @@ In this episode, we will explore the usage of a **centralized workflow** for col
 :alt: Centralized layout
 :width: 50%
 
-Centralized layout.
+Centralized layout. **Red** is the repository on GitHub.  **Blue** is
+where all contributors work on their own computers.
 ```
 
 Features:
@@ -50,16 +51,19 @@ Real life examples:
 ## Exercise preparation
 
 In this exercise we will practice collaborative centralized workflow in
-groups.  We'll discuss how this leads to code review and discuss a number of
-typical pitfalls.
+groups.  An **administrator** will create a repository, and
+**collaborators** will contribute to it.  We'll discuss how this leads
+to code review and discuss a number of typical pitfalls.
 
 ``````{prereq} Exercise preparation
 `````{tabs}
-  ````{tab} Part of team/ exercise room
+  ````{tab} Part of team/exercise room
   - In-person: We form small groups (4-5 persons). Video: use breakout rooms.
-  - Each group needs to appoint someone who will host the shared GitHub repository: *an administrator*.
-    This is typically the exercise lead (if available).
-  - **One person per group (administrator)** generates a new repository
+  - Each group needs to appoint someone who will host the shared
+    GitHub repository: *an administrator*.
+    This is typically the exercise lead (if available).  Everyone else
+    is a *collaborator*.
+  - **Administrator** (one person per group) generates a new repository
     from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
     called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
     ```{figure} img/centralized/generate_repo.png
@@ -67,15 +71,19 @@ typical pitfalls.
     :width: 100%
     ```
   - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
-    - Participants give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
+    - Collaborators give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
     - Administrator gives the other group members the newly created GitHub repository URL.
     - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
   ````
 
   ````{tab} Participating via stream
-  We create(d) these the day before hopefully:
-  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
-  - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
+  The instructors are the **administrators**.  All watchers are
+  **collaborators**.
+
+  We create(d) these the day before hopefully.  **Choose only one to
+  work with**:
+  - Not recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
+  - Recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
 
   The preparation typically happens already the day before where we ask
   participants to send us their usernames and we add them all.
@@ -107,7 +115,7 @@ typical pitfalls.
   others**. Please ask questions both during group work and in the collaborative document.  There
   are also optional exercises.
 
-Full exercise is below.
+The exercise is steps A-H below.
 ```
 
 ```{callout} Hint for breakout rooms
@@ -212,8 +220,7 @@ remote or central (time arrow is left to right)
 local (time arrow is left to right)
 ```
 
-```{note}
-**Meaning of `-u` | `--set-upstream`**
+```{admonition} **Meaning of `-u` | `--set-upstream`**
 
 The `-u` or `--set-upstream` will connect the local branch with the newly created upstream/remote branch
 and track it. This has the following advantages:
@@ -385,21 +392,21 @@ We will submit another change by a pull request but this time we will **first cr
   1. You all create a new file in the master branch, stage and commit your change locally.
   2. Try to push the change to the upstream repository:
 
-  ```console
-  $ git push origin master
-  ```
-  You probably see something like this:
+     ```console
+     $ git push origin master
+     ```
+     You probably see something like this:
 
-  ```console
-  $ git push
+     ```console
+     $ git push
 
-  To https://github.com/user/repo.git
-   ! [rejected]        master -> master (non-fast-forward)
-  error: failed to push some refs to 'https://github.com/user/repo.git'
-  To prevent you from losing history, non-fast-forward updates were rejected
-  Merge the remote changes (e.g. 'git pull') before pushing again.  See the
-  'Note about fast-forwards' section of 'git push --help' for details.
-  ```
+     To https://github.com/user/repo.git
+      ! [rejected]        master -> master (non-fast-forward)
+     error: failed to push some refs to 'https://github.com/user/repo.git'
+     To prevent you from losing history, non-fast-forward updates were rejected
+     Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+     'Note about fast-forwards' section of 'git push --help' for details.
+     ```
 
   - The push only worked for one participant.
   - Discuss why push for everybody else in this group was rejected?
