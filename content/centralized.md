@@ -289,7 +289,7 @@ At the same time, helpers can review open pull requests from their exercises gro
 
 **Protected branches**
 
-- A good setting is to make the `master` or `main` branch **protected** and all changes to it have to go
+- A good setting for large projects is to make the `master` or `main` branch **protected** and all changes to it have to go
   through code review.
 - Centralized workflow with protected branches is a good setup for many projects.
 
