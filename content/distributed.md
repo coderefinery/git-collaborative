@@ -73,22 +73,33 @@ Please step out of the repository and check that you fork the **forking**-workfl
 
 ## Exercise preparation
 
-```{prereq} Exercise preparation
-**Helpers in breakout-rooms**:
-- Create an exercise repository by
-  [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
-  using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
-  called `forking-workflow-exercise`
-- In this case we **do not add collaborators** to the repository (this is the point of this example).
-- Share the link to the newly created repository in the shared document with your group.
+``````{prereq} Exercise preparation
+`````{tabs}
+  ````{tab} Part of team/ exercise room
+  **Exercise leads**:
+  - Create an exercise repository by
+    [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+    using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
+    called `forking-workflow-exercise`
+  - In this case we **do not add collaborators** to the repository (this is the point of this example).
+  - Share the link to the newly created repository in the shared document with your group.
+  
+  **Learners in team/breakout-room**: Fork the helper's newly created repository and clone the fork.
+  ````
 
-**Learners in breakout-rooms**: Fork the helper's newly created repository and clone the fork.
+  ````{tab} Participating via stream
+  We create(d) these the day before hopefully:
+  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream)
+  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded> (this will be shown on stream and recorded)
 
-**Instructor**: Prepare an exercise repository for participants following via stream (see below).
+  Here we don't need your GitHub usernames because the point of this exercise
+  is to show that we can collaborate without granting write permissions.
 
-**Learners following via stream**: Fork the repository created by the
-instructor on stream and then clone the fork to your computer.
-```
+  Learners following via stream: Fork one of these two repositories
+  and then clone the fork to your computer.
+  ````
+`````
+``````
 
 
 ## Exercise: Part 1 - creating a pull request
@@ -103,10 +114,11 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
   forked repository.
 
 **Exercise**:
-- Helper prepares an exercise repository (see below; this will take 5-10 minutes).
+- Helper prepares an exercise repository (see above; this will take 5-10 minutes).
 - **The exercise group works on steps A-E** (15-20 minutes).
-- There are two optional steps after step E for those who want more steps.
-- After step E you can return to the main room. Please ask questions both during group work and in main room.
+- There are two optional steps after step E for those who want more.
+- After step E you can return to the main room or stream or take a break or help others.
+  Please ask questions both during group work and in the collaborative document.
 - **We will review the pull requests and update forks together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
