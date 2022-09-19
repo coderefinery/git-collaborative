@@ -4,7 +4,8 @@
 
 In order to collaborate efficiently using Git, it's essential to have a solid
 understanding of how remotes work, and how to contribute changes through pull
-requests or merge requests. The git-intro lesson teaches participants how to
+requests or merge requests. The [git-intro lesson](https://coderefinery.github.io/git-intro/)
+teaches participants how to
 work efficiently with Git when there is only one developer (more precisely: how
 to work when there are no remote Git repositories yet in the picture). This
 lesson dives into the collaborative aspects of Git and focuses on the possible
@@ -29,14 +30,14 @@ By the end of this lesson, learners should:
 - Know how to use pull requests or merge requests to submit changes to another projects
 - Know how to reference issues in commits or pull/merge requests and how to auto-close issues
 - Know how to update a fork
-- Be able to contribute in code review as submitter or reviewer
+- **Be able to contribute in code review as submitter or reviewer**
 
 
 ## Interesting questions you might get
 
-If participants run `git graph` they might notice `origin/HEAD`.  This has been
-omitted from the figures to not overload the presentation. This pointer represents the
-default branch of the remote repository.
+- If participants run `git graph` they might notice `origin/HEAD`.  This has been
+  omitted from the figures to not overload the presentation. This pointer represents the
+  default branch of the remote repository.
 
 
 ## Timing
@@ -48,6 +49,7 @@ default branch of the remote repository.
   time of the first episode.
 - The "How to contribute changes to somebody else's project" episode can be
   covered relatively quickly and offers room for discussion if you have time left.
+  However, this should not be skipped as this is perhaps the key learning outcome.
 
 
 ## Preparing exercises
@@ -61,9 +63,18 @@ group, communicating their usernames, adding them as collaborators, and waiting
 until everybody accepts the GitHub invitation to join the newly created
 exercise repository.
 
-
-- Livestream: Create the centralized exercises in an organization so
-  that you can give others admin access to add collaborators.
+**Live stream**:
+- Create the centralized exercises **in an organization** (not under your username) so
+  that you can give others admin access to add collaborators. Also this way you
+  can then fork yourself if needed.
+- We have created two versions of each **a day in advance** to signal which one might end up
+  being discussed on recording/stream:
+  - centralized-workflow-exercise-recorded
+  - centralized-workflow-exercise
+  - forking-workflow-exercise-recorded
+  - forking-workflow-exercise
+- We have collected usernames of people who want to contribute via email.
+- The exercises were placed under <https://github.com/cr-workshop-exercises>.
 
 
 ## Typical pitfalls
@@ -83,6 +94,6 @@ been created get appended to the pull request needs to be explained.
 
 ## Other practical aspects
 
-- Participants really have to sit next to someone, so that they can see the
-  screens. From the beginning.
+- In in-person workshops participants really have to sit next to someone, so
+  that they can see the screens. From the beginning.
 - Emphasize use of `git graph` a lot, just like in the git-solo lesson.
