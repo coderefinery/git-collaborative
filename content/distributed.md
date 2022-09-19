@@ -75,7 +75,8 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Objectives**:
 - Learn how to fork, modify the fork, and file a pull request towards the forked repo.
-- Learn how to update your fork with changes to the forked repository from others.
+- Learn how to update your fork with changes that others have already made to the
+  forked repository.
 
 **Exercise**:
 - Helper prepares an exercise repository (see below; this will take 5-10 minutes).
