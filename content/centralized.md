@@ -249,7 +249,13 @@ discuss with others what you see.
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
 
-A pull-request means: "please review my changes and if you agree, merge them with a mouse-click". In a popular project, it means that anyone can
+There are **several options to open a pull request**:
+- Follow the link printed to terminal output when git-pushing a branch to GitHub/GitLab
+- Visit the GitHub repository in the browser after pushing the branch and click on the green button "Compare & pull request"
+- Click on "Pull requests" on top of the GitHub repository and either "Compare & pull request" or "New pull request"
+- Click on "Branches" and then "New pull request" from the respective branch.
+
+Meaning of a pull request: think of it as change proposal. In a popular project, it means that anyone can
 contribute with *almost no work* on the maintainer's side - a big win.
 
 
