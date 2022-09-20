@@ -17,7 +17,10 @@
 :alt: Forking workflow
 :width: 50%
 
-Forking workflow.
+Forking workflow.  **Red** is the central repository, where only
+owners have access.  **Green** are *forks* on Github (copy for a
+single user to work on).  **Blue** are local copies where contributors
+work on their own computer.
 ```
 
 In the **forking layout**, again we call one repository the "central"
@@ -26,11 +29,13 @@ repository on GitHub/GitLab/Bitbucket).
 
 Features:
 
-- **Anybody can contribute without asking for permission** (to public projects).
+- **Anybody can propose contributions without asking for advance permission**
+  (to public projects).
 - Maintainer still has **full control over what is merged**.
-- There is now **more than one remote** to work with.
+- Contributors now have **more than one remote** to work with.
 
-Real life examples:
+This is used by almost all large (and small) open-source projects
+these days.  Real life examples:
 
 - NumPy: [https://numpy.org/devdocs/dev/index.html](https://numpy.org/devdocs/dev/index.html)
 - [https://github.com/jupyterlab/jupyterlab](https://github.com/jupyterlab/jupyterlab)
@@ -46,14 +51,14 @@ remote refers to the fork.
 - We can call these aliases as we like.
 - We can add and remove remotes:
 
-```console
-$ git remote add upstream https://github.com/project/project.git
-$ git remote rm upstream
-$ git remote add group-repo https://example.com/exciting-project.git
-$ git remote rm group-repo
-$ git remote add upstream https://github.com/project/project.git
-$ git remote add downstream https://github.com/userX/project.git
-```
+  ```console
+  $ git remote add upstream https://github.com/project/project.git
+  $ git remote rm upstream
+  $ git remote add group-repo https://example.com/exciting-project.git
+  $ git remote rm group-repo
+  $ git remote add upstream https://github.com/project/project.git
+  $ git remote add downstream https://github.com/userX/project.git
+  ```
 
 We typically synchronize remotes via the local clone on our local computer.
 
@@ -75,22 +80,29 @@ Please step out of the repository and check that you fork the **forking**-workfl
 
 ``````{prereq} Exercise preparation
 `````{tabs}
-  ````{tab} Part of team/ exercise room
-  **Exercise leads**:
+  ````{tab} Part of team/exercise room
+
+  Continue with the teams from before.
+
+  **Administrator (exercise leads)**:
   - Create an exercise repository by
     [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
     using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
     called `forking-workflow-exercise`
   - In this case we **do not add collaborators** to the repository (this is the point of this example).
   - Share the link to the newly created repository in the shared document with your group.
-  
+
   **Learners in team/breakout-room**: Fork the helper's newly created repository and clone the fork.
   ````
 
   ````{tab} Participating via stream
-  We create(d) these the day before hopefully:
-  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
-  - <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
+  The instructors are the **administrators**.  All watchers are
+  **collaborators**.
+
+  We create(d) these the day before hopefully.  **Choose only one to
+  work with**:
+  - Not recorded: <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
+  - Recorded: <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
 
   Here we don't need your GitHub usernames because the point of this exercise
   is to show that we can collaborate without granting write permissions.
@@ -173,7 +185,7 @@ Before we start any coding, open a new "Issue" on the central repository as a
 collect feedback from others. After creating this issue note the issue number.
 We will later refer to this issue number.
 
-Discuss with your neighbor why it can be useful to open an issue before
+Discuss why it can be useful to open an issue before
 starting the actual coding.
 
 
@@ -363,10 +375,10 @@ $ git push <fork-url> master
 - Upstream/central repo receives other changes (other merged pull-requests)
 - How do we get these changes to the fork?
 
-```console
-$ git remote add central <central-repository-url>
-$ git fetch central
-```
+  ```console
+  $ git remote add central <central-repository-url>
+  $ git fetch central
+  ```
 
 ```{figure} img/forking/github-remote-03.svg
 
