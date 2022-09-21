@@ -134,6 +134,16 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 - **We will review the pull requests and update forks together** (instructor demonstrates, and everybody follows along in their repositories).
 ```
 
+Before and after each action you take, run the following informational
+commands.  Carefully observe what happens, especially in `git graph`:
+
+- `git graph` - almost every time.
+  - As a reminder, to define `git graph` use
+    ```console
+	$ git config --global alias.graph "log --all --graph --decorate --oneline"
+	```
+- `git status` - when you modify files
+
 
 ### Step A: Fork and clone
 
