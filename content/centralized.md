@@ -125,6 +125,12 @@ good alternative is to have one of the learners screen-share and get advice on t
 steps from other learners and helpers!
 ```
 
+Before and after each action you take, run the following informational
+commands.  Carefully observe what happens, especially in `git graph`:
+
+- `git graph` - almost every time
+- `git status` - when you modify files
+
 
 ### Step A. Clone your administrator's group repository
 
