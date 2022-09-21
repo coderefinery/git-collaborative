@@ -78,10 +78,24 @@ to code review and discuss a number of typical pitfalls.
 
   ````{tab} Participating via stream
   The instructors are the **administrators**.  All watchers are
-  **collaborators**.
+  **collaborators**.  This exercise is only possible during our
+  livestream courses - otherwise we will not grant you access and the
+  repositories may not exist.
+
+  ```{admonition} If you have not requested access (our emails asked yesterday)
+  ---
+  class: dropdown
+  ---
+  If you have not yet requested access, could you please [open an
+  issue in this
+  repository](https://github.com/cr-workshop-exercises/centralized-workflow-exercise/issues/new).
+  Give any title like "please add me" and then click submit.  Wait a
+  minute for an invite email to arrive (someone does this manually).
+  ```
 
   We create(d) these the day before hopefully.  **Choose only one to
-  work with**:
+  work with.  You must have requested access already, see above**:
+
   - Not recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
   - Recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
 
