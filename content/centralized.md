@@ -90,7 +90,7 @@ to code review and discuss a number of typical pitfalls.
   issue in this
   repository](https://github.com/cr-workshop-exercises/centralized-workflow-exercise/issues/new).
   Give any title like "please add me" and then click submit.  Wait a
-  minute for an invite email to arrive (someone does this manually).
+  minute for staff to add you, then wait for the invite email to arrive and *accept the invitation from the email*.
   ```
 
   We create(d) these the day before hopefully.  **Choose only one to
