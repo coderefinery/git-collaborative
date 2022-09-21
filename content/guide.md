@@ -67,14 +67,45 @@ exercise repository.
 - Create the centralized exercises **in an organization** (not under your username) so
   that you can give others admin access to add collaborators. Also this way you
   can then fork yourself if needed.
+- For CR workshops, the exercises were placed under
+  <https://github.com/cr-workshop-exercises>.
 - We have created two versions of each **a day in advance** to signal which one might end up
   being discussed on recording/stream:
-  - centralized-workflow-exercise-recorded
-  - centralized-workflow-exercise
-  - forking-workflow-exercise-recorded
-  - forking-workflow-exercise
-- We have collected usernames of people who want to contribute via email.
-- The exercises were placed under <https://github.com/cr-workshop-exercises>.
+  - `centralized-workflow-exercise-recorded`
+  - `centralized-workflow-exercise`
+  - `forking-workflow-exercise-recorded`
+  - `forking-workflow-exercise`
+- We create a organization team, `stream-exercise-participants`.  The
+  *centralized* workflow exercise repos have this team added as a
+  collaborator (*not* forking - they fork so they don't need write
+  access there).
+- We have collected usernames of people who want to contribute via
+  issues on GitHub.  Make a fifth repository, `access-requests`,
+  create a sample access request issue there, and have learners make a
+  new issue in that repository.  The day before
+  - Why a fifth repository?  So that learners don't get emails from all
+    other access requests once they get added to the team
+  - Sample text:
+    ```
+    On Thursday we will all practice how to collaborate using Git/GitHub
+    and one ambitious thing we will try is to collaborate with
+    participants following via stream. This does not apply to teams and
+    exercise groups who will create their own exercise repositories and
+    these groups can ignore the rest of this section.
+
+    For this to work we will need to give you access to a practice
+    repository.  This is option, you could just watch instead. We delete
+    these repositories after the workshop and will not use your username
+    for anything other than this exercise.
+
+    If you would like to participate in this, could you please open an
+    issue here.  Give any title like "please add me" and then click
+    submit:
+    - https://github.com/cr-workshop-exercises/access-requests/issues/new
+
+    Example for how I requested access:
+    - https://github.com/cr-workshop-exercises/access-requests/issues/1
+    ```
 
 
 ## Typical pitfalls
