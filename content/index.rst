@@ -2,16 +2,16 @@
 
 Collaborative distributed version control
 =========================================
- 
+
 We have learned how to make a Git repository for a single person. What
 about sharing?
 
 - Share the folder using email or using some file sharing service:
   This would lead to many back and forth emails and would be difficult
-  keep all copies synchronized. 
+  keep all copies synchronized.
 - One person’s repository on the web: allows one person to keep track of
   more projects, gain visibility, feedback, and recognition.
-- Common repository for a group: everyone can directly update the same repository. 
+- Common repository for a group: everyone can directly update the same repository.
   Good for small groups.
 - Forks or copies with different owners: anyone can suggest changes, even without
   advance permission. Maintainers approve what they agree with.
