@@ -156,6 +156,11 @@ which repository you should fork).
 How to fork.
 ```
 
+Then clone the fork to your computer.  The `<repository-url>` you use
+should include your username.  **Clone using the SSH path you get from
+the webpage, not the https url from the web browser. The URL should start with
+`git@github.com:`.  Otherwise, you won't be able to push later.**
+
 Here is a pictorial representation of this part:
 
 ```{figure} img/forking/forking-1.svg
