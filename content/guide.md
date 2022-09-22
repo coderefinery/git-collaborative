@@ -75,6 +75,7 @@ exercise repository.
   - `centralized-workflow-exercise`
   - `forking-workflow-exercise-recorded`
   - `forking-workflow-exercise`
+- Protect the default branch of the two `centralized-*` repositories.
 - We create a organization team, `stream-exercise-participants`.  The
   *centralized* workflow exercise repos have this team added as a
   collaborator (*not* forking - they fork so they don't need write
