@@ -117,6 +117,14 @@ to code review and discuss a number of typical pitfalls.
   - If you do not wish this, you can "unwatch" a repository (top of the project page).
   - However, we recommend watching repositories you are interested in. You can learn things from experts just by
     watching the activity that come through.
+  ```{figure} img/centralized/unwatch.png
+  :alt: Unwatching a repository
+
+  Unwatch a repository by clicking "Unwatch" in the repository view,
+  then "Participating and @mentions" - this way, you will get
+  notifications about your own interactions.
+  ```
+
 ``````
 
 
