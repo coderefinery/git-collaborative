@@ -111,12 +111,19 @@ to code review and discuss a number of typical pitfalls.
     you can go to your GitHub notifications in the top right corner. The
     administrator can also "copy invite link" and share it within the group.
 
+(unwatch)=
+
 - **Watching and unwatching repositories**
   - Now that you are a collaborator, you get notified about new issues and pull
     requests via email.
-  - If you do not wish this, you can "unwatch" a repository (top of the project page).
-  - However, we recommend watching repositories you are interested in. You can learn things from experts just by
-    watching the activity that come through.
+  - If you do not wish this, you can "unwatch" a repository (top of
+    the project page).
+    - If you are a livestreamer, you will need to unwatch both of the
+      two above repositories under the "Participating via stream" tab
+      above.
+  - However, we recommend watching repositories you are interested
+    in. You can learn things from experts just by watching the
+    activity that come through a popular project.
   ```{figure} img/centralized/unwatch.png
   :alt: Unwatching a repository
 
