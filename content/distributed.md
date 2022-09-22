@@ -254,6 +254,20 @@ else than "feature". Also verify where "origin" points to.
 $ git push origin feature
 ```
 
+````{admonition} If you get a password request for https://github.com when you try to push
+---
+class: warning, dropdown
+---
+Probably you cloned with the HTTPS URL (see `git remote -v` to
+confirm).  You can change this to SSH by going to the repository page,
+clicking "Code", copying the SSH url (starts with `git@github.com:`),
+and then updating the URL with:
+
+```console
+$ git remote set-url origin <repository-url>
+```
+````
+
 ```{figure} img/forking/github-remote-01.svg
 
 central
