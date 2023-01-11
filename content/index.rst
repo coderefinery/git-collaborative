@@ -75,3 +75,12 @@ and finally look into how to automate tasks using Git hooks.
    reference
    exercises
    guide
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: About
+
+   All lessons <https://coderefinery.org/lessons/core/>
+   CodeRefinery <https://coderefinery.org/>
+   Reusing <https://coderefinery.org/lessons/reusing/>
