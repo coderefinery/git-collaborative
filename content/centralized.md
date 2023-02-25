@@ -169,7 +169,7 @@ $ git clone <repository-url> centralized-workflow-exercise
 
 Where `<repository-url>` is the repository created by the exercise
 administrator.  **Clone using the SSH path you get from the webpage,
-not the https url. The URL should start with `git@github.com:`.
+not the https URL. The URL should start with `git@github.com:`.
 Otherwise, you won't be able to push later.**
 
 This is a representation of what happens when you clone:
