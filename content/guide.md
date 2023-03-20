@@ -1,5 +1,31 @@
 # Instructor guide
 
+
+## Detailed schedule
+
+We share this as a good starting point for planning:
+
+- 08:50 - 09:00: Soft start and icebreaker question
+- 09:00 - 09:15: Recap Git, any HedgeDoc questions to highlight
+- 09:15 - 09:30: [Concepts around collaboration](https://coderefinery.github.io/git-collaborative/remotes/)
+    - Explain terms: Pull, push, clone, fork. Focus on pull and not fetch.
+    - Focus more on clone and less on generating from templates and importing.
+- 09:30 - 10:45: [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
+    - 9:30 - 9:45: Explain concepts
+    - 9:45 - 9:55: Break
+    - 9:55 - 10:00: Inform clearly what is expected outcome
+    - 10:00 - 10:30: [Excercise](https://coderefinery.github.io/git-collaborative/centralized/#exercise-preparation)
+    - 10:30 - 10:45: Discussion and answering questions
+- 10:45 - 10:55: Break
+- 10:55 - 12:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
+    - 10:55 - 11:10: Concepts and what are exercise outcomes
+    - 11:10 - 11:40: [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
+    - 11:40 - 11:55: Discussion and answering questions
+- 11:55 - 12:05: break
+- 12:05 - 12:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/)
+                 and Q&A
+
+
 ## Why we teach this lesson
 
 In order to collaborate efficiently using Git, it's essential to have a solid
