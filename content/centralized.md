@@ -189,7 +189,7 @@ and "m1" is a merge commit.
 
 - We clone the entire history, all branches, all commits. In our case, we have one branch (we did not include *all branches* when creating our repository from template) and we have only one commit (*initial commit*).
 - `git clone` creates pointers `origin/master` so you can see the branches of the origin.
-- `origin` refers to where we cloned from, try: `git remote -v`.
+- `origin` refers to where we cloned from.
 - `origin` is a shortcut for the full URL.
 - `origin/master` is a read-only pointer.
 - The branches starting with `origin/` only move during `git pull` or `git fetch` or `git push`.
