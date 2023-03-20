@@ -415,7 +415,7 @@ local
 
 ## Optional exercises
 
-```{exercise} (optional) Centralized-3: Cross-referencing issues using "#NNN"
+```{exercise} (optional) Centralized-3: Cross-referencing issues using "#N"
 We will submit another change by a pull request but this time we will **first create an issue**.
 
 1. Open an issue on GitHub and describe your idea for a change. This gives
@@ -423,28 +423,29 @@ We will submit another change by a pull request but this time we will **first cr
    will need it in step 3.
 2. Create a new branch and switch to it.
 3. On the new branch create a commit and in the commit message write what you
-   did, but also add that this "closes #1" (if the issue that you refer to had the number
-   1).
+   did, but also add that this "closes #N" (replace N by the actual issue number).
 4. Push the branch and open a new pull request. If you forgot to refer to the
    issue number in step 3, you can still refer to it in the pull request
-   form.
-5. Note how now commits, pull requests, and issues can be cross-referenced by including `#NNN`.
+   form (add a "closes #N" to the title or description).
+5. Note how now commits, pull requests, and issues can be cross-referenced by including `#N`.
 6. Notice how after the pull request is merged, the issue gets automatically
    closed.  This only happens for certain keywords like `closes` or `fix`.
 7. Discuss the value of cross-referencing them and of auto-closing issues
    with commits or pull requests.
+
+See also the [GitHub documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+for more examples.
 ```
 
 ````{exercise} (optional) Centralized-4: Why did we create a feature branch "yourname-somefeature"? (exercise/discussion)
-  This exercise is done in groups of 4-5 persons and can be done through a discussion only.
-
   Pushing directly to the main branch is perfectly fine for simple personal projects -
   the pull-request workflows covered here are for larger projects or for collaborative development.
   Guidelines for simpler workflows are given in the
-  [how much git is necessary?](https://coderefinery.github.io/git-intro/level/) episode of the git-intro lesson.
+  [how much Git is necessary?](https://coderefinery.github.io/git-intro/level/) episode of the git-intro lesson.
 
   In collaborative development, whenever we update our repository we create a new branch
-  and create a pull-request. Let's now imagine that everyone in your group makes a new change (create a new file)
+  and create a pull-request. Let's now imagine that everyone in your group (or one person on two different clones)
+  makes a new change (create a new file)
   but without creating a new branch.
 
   1. You all create a new file in the master branch, stage and commit your change locally.
@@ -466,7 +467,7 @@ We will submit another change by a pull request but this time we will **first cr
      'Note about fast-forwards' section of 'git push --help' for details.
      ```
 
-  - The push only worked for one participant.
+  - The push only worked for one participant (one clone).
   - Discuss why push for everybody else in this group was rejected?
 
   ```{solution}
@@ -478,30 +479,18 @@ We will submit another change by a pull request but this time we will **first cr
 ````
 
 ````{discussion} Discussion: How to make changes to remote branches
-  We can create a local branch `somefeature` tracking `origin/somefeature`:
-
-  ```console
-  $ git checkout -b somefeature origin/somefeature
-  ```
-
-  If there is no local branch `somefeature` and there is a remote branch `origin/somefeature`, then this is enough:
-
+  If there is a remote branch `somefeature`, we can create a local branch and start tracking `origin/somefeature` like this:
   ```console
   $ git checkout somefeature
   ```
 
-  The long form is only needed if you have multiple remotes containing a branch called `somefeature`
-  (we will learn about multiple remotes in the next episode).
-
   Once we track a remote branch, we can pull from it and push to it:
-
   ```console
   $ git pull origin somefeature
   $ git push origin somefeature
   ```
 
   We can also delete remote branches:
-
   ```console
   $ git push origin --delete somefeature
   ```
