@@ -95,7 +95,7 @@ Please step out of the repository and check that you fork the **forking**-workfl
   **Learners in team/breakout-room**: Fork the helper's newly created repository and clone the fork.
   ````
 
-  ````{tab} Participating via stream
+  ````{tab} Following on your own
   The instructors are the **administrators**.  All watchers are
   **collaborators**.
 
@@ -107,7 +107,7 @@ Please step out of the repository and check that you fork the **forking**-workfl
   Here we don't need your GitHub usernames because the point of this exercise
   is to show that we can collaborate without granting write permissions.
 
-  Learners following via stream: Fork one of these two repositories
+  Learners following on their own: Fork one of these two repositories
   and then clone the fork to your computer.
   ````
 `````

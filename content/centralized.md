@@ -76,7 +76,7 @@ to code review and discuss a number of typical pitfalls.
     - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
   ````
 
-  ````{tab} Participating via stream
+  ````{tab} Following on your own
   The instructors are the **administrators**.  All watchers are
   **collaborators**.  This exercise is only possible during our
   livestream courses - otherwise we will not grant you access and the
@@ -118,8 +118,8 @@ to code review and discuss a number of typical pitfalls.
     requests via email.
   - If you do not wish this, you can "unwatch" a repository (top of
     the project page).
-    - If you are a livestreamer, you will need to unwatch both of the
-      two above repositories under the "Participating via stream" tab
+    - If you are a following on your own, you will need to unwatch both of the
+      two above repositories under the "Following on your own" tab
       above.
   - However, we recommend watching repositories you are interested
     in. You can learn things from experts just by watching the
