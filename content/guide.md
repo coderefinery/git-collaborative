@@ -14,7 +14,7 @@ We share this as a good starting point for planning:
     - 9:30 - 9:45: Explain concepts
     - 9:45 - 9:55: Break
     - 9:55 - 10:00: Inform clearly what is expected outcome
-    - 10:00 - 10:30: [Excercise](https://coderefinery.github.io/git-collaborative/centralized/#exercise-preparation)
+    - 10:00 - 10:30: [Exercise](https://coderefinery.github.io/git-collaborative/centralized/#exercise-preparation)
     - 10:30 - 10:45: Discussion and answering questions
 - 10:45 - 10:55: Break
 - 10:55 - 12:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
