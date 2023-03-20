@@ -5,16 +5,14 @@
 ```
 
 ```{instructor-note}
-- 20 min teaching
+- 15 min teaching
 ```
 
 
 ## Motivation
 
-- Let's say that someone has given you access to a repository online and you want to contribute to it.
-- It is quite easy to make a copy and send a change back.
-- First, we do this a relatively simple way: get repository, make a change
-  locally, and send the change directly back.
+- Someone has given you access to a repository online and you want to contribute?
+- We will learn how to make a copy and send changes back.
 - Then, we make a "pull request" that allows a review.
 - Once we know how code review works, we will be able to propose changes
   to repositories of others and review changes submitted by external
@@ -25,12 +23,12 @@
 
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
-- **branch**: Independent development line, often we call the main development line `master` or `main`.
+- **branch**: Independent development line. The main development line is often called `main` or `master`.
 - **tag**: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
   that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
 - **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
 - **forking**: Taking a copy of a repository (which is typically not yours) - your
-  copy (fork) stays on GitHub and you can make changes to your copy.
+  copy (fork) stays on GitHub/GitLab and you can make changes to your copy.
 
 ```{figure} img/overview/fork.png
 :alt: Forking and cloning
@@ -72,7 +70,7 @@ Importing a repository.
 ```{discussion}
 - Visit one of the repositories/projects that you have used recently and try to find out
   how many forks exist and where they are.
-- In which situations it could be useful to start from a "template" repository by generating?
+- In which situations could it be useful to start from a "template" repository by generating?
 ```
 
 
@@ -81,14 +79,6 @@ Importing a repository.
 - We need a mechanism to communicate changes between the repositories.
 - We will **pull** or **fetch** updates **from** remote repositories (we will soon discuss the difference between pull and fetch).
 - We will **push** updates **to** remote repositories.
-- We will learn how to suggest changes within repositories on GitHub and across repositories.
-- We will learn how to update forks by pulling/fetching changes and pushing them to forks.
-
-
-```{keypoints}
-- `git clone` copies everything: all commits and all branches.
-- Branches on the remote appear as (read-only) local branches with a prefix, e.g. `origin/master`.
-- We synchronize commits between local and remote with `git fetch`/`git pull` and `git push`.
-- Repositories that are shared online often synchronize via pull requests or merge requests.
-- Repositories that are forked or cloned do not automatically synchronize themselves.
-```
+- We will learn how to suggest changes within repositories on GitHub and across repositories (**pull request**).
+- Repositories that are forked or cloned do not automatically synchronize themselves:
+  We will learn how to update forks (by pulling from the "central" repository).
