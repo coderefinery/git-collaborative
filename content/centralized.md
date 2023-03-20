@@ -6,8 +6,8 @@
 ```
 
 ```{instructor-note}
-- 20 min teaching
-- 40 min exercises
+- 30 min teaching
+- 30 min exercises
 ```
 
 
