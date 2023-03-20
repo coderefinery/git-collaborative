@@ -431,7 +431,7 @@ We will submit another change by a pull request but this time we will **first cr
    will need it in step 3.
 2. Create a new branch and switch to it.
 3. On the new branch create a commit and in the commit message write what you
-   did, but also add that this "closes #N" (replace N by the actual issue number).
+   did, but also add that this "closes #N" (replace N by the actual issue number from step 1).
 4. Push the branch and open a new pull request. If you forgot to refer to the
    issue number in step 3, you can still refer to it in the pull request
    form (add a "closes #N" to the title or description).
