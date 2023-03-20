@@ -217,7 +217,12 @@ starting the actual coding.
 
 Before we do any modification, we create a new branch and switch to it: this is
 a good reflex and a good practice. Choose a branch name which is descriptive of
-its content.
+its content. For example:
+
+```console
+$ git branch myname-purpose    # describes both who it belongs to and the purpose
+$ git checkout myname-purpose
+```
 
 On the new branch create a new file which will hold your recipe,
 for instance `traditional_coderefinery_tacos.md` (but change the name). You can get inspired
