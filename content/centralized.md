@@ -137,26 +137,20 @@ to code review and discuss a number of typical pitfalls.
 
 ```{exercise} Centralized-1: Clone a repository, add a file, push changes as a branch, and create a pull request
 - Before we start with the exercise, instructor points to the preparation (above).
-- The exercise group works on steps A-H (15-20 minutes).
-- **After step H you can either return to the main room or take a break or help
-  others**. Please ask questions both during group work and in the collaborative document.  There
-  are also optional exercises.
-
-The exercise is steps A-H below.
+- Then work on steps A-H.
+- There are also optional exercises.
+- Before and after each action you take, run the following informational
+commands:
+  - `git graph` - almost every time
+  - `git status` - when you modify files
 ```
 
 ```{callout} Hint for breakout rooms
 If the helper in the room is the one who sets up the central repository, they
-cannot easily demostrate the steps via screen-sharing as the repository's owner. A
+cannot easily demostrate the steps via screen-sharing as the repository's maintainer. A
 good alternative is to have one of the learners screen-share and get advice on the
 steps from other learners and helpers!
 ```
-
-Before and after each action you take, run the following informational
-commands.  Carefully observe what happens, especially in `git graph`:
-
-- `git graph` - almost every time
-- `git status` - when you modify files
 
 
 ### Step A. Clone your maintainer's group repository
@@ -166,12 +160,16 @@ $ git clone <repository-url> centralized-workflow-exercise
 ```
 
 Where `<repository-url>` is the repository created by the exercise
-maintainer.  **Clone using the SSH path you get from the webpage,
-not the https URL. The URL should start with `git@github.com:`.
-Otherwise, you won't be able to push later.**
+maintainer.
 
-This is a representation of what happens when you clone:
+**Clone using the SSH path** you get from the webpage (the one that starts with
+`git@github.com:`), not the one that starts with `https://github.com`.
+Otherwise, you won't be able to push later.
 
+````{admonition} Representation of what happens when you clone
+---
+class: dropdown
+---
 ```{figure} img/centralized/01-remote.svg
 
 remote or central
@@ -193,6 +191,7 @@ and "m1" is a merge commit.
 - The branches starting with `origin/` only move during `git pull` or `git fetch` or `git push`.
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
+````
 
 
 ### Step B. Change directory into the newly created directory
@@ -219,7 +218,9 @@ branch name to indicate who made it.
 
 ### Step D. Create a file with a unique name, e.g.: `yourusername.txt`
 
-In this file share your favourite cooking recipe or haiku or Git trick or whatever.
+In this file share your favourite cooking recipe or haiku or Git trick or
+whatever (we will push soon to a public repository so don't share something you
+don't want to become public for the duration of the exercise).
 
 
 ### Step E. Stage and commit the change
@@ -229,6 +230,10 @@ $ git add yourusername.txt
 $ git commit
 ```
 
+````{admonition} The commit only exists locally
+---
+class: dropdown
+---
 ```{figure} img/centralized/01-remote.svg
 
 remote or central
@@ -238,6 +243,7 @@ remote or central
 
 local (read figure left to right)
 ```
+````
 
 
 ### Step F. Push your change as a new branch
@@ -252,15 +258,18 @@ class: warning, dropdown
 ---
 Probably you cloned with the HTTPS URL (see `git remote -v` to
 confirm).  You can change this to SSH by going to the repository page,
-clicking "Code", copying the SSH url (starts with `git@github.com:`),
+clicking "Code", copying the SSH URL (starts with `git@github.com:`),
 and then updating the URL with:
 
 ```console
-$ git remote set-url origin <repository-url>
+$ git remote set-url origin <ssh-repository-url>
 ```
 ````
 
-
+````{admonition} Now the commit also exists on the remote repository
+---
+class: dropdown
+---
 ```{figure} img/centralized/04-remote.svg
 
 remote or central (read figure left to right)
@@ -270,10 +279,12 @@ remote or central (read figure left to right)
 
 local (read figure left to right)
 ```
+````
 
-```{note}
-**Meaning of `-u` | `--set-upstream`**
-
+```{admonition} Meaning of -u
+---
+class: dropdown
+---
 The `-u` or `--set-upstream` will connect the local branch with the newly created upstream/remote branch
 and track it. This has the following advantages:
 - If you from here on only type `git push` or `git pull` without branchname, Git will know what branch you
@@ -292,7 +303,7 @@ problem if you explicitly type out the remote and branch name every time.
 
 After you have pushed your branch and other participants have too, browse the
 network of branches and commits (on GitHub click on Insights -> Network) and
-discuss with others what you see.
+discuss what you see.
 
 
 ### Step H. Submit a pull request
@@ -300,14 +311,14 @@ discuss with others what you see.
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
 
+Meaning of a pull request: think of it as change proposal. In a popular project, it means that anyone can
+contribute with *almost no work* on the maintainer's side - a big win.
+
 There are **several options to open a pull request**:
 - Follow the link printed to terminal output when git-pushing a branch to GitHub/GitLab
 - Visit the GitHub repository in the browser after pushing the branch and click on the green button "Compare & pull request"
 - Click on "Pull requests" on top of the GitHub repository and either "Compare & pull request" or "New pull request"
-- Click on "Branches" and then "New pull request" from the respective branch.
-
-Meaning of a pull request: think of it as change proposal. In a popular project, it means that anyone can
-contribute with *almost no work* on the maintainer's side - a big win.
+- Click on "Branches" and then "New pull request" from the respective branch
 
 
 ## Exercise: Part 2 - code review and merging changes
@@ -331,47 +342,10 @@ pull request, discusses what features to look at, and how to discuss and review.
 
 At the same time, helpers can review open pull requests from their exercises groups.
 
-```{discussion}
-**Naming**
-
-- In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
-- Which one do you feel is more appropriate and in which
-  context? (The name **pull request** may make more sense in the forking workflow: next episode).
-- It can be useful to think of them as **change proposals**.
-
-**Pull requests are from branch to branch**
-
-- They originate from a source branch and are directed towards a branch.
-- Not from commit to branch.
-- Pull requests create new commits on the target branch.
-- They do not create new branches.
-
-**Pull requests can be used for code review**
-
-- Pull requests are like change proposals.
-- We recommend that pull requests are reviewed by someone else in your group.
-- In our example everyone has write access to the "central" repository.
-
-**Protected branches**
-
-- A good setting for large projects is to make the `master` or `main` branch **protected** and all changes to it have to go
-  through code review.
-- Centralized workflow with protected branches is a good setup for many projects.
-
-**Code review**
-
-- You see what others are working on
-- Collaborative learning
-- OK if students and junior researchers review senior researchers
-- Improves quality of the code
-
-**Read more**
-
-- This is a great resource: [Practical git PRs for small teams](https://scicomp.aalto.fi/scicomp/practical-git-prs/)
-```
-
-Once the pull-request is accepted, the change is merged:
-
+````{admonition} Once the pull-request is accepted, the change is merged
+---
+class: dropdown
+---
 ```{figure} img/centralized/06-remote.svg
 
 remote or central
@@ -381,6 +355,7 @@ remote or central
 
 local
 ```
+````
 
 Finally also discuss the "network" on GitHub.
 
@@ -390,12 +365,45 @@ At this stage demonstrate how to suggest small changes to pull/merge requests:
 - [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/reviews/suggestions.html)
 ```
 
+```{discussion}
+**Naming**
+
+- In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
+- Which one do you feel is more appropriate and in which
+  context? (The name **pull request** may make more sense in the forking workflow: next episode).
+- It can be useful to think of them as **change proposals**.
+
+**Pull requests can be used for code review**
+
+- We recommend that pull requests are reviewed by someone else in your group.
+- Collaborative learning
+- OK if students and junior researchers review senior researchers
+- In our example everyone has write access to the "central" repository.
+
+**Pull requests are from branch to branch**
+
+- They originate from a source branch and are directed towards a branch.
+- Not from commit to branch.
+- Pull requests create new commits on the target branch.
+- They do not create new branches.
+
+**Protected branches**
+
+- A good setting for large projects is to make the `master` or `main` branch **protected** and all changes to it have to go
+  through code review.
+- Centralized workflow with protected branches is a good setup for many projects.
+
+**Read more**
+
+- This is a great resource: [Practical git PRs for small teams](https://scicomp.aalto.fi/scicomp/practical-git-prs/)
+```
+
 
 ### Step 2B. Update your local copy
 
 Your branch `yourname-somefeature` is not needed anymore but more importantly,
-you need to sync your local copy: Everybody needs to do this step in their
-exercise repository but we do this together in the main room so that we can
+you need to sync your local copy: **Everybody needs to do this step in their
+exercise repository** but we do this together in the main room so that we can
 discuss this step and ask questions.
 
 ```console
