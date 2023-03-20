@@ -18,7 +18,7 @@
 :width: 50%
 
 Forking workflow.  **Red** is the central repository, where only
-owners have access.  **Green** are *forks* on Github (copy for a
+owners have access.  **Green** are *forks* on GitHub (copy for a
 single user to work on).  **Blue** are local copies where contributors
 work on their own computer.
 ```

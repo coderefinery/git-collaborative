@@ -26,7 +26,7 @@ the basics.
   conflict to the user to resolve.
 * **issue**: Feature of web repositories that allows discussion
   related to a repository.
-* **pull request**: A Github/Gitlab feature that allows you to send a
+* **pull request**: A GitHub/Gitlab feature that allows you to send a
   code suggestion using a branch, which allows one-button merging.  In
   Gitlab, called "**merge request**".
 * **git hook**: Code that can run before or after certain actions, for

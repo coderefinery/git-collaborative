@@ -14,7 +14,7 @@
 ## Meaning of "central" in a distributed version control
 
 In this episode, we will explore the usage of a **centralized workflow** for collaborating online on a project
-**within one repository on Github**.  This means that everyone has
+**within one repository on GitHub**.  This means that everyone has
 access to that **central repository** - convenient (but doesn't scale to a huge
 project).
 
