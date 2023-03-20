@@ -51,19 +51,20 @@ Real life examples:
 ## Exercise preparation
 
 In this exercise we will practice collaborative centralized workflow in
-groups.  An **administrator** will create a repository, and
+groups (but you can also collaborate with us as individual).
+One person (**maintainer**) will create the exercise repository, and
 **collaborators** will contribute to it.  We'll discuss how this leads
 to code review and discuss a number of typical pitfalls.
 
 ``````{prereq} Exercise preparation
 `````{tabs}
   ````{tab} Part of team/exercise room
-  - In-person: We form small groups (4-5 persons). Video: use breakout rooms.
+  - Form not too large groups (4-5 persons).
   - Each group needs to appoint someone who will host the shared
-    GitHub repository: *an administrator*.
+    GitHub repository: the *maintainer*.
     This is typically the exercise lead (if available).  Everyone else
     is a *collaborator*.
-  - **Administrator** (one person per group) generates a new repository
+  - The **maintainer** (one person per group) generates a new repository
     from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
     called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
     ```{figure} img/centralized/generate_repo.png
@@ -71,18 +72,18 @@ to code review and discuss a number of typical pitfalls.
     :width: 100%
     ```
   - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
-    - Collaborators give their GitHub usernames to their chosen administrator (in their respective group, in online workshops you can use the Zoom chat for private communication within the breakout room).
-    - Administrator gives the other group members the newly created GitHub repository URL.
-    - Administrator adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
+    - Collaborators give their GitHub usernames to their chosen maintainer.
+    - Maintainer gives the other group members the newly created GitHub repository URL.
+    - Maintainer adds participants as collaborators to their project (Settings → Manage Access → Invite a collaborator).
   ````
 
   ````{tab} Following on your own
-  The instructors are the **administrators**.  All watchers are
+  The instructors are the **maintainers**.  All watchers are
   **collaborators**.  This exercise is only possible during our
-  livestream courses - otherwise we will not grant you access and the
-  repositories may not exist.
+  livestream courses.
+  The preparation typically happens already the day before.
 
-  ```{admonition} If you have not requested access (our emails asked yesterday)
+  ```{admonition} If you have not requested access (we email about it typically the day before this lesson)
   ---
   class: dropdown
   ---
@@ -90,17 +91,17 @@ to code review and discuss a number of typical pitfalls.
   issue in this
   repository](https://github.com/cr-workshop-exercises/centralized-workflow-exercise/issues/new).
   Give any title like "please add me" and then click submit.  Wait a
-  minute for staff to add you, then wait for the invite email to arrive and *accept the invitation from the email*.
+  minute for staff to add you, then wait for the invite email to arrive and
+  accept the invitation from the email.
   ```
 
-  We create(d) these the day before hopefully.  **Choose only one to
-  work with.  You must have requested access already, see above**:
+  **Choose only one to work with** (you must have requested access already, see above)
 
-  - Not recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
+  - Not recorded:
+    <https://github.com/cr-workshop-exercises/centralized-workflow-exercise>
+    (this will not be shown on stream or recorded in our videos, but is public
+    on the internet until it is deleted)
   - Recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
-
-  The preparation typically happens already the day before where we ask
-  participants to send us their usernames and we add them all.
   ````
 `````
 
@@ -109,7 +110,7 @@ to code review and discuss a number of typical pitfalls.
   - Alternatively check the inbox for the email account you registered with
     GitHub. GitHub emails you an invitation link, but if you don't receive it
     you can go to your GitHub notifications in the top right corner. The
-    administrator can also "copy invite link" and share it within the group.
+    maintainer can also "copy invite link" and share it within the group.
 
 (unwatch)=
 
@@ -118,9 +119,6 @@ to code review and discuss a number of typical pitfalls.
     requests via email.
   - If you do not wish this, you can "unwatch" a repository (top of
     the project page).
-    - If you are a following on your own, you will need to unwatch both of the
-      two above repositories under the "Following on your own" tab
-      above.
   - However, we recommend watching repositories you are interested
     in. You can learn things from experts just by watching the
     activity that come through a popular project.
@@ -161,14 +159,14 @@ commands.  Carefully observe what happens, especially in `git graph`:
 - `git status` - when you modify files
 
 
-### Step A. Clone your administrator's group repository
+### Step A. Clone your maintainer's group repository
 
 ```console
 $ git clone <repository-url> centralized-workflow-exercise
 ```
 
 Where `<repository-url>` is the repository created by the exercise
-administrator.  **Clone using the SSH path you get from the webpage,
+maintainer.  **Clone using the SSH path you get from the webpage,
 not the https URL. The URL should start with `git@github.com:`.
 Otherwise, you won't be able to push later.**
 
