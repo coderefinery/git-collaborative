@@ -19,10 +19,10 @@ about sharing?
 Being able to share more easily (going down the above list) is
 *transformative* (easier to change something, that is you are not the sole owner)
 because it allows projects to scale to a new level.
-This can’t be done without proper tools.
+**This can’t be done without proper tools.**
 
-In this lesson we will learn how to keep repositories in sync and how to
-work with remote repositories on GitHub and other services. We will
+**In this lesson we will learn how to keep repositories in sync and how to
+work with remote repositories on GitHub and other services.** We will
 discover and exercise the centralized as well as the forking workflows,
 and finally look into how to automate tasks using Git hooks.
 
