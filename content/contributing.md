@@ -11,10 +11,10 @@
 
 ## Contributing very minor changes
 
-- Fork repository
+- Clone or fork+clone repository
 - Create a branch
 - Commit and push change
-- File a pull request or merge request
+- Open a pull request or merge request
 
 
 ## If you observe an issue and have an idea how to fix it
@@ -26,41 +26,41 @@
 - If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it
 - Submit your fix as pull request or merge request which references/closes the issue
 
-**Motivation**:
-
+```{admonition} Motivation
 - **Inform others about an observed problem**
 - Make it clear whether this issue is up for grabs or already being worked on
+```
 
 
 ## If you have an idea for a new feature
 
 - Open an issue in the repository you wish to contribute to
-- Write a short proposal for your suggested change or new feature
+- In the issue, write a short proposal for your suggested change or new feature
 - Motivate why and how you wish to do this
 - Also indicate where you are unsure and where you would like feedback
 - **Discuss and get feedback before you code**
 - Once you start coding, indicate that you are working on it
 - Once you are done, submit your new feature as pull request or merge request which references/closes the issue/proposal
 
-**Motivation**:
-
+```{admonition} Motivation
 - **Get agreement and feedback before writing 5000 lines of code** which might be rejected
 - If we later wonder why something was done, we have the issue/proposal as
   reference and can read up on the reasoning behind a code change
+```
 
 
 ## WIP (work in progress) merge requests and draft pull requests
 
-- Convention: Pull requests or merge requests starting with "WIP" are not to be merged yet
+- Convention: Pull requests or merge requests starting with "WIP" or "Draft" are not to be merged yet
 - They are there to **collect feedback on unfinished work**
 - On GitHub you can create [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
   which cannot be merged until marked ready for review.
 - Also GitLab offers same mechanism (merge request starting with "WIP" or "Draft")
 
-**Motivation**:
-
+```{admonition} Motivation
 - Collect feedback before it is finished and before it becomes more difficult to change
 - Communicate to others what is partially done if it affects their work
+```
 
 
 ## Licenses matter
@@ -78,7 +78,6 @@
   without all future hashes changing
 - Projects like <https://github.com/torvalds/linux> or <https://github.com/Homebrew/brew>
   have to be extremely careful what they accept
-- Do not blindly merge submitted pull requests
 - Browse the code changes before merging them
 - If you get an extremely large changeset, ask for more information
 - Possibly verify whether the submitter is not trying to impersonate somebody you know
