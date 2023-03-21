@@ -6,8 +6,8 @@
 ```
 
 ```{instructor-note}
-- 20 min teaching
-- 40 min exercises
+- 30 min teaching
+- 30 min exercises
 ```
 
 
@@ -37,8 +37,8 @@ Features:
 This is used by almost all large (and small) open-source projects
 these days.  Real life examples:
 
-- NumPy: [https://numpy.org/devdocs/dev/index.html](https://numpy.org/devdocs/dev/index.html)
-- [https://github.com/jupyterlab/jupyterlab](https://github.com/jupyterlab/jupyterlab)
+- [NumPy](https://numpy.org/devdocs/dev/index.html)
+- [JupyterLab](https://github.com/jupyterlab/jupyterlab)
 
 
 ## Working with multiple remotes
@@ -47,26 +47,24 @@ In the forking layout described above we work with **multiple remotes**,
 in this case **two remotes**: One remote refers to the "central" repository, and the other
 remote refers to the fork.
 
-- There is nothing special about the name `origin`. The `origin` is just an alias/placeholder (think of "sticky note" referring to an URL).
-- We can call these aliases as we like.
+- There is nothing special about the name `origin`. The `origin` is an alias/placeholder (think of "sticky note" referring to an URL).
+- We can name these aliases as we like.
 - We can add and remove remotes:
-
   ```console
   $ git remote add upstream https://github.com/project/project.git
   $ git remote rm upstream
+
   $ git remote add group-repo https://example.com/exciting-project.git
   $ git remote rm group-repo
+
   $ git remote add upstream https://github.com/project/project.git
   $ git remote add downstream https://github.com/userX/project.git
   ```
 
-We typically synchronize remotes via the local clone on our local computer.
-
-To see all remotes:
-
-```console
-$ git remote --verbose
-```
+- To see all remotes:
+  ```console
+  $ git remote --verbose
+  ```
 
 ```{warning}
 **We will work with a new repository for this exercise!**
@@ -488,24 +486,10 @@ local
 
 
 ```{discussion} Discussion: Always create a feature branch
-For each pull request create a new branch.
-
-Motivation:
-- Limits the risk that commits get accidentally appended to an open pull request.
-- History-rewrite (rebased and/or squashed commits) on the central repository does not lead to a diverging local default branch.
-
-See also [this
-blogpost](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/)
-for an explanation.
-```
-
-
-```{keypoints}
-- Working with multiple remotes is not as scary as it might look.
-- `origin` is just an alias/placeholder.
-- We can add and remove remotes.
-- We can call these aliases/placeholders as we like.
-- We typically synchronize/updates remotes via the local clone.
-- To see all remotes use `git remote -v`.
-- If you are more than one person contributing to a project, consider using code review.
+**For each pull request create a new branch**. Motivation:
+- Limits the risk that commits get accidentally appended to an open pull
+  request (remember: pull requests are from branch to branch, not from commit
+  to branch).
+- History-rewrite (rebased and/or squashed commits) on the central repository
+  does not lead to a diverging branch on the fork.
 ```
