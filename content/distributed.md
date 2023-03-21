@@ -80,33 +80,38 @@ Please step out of the repository and check that you fork the **forking**-workfl
 `````{tabs}
   ````{tab} Part of team/exercise room
 
-  Continue with the teams from before.
-
-  **Administrator (exercise leads)**:
+  **Maintainer (team lead)**:
   - Create an exercise repository by
     [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
     using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
     called `forking-workflow-exercise`
   - In this case we **do not add collaborators** to the repository (this is the point of this example).
-  - Share the link to the newly created repository in the shared document with your group.
+  - Share the link to the newly created repository with your group.
 
-  **Learners in team/breakout-room**: Fork the helper's newly created repository and clone the fork.
+  **Learners in exercise team**: Fork the newly created repository (not the
+  "coderefinery" one) and then **clone your fork**.
   ````
 
   ````{tab} Following on your own
-  The instructors are the **administrators**.  All watchers are
+  The instructors are the **maintainers**.  All watchers are
   **collaborators**.
 
   We create(d) these the day before hopefully.  **Choose only one to
   work with**:
-  - Not recorded: <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this will not be shown on stream or recorded in our videos, but is be public on the Internet until it is deleted)
-  - Recorded: <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
+  - Not recorded:
+    <https://github.com/cr-workshop-exercises/forking-workflow-exercise> (this
+    will not be shown on stream or recorded in our videos, but is be public on
+    the internet until it is deleted)
+  - Recorded:
+    <https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded>
+    (this will be shown on stream and recorded, **your username and comments
+    may appear in the recorded video on YouTube**)
 
   Here we don't need your GitHub usernames because the point of this exercise
   is to show that we can collaborate without granting write permissions.
 
   Learners following on their own: Fork one of these two repositories
-  and then clone the fork to your computer.
+  and then **clone your fork** to your computer.
   ````
 `````
 ``````
