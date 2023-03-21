@@ -124,28 +124,28 @@ As an example we will collaboratively develop a cookbook for taco recipes,
 inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Objectives**:
-- Learn how to fork, modify the fork, and file a pull request towards the central repo.
+- Learn how to fork, modify the fork, and open a pull request towards the central repository.
 - Learn how to update your fork with changes that others have already made to the
   forked repository.
 
 **Exercise**:
-- Helper prepares an exercise repository (see above; this will take 5-10 minutes).
-- **The exercise group works on steps A-E** (15-20 minutes).
+- Maintainer prepares an exercise repository (see above; this will take 5-10 minutes).
+- **Learners work on steps A-E** (15-20 minutes).
 - There are two optional steps after step E for those who want more.
-- After step E you can return to the main room or stream or take a break or help others.
+- After step E you take a break or help others.
   Please ask questions both during group work and in the collaborative document.
-- **We will review the pull requests and update forks together** (instructor demonstrates, and everybody follows along in their repositories).
+- **We will review the pull requests together**
+  and then update forks.
 ```
 
 Before and after each action you take, run the following informational
 commands.  Carefully observe what happens, especially in `git graph`:
 
-- `git graph` - almost every time.
-  - As a reminder, to define `git graph` use
+- `git graph` - almost every time. As a reminder, to define `git graph` use:
     ```console
 	$ git config --global alias.graph "log --all --graph --decorate --oneline"
 	```
-- `git status` - when you modify files
+- `git status` - when you modify files.
 
 
 ### Step A: Fork and clone
@@ -159,11 +159,15 @@ which repository you should fork).
 How to fork.
 ```
 
-Then clone the fork to your computer.  The `<repository-url>` you use
+Then **clone your fork** to your computer.  The repository URL
 should include your username.  **Clone using the SSH path you get from
-the webpage, not the https url from the web browser. The URL should start with
-`git@github.com:`.  Otherwise, you won't be able to push later.**
+the webpage, not the https URL** from the web browser. The URL should start with
+`git@github.com:`.  Otherwise, you won't be able to push later.
 
+````{admonition} Pictorial representation of this step
+---
+class: dropdown
+---
 Here is a pictorial representation of this part:
 
 ```{figure} img/forking/forking-1.svg
@@ -203,6 +207,7 @@ fork
 
 local
 ```
+````
 
 
 ### Step B: Open an "issue" as a change proposal
@@ -223,11 +228,11 @@ a good reflex and a good practice. Choose a branch name which is descriptive of
 its content. For example:
 
 ```console
-$ git branch myname-purpose    # describes both who it belongs to and the purpose
-$ git checkout myname-purpose
+$ git branch myname-feature    # describes both who it belongs to and the purpose
+$ git checkout myname-feature
 ```
 
-On the new branch create a new file which will hold your recipe,
+**On the new branch create a new file** which will hold your recipe,
 for instance `traditional_coderefinery_tacos.md` (but change the name). You can get inspired
 [here](https://github.com/sinker/tacofancy/tree/master/full_tacos). Hopefully we all use different
 file names, otherwise we will experience conflicts later (which is also interesting!).
@@ -236,10 +241,14 @@ There is also a file called `test.py` which will automatically verify whether yo
 "taco" (case insensitive). This is there to slowly introduce us to automated testing.
 
 Once you are happy with your recipe, commit the change and in your commit
-message reference the issue which you have opened earlier with "this is my
+message **reference the issue** which you have opened earlier with "this is my
 commit message; closes #N" (use a more descriptive message and replace N by the
-actual issue number).
+actual issue number from step B).
 
+````{admonition} Pictorial representation of this step
+---
+class: dropdown
+---
 And here is a picture of what just happened:
 
 ```{figure} img/forking/github-remote-01.svg
@@ -256,15 +265,16 @@ fork
 
 local
 ```
+````
 
 
 ### Step D: Push your changes to the fork
 
 Now push your new branch to your fork. Your branch is probably called something
-else than "feature". Also verify where "origin" points to.
+else than "myname-feature". Also verify where "origin" points to.
 
 ```console
-$ git push origin feature
+$ git push origin myname-feature
 ```
 
 ````{admonition} If you get a password request for https://github.com when you try to push
@@ -273,7 +283,7 @@ class: warning, dropdown
 ---
 Probably you cloned with the HTTPS URL (see `git remote -v` to
 confirm).  You can change this to SSH by going to the repository page,
-clicking "Code", copying the SSH url (starts with `git@github.com:`),
+clicking "Code", copying the SSH URL (starts with `git@github.com:`),
 and then updating the URL with:
 
 ```console
@@ -281,6 +291,10 @@ $ git remote set-url origin <repository-url>
 ```
 ````
 
+````{admonition} Pictorial representation of this step
+---
+class: dropdown
+---
 ```{figure} img/forking/github-remote-01.svg
 
 central
@@ -295,14 +309,17 @@ fork
 
 local
 ```
+````
 
 
-### Step E: File a pull request
+### Step E: Open a pull request
 
 Then file a pull request from the branch on your fork towards the master branch on the central repository.
 
-Here is a pictorial representation for parts D and E:
-
+````{admonition} Pictorial representation for steps D and E
+---
+class: dropdown
+---
 ```{figure} img/forking/forking-2.svg
 
 Push followed by a pull request.
@@ -326,37 +343,40 @@ fork
 
 local
 ```
+````
 
-Wait here until we integrate all pull requests into the central repo
-together on the big screen.
+**Wait here** until we integrate all pull requests into the central repo
+together.
 
 Observe how the issues automatically close after the pull requests are merged
 (provided the commit messages contain [the right keywords](https://help.github.com/en/articles/closing-issues-using-keywords)).
 
 ```{exercise} (optional) Distributed-2: Send a conflicting pull request
-If you complete parts A-E much earlier than others, try to send another pull request
+If you complete parts A-E much earlier than others, try to open another pull request
 where you anticipate a conflict with your first pull request.
 ```
 
 ```{exercise} (optional) Distributed-3: Making changes to your pull request after it has been opened.
-You can do that by pushing new commits to the branch where you sent the pull
+You can do that by pushing **additional commits to the same branch** where you opened the pull
 request from. Observe how they end up added to your pull request.
 ```
 
 
 ## Exercise: Part 2 - code review and merging changes
 
-**We do this step together on the main screen (in the main room)**. The instructor shows a submitted
+**We do this step together**. The instructor shows a submitted
 pull request, discusses what features to look at, and how to discuss and review.
 
-At the same time, helpers can review open pull requests from their exercises groups.
+At the same time, maintainers can review open pull requests from their exercises groups.
 
 
 ```{exercise} (optional) Distributed-4: Squash merge a pull request
-If you complete this exercise much earlier than others, pair up with somebody,
-create a new repository, fork it, and send a pull request with several
-small commits. On the other computer accept these with "Squash and merge" and later compare the source
-and target repositories/branches how they differ after the small commits got squashed into one.
+If you complete this exercise much earlier than others, create a new pull
+request with two or more commits.
+
+Then, when reviewing the change as maintainer, accept these with "Squash and
+merge" and later compare the source and target repositories/branches how they
+differ after the small commits got squashed into one.
 ```
 
 
@@ -371,26 +391,7 @@ merged changes from others and verify that you got the files created by other pa
 Make sure that the contributions from other participants are not only on your
 local repository but really also end up in your fork.
 
-Here is a pictorial representation of this part:
-
-```{figure} img/forking/forking-3.svg
-
-Pull followed by push to a different remote.
-```
-
-We will discuss three solutions:
-
-```{instructor-note}
-It would be great to present both the "shorter route" and the updating fork via
-the web interface. One way to do this is to encourage a participant to share
-screen while they demonstrate the "shorter route" and then to also demonstrate
-the web interface fork update on the instructor computer.
-```
-
-
-### Using the web interface (GitHub)
-
-On GitHub it is now also possible to update the fork by pressing a button (see
+On GitHub it is possible to update the fork by pressing a button (see
 screenshot below):
 
 ```{figure} img/forking/fetch-and-merge.png
@@ -399,32 +400,38 @@ screenshot below):
 Updating the fork via GitHub web interface.
 ```
 
-
-### Shorter route
-
-`Remote` are aliases. We can use the URLs a remote directly.
-
-A remote is tracked repository. `remote` is a Git keyword as in `git remote`.
-We can use the URL of a tracked repository directly instead of aliases like `origin` or `upstream`.
+````{admonition} Updating the fork using the command line
+---
+class: dropdown
+---
+Remotes are aliases. We can use the URLs a remote directly.
+instead of aliases like `origin` or `upstream`.
 
 Here we pull from the central repo and push to our fork:
-
 ```console
 $ git checkout master
 $ git pull <central-repository-url> master
 $ git push <fork-url> master
 ```
 
+Here is a pictorial representation of this part:
+```{figure} img/forking/forking-3.svg
 
-### Longer route
+Pull followed by push to a different remote.
+```
+````
 
-- Upstream/central repo receives other changes (other merged pull-requests)
-- How do we get these changes to the fork?
+````{admonition} Updating the fork using the command line (longer version)
+---
+class: dropdown
+---
+Below is a step by step recipe with pictorial representations which hopefully
+makes clear what happens in each step.
 
-  ```console
-  $ git remote add central <central-repository-url>
-  $ git fetch central
-  ```
+```console
+$ git remote add central <central-repository-url>
+$ git fetch central
+```
 
 ```{figure} img/forking/github-remote-03.svg
 
@@ -479,6 +486,7 @@ fork
 
 local
 ```
+````
 
 ---
 
