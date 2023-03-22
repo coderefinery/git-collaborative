@@ -40,6 +40,13 @@ these days.  Real life examples:
 - [NumPy](https://numpy.org/devdocs/dev/index.html)
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab)
 
+```{discussion} Discussion: Why do we create a fork and not only a clone?
+- It is not easy to show my changes on my computer to somebody else.
+- The maintainer cannot pull from my laptop.
+- The cloud provider is a trusted place to pull from and allows review before pulling.
+- Backup.
+```
+
 
 ## Working with multiple remotes
 
