@@ -81,7 +81,7 @@ By the end of this lesson, learners should:
 ## Preparing exercises
 
 Exercise leads typically prepare exercise repositories for the exercise group
-(although the material speaks about "administrator" who can also be one of the
+(although the material speaks about "maintainer" who can also be one of the
 learners). Preparing the first exercise (centralized workflow) will take more
 time than preparing the second (forking workflow). Most preparation time is not
 the generating part but will go into communicating the URL to the exercise
