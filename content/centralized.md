@@ -89,10 +89,10 @@ to code review and discuss a number of typical pitfalls.
   ---
   If you have not yet requested access, could you please [open an
   issue in this
-  repository](https://github.com/cr-workshop-exercises/centralized-workflow-exercise/issues/new).
-  Give any title like "please add me" and then click submit.  Wait a
+  repository](https://github.com/cr-workshop-exercises/access-requests/issues/new/choose).
+  Wait a
   minute for staff to add you, then wait for the invite email to arrive and
-  accept the invitation from the email.
+  accept the invitation from the email and "unwatch" repositories (below).
   ```
 
   **Choose only one to work with** (you must have requested access already, see above)
