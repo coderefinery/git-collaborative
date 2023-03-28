@@ -7,7 +7,7 @@ the basics.
 
 * [Interactive git cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
 * [Very detailed 2-page git
-  cheatsheet](https://aaltoscicomp.github.io/cheatsheets/git-for-normal-people-cheatsheet_1.0.pdf)
+  cheatsheet](https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it-cheatsheet.pdf)
 
 
 ## Glossary
