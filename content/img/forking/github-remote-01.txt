@@ -1,3 +1,3 @@
-     [master]
+     [main]
       |
 c1----c2

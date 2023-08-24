@@ -1,4 +1,4 @@
-     [master,HEAD]
+     [main,HEAD]
       |
 c1----c2
       | \
@@ -6,4 +6,4 @@ c1----c2
       |  |
       |  [yourname-somefeature]
       |
-      [origin/master]
+      [origin/main]

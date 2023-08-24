@@ -1,6 +1,6 @@
-     [origin/master]
+     [origin/main]
       |
-      |      [master,upstream/master]
+      |      [main,upstream/main]
       |       |
 c1----c2------m1
         \    /

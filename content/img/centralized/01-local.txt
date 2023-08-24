@@ -1,5 +1,5 @@
-[master,HEAD]
+[main,HEAD]
 |
 c1
 |
-[origin/master]
+[origin/main]

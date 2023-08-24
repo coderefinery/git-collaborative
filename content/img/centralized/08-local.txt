@@ -1,8 +1,8 @@
-         [origin/master]
+         [origin/main]
           |
           d1---c3*
          /     |
-        /     [master,HEAD]
+        /     [main,HEAD]
 c1----c2
         \
          b1
