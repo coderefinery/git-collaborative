@@ -10,19 +10,19 @@ We share this as a good starting point for planning:
 - 09:15 - 09:30: [Concepts around collaboration](https://coderefinery.github.io/git-collaborative/remotes/)
     - Explain terms: Pull, push, clone, fork. Focus on pull and not fetch.
     - Focus more on clone and less on generating from templates and importing.
-- 09:30 - 10:45: [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
+- 09:30 - 11:00: [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
     - 9:30 - 9:45: Explain concepts
     - 9:45 - 9:55: Break
     - 9:55 - 10:00: Inform clearly what is expected outcome
     - 10:00 - 10:30: [Exercise](https://coderefinery.github.io/git-collaborative/centralized/#exercise-preparation)
-    - 10:30 - 10:45: Discussion and answering questions
-- 10:45 - 10:55: Break
-- 10:55 - 12:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
-    - 10:55 - 11:10: Concepts and what are exercise outcomes
-    - 11:10 - 11:40: [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
-    - 11:40 - 11:55: Discussion and answering questions
-- 11:55 - 12:05: break
-- 12:05 - 12:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/)
+    - 10:30 - 11:00: Instructors go through the exercise. Discussion and answering questions
+- 11:00 - 12:00: Lunch Break
+- 12:00 - 13:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
+    - 12:00 - 12:15: Concepts and what are exercise outcomes
+    - 12:15 - 12:45: [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
+    - 12:45 - 13:00: Instructors go through excercises. Discussion and answering questions
+- 13:00 - 12:10: break
+- 13:10 - 13:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/)
                  and Q&A
 
 
