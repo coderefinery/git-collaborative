@@ -20,10 +20,9 @@ We share this as a good starting point for planning:
 - 12:00 - 13:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
     - 12:00 - 12:15: Concepts and what are exercise outcomes
     - 12:15 - 12:45: [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
-    - 12:45 - 13:00: Instructors go through excercises. Discussion and answering questions
-- 13:00 - 13:10: break
-- 13:10 - 13:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/)
-                 and Q&A
+    - 12:45 - 12:55 Break
+    - 12:55 - 13:10: Instructors go through excercises. Discussion and answering questions
+- 13:10 - 13:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/) and Q&A
 
 
 ## Why we teach this lesson
