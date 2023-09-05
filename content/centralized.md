@@ -40,7 +40,7 @@ Features:
 - Typically all developers have both read and write permissions (double-headed arrows).
 - Suited for cases where **all developers are in the same group or organization or project**.
 - **Everybody who wants to contribute needs write access**.
-- Good idea to write-protect the main branch (typically `master` or `main`).
+- Good idea to write-protect the main branch (typically `main`).
 
 Real life examples:
 
@@ -184,10 +184,10 @@ Here and in what follows, "c1" is a commit, "b1" etc. are commits on side branch
 and "m1" is a merge commit.
 
 - We clone the entire history, all branches, all commits. In our case, we have one branch (we did not include *all branches* when creating our repository from template) and we have only one commit (*initial commit*).
-- `git clone` creates pointers `origin/master` so you can see the branches of the origin.
+- `git clone` creates pointers `origin/main` so you can see the branches of the origin.
 - `origin` refers to where we cloned from.
 - `origin` is a shortcut for the full URL.
-- `origin/master` is a read-only pointer.
+- `origin/main` is a read-only pointer.
 - The branches starting with `origin/` only move during `git pull` or `git fetch` or `git push`.
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
@@ -205,11 +205,11 @@ Try to find out where this repository was cloned from using `git remote -v`.
 
 ### Step C. Create a branch `yourname-somefeature` pointing at your commit
 
-Create a branch from the current `master`. Also adapt "yourname-somefeature" to a better name:
+Create a branch from the current `main`. Also adapt "yourname-somefeature" to a better name:
 
 ```console
-$ git branch yourname-somefeature master
-$ git checkout yourname-somefeature
+$ git branch yourname-somefeature main
+$ git switch yourname-somefeature
 ```
 
 The `yourname-` prefix has no special meaning here (not like `origin/`): it is just part of a
@@ -308,7 +308,7 @@ discuss what you see.
 
 ### Step H. Submit a pull request
 
-Submit a pull request from your branch towards the `master` branch.
+Submit a pull request from your branch towards the `main` branch.
 Do this through the web interface.
 
 Meaning of a pull request: think of it as change proposal. In a popular project, it means that anyone can
@@ -389,7 +389,7 @@ At this stage demonstrate how to suggest small changes to pull/merge requests:
 
 **Protected branches**
 
-- A good setting for large projects is to make the `master` or `main` branch **protected** and all changes to it have to go
+- A good setting for large projects is to make the `main` branch **protected** and all changes to it have to go
   through code review.
 - Centralized workflow with protected branches is a good setup for many projects.
 
@@ -407,8 +407,8 @@ exercise repository** but we do this together in the main room so that we can
 discuss this step and ask questions.
 
 ```console
-$ git checkout master
-$ git pull origin master
+$ git switch main
+$ git pull origin main
 ```
 
 ```{figure} img/centralized/06-remote.svg
@@ -456,11 +456,11 @@ for more examples.
   makes a new change (create a new file)
   but without creating a new branch.
 
-  1. You all create a new file in the master branch, stage and commit your change locally.
+  1. You all create a new file in the main branch, stage and commit your change locally.
   2. Try to push the change to the upstream repository:
 
      ```console
-     $ git push origin master
+     $ git push origin main
      ```
      You probably see something like this:
 
@@ -468,7 +468,7 @@ for more examples.
      $ git push
 
      To https://github.com/user/repo.git
-      ! [rejected]        master -> master (non-fast-forward)
+      ! [rejected]        main -> main (non-fast-forward)
      error: failed to push some refs to 'https://github.com/user/repo.git'
      To prevent you from losing history, non-fast-forward updates were rejected
      Merge the remote changes (e.g. 'git pull') before pushing again.  See the
@@ -489,7 +489,7 @@ for more examples.
 ````{discussion} Discussion: How to make changes to remote branches
   If there is a remote branch `somefeature`, we can create a local branch and start tracking `origin/somefeature` like this:
   ```console
-  $ git checkout somefeature
+  $ git switch somefeature
   ```
 
   Once we track a remote branch, we can pull from it and push to it:
