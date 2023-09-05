@@ -236,7 +236,7 @@ its content. For example:
 
 ```console
 $ git branch myname-feature    # describes both who it belongs to and the purpose
-$ git checkout myname-feature
+$ git switch myname-feature
 ```
 
 **On the new branch create a new file** which will hold your recipe,
@@ -321,7 +321,7 @@ local
 
 ### Step E: Open a pull request
 
-Then file a pull request from the branch on your fork towards the master branch on the central repository.
+Then file a pull request from the branch on your fork towards the main branch on the central repository.
 
 ````{admonition} Pictorial representation for steps D and E
 ---
@@ -416,9 +416,9 @@ instead of aliases like `origin` or `upstream`.
 
 Here we pull from the central repo and push to our fork:
 ```console
-$ git checkout master
-$ git pull <central-repository-url> master
-$ git push <fork-url> master
+$ git switch main
+$ git pull <central-repository-url> main
+$ git push <fork-url> main
 ```
 
 Here is a pictorial representation of this part:
@@ -456,8 +456,8 @@ local
 ```
 
 ```console
-$ git checkout master
-$ git merge central/master
+$ git switch main
+$ git merge central/main
 ```
 
 ```{figure} img/forking/github-remote-03.svg
@@ -476,7 +476,7 @@ local
 ```
 
 ```console
-$ git push origin master
+$ git push origin main
 ```
 
 ```{figure} img/forking/github-remote-03.svg
