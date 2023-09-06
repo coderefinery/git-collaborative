@@ -19,7 +19,7 @@ the basics.
 * **pull**: Fetch (above) and then merge
 * **origin**: Default name for a remote repository.
 * **origin/NAME**: A branch name which represents a remote branch.
-* **master**: Default name for main branch.
+* **main**: Default name for main branch.
 * **merge**: Combine the changes on two branches.
 * **conflict**: When a merge has changes that affect the same lines,
   git can not automatically figure out what to do.  It presents the
@@ -55,7 +55,7 @@ Status:
 
 General work:
 
-* `git checkout <branch-name>`: Make a branch active.
+* `git switch <branch-name>`: Make a branch active.
 * `git push [<remote-name>] [<branch>:<branch>]`: Send commits and
   update the branch on the remote.
 * `git pull [<remote-name>] [<branch-name>]`: Fetch and then merge

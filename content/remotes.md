@@ -23,7 +23,7 @@
 
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
-- **branch**: Independent development line. The main development line is often called `main` or `master`.
+- **branch**: Independent development line. The main development line is often called `main`.
 - **tag**: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
   that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
 - **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
