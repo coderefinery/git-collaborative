@@ -40,7 +40,7 @@ Features:
 - Typically all developers have both read and write permissions (double-headed arrows).
 - Suited for cases where **all developers are in the same group or organization or project**.
 - **Everybody who wants to contribute needs write access**.
-- Good idea to write-protect the main branch (typically `main`).
+- Good idea to write-protect the main branch (typically `main` or `master`).
 
 Real life examples:
 
