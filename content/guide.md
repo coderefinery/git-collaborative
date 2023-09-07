@@ -1,9 +1,7 @@
 # Instructor guide
 
 
-## Detailed schedule
-
-We share this as a good starting point for planning:
+## Schedule Day 3
 
 - 08:50 - 09:00: Soft start and icebreaker question
 - 09:00 - 09:15: Recap Git, any HedgeDoc questions to highlight
