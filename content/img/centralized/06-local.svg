@@ -189,9 +189,9 @@
                         stroke-miterlimit:4;
                         stroke-opacity:1.0;
                         stroke-dasharray:none"
-                 width="120.0"
+                 width="104.0"
                  height="30.0"
-                 x="16.0"
+                 x="24.0"
                  y="65.0"
                  ry="0.0" />
            <text style="font-size:12.5px;
@@ -204,8 +204,8 @@
                         fill-opacity:1.0;
                         stroke:none;
                         font-family:DejaVu Sans Mono"
-                 x="23.5"
-                 y="85.5">origin/master</text>
+                 x="31.5"
+                 y="85.5">origin/main</text>
            
            <path style="fill:none;
                  stroke:#000000;
@@ -225,9 +225,9 @@
                         stroke-miterlimit:4;
                         stroke-opacity:1.0;
                         stroke-dasharray:none"
-                 width="64.0"
+                 width="48.0"
                  height="30.0"
-                 x="44.0"
+                 x="52.0"
                  y="-65.0"
                  ry="0.0" />
            <text style="font-size:12.5px;
@@ -240,8 +240,8 @@
                         fill-opacity:1.0;
                         stroke:none;
                         font-family:DejaVu Sans Mono"
-                 x="51.5"
-                 y="-44.5">master</text>
+                 x="59.5"
+                 y="-44.5">main</text>
            
            <path style="fill:none;
                  stroke:#000000;

@@ -1,4 +1,4 @@
-     [master,origin/master]
+     [main,origin/main]
       |
 c1----c2----c3
             |
