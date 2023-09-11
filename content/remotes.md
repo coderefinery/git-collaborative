@@ -97,19 +97,6 @@ Importing a repository.
 ```
 
 
-## Cloning and forking
-
-In essence, a main difference between cloning a repository and forking a repository is that the former is a general operation for generating copies of a repository on different computers, whereas forking is a particular operation implemented on GitHub/GitLab.
-
-```{figure} img/overview/forkandclone.png
-:alt: Forking and cloning
-:width: 100%
-:class: with-border
-
-Forking and cloning
-```
-
-
 ## Synchronizing changes between repositories
 
 - We need a mechanism to communicate changes between the repositories.
@@ -118,3 +105,12 @@ Forking and cloning
 - We will learn how to suggest changes within repositories on GitHub and across repositories (**pull request**).
 - Repositories that are forked or cloned do not automatically synchronize themselves:
   We will learn how to update forks (by pulling from the "central" repository).
+- A main difference between cloning a repository and forking a repository is that the former is a general operation for generating copies of a repository to different computers, whereas forking is a particular operation implemented on GitHub/GitLab.
+
+```{figure} img/overview/forkandclone.png
+:alt: Forking and cloning
+:width: 100%
+:class: with-border
+
+Forking and cloning
+```
