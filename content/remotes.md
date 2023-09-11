@@ -33,7 +33,10 @@
 
 ## Cloning a repository
 
-In order to make a complete copy a whole repository, the `git clone` command can be used. When cloning, all files of all branches of a repository are copied in one operation. Cloning of a repository is of relevance in a few different situations. Working on your own, cloning is the operation that you can use to create multiple instances of a repository on, for instance, a personal computer, a server computer, and a supercomputer. Another common use case for cloning is when working together within a smaller team where everyone has access to the same git repository.
+In order to make a complete copy a whole repository, the `git clone` command can be used. When cloning, all the files, of all or selected branches, of a repository are copied in one operation. Cloning of a repository is of relevance in a few different situations:
+* Working on your own, cloning is the operation that you can use to create multiple instances of a repository on, for instance, a personal computer, a server, and a supercomputer.
+* The parent repository could be a repository that you or your colleague own. A common use case for cloning is when working together within a smaller team where everyone has read and write access to the same git repository.
+* Alternatively, cloning can be made from a public repository of a code that you would like to use. Perhaps you have no intention to work on the code, but would like to stay in tune with the latest developments, also in-between releases of new versions of the code.
 
 ```{figure} img/overview/clone.png
 :alt: Cloning
@@ -46,7 +49,9 @@ Cloning
 
 ## Forking a repository
 
-Forking of a repository is of high relevance when working with a git repository to which you do not have write access. When a fork is made on GitHub/GitLab, a complete copy of the repository is made. The copy will reside under a different account on GitHub/GitLab.
+When a fork is made on GitHub/GitLab a complete copy, of all or selected branches, of the repository is made. The copy will reside under a different account on GitHub/GitLab. Forking of a repository is of high relevance when working with a git repository to which you do not have write access.
+* In the fork repository commits can be made to the base branch (`main` or `master`), and to other branches.
+* The commits that are made within the branches of the fork repository can be contributed back to the parent repository by means of pull or merge requests.
 
 ```{figure} img/overview/fork.png
 :alt: Forking
