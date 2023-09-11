@@ -30,12 +30,30 @@
 - **forking**: Taking a copy of a repository (which is typically not yours) - your
   copy (fork) stays on GitHub/GitLab and you can make changes to your copy.
 
-```{figure} img/overview/fork.png
-:alt: Forking and cloning
+
+## Cloning a repository
+
+In order to make a complete copy a whole repository, the `git clone` command can be used. When cloning, all files of all branches of a repository are copied in one operation. Cloning of a repository is of relevance in a few different situations. Working on your own, cloning is the operation that you can use to create multiple instances of a repository on, for instance, a personal computer, a server computer, and a supercomputer. Another common use case for cloning is when working together within a smaller team where everyone has access to the same git repository.
+
+```{figure} img/overview/clone.png
+:alt: Cloning
 :width: 100%
 :class: with-border
 
-Forking and cloning.
+Cloning
+```
+
+
+## Forking a repository
+
+Forking of a repository is of high relevance when working with a git repository to which you do not have write access. When a fork is made on GitHub/GitLab, a complete copy of the repository is made. The copy will reside under a different account on GitHub/GitLab.
+
+```{figure} img/overview/fork.png
+:alt: Forking
+:width: 100%
+:class: with-border
+
+Forking
 ```
 
 
@@ -71,6 +89,19 @@ Importing a repository.
 - Visit one of the repositories/projects that you have used recently and try to find out
   how many forks exist and where they are.
 - In which situations could it be useful to start from a "template" repository by generating?
+```
+
+
+## Cloning and forking
+
+In essence, a main difference between cloning a repository and forking a repository is that the former is a general operation for generating copies of a repository on different computers, whereas forking is a particular operation implemented on GitHub/GitLab.
+
+```{figure} img/overview/forkandclone.png
+:alt: Forking and cloning
+:width: 100%
+:class: with-border
+
+Forking and cloning
 ```
 
 
