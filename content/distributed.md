@@ -352,6 +352,11 @@ local
 ```
 ````
 
+### Step F: View your pull request
+
+Go to the central repository, and list all pull requests and view your your pull request. 
+Remember that the pull request is created on the original repostory. 
+
 **Wait here** until we integrate all pull requests into the central repo
 together.
 
