@@ -160,7 +160,7 @@ commands.  Carefully observe what happens, especially in `git graph`:
 First fork the exercise repository (please carefully check with your exercise group
 which repository you should fork).
 
-```{figure} img/forking/how-to-fork.jpg
+```{figure} img/forking/how-to-fork.png
 :class: with-border
 
 How to fork.
