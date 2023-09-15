@@ -43,7 +43,7 @@ cheatsheet](https://coderefinery.github.io/git-intro/reference/).
 
 Setup:
 
-* `git clone <url> [<target-directory>]`: Make a copy of existing
+* `git clone URL [TARGET-DIRECTORY]`: Make a copy of existing
   repository at &lt;url&gt;, containing all history.
 
 Status:
@@ -55,17 +55,17 @@ Status:
 
 General work:
 
-* `git switch <branch-name>`: Make a branch active.
-* `git push [<remote-name>] [<branch>:<branch>]`: Send commits and
+* `git switch BRANCH-NAME`: Make a branch active.
+* `git push [REMOTE-NAME] [BRANCH:BRANCH]`: Send commits and
   update the branch on the remote.
-* `git pull [<remote-name>] [<branch-name>]`: Fetch and then merge
+* `git pull [REMOTE-NAME] [BRANCH-NAME]`: Fetch and then merge
   automatically.  Can be convenient, but to be careful you can fetch
   and merge separately.
-* `git fetch [<remote-name>]`: Get commits from the remote.  Doesn't
+* `git fetch [REMOTE-NAME]`: Get commits from the remote.  Doesn't
   update local branches, but updates the remote tracking branches
   (like origin/NAME).
-* `git merge [<branch-name>]`: Updates your current branch with
+* `git merge [BRANCH-NAME]`: Updates your current branch with
   changes from another branch.  By default, merges to the branch is is
   tracking by default.
-* `git remote add <remote-name> <url>`: Adds a new remote with a
+* `git remote add REMOTE-NAME URL`: Adds a new remote with a
   certain name.

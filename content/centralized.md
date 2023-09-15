@@ -156,10 +156,10 @@ steps from other learners and helpers!
 ### Step A. Clone your maintainer's group repository
 
 ```console
-$ git clone <repository-url> centralized-workflow-exercise
+$ git clone REPOSITORY-URL centralized-workflow-exercise
 ```
 
-Where `<repository-url>` is the repository created by the exercise
+Where `REPOSITORY-URL` is the repository created by the exercise
 maintainer.
 
 **Clone using the SSH path** you get from the webpage (the one that starts with
@@ -262,7 +262,7 @@ clicking "Code", copying the SSH URL (starts with `git@github.com:`),
 and then updating the URL with:
 
 ```console
-$ git remote set-url origin <ssh-repository-url>
+$ git remote set-url origin SSH-REPOSITORY-URL
 ```
 ````
 

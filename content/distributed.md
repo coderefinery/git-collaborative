@@ -294,7 +294,7 @@ clicking "Code", copying the SSH URL (starts with `git@github.com:`),
 and then updating the URL with:
 
 ```console
-$ git remote set-url origin <repository-url>
+$ git remote set-url origin REPOSITORY-URL
 ```
 ````
 
@@ -422,8 +422,8 @@ instead of aliases like `origin` or `upstream`.
 Here we pull from the central repo and push to our fork:
 ```console
 $ git switch main
-$ git pull <central-repository-url> main
-$ git push <fork-url> main
+$ git pull CENTRAL-REPOSITORY-URL main
+$ git push FORK-URL main
 ```
 
 Here is a pictorial representation of this part:
@@ -441,7 +441,7 @@ Below is a step by step recipe with pictorial representations which hopefully
 makes clear what happens in each step.
 
 ```console
-$ git remote add central <central-repository-url>
+$ git remote add central CENTRAL-REPOSITORY-URL
 $ git fetch central
 ```
 
