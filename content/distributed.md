@@ -137,7 +137,7 @@ inspired by [tacofancy](https://github.com/sinker/tacofancy).
 
 **Exercise**:
 - Maintainer prepares an exercise repository (see above; this will take 5-10 minutes).
-- **Learners work on steps A-E** (15-20 minutes).
+- **Learners work on steps A-F** (15-20 minutes).
 - There are two optional steps after step E for those who want more.
 - After step E you take a break or help others.
   Please ask questions both during group work and in the collaborative document.
