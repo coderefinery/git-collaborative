@@ -109,27 +109,8 @@ exercise repository.
   new issue in that repository.  The day before
   - Why a fifth repository?  So that learners don't get emails from all
     other access requests once they get added to the team
-  - Sample text:
-    ```
-    On Thursday we will all practice how to collaborate using Git/GitHub
-    and one ambitious thing we will try is to collaborate with
-    participants following via stream. This does not apply to teams and
-    exercise groups who will create their own exercise repositories and
-    these groups can ignore the rest of this section.
-
-    For this to work we will need to give you access to a practice
-    repository.  This is option, you could just watch instead. We delete
-    these repositories after the workshop and will not use your username
-    for anything other than this exercise.
-
-    If you would like to participate in this, could you please open an
-    issue here.  Give any title like "please add me" and then click
-    submit:
-    - https://github.com/cr-workshop-exercises/access-requests/issues/new
-
-    Example for how I requested access:
-    - https://github.com/cr-workshop-exercises/access-requests/issues/1
-    ```
+  - [Example email requesting learners to join](https://coderefinery.github.io/2023-09-19-workshop/communication/#2023-09-19-summary-day-1-and-preparation-for-day-3)
+  - [Example issue comment](https://github.com/cr-workshop-exercises/access-requests/issues/110)
 
 
 ## Typical pitfalls
