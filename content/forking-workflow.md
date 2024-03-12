@@ -1,4 +1,4 @@
-# Distributed version control and forking workflow
+# How to contribute changes to repositories that belong to others
 
 ```{objectives}
 - Get a mental representation of what is happening on GitHub/GitLab.

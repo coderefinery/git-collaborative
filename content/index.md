@@ -45,9 +45,9 @@ to host your Git repository on another platform.
 :maxdepth: 1
 :caption: Core episodes
 
-remotes.md
-centralized.md
-distributed.md
+concepts.md
+same-repository.md
+forking-workflow.md
 contributing.md
 ```
 

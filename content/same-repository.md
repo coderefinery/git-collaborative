@@ -1,4 +1,4 @@
-# Centralized workflow
+# Collaborating within the same repository
 
 ```{objectives}
 - Understand how to collaborate using a centralized workflow.
@@ -18,7 +18,7 @@ In this episode, we will explore the usage of a **centralized workflow** for col
 access to that **central repository** - convenient (but doesn't scale to a huge
 project).
 
-In {doc}`the next section <distributed>`, we will see that Git is
+In {doc}`the next section <forking-workflow>`, we will see that Git is
 **distributed** version control.
 This means that any type of repository links that you can think of can be
 implemented - not just "everything connects to one central server".
