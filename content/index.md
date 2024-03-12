@@ -49,6 +49,7 @@ concepts.md
 same-repository.md
 forking-workflow.md
 contributing.md
+code-review.md
 ```
 
 ```{toctree}

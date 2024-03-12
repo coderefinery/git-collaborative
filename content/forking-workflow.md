@@ -81,6 +81,11 @@ Please step out of the repository and check that you fork the **forking**-workfl
 ```
 
 
+## Exercise
+
+We are working on combining the steps into one exercise.
+
+
 ## Exercise preparation
 
 ``````{prereq} Exercise preparation

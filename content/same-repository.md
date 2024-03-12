@@ -48,6 +48,11 @@ Real life examples:
 - [https://github.com/ropensci/plotly](https://github.com/ropensci/plotly)
 
 
+## Exercise
+
+We are working on combining the steps into one exercise.
+
+
 ## Exercise preparation
 
 In this exercise we will practice collaborative centralized workflow in
