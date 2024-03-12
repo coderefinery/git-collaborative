@@ -66,6 +66,7 @@ bare-repos.md
 reference
 exercises
 guide
+PDF version <https://coderefinery.github.io/git-collaborative/lesson.pdf>
 ```
 
 ```{toctree}
