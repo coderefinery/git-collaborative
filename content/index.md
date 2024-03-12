@@ -43,13 +43,21 @@ to host your Git repository on another platform.
 
 ```{toctree}
 :maxdepth: 1
-:caption: Core episodes
+:caption: Core lesson
 
 concepts.md
 same-repository.md
 forking-workflow.md
-contributing.md
 code-review.md
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Older episodes
+
+same-repository-old.md
+forking-workflow-old.md
+contributing.md
 ```
 
 ```{toctree}
