@@ -37,6 +37,7 @@ extensions = [
     # remove once sphinx_rtd_theme updated for contrast and accessibility:
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
+    "sphinx.ext.intersphinx",
 ]
 
 # MyST extensions
@@ -64,6 +65,10 @@ exclude_patterns = [
     "*venv*",
     "img/README.md",
 ]
+
+intersphinx_mapping = {
+    'git-intro': ('https://coderefinery.github.io/git-intro/', None)    }
+
 
 
 # -- Options for HTML output -------------------------------------------------

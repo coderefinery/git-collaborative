@@ -12,28 +12,57 @@ the basics.
 
 ## Glossary
 
-* **remote**: Roughly, another git repository on another computer.  A
-  repository can be linked to several other remotes.
-* **push**: Send a branch from your current repository to another repository
-* **fetch**: Update your view of another repository
-* **pull**: Fetch (above) and then merge
-* **origin**: Default name for a remote repository.
-* **origin/NAME**: A branch name which represents a remote branch.
-* **main**: Default name for main branch.
-* **merge**: Combine the changes on two branches.
-* **conflict**: When a merge has changes that affect the same lines,
-  git can not automatically figure out what to do.  It presents the
-  conflict to the user to resolve.
-* **issue**: Feature of web repositories that allows discussion
-  related to a repository.
-* **pull request**: A GitHub/Gitlab feature that allows you to send a
-  code suggestion using a branch, which allows one-button merging.  In
-  Gitlab, called "**merge request**".
-* **git hook**: Code that can run before or after certain actions, for
-  example to do tests before allowing you to commit.
-* **bare repository**: A copy of a repository that only is only the `.git`
-  directory: there are no files actually checked out.  Directory names
-  usually like `something.git`
+:::{glossary}
+
+remote
+   Roughly, another git repository on another computer.  A
+   repository can be linked to several other remotes.
+
+push
+   Send a branch from your current repository to another repository
+
+fetch
+   Update your view of another repository
+
+pull
+   Fetch (above) and then merge
+
+origin
+   Default name for a remote repository.
+
+origin/NAME
+   A branch name which represents a remote branch.
+
+main
+   Default name for main branch.
+
+merge
+   Combine the changes on two branches.
+
+conflict
+   When a merge has changes that affect the same lines,
+   git can not automatically figure out what to do.  It presents the
+   conflict to the user to resolve.
+
+issue
+   Feature of web repositories that allows discussion
+   related to a repository.
+
+pull request
+   A GitHub/Gitlab feature that allows you to send a
+   code suggestion using a branch, which allows one-button merging.  In
+   Gitlab, called "**merge request**".
+
+git hook
+   Code that can run before or after certain actions, for
+   example to do tests before allowing you to commit.
+
+bare repository
+   A copy of a repository that only is only the `.git`
+   directory: there are no files actually checked out.  Directory names
+   usually like `something.git`
+
+:::
 
 
 ## Commands we use
