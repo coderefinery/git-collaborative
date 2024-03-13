@@ -132,3 +132,11 @@ The fact that pull requests are from branch to branch also strongly suggests
 that it is a good practice to create a new branch for each pull request.
 Otherwise you could accidentally modify an open pull request by adding new
 commits to the source branch.
+
+
+## Summary
+
+- Our process isn't just about code now.  It's about discussion and
+  working together to make the whole process better.
+- GitHub discussions and reviewing is quite powerful and can make
+  small changes easy.

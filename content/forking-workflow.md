@@ -198,3 +198,12 @@ After the update my "branch is up to date" with the upstream repository:
 - If we later wonder why something was done, we have the issue/proposal as
   reference and can read up on the reasoning behind a code change
 :::
+
+
+
+## Summary
+
+- This forking workflow lets you propose changes to repositories for
+  which *you have no access*.
+- This is the way that much modern open-source software works.
+- You can now contribute to any project you can view.
