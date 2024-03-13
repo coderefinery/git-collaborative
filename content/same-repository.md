@@ -239,6 +239,8 @@ Checklist for reviewing a pull request:
 - Is the description informative?
 - Scroll down to see commits.
 - Scroll down to see the changes.
+- If you get incredibly many changes, also consider the license or copyright
+  and ask where all that code is coming from.
 - Again, be kind and constructive.
 - Later we will learn how to suggest changes directly in the pull request.
 
