@@ -110,7 +110,7 @@ most research groups.
 1. Make a change to the recipe book on the new branch and in the commit
    cross-reference the issue you opened (see the walk-through below for how to do that).
 1. Open a pull request towards the main branch.
-1. Review somebody else's pull request and give constructive feedback.
+1. Review somebody else's pull request and give constructive feedback. Merge their pull request.
 1. Try to create a new branch with some half-finished work and open a draft
    pull request. Verify that the draft pull request cannot be merged since it
    is not meant to be merged yet.
