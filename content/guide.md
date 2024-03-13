@@ -123,7 +123,7 @@ exercise repository.
   - Why a fifth repository?  So that learners don't get emails from all
     other access requests once they get added to the team
   - [Example email requesting learners to join](https://coderefinery.github.io/2024-03-12-workshop/communication/#2024-03-12-exercise-preparation-for-learners-without-own-group)
-  - [Example issue comment]([https://github.com/cr-workshop-exercises/access-requests/issues/110](https://github.com/cr-workshop-exercises/access-requests/issues/41))
+  - [Example issue comment](https://github.com/cr-workshop-exercises/access-requests/issues/41)
 
 
 ## Typical pitfalls
