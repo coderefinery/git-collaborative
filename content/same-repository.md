@@ -232,7 +232,7 @@ which issue and to know from when until when precisely the issue was open.
 ### Reviewing pull requests
 
 Checklist for reviewing a pull request:
-- Be kind, on the other side is a human who has effort into this.
+- Be kind, on the other side is a human who has put effort into this.
 - Be constructive: if you see a problem, suggest a solution.
 - Towards which branch is this directed?
 - Is the title descriptive?
