@@ -36,15 +36,24 @@ previous episode.
    deliberately introduce a typo and also a larger mistake which we will want to fix during the code review.
 1. Open a pull request towards the main branch.
 1. As a reviewer to somebody else's pull request, ask for an improvement and
-   also directly suggest a change for the small typo.
-1. As the submitter, learn how to accept the suggested change.
+   also directly suggest a change for the small typo. (Hint:
+   suggestions are possible through the GitHub web interface, view of
+   a pull request, "Files changed" view, after selecting some lines.
+   Look for the "±" button.)
+1. As the submitter, learn how to accept the suggested change.  (Hint:
+   GitHub web interface, "Files Changed" view.)
 1. As the submitter, improve the pull request without having to close and open
-   a new one: by adding a new commit to the same branch.
+   a new one: by adding a new commit to the same branch. (Hint: push
+   to the branch again.)
 1. Once the changes are addressed, merge the pull request.
 :::
 
 
 ## Help and discussion
+
+From here on out, we don't give detailed steps to the solution.  You
+need to combine what you know, and the extra info below, in order to
+solve the above.
 
 ### How to ask for changes in a pull request
 
