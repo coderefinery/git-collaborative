@@ -25,7 +25,7 @@ We will add more details and screenshots before the course.
    also suggest a change for the small typo.
 1. As the submitter, improve the pull request without having to close and open
    a new one: by adding a new commit to the same branch.
-1. Once the changes are addressed, merge the pull request. 
+1. Once the changes are addressed, merge the pull request.
 :::
 
 
