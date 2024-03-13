@@ -91,7 +91,7 @@ exercise repository.
   that you can give others admin access to add collaborators. Also this way you
   can then fork yourself if needed.
 - For CR workshops, the exercises were placed under
-  <https://github.com/cr-workshop-exercises>.
+  <https://github.com/cr-workshop-exercises>. The instructors or team leads need to have owner status in the organization in order to invite people.
 - We have created two versions of each **a day in advance** to signal which one might end up
   being discussed on recording/stream:
   - `centralized-workflow-exercise-recorded`
@@ -106,11 +106,24 @@ exercise repository.
 - We have collected usernames of people who want to contribute via
   issues on GitHub.  Make a fifth repository, `access-requests`,
   create a sample access request issue there, and have learners make a
-  new issue in that repository.  The day before
+  new issue in that repository.  The day/morning before the day of the lesson the instructor or team leader now has to invite the learners to the team. Three steps:
+      1. copy the learners GitHub username from the issue
+      2. go to [team member page, example linked here](https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants/members) and invite that username to the team (this means first clicking invite and then scrolling down to click the "add username to ..." button. This sends an email to that users email that is connected to their GitHub account.
+      3. In the issue, copy following text (or similar) to the issue and "close with comment":
+  ```
+  We have added you to the CodeRefinery exercise repository.
+
+  What you should do before the exercise starts:
+
+  You will get an invitation from GitHub to your email address (that GitHub knows about). Please accept that invitation so that you can participate in the collaborative exercise.
+  To make sure you don't get too many emails during the exercise, don't forget to "unwatch" both https://github.com/cr-workshop-exercises/centralized-workflow-exercise and https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
+  To "unwatch", go to the repository and click the "Unwatch" button (top middle of the screen) and then select "Participating and @mentions".
+``
+  
   - Why a fifth repository?  So that learners don't get emails from all
     other access requests once they get added to the team
-  - [Example email requesting learners to join](https://coderefinery.github.io/2023-09-19-workshop/communication/#2023-09-19-summary-day-1-and-preparation-for-day-3)
-  - [Example issue comment](https://github.com/cr-workshop-exercises/access-requests/issues/110)
+  - [Example email requesting learners to join](https://coderefinery.github.io/2024-03-12-workshop/communication/#2024-03-12-exercise-preparation-for-learners-without-own-group)
+  - [Example issue comment]([https://github.com/cr-workshop-exercises/access-requests/issues/110](https://github.com/cr-workshop-exercises/access-requests/issues/41))
 
 
 ## Typical pitfalls
