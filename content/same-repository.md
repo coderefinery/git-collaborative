@@ -10,6 +10,81 @@ most research groups.
 
 ## Exercise
 
+::::::{prereq} Exercise preparation
+:::::{tabs}
+  ::::{tab} Part of team/exercise room
+  - Form not too large groups (4-5 persons).
+  - Each group needs to appoint someone who will host the shared
+    GitHub repository: the *maintainer*.
+    This is typically the exercise lead (if available).  Everyone else
+    is a *collaborator*.
+  - The **maintainer** (one person per group) generates a new repository
+    from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
+    called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
+    :::{figure} img/centralized/generate_repo.png
+    :alt: Screenshot of generating the exercise repository
+    :width: 100%
+    :::
+  - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
+    - Collaborators give their GitHub usernames to their chosen maintainer.
+    - Maintainer gives the other group members the newly created GitHub repository URL.
+    - Maintainer adds participants as collaborators to their project (Settings -> Collaborators and teams -> Manage access -> Add people).
+  ::::
+
+  ::::{tab} Following on your own
+  The instructors are the **maintainers**.  All watchers are
+  **collaborators**.  This exercise is only possible during our
+  livestream courses.
+  The preparation typically happens already 1-2 days before.
+
+  :::{admonition} If you have not requested access
+  ---
+  class: dropdown
+  ---
+  If you have not yet requested access, could you please [open an
+  issue in this
+  repository](https://github.com/cr-workshop-exercises/access-requests/issues/new/choose).
+  Wait a
+  minute for staff to add you, then wait for the invite email to arrive and
+  accept the invitation from the email and "unwatch" repositories (below).
+  :::
+
+  **Choose only one to work with** (you must have requested access already, see above)
+
+  - Not recorded:
+    <https://github.com/cr-workshop-exercises/centralized-workflow-exercise>
+    (this will not be shown on stream or recorded in our videos, but is public
+    on the internet until it is deleted)
+  - Recorded: <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded> (this will be shown on stream and recorded, **your username and comments may appear in the recorded video on YouTube**)
+  ::::
+:::::
+
+- **Don't forget to accept the invitation**
+  - Check <https://github.com/settings/organizations/>
+  - Alternatively check the inbox for the email account you registered with
+    GitHub. GitHub emails you an invitation link, but if you don't receive it
+    you can go to your GitHub notifications in the top right corner. The
+    maintainer can also "copy invite link" and share it within the group.
+
+(unwatch)=
+
+- **Watching and unwatching repositories**
+  - Now that you are a collaborator, you get notified about new issues and pull
+    requests via email.
+  - If you do not wish this, you can "unwatch" a repository (top of
+    the project page).
+  - However, we recommend watching repositories you are interested
+    in. You can learn things from experts just by watching the
+    activity that come through a popular project.
+  :::{figure} img/centralized/unwatch.png
+  :alt: Unwatching a repository
+
+  Unwatch a repository by clicking "Unwatch" in the repository view,
+  then "Participating and @mentions" - this way, you will get
+  notifications about your own interactions.
+  :::
+::::::
+
 :::{exercise} Exercise: Collaborating within the same repository (25 min)
 
 **Technical requirements**:
