@@ -10,7 +10,15 @@ most research groups.
 
 ## Exercise
 
+In this exercise, we will contribute to a repository via a {term}`pull
+request`.  This means that you propose some change, and then it is
+accepted (or not).
+
 ::::::{prereq} Exercise preparation
+
+First, we need to get access to some repository to which we will
+contribute.
+
 :::::{tabs}
   ::::{tab} Part of team/exercise room
   - Form not too large groups (4-5 persons).
@@ -87,10 +95,10 @@ most research groups.
 
 :::{exercise} Exercise: Collaborating within the same repository (25 min)
 
-**Technical requirements**:
+**Technical requirements** (from installation instructions):
 - If you create the commits locally: [Being able to authenticate to GitHub](https://coderefinery.github.io/installation/ssh/)
 
-**What is familiar** from the previous workshop days:
+**What is familiar** from the previous workshop days (not repeated here):
 - Cloning a repository ([previous lesson](https://coderefinery.github.io/git-intro/local-workflow/))
 - Creating a branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
 - Committing a change on the new branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
@@ -108,7 +116,10 @@ most research groups.
    issue number since you will need it later.
 1. Create a new branch.
 1. Make a change to the recipe book on the new branch and in the commit
-   cross-reference the issue you opened (see the walk-through below for how to do that).
+   cross-reference the issue you opened (see the walk-through below
+   for how to do that).
+1. Push your new branch (with the new commit) to the repository you
+   are working on.
 1. Open a pull request towards the main branch.
 1. Review somebody else's pull request and give constructive feedback. Merge their pull request.
 1. Try to create a new branch with some half-finished work and open a draft
@@ -117,10 +128,63 @@ most research groups.
 :::
 
 
-## Help and discussion
+## Solution and hints
+
+### (1) Opening an issue
+
+This is done through the GitHub web interface.  For example, you could
+give the name of the recipe you want to add (so that others don't add
+the same one).  It is the "Issues" tab.
+
+### (2) Create a new branch.
+
+If on GitHub, you can make the branch in the web interface
+({external:doc}`commits`).  If working locally, you need
+{external:doc}`local-workflow`.
 
 
-### Pushing local changes to the remote repository
+### (3) Make a change adding the recipe
+
+Add a new file with the recipe in it.  Commit the file. In the commit
+message, include the note about the issue number, saying that this
+will close that issue.
+
+#### Cross-referencing issues and pull requests
+
+Each issue and each pull request gets a number and you can cross-reference them.
+
+When you open an issue, note down the issue number (in this case it is `#2`):
+:::{figure} img/same-repository/issue-number.png
+:width: 60%
+:class: with-border
+:alt: Each issue gets a number
+:::
+
+You can reference this issue number in a commit message or in a pull request, like in this
+commit message:
+```text
+this is the new recipe; fixes #2
+```
+
+If you forget to do that in your commit message, you can also reference the issue
+in the pull request description. And instead of `fixes` you can also use `closes` or `resolves`
+or `fix` or `close` or `resolve` (case insensitive).
+
+Here are all the keywords that GitHub recognizes:
+<https://help.github.com/en/articles/closing-issues-using-keywords>
+
+Then observe what happens in the issue once your commit gets merged: it will
+automatically close the issue and create a link between the issue and the
+commit. This is very useful for tracking what changes were made in response to
+which issue and to know from when until when precisely the issue was open.
+
+
+### (4) Push to GitHub as a new branch
+
+Covered in {external:doc}`local-workflow`.
+
+Push the branch to the repository. You should end up with a branch
+visible in the GitHub web view.
 
 This is only necessary if you created the changes locally. If you created the
 changes directly on GitHub, you can skip this step.
@@ -189,47 +253,15 @@ $ git remote set-url origin NEWADDRESS
 :::::
 
 
-### What is a protected branch? And how to modify it?
+### (5) Open a pull request towards the main branch
 
-A protected branch on GitHub or GitLab is a branch that cannot (accidentally)
-deleted or force-pushed to. It is also possible to require that a branch cannot
-be directly pushed to or modified, but that changes must be submitted via a
-pull request.
-
-To protect a branch in your own repository, go to "Settings" -> "Branches".
+This is done through the GitHub web interface.  We saw this in, for
+example, {ref}`begin-pull-request`
 
 
-### Cross-referencing issues and pull requests
+### (6) Reviewing pull requests
 
-Each issue and each pull request gets a number and you can cross-reference them.
-
-When you open an issue, note down the issue number (in this case it is `#2`):
-:::{figure} img/same-repository/issue-number.png
-:width: 60%
-:class: with-border
-:alt: Each issue gets a number
-:::
-
-You can reference this issue number in a commit message or in a pull request, like in this
-commit message:
-```text
-this is the new recipe; fixes #2
-```
-
-If you forget to do that in your commit message, you can also reference the issue
-in the pull request description. And instead of `fixes` you can also use `closes` or `resolves`
-or `fix` or `close` or `resolve` (case insensitive).
-
-Here are all the keywords that GitHub recognizes:
-<https://help.github.com/en/articles/closing-issues-using-keywords>
-
-Then observe what happens in the issue once your commit gets merged: it will
-automatically close the issue and create a link between the issue and the
-commit. This is very useful for tracking what changes were made in response to
-which issue and to know from when until when precisely the issue was open.
-
-
-### Reviewing pull requests
+You review through the GitHub web interface.
 
 Checklist for reviewing a pull request:
 - Be kind, on the other side is a human who has put effort into this.
@@ -244,8 +276,12 @@ Checklist for reviewing a pull request:
 - Again, be kind and constructive.
 - Later we will learn how to suggest changes directly in the pull request.
 
+If someone is new, it's often nice to say something encouraging in the
+comments before merging (even if it's just "thanks").  If all is good
+and there's not much else to say, you could merge directly.
 
-### Draft pull requests
+
+### (7) Draft pull requests
 
 Try to create a draft pull request:
 :::{figure} img/same-repository/draft-pr.png
@@ -267,3 +303,22 @@ Draft pull requests can be useful for:
   signaling that it is ready to merge.
 - **Information**: They can help communicating to others that a change is coming up and in
   progress.
+
+
+### What is a protected branch? And how to modify it?
+
+A protected branch on GitHub or GitLab is a branch that cannot (accidentally)
+deleted or force-pushed to. It is also possible to require that a branch cannot
+be directly pushed to or modified, but that changes must be submitted via a
+pull request.
+
+To protect a branch in your own repository, go to "Settings" -> "Branches".
+
+
+
+### Summary
+
+- We used all the same pieces that we've learned the last two days
+- But we successfully contributed to someone else's project!
+- The pull request allowed us to contribute without changing directly:
+  this is very good when it's not mainly our project.
