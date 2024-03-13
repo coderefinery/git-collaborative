@@ -1,6 +1,11 @@
 # Practicing code review
 
-We will add more details and screenshots before the course.
+In this episode we will practice the code review process. We will learn how to
+ask for changes in a pull request, how to suggest a change in a pull request,
+and how to modify a pull request.
+
+This will enable research groups to work more collaboratively and to not only
+improve the code quality but also to learn from each other.
 
 
 ## Exercise

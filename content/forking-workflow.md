@@ -1,7 +1,12 @@
 # How to contribute changes to repositories that belong to others
 
+In this episode we prepare you to suggest and contribute changes to
+repositories that belong to others. These might be open source projects that
+you use in your work.
 
-We will add more details and screenshots before the course.
+We will see how Git and services like GitHub or GitLab can be used to suggest
+modification without having to ask for write access to the repository and
+accept modifications without having to grant write access to others.
 
 
 ## Exercise
@@ -19,6 +24,7 @@ We will add more details and screenshots before the course.
 
 **What will be new** in this exercise:
 - Opening a pull request towards the upstream repository.
+- Pull requests can be coupled with automated testing.
 - Learning that your fork can get out of date.
 - After the pull requests are merged, updating your fork with the changes.
 - Learn how to approach other people's repositories with ideas, changes, and requests.
@@ -30,6 +36,11 @@ We will add more details and screenshots before the course.
 1. Make a change to the recipe book on the new branch and in the commit cross-reference the issue you opened.
    See the walk-through below for how to do this.
 1. Open a pull request towards the upstream repository.
+1. Team leaders will merge the pull requests. For individual participants, the
+   instructors and workshop organizers will review and merge the pull requests.
+   During the review, pay attention to the automated test step (here for
+   demonstration purposes, we test whether the recipe contains an ingredients
+   and an instructions sections).
 1. After few pull requests are merged, update your fork with the changes.
 1. Check that in your fork you can see changes from other people's pull requests.
 :::

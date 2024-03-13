@@ -1,6 +1,11 @@
 # Collaborating within the same repository
 
-We will add more details and screenshots before the course.
+In this episode, we will learn how to collaborate within the same repository.
+We will learn how to cross-reference issues and pull requests, how to review
+pull requests, and how to use draft pull requests.
+
+This exercise will form a good basis for collaboration that is suitable for
+most research groups.
 
 
 ## Exercise
