@@ -10,6 +10,11 @@ improve the code quality but also to learn from each other.
 
 ## Exercise
 
+:::{prereq} Exercise preparation
+We can continue in the same exercise repository which we have used in the
+previous episode.
+:::
+
 :::{exercise} Exercise: Practicing code review (25 min)
 
 **Technical requirements**:
