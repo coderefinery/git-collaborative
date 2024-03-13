@@ -1,4 +1,4 @@
-# How to contribute changes to repositories that belong to others
+# Forking workflow
 
 ```{objectives}
 - Get a mental representation of what is happening on GitHub/GitLab.
