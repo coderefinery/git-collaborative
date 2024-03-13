@@ -47,8 +47,8 @@ to host your Git repository on another platform.
 
 concepts.md
 same-repository.md
-forking-workflow.md
 code-review.md
+forking-workflow.md
 ```
 
 ```{toctree}
