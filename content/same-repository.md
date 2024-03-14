@@ -256,7 +256,7 @@ $ git remote set-url origin NEWADDRESS
 ### (5) Open a pull request towards the main branch
 
 This is done through the GitHub web interface.  We saw this in, for
-example, {ref}`begin-pull-request`
+example, in a [previous lesson](https://coderefinery.github.io/git-intro/merging/).
 
 
 ### (6) Reviewing pull requests
