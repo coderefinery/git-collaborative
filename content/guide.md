@@ -31,6 +31,65 @@ Times here are in CE(S)T.
 - 13:00 - 13:30 (30 min) Discussion, demonstration, Q&A, feedback, what to expect next week
 
 
+## Preparing exercises within exercise groups
+
+Exercise leads typically prepare exercise repositories for the exercise group
+(although the material speaks about "maintainer" who can also be one of the
+learners). Preparing the first exercise (centralized workflow) **will take more
+time** than preparing the second (forking workflow). Most preparation time is not
+the generating part but will go into communicating the URL to the exercise
+group, communicating their usernames, adding them as collaborators, and waiting
+until everybody accepts the GitHub invitation to join the newly created
+exercise repository.
+
+
+## Preparing exercises for the live stream
+
+- This **takes 30-60 minutes** to set up. Allocate the time for this before the workshop.
+- It requires coordinating with co-instructors and **communication with learners on days 1 and 2**.
+- Create the centralized exercises **in an organization** (not under your username) so
+  that you can give others admin access to add collaborators. Also this way you
+  can then fork yourself if needed.
+- For CR workshops, the exercises were placed under
+  <https://github.com/cr-workshop-exercises>. The instructors or team leads need to have owner status in the organization in order to invite people.
+- We have created two versions of each **a day in advance** to signal which one might end up
+  being discussed on recording/stream:
+  - `centralized-workflow-exercise-recorded`
+  - `centralized-workflow-exercise`
+  - `forking-workflow-exercise-recorded`
+  - `forking-workflow-exercise`
+- Protect the default branch of the two `centralized-*` repositories.
+
+How to give access to `centralized-workflow-exercise` and `centralized-workflow-exercise-recorded` repositories:
+- We created an organization team, `stream-exercise-participants`.  The
+  *centralized* workflow exercise repos have this team added as a
+  collaborator (*not* the forking - they fork so they don't need write
+  access there).
+- We created a fifth repository, [access-requests](https://github.com/cr-workshop-exercises/access-requests) with an issue template.
+- Learners who are not part of an exercise group and want to participate in this exercise will open an issue in the `access-requests` repository.
+  We use the `access-requests` repository so that learners don't get emails from all
+  other access requests once they get added to the team.
+- Make sure you have 2 other people who have admin access and can help you adding learners who request access 5 minutes after the exercise starts.
+- The day/morning before the day of the lesson the instructor or team leader now has to invite the learners **to the team** (not to specific repositories):
+  1. Copy the learners GitHub username from the issue.
+  1. Go to [team member page, example linked
+     here](https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants/members)
+     and invite that username to the team (this means first clicking invite and
+     then scrolling down to click the "add username to ..." button. This sends
+     an email to that users email that is connected to their GitHub account.
+  1. In the issue, copy following text (or similar) to the issue and "close with comment":
+     ```text
+     We have added you to the CodeRefinery exercise repository.
+
+     What you should do before the exercise starts:
+
+     You will get an invitation from GitHub to your email address (that GitHub knows about). Please accept that invitation so that you can participate in the collaborative exercise.
+     To make sure you don't get too many emails during the exercise, don't forget to "unwatch" both https://github.com/cr-workshop-exercises/centralized-workflow-exercise and https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
+     To "unwatch", go to the repository and click the "Unwatch" button (top middle of the screen) and then select "Participating and @mentions".
+     ```
+  - [Example email requesting learners to join](https://coderefinery.github.io/2024-03-12-workshop/communication/#2024-03-12-exercise-preparation-for-learners-without-own-group)
+
+
 ## Why we teach this lesson
 
 In order to collaborate efficiently using Git, it's essential to have a solid
@@ -81,57 +140,6 @@ By the end of this lesson, learners should:
 - The "How to contribute changes to somebody else's project" episode can be
   covered relatively quickly and offers room for discussion if you have time left.
   However, this should not be skipped as this is perhaps the key learning outcome.
-
-
-## Preparing exercises
-
-Exercise leads typically prepare exercise repositories for the exercise group
-(although the material speaks about "maintainer" who can also be one of the
-learners). Preparing the first exercise (centralized workflow) will take more
-time than preparing the second (forking workflow). Most preparation time is not
-the generating part but will go into communicating the URL to the exercise
-group, communicating their usernames, adding them as collaborators, and waiting
-until everybody accepts the GitHub invitation to join the newly created
-exercise repository.
-
-**Live stream**:
-- Create the centralized exercises **in an organization** (not under your username) so
-  that you can give others admin access to add collaborators. Also this way you
-  can then fork yourself if needed.
-- For CR workshops, the exercises were placed under
-  <https://github.com/cr-workshop-exercises>. The instructors or team leads need to have owner status in the organization in order to invite people.
-- We have created two versions of each **a day in advance** to signal which one might end up
-  being discussed on recording/stream:
-  - `centralized-workflow-exercise-recorded`
-  - `centralized-workflow-exercise`
-  - `forking-workflow-exercise-recorded`
-  - `forking-workflow-exercise`
-- Protect the default branch of the two `centralized-*` repositories.
-- We create a organization team, `stream-exercise-participants`.  The
-  *centralized* workflow exercise repos have this team added as a
-  collaborator (*not* forking - they fork so they don't need write
-  access there).
-- We have collected usernames of people who want to contribute via
-  issues on GitHub.  Make a fifth repository, `access-requests`,
-  create a sample access request issue there, and have learners make a
-  new issue in that repository.  The day/morning before the day of the lesson the instructor or team leader now has to invite the learners to the team. Three steps:
-      1. copy the learners GitHub username from the issue
-      2. go to [team member page, example linked here](https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants/members) and invite that username to the team (this means first clicking invite and then scrolling down to click the "add username to ..." button. This sends an email to that users email that is connected to their GitHub account.
-      3. In the issue, copy following text (or similar) to the issue and "close with comment":
-  ```
-  We have added you to the CodeRefinery exercise repository.
-
-  What you should do before the exercise starts:
-
-  You will get an invitation from GitHub to your email address (that GitHub knows about). Please accept that invitation so that you can participate in the collaborative exercise.
-  To make sure you don't get too many emails during the exercise, don't forget to "unwatch" both https://github.com/cr-workshop-exercises/centralized-workflow-exercise and https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
-  To "unwatch", go to the repository and click the "Unwatch" button (top middle of the screen) and then select "Participating and @mentions".
-``
-
-  - Why a fifth repository?  So that learners don't get emails from all
-    other access requests once they get added to the team
-  - [Example email requesting learners to join](https://coderefinery.github.io/2024-03-12-workshop/communication/#2024-03-12-exercise-preparation-for-learners-without-own-group)
-  - [Example issue comment](https://github.com/cr-workshop-exercises/access-requests/issues/41)
 
 
 ## Typical pitfalls
