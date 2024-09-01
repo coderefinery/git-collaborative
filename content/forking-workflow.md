@@ -89,6 +89,52 @@ accept modifications without having to grant write access to others.
 ## Help and discussion
 
 
+### Help! I don't have permissions to push my local changes
+
+Maybe you see an error like this one:
+```text
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+Or like this one:
+```text
+failed to push some refs to cr-workshop-exercises/forking-workflow-exercise.git
+```
+
+In this case you probably try to push the changes not to your fork but to the original repository
+and in this exercise you do not have write access to the original repository.
+
+The simpler solution is to clone again but this time your fork.
+
+:::{solution} Recovery
+
+But if you want to keep your local changes, you can change the remote URL to point to your fork.
+Check where your remote points to with `git remote --verbose`.
+
+It should look like this (replace `your-user` with your GitHub username):
+```console
+$ git remote --verbose
+
+origin	git@github.com:your-user/forking-workflow-exercise.git (fetch)
+origin	git@github.com:your-user/forking-workflow-exercise.git (push)
+```
+
+It should **not** look like this:
+```console
+$ git remote --verbose
+
+origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (fetch)
+origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (push)
+```
+
+In this case you can adjust "origin" to point to your fork with:
+```console
+$ git remote set-url origin git@github.com:your-user/forking-workflow-exercise.git
+```
+:::
+
+
 ### Opening a pull request towards the upstream repository
 
 We have learned in the previous episode that pull requests are always from
