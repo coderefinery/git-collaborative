@@ -1,26 +1,34 @@
 # Instructor guide
 
 
-## Schedule Day 3
+## Approximate schedule
 
-- 08:50 - 09:00: Soft start and icebreaker question
-- 09:00 - 09:15: Recap Git, any HedgeDoc questions to highlight
-- 09:15 - 09:30: [Concepts around collaboration](https://coderefinery.github.io/git-collaborative/remotes/)
+Times here are in CE(S)T.
+
+- 08:50 - 09:00 (10 min) Soft start and icebreaker question
+
+- 09:00 - 09:15 (15 min) Recap Git, any HedgeDoc questions to highlight
+- 09:15 - 09:25 (10 min) [Concepts around collaboration](https://coderefinery.github.io/git-collaborative/concepts/)
     - Explain terms: Pull, push, clone, fork. Focus on pull and not fetch.
     - Focus more on clone and less on generating from templates and importing.
-- 09:30 - 11:00: [Centralized workflow](https://coderefinery.github.io/git-collaborative/centralized/)
-    - 9:30 - 9:45: Explain concepts
-    - 9:45 - 9:55: Break
-    - 9:55 - 10:00: Inform clearly what is expected outcome
-    - 10:00 - 10:30: [Exercise](https://coderefinery.github.io/git-collaborative/centralized/#exercise-preparation)
-    - 10:30 - 11:00: Instructors go through the exercise. Discussion and answering questions
-- 11:00 - 12:00: Lunch Break
-- 12:00 - 13:10: [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
-    - 12:00 - 12:15: Concepts and what are exercise outcomes
-    - 12:15 - 12:45: [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
-    - 12:45 - 12:55 Break
-    - 12:55 - 13:10: Instructors go through excercises. Discussion and answering questions
-- 13:10 - 13:30: [How to contribute changes to somebody else’s project](https://coderefinery.github.io/git-collaborative/contributing/) and Q&A
+- 09:25 - 10:00 (35 min) [Collaborating within the same repository](https://coderefinery.github.io/git-collaborative/same-repository/)
+  - Exercise (incl preparation)
+
+- 10:00 - 10:10 (10 min) Break
+
+- 10:10 - 10:30 (20 min) [Collaborating within the same repository](https://coderefinery.github.io/git-collaborative/same-repository/)
+  - Demo and Q/A
+- 10:30 - 11:00 (30 min)  [Practicing code review](https://coderefinery.github.io/git-collaborative/code-review/)
+
+- 11:00 - 12:00 (60 min) Break
+
+- 12:00 - 12:50 (50 min) [Distributed version control and forking workflow](https://coderefinery.github.io/git-collaborative/distributed/)
+    - Concepts and what are exercise outcomes
+    - [Exercise](https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation)
+
+- 12:50 - 13:00 (10 min) Break
+
+- 13:00 - 13:30 (30 min) Discussion, demonstration, Q&A, feedback, what to expect next week
 
 
 ## Why we teach this lesson
