@@ -16,6 +16,8 @@ authors:
   given-names: "Dhanya"
 - family-names: "Lindi"
   given-names: "Bjørn"
+- family-names: "Pilstål"
+  given-names: "Robert"
 title: "Collaborative distributed version control"
 type: "data"
 abstract: "This lesson builds on "Introduction to version control" and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub."
