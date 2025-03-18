@@ -16,10 +16,10 @@ accept modifications without having to grant write access to others.
   ::::{tab} Part of team/exercise room
 
   **Maintainer (team lead)**:
-  - Create an exercise repository by
+  - Create an exercise repository
+    called `forking-workflow-exercise` by
     [generating from a template](https://help.github.com/en/articles/creating-a-repository-from-a-template)
-    using this template: <https://github.com/coderefinery/template-forking-workflow-exercise>
-    called `forking-workflow-exercise`
+    using this template: <https://github.com/coderefinery/recipe-book-template>.
   - In this case we **do not add collaborators** to the repository (this is the point of this example).
   - Share the link to the newly created repository with your group.
 
