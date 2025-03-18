@@ -46,6 +46,9 @@ exercise repository.
 ## Preparing exercises for the live stream
 
 - This **takes 30-60 minutes** to set up. Allocate the time for this before the workshop.
+- Make sure to remove all participants from a previous workshop from these two places:
+  - <https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants>
+  - <https://github.com/orgs/cr-workshop-exercises/people>
 - It requires coordinating with co-instructors and **communication with learners on days 1 and 2**.
 - Create the centralized exercises **in an organization** (not under your username) so
   that you can give others admin access to add collaborators. Also this way you
