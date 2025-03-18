@@ -72,6 +72,7 @@ bare-repos.md
 :maxdepth: 1
 :caption: Reference
 
+Shell crash course <https://youtu.be/xbTTDLA3txI>
 reference
 exercises
 guide
