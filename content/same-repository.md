@@ -114,6 +114,9 @@ contribute.
 **Exercise tasks**:
 1. Open an issue where you describe the change you want to make. Note down the
    issue number since you will need it later.
+1. If you work locally and not on GitHub, you need to clone the repository to
+   your computer before you can create a new branch (more details in "Solution
+   and hints" below).
 1. Create a new branch.
 1. Make a change to the recipe book on the new branch and in the commit
    cross-reference the issue you opened (see the walk-through below
