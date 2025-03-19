@@ -69,6 +69,18 @@ working with a git repository to which you do not have write access.
   whereas forking is a particular operation implemented on GitHub/GitLab.
 
 
+## Should we clone or fork?
+
+Should we all work on forks or should we all work inside one repository?
+
+- For most small or medium-sized research projects you probably want to **work by
+  cloning a repository** that all research group has write access to (we will
+  exercise this in the next section).
+
+- It's only when you want to contribute to a project that you don't have write
+  access to that you need to use **forks** (we will practice this as well).
+
+
 ## Generating from templates
 
 A repository can be marked as **template** and new repositories can be
