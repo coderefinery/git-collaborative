@@ -1,22 +1,8 @@
 # Concepts around collaboration
 
-```{objectives}
+:::{objectives}
 - Be able to decide whether to divide work at the branch level or at the repository level.
-```
-
-```{instructor-note}
-- 15 min teaching
-```
-
-
-## Motivation
-
-- Someone has given you access to a repository online and you want to contribute?
-- We will learn how to make a copy and send changes back.
-- Then, we make a "pull request" that allows a review.
-- Once we know how code review works, we will be able to propose changes
-  to repositories of others and review changes submitted by external
-  contributors.
+:::
 
 
 ## Commits, branches, repositories, forks, clones
@@ -33,68 +19,41 @@
 
 ## Cloning a repository
 
-In order to make a complete copy a whole repository, the `git clone` command can be used. When cloning, all the files, of all or selected branches, of a repository are copied in one operation. Cloning of a repository is of relevance in a few different situations:
-* Working on your own, cloning is the operation that you can use to create multiple instances of a repository on, for instance, a personal computer, a server, and a supercomputer.
-* The parent repository could be a repository that you or your colleague own. A common use case for cloning is when working together within a smaller team where everyone has read and write access to the same git repository.
-* Alternatively, cloning can be made from a public repository of a code that you would like to use. Perhaps you have no intention to work on the code, but would like to stay in tune with the latest developments, also in-between releases of new versions of the code.
+In order to make a complete copy a whole repository, the `git clone` command
+can be used. When cloning, all the files, of all or selected branches, of a
+repository are copied in one operation. Cloning of a repository is of relevance
+in a few different situations:
+* Working on your own, cloning is the operation that you can use to create
+  multiple instances of a repository on, for instance, a personal computer, a
+  server, and a supercomputer.
+* The parent repository could be a repository that you or your colleague own. A
+  common use case for cloning is when working together within a smaller team
+  where everyone has read and write access to the same git repository.
+* Alternatively, cloning can be made from a public repository of a code that
+  you would like to use. Perhaps you have no intention to work on the code, but
+  would like to stay in tune with the latest developments, also in-between
+  releases of new versions of the code.
 
-```{figure} img/overview/clone.png
-:alt: Cloning
+
+:::{figure} img/overview/forkandclone.png
+:alt: Forking and cloning
 :width: 100%
 :class: with-border
 
-Cloning
-```
+Forking and cloning
+:::
 
 
 ## Forking a repository
 
-When a fork is made on GitHub/GitLab a complete copy, of all or selected branches, of the repository is made. The copy will reside under a different account on GitHub/GitLab. Forking of a repository is of high relevance when working with a git repository to which you do not have write access.
-* In the fork repository commits can be made to the base branch (`main` or `master`), and to other branches.
-* The commits that are made within the branches of the fork repository can be contributed back to the parent repository by means of pull or merge requests.
-
-```{figure} img/overview/fork.png
-:alt: Forking
-:width: 100%
-:class: with-border
-
-Forking
-```
-
-
-## Generating from templates and importing
-
-There are two more ways to create "copies" of repositories into your user space:
-- A repository can be marked as **template** and new repositories can be
-  **generated** from it, like using a cookie-cutter.
-  The newly created repository will start with a new history, only one commit, and not
-  inherit the history of the template.
-
-```{figure} img/overview/generate.png
-:alt: Generating from a template
-:width: 100%
-:class: with-border
-
-Generating from a template.
-```
-
-- You can **import** a repository from another hosting service or web address.
-  This will preserve the history of the imported project.
-
-```{figure} img/overview/import.png
-:alt: Importing a repository
-:width: 100%
-:class: with-border
-
-Importing a repository.
-```
----
-
-```{discussion}
-- Visit one of the repositories/projects that you have used recently and try to find out
-  how many forks exist and where they are.
-- In which situations could it be useful to start from a "template" repository by generating?
-```
+When a fork is made on GitHub/GitLab a complete copy, of all or selected
+branches, of the repository is made. The copy will reside under a different
+account on GitHub/GitLab. Forking of a repository is of high relevance when
+working with a git repository to which you do not have write access.
+- In the fork repository commits can be made to the base branch (`main` or
+  `master`), and to other branches.
+- The commits that are made within the branches of the fork repository can be
+  contributed back to the parent repository by means of pull or merge requests.
 
 
 ## Synchronizing changes between repositories
@@ -105,12 +64,23 @@ Importing a repository.
 - We will learn how to suggest changes within repositories on GitHub and across repositories (**pull request**).
 - Repositories that are forked or cloned do not automatically synchronize themselves:
   We will learn how to update forks (by pulling from the "central" repository).
-- A main difference between cloning a repository and forking a repository is that the former is a general operation for generating copies of a repository to different computers, whereas forking is a particular operation implemented on GitHub/GitLab.
+- A main difference between cloning a repository and forking a repository is that the former
+  is a general operation for generating copies of a repository to different computers,
+  whereas forking is a particular operation implemented on GitHub/GitLab.
 
-```{figure} img/overview/forkandclone.png
-:alt: Forking and cloning
+
+## Generating from templates
+
+A repository can be marked as **template** and new repositories can be
+**generated** from it, like using a cookie-cutter.
+
+The newly created repository will start with a new ("flattened") history, only one commit, and not
+inherit the history of the template.
+
+:::{figure} img/overview/generate.png
+:alt: Generating from a template
 :width: 100%
 :class: with-border
 
-Forking and cloning
-```
+Generating from a template.
+:::
