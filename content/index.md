@@ -1,29 +1,27 @@
 # Collaborative distributed version control
 
-We have learned how to make a Git repository for a single person. What
-about sharing?
+We have learned how to work with a Git repository used by a single person. What
+about sharing and collaborating?
 
 - Share the folder using email or using some file sharing service:
   This would lead to many back and forth emails and would be difficult
   keep all copies synchronized.
-- One person’s repository on the web: allows one person to keep track of
+- One person’s repository on the web: Allows one person to keep track of
   more projects, gain visibility, feedback, and recognition.
-- Common repository for a group: everyone can directly update the same repository.
+- **Common repository for a group**: Everyone can directly update the same repository.
   Good for small groups.
-- Forks or copies with different owners: anyone can suggest changes, even without
+- Forks or copies with different owners: Anyone can suggest changes, even without
   advance permission. Maintainers approve what they agree with.
 
 Being able to share more easily (going down the above list) is
 *transformative* (easier to change something, that is you are not the sole owner)
 because it allows projects to scale to a new level.
-**This can’t be done without proper tools.**
 
-**In this lesson we will learn how to keep repositories in sync and how to
-work with remote repositories on GitHub and other services.** We will
-discover and exercise the centralized as well as the forking workflows,
-and finally look into how to automate tasks using Git hooks.
+We will **discover and exercise the most typical workflows when collaborating**
+using services like GitHub.
 
-```{prereq}
+
+:::{prereq}
 1. Basic understanding of Git.
 2. You need a [GitHub](https://github.com) account.
 
@@ -39,7 +37,8 @@ popular web platform for hosting Git repositories and the chance is
 high that you will interact with
 [GitHub](https://github.com)-based repositories even if you choose
 to host your Git repository on another platform.
-```
+:::
+
 
 ```{toctree}
 :maxdepth: 1
