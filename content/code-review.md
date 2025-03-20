@@ -5,7 +5,7 @@ ask for changes in a pull request, how to suggest a change in a pull request,
 and how to modify a pull request.
 
 This will enable research groups to work more collaboratively and to not only
-improve the code quality but also to learn from each other.
+improve the code quality but also to **learn from each other**.
 
 
 ## Exercise
@@ -120,7 +120,7 @@ and later open a new one. It can even be counter-productive to do so: This can
 fragment the discussion and the history of the pull request and can make it
 harder to understand the context of the changes.
 
-A much better mechanism to recognize that pull requests are not implemented
+A much better mechanism is to recognize that pull requests are not implemented
 from a specific commit to a specific branch, but **always from a branch to a
 branch**.
 
@@ -129,7 +129,7 @@ commits to the same source branch. This way the pull request will be updated
 automatically and the reviewer can see the new changes and comment on them.
 
 The fact that pull requests are from branch to branch also strongly suggests
-that it is a good practice to create a new branch for each pull request.
+that it is a good practice to **create a new branch for each pull request**.
 Otherwise you could accidentally modify an open pull request by adding new
 commits to the source branch.
 
@@ -138,5 +138,5 @@ commits to the source branch.
 
 - Our process isn't just about code now.  It's about discussion and
   working together to make the whole process better.
-- GitHub discussions and reviewing is quite powerful and can make
+- GitHub (or GitLab) discussions and reviewing are quite powerful and can make
   small changes easy.
