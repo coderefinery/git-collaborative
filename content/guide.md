@@ -55,6 +55,9 @@ exercise repository.
   can then fork yourself if needed.
 - For CR workshops, the exercises were placed under
   <https://github.com/cr-workshop-exercises>. The instructors or team leads need to have owner status in the organization in order to invite people.
+- All exercise repositories can be created from
+  <https://github.com/coderefinery/recipe-book-template> by `git clone
+  --mirror` from the template followed by `git push --mirror` towards the exercise repository.
 - We have created two versions of each **a day in advance** to signal which one might end up
   being discussed on recording/stream:
   - `centralized-workflow-exercise-recorded`

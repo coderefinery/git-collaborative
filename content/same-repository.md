@@ -27,8 +27,9 @@ contribute.
     This is typically the exercise lead (if available).  Everyone else
     is a *collaborator*.
   - The **maintainer** (one person per group) generates a new repository
-    from the template <https://github.com/coderefinery/template-centralized-workflow-exercise>
-    called `centralized-workflow-exercise` (There is no need to tick *"Include all branches"* for this exercise):
+    called `centralized-workflow-exercise`
+    from the template <https://github.com/coderefinery/recipe-book-template>
+    (There is no need to tick *"Include all branches"* for this exercise):
     :::{figure} img/centralized/generate_repo.png
     :alt: Screenshot of generating the exercise repository
     :width: 100%
