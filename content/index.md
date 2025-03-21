@@ -52,15 +52,6 @@ forking-workflow.md
 
 ```{toctree}
 :maxdepth: 1
-:caption: Older episodes
-
-same-repository-old.md
-forking-workflow-old.md
-contributing.md
-```
-
-```{toctree}
-:maxdepth: 1
 :caption: Optional episodes
 
 hooks.md
