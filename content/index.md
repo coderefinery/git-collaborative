@@ -5,7 +5,7 @@ about sharing and collaborating?
 
 - Share the folder using email or using some file sharing service:
   This would lead to many back and forth emails and would be difficult
-  keep all copies synchronized.
+  to keep all copies synchronized.
 - One person’s repository on the web: Allows one person to keep track of
   more projects, gain visibility, feedback, and recognition.
 - **Common repository for a group**: Everyone can directly update the same repository.
