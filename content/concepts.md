@@ -9,7 +9,8 @@
 
 - {term}`repository`: The project, contains all data and history (commits, branches, tags).
 - {term}`commit`: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
-- {term}`branch`: Independent development line. The main development line is often called `main`.
+- {term}`branch`: Independent development line. The main development line is often called `main`. Technically, a branch in Git
+  is implemented as a pointer to a commit (imagine a sticky note with a branch name on it).
 - {term}`tag`: A pointer to one commit, to be able to refer to it later. Like a [commemorative plaque](https://en.wikipedia.org/wiki/Commemorative_plaque)
   that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
 - {term}`cloning <clone>`: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
@@ -28,9 +29,9 @@ in a few different situations:
   server, and a supercomputer.
 * The parent repository could be a repository that you or your colleague own. A
   common use case for cloning is when working together within a smaller team
-  where everyone has read and write access to the same git repository.
+  where everyone has read and write access to the same Git repository.
 * Alternatively, cloning can be made from a public repository of a code that
-  you would like to use. Perhaps you have no intention to work on the code, but
+  you would like to use. Perhaps you have no intention to change the code, but
   would like to stay in tune with the latest developments, also in-between
   releases of new versions of the code.
 
@@ -49,21 +50,20 @@ Forking and cloning
 When a fork is made on GitHub/GitLab a complete copy, of all or selected
 branches, of the repository is made. The copy will reside under a different
 account on GitHub/GitLab. Forking of a repository is of high relevance when
-working with a git repository to which you do not have write access.
-- In the fork repository commits can be made to the base branch (`main` or
+working with a Git repository to which you do not have write access.
+- In the fork repository commits can be made to the default branch (`main` or
   `master`), and to other branches.
 - The commits that are made within the branches of the fork repository can be
-  contributed back to the parent repository by means of pull or merge requests.
+  contributed back to the parent repository by means of **pull or merge requests**.
 
 
 ## Synchronizing changes between repositories
 
+- Repositories that are forked or cloned **do not automatically synchronize themselves**.
 - We need a mechanism to communicate changes between the repositories.
 - We will **pull** or **fetch** updates **from** remote repositories (we will soon discuss the difference between pull and fetch).
 - We will **push** updates **to** remote repositories.
-- We will learn how to suggest changes within repositories on GitHub and across repositories (**pull request**).
-- Repositories that are forked or cloned do not automatically synchronize themselves:
-  We will learn how to update forks (by pulling from the "central" repository).
+- We will learn how to suggest changes within repositories on GitHub and across repositories (**pull requests**).
 - A main difference between cloning a repository and forking a repository is that the former
   is a general operation for generating copies of a repository to different computers,
   whereas forking is a particular operation implemented on GitHub/GitLab.
@@ -71,7 +71,7 @@ working with a git repository to which you do not have write access.
 
 ## Should we clone or fork?
 
-Should we all work on forks or should we all work inside one repository?
+Should we all work inside one repository and clone? Or should we all work on forks?
 
 - For most small or medium-sized research projects you probably want to **work by
   cloning a repository** that all research group has write access to (we will
