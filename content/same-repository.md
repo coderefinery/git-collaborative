@@ -7,12 +7,16 @@ pull requests, and how to use draft pull requests.
 This exercise will form a good basis for collaboration that is suitable for
 most research groups.
 
+:::{note}
+When you read or hear **pull request**, please think of a **change proposal**.
+:::
+
 
 ## Exercise
 
-In this exercise, we will contribute to a repository via a {term}`pull
-request`.  This means that you propose some change, and then it is
-accepted (or not).
+In this exercise, we will contribute to a repository via a **pull request**.
+This means that you propose some change, and then it can be discussed and
+accepted (sometimes after requesting further improvements).
 
 ::::::{prereq} Exercise preparation
 
@@ -74,8 +78,6 @@ contribute.
     GitHub. GitHub emails you an invitation link, but if you don't receive it
     you can go to your GitHub notifications in the top right corner. The
     maintainer can also "copy invite link" and share it within the group.
-
-(unwatch)=
 
 - **Watching and unwatching repositories**
   - Now that you are a collaborator, you get notified about new issues and pull
@@ -140,10 +142,11 @@ This is done through the GitHub web interface.  For example, you could
 give the name of the recipe you want to add (so that others don't add
 the same one).  It is the "Issues" tab.
 
+
 ### (2) Create a new branch.
 
 If on GitHub, you can make the branch in the web interface
-({external:doc}`commits`).  If working locally, you need
+({external:doc}`commits`).  If working locally, you need to follow
 {external:doc}`local-workflow`.
 
 
@@ -151,7 +154,8 @@ If on GitHub, you can make the branch in the web interface
 
 Add a new file with the recipe in it.  Commit the file. In the commit
 message, include the note about the issue number, saying that this
-will close that issue.
+will close that issue (right below here we show how).
+
 
 #### Cross-referencing issues and pull requests
 
@@ -180,18 +184,17 @@ Here are all the keywords that GitHub recognizes:
 Then observe what happens in the issue once your commit gets merged: it will
 automatically close the issue and create a link between the issue and the
 commit. This is very useful for tracking what changes were made in response to
-which issue and to know from when until when precisely the issue was open.
+which issue and to know from when **until when precisely** the issue was open.
 
 
 ### (4) Push to GitHub as a new branch
 
-Covered in {external:doc}`local-workflow`.
-
-Push the branch to the repository. You should end up with a branch
-visible in the GitHub web view.
-
 This is only necessary if you created the changes locally. If you created the
 changes directly on GitHub, you can skip this step.
+
+Push the branch to the repository. You should end up with a branch
+visible in the GitHub web view (if you are unsure how, see
+{external:doc}`local-workflow`).
 
 :::::{tabs}
 ::::{group-tab} VS Code
@@ -210,12 +213,12 @@ and make it visible there, first verify what your remote is:
 ```console
 $ git remote --verbose
 
-origin	git@github.com:user/centralized-workflow-exercise.git (fetch)
-origin	git@github.com:user/centralized-workflow-exercise.git (push)
+origin	git@github.com:USER/centralized-workflow-exercise.git (fetch)
+origin	git@github.com:USER/centralized-workflow-exercise.git (push)
 ```
 
 In this case the remote is called `origin` and refers to the address
-git@github.com:user/centralized-workflow-exercise.git.  Both can be used
+git@github.com:USER/centralized-workflow-exercise.git.  Both can be used
 interchangeably. Make sure it points to the right repository, ideally a
 repository that you can write to.
 
@@ -247,7 +250,7 @@ ADDRESS is the part that you copy from here:
 :width: 60%
 :class: with-border
 :alt: Copying the clone address from GitHub
-::::
+:::
 
 If the remote points to the wrong place, you can change it with:
 ```console
@@ -259,8 +262,8 @@ $ git remote set-url origin NEWADDRESS
 
 ### (5) Open a pull request towards the main branch
 
-This is done through the GitHub web interface.  We saw this in, for
-example, in a [previous lesson](https://coderefinery.github.io/git-intro/merging/).
+This is done through the GitHub web interface.  We saw this
+in a [previous lesson](https://coderefinery.github.io/git-intro/merging/).
 
 
 ### (6) Reviewing pull requests
@@ -322,7 +325,7 @@ To protect a branch in your own repository, go to "Settings" -> "Branches".
 
 ### Summary
 
-- We used all the same pieces that we've learned the last two days
-- But we successfully contributed to someone else's project!
+- We used all the same pieces that we've learned previously.
+- But we successfully contributed to a **collaborative project**!
 - The pull request allowed us to contribute without changing directly:
   this is very good when it's not mainly our project.
