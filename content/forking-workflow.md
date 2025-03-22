@@ -56,7 +56,7 @@ accept modifications without having to grant write access to others.
 **Technical requirements**:
 - If you create the commits locally: [Being able to authenticate to GitHub](https://coderefinery.github.io/installation/ssh/)
 
-**What is familiar** from the previous workshop days:
+**What is familiar** from the previous episodes:
 - Forking a repository ([previous lesson](https://coderefinery.github.io/git-intro/browsing/))
 - Creating a branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
 - Committing a change on the new branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
@@ -112,12 +112,12 @@ The simpler solution is to clone again but this time your fork.
 But if you want to keep your local changes, you can change the remote URL to point to your fork.
 Check where your remote points to with `git remote --verbose`.
 
-It should look like this (replace `your-user` with your GitHub username):
+It should look like this (replace `USER` with your GitHub username):
 ```console
 $ git remote --verbose
 
-origin	git@github.com:your-user/forking-workflow-exercise.git (fetch)
-origin	git@github.com:your-user/forking-workflow-exercise.git (push)
+origin	git@github.com:USER/forking-workflow-exercise.git (fetch)
+origin	git@github.com:USER/forking-workflow-exercise.git (push)
 ```
 
 It should **not** look like this:
@@ -130,7 +130,7 @@ origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (push)
 
 In this case you can adjust "origin" to point to your fork with:
 ```console
-$ git remote set-url origin git@github.com:your-user/forking-workflow-exercise.git
+$ git remote set-url origin git@github.com:USER/forking-workflow-exercise.git
 ```
 :::
 
@@ -181,7 +181,7 @@ Click on the "Details" link to see the details of the failed test:
   locally.
 
 **How does it work?**
-- We added a [GitHub Actions workflow](https://github.com/coderefinery/recipe-book-template/blob/main/.github/workflows/check-recipes.yml)
+- We added a GitHub Actions workflow
   to automatically run on each push or pull request towards the `main` branch.
 
 What tests or steps can you image for your project to run automatically with
@@ -190,8 +190,7 @@ each pull request?
 
 ### How to update your fork with changes from upstream
 
-This used to be difficult but now it is two mouse clicks.
-
+This used to be difficult but now it is two mouse clicks:
 Navigate to your fork and notice how GitHub tells you that your fork is behind.
 In my case, it is 9 commits behind upstream. To fix this, click on "Sync fork"
 and then "Update branch":
@@ -246,10 +245,9 @@ After the update my "branch is up to date" with the upstream repository:
 :::
 
 
-
 ## Summary
 
 - This forking workflow lets you propose changes to repositories for
-  which *you have no access*.
+  which **you have no write access**.
 - This is the way that much modern open-source software works.
 - You can now contribute to any project you can view.
