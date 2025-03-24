@@ -1,6 +1,6 @@
 # Practicing code review
 
-In this episode we will practice the code review process. We will learn how to
+In this episode we will practice the **code review process**. We will learn how to
 ask for changes in a pull request, how to suggest a change in a pull request,
 and how to modify a pull request.
 
@@ -20,7 +20,7 @@ previous episode.
 **Technical requirements**:
 - If you create the commits locally: [Being able to authenticate to GitHub](https://coderefinery.github.io/installation/ssh/)
 
-**What is familiar** from the previous workshop days:
+**What is familiar** from previous episodes:
 - Creating a branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
 - Committing a change on the new branch ([previous lesson](https://coderefinery.github.io/git-intro/commits/))
 - Opening and merging pull requests ([previous lesson](https://coderefinery.github.io/git-intro/merging/))
@@ -83,7 +83,7 @@ goal is not gate-keeping but **collaborative learning**.
 If you see a very small problem that is easy to fix, you can suggest a change
 as a reviewer.
 
-Instead of asking the submitter to tiny problem, you can suggest a change by
+Instead of asking the submitter to fix the tiny problem, you can suggest a change by
 clicking on the plus sign next to the line number in the "Files changed" tab:
 :::{figure} img/code-review/leave-comment.png
 :width: 100%
@@ -110,7 +110,7 @@ The result is this and the submitter can accept the change with a single click:
 ::::
 
 After accepting with "Commit suggestion", the improvement gets added to the
-pull request.
+pull request as a new commit.
 
 
 ### How to modify a pull request to address the review comments
