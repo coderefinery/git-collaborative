@@ -76,7 +76,7 @@ exercise repository.
 ### How should learners request access
 
 This is also in the email template above but they need to:
-- Open an issue at https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md
+- Open an issue at <https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md>
 
 - Accept invitation from GitHub sent to their email address (that GitHub
   knows about).
