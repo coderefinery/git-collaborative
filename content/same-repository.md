@@ -329,3 +329,36 @@ To protect a branch in your own repository, go to "Settings" -> "Branches".
 - But we successfully contributed to a **collaborative project**!
 - The pull request allowed us to contribute without changing directly:
   this is very good when it's not mainly our project.
+
+:::{discussion} Let's clarify typical questions
+**What is the difference between `git pull` and a pull request?**
+- `git pull` is a command that fetches changes from a remote repository and
+  merges them into the current branch.
+- Pull request: change proposal. It might have been named this way because
+  after you accept a pull request, internally it git pulls the changes from
+  the branch containing the change proposal.
+
+**What is the difference between a pull request and an issue?**
+- Pull request is a mechanism to suggest and review changes.
+- An issue is a place where we note and discuss problems or ideas.
+- Both get a number and they can reference each other but that's all they have in common.
+- [Linking a pull request to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+  
+**What is the practical difference between branch + pull and fork + pull?**
+- The practical difference between branch + pull and fork + pull lies in how collaboration is structured in a Git-based workflow.
+- Branch + Pull (Single Repository Contribution) : Used when contributing to a repository where you have direct write access.
+- Process:
+     1. Clone the main repository.
+     2. Create a new branch in the same repository.
+     3. Make changes and commit them.
+     4. Push the branch to the same repository.
+     5. Open a Pull Request from your branch to the main branch.
+- Fork + Pull (External Contribution): Used when contributing to a repository where you do not have write access.
+- Process:
+     1. Fork the repository (create your own copy under your GitHub account).
+     2. Clone your forked repository locally.
+     3. Create a new branch in your fork.
+     4. Make changes and commit them.
+     5. Push the branch to your fork.
+     6. Open a Pull Request from your fork to the original repository.
+:::
