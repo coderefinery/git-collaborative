@@ -98,7 +98,7 @@ to be able to add people to the team.
    Any open issue means the person hasn't been added yet.
 
 2) Add person to <https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants>
-  - Click on "Add member" -> "Invite" -> "Add member to stream-exercise-participants"
+  - Click on "Add member" -> "Invite" -> "Add (username) to stream-exercise-participants"
   - **Do not add/invite the person anywhere else**, not as collaborator to any
     exercise repo directly. Only add invite them into the team
     "stream-exercise-participants". Motivation: This way we give instructors the control over when the exercise can start. Otherwise
