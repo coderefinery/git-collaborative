@@ -97,14 +97,16 @@ to be able to add people to the team.
 1) Check <https://github.com/cr-workshop-exercises/access-requests/issues>.
    Any open issue means the person hasn't been added yet.
 
-2) Add person to <https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants>
+2) Assign one issue to yourself. This way other organizers know that this is being worked on.
+
+3) Add person to <https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants>
   - Click on "Add member" -> "Invite" -> "Add (username) to stream-exercise-participants"
   - **Do not add/invite the person anywhere else**, not as collaborator to any
     exercise repo directly. Only add invite them into the team
     "stream-exercise-participants". Motivation: This way we give instructors the control over when the exercise can start. Otherwise
     learners might merge changes before the lesson and thus change the example and confuse instructors and learners.
 
-3) Close the issue on <https://github.com/cr-workshop-exercises/access-requests/issues> with the following comment (feel free to adapt it):
+4) Close the issue on <https://github.com/cr-workshop-exercises/access-requests/issues> with the following comment (feel free to adapt it):
 ```
 Thanks! I have added you to the collaborative exercise team.
 
