@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hooks &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Non-bare and bare repositories" href="../bare-repos/" />
+    <link rel="prev" title="How to contribute changes to repositories that belong to others" href="../forking-workflow/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-review/">Practicing code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forking-workflow/">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-side-hooks">Client-side hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-side-hooks">Server-side hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actions-workflows-and-continuous-integration-services">Actions, workflows, and continuous integration services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Hooks</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/hooks.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hooks">
+<h1>Hooks<a class="headerlink" href="#hooks" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Learn how to couple scripts to Git repository events.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>10 min teaching/demonstration</p></li>
+</ul>
+</div>
+<p>Sometimes you would like Git events (commits, pushes, etc.) to <strong>trigger scripts</strong>
+which take care of some tasks.  <strong>Hooks are scripts that are executed
+before/after certain Git events</strong>.  They can be used to enforce nearly any kind of
+policy for your project.  There are client-side and server-side hooks.</p>
+<section id="client-side-hooks">
+<h2>Client-side hooks<a class="headerlink" href="#client-side-hooks" title="Link to this heading"></a></h2>
+<p>You can find and edit them here:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>.git/hooks/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code>: before commit message editor (example: make sure tests pass)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prepare-commit-msg</span></code>: before commit message editor (example: modify default messages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commit-msg</span></code>: after commit message editor (example: validate commit message pattern)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-commit</span></code>: after commit process (example: notification)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-rebase</span></code>: before rebase anything (example: disallow rebasing published commits)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-rewrite</span></code>: run by commands that rewrite commits</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-checkout</span></code>: after successful <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> (example: generating documentation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-merge</span></code>: after successful merge</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-push</span></code>: runs during <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> before any objects have been transferred</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-auto-gc</span></code>: invoked just before the garbage collection takes place</p></li>
+</ul>
+<p>See also <a class="reference external" href="https://pre-commit.com">https://pre-commit.com</a>,
+a framework for managing and maintaining multi-language pre-commit hooks.</p>
+<p>Example for a <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hook which checks whether a Python code is <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>-compliant
+using <a class="reference external" href="http://pycodestyle.pycqa.org">pycodestyle</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># ignore errors due to too long lines</span>
+pycodestyle<span class="w"> </span>--ignore<span class="o">=</span>E501<span class="w"> </span>myproject/
+</pre></div>
+</div>
+</section>
+<section id="server-side-hooks">
+<h2>Server-side hooks<a class="headerlink" href="#server-side-hooks" title="Link to this heading"></a></h2>
+<p>You can typically edit them through a web interface on GitHub/GitLab.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-receive</span></code>: before accepting any references</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code>: like <code class="docutils literal notranslate"><span class="pre">pre-receive</span></code> but runs once per pushed branch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-receive</span></code>: after entire process is completed</p></li>
+<li><p>Typical use:</p>
+<ul>
+<li><p>Maintenance work</p></li>
+<li><p>Automated tests</p></li>
+<li><p>Refreshing of documentation/website</p></li>
+<li><p>Sanity checks</p></li>
+<li><p>Code style checks</p></li>
+<li><p>Email notification</p></li>
+<li><p>Rebuilding software packages</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="actions-workflows-and-continuous-integration-services">
+<h2>Actions, workflows, and continuous integration services<a class="headerlink" href="#actions-workflows-and-continuous-integration-services" title="Link to this heading"></a></h2>
+<p>GitHub and GitLab let you define workflows/actions/recipes which are triggered
+by e.g. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> or by a release (tag creation).  They can be customized and
+almost any automation you can think of becomes possible.</p>
+<p>These services use hooks under the hood. These days, project are more likely to
+use these higher-level services rather than Git hooks directly.</p>
+<p>You can read more about these services here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/actions">GitHub Actions</a></p></li>
+<li><p><a class="reference external" href="https://docs.gitlab.com/ee/ci/">GitLab CI</a></p></li>
+</ul>
+<p>In our projects we use these services to:</p>
+<ul class="simple">
+<li><p>Build websites</p></li>
+<li><p>Build documentation</p></li>
+<li><p>Run tests</p></li>
+<li><p>Create containers</p></li>
+<li><p>Package and upload packages</p></li>
+<li><p>Spellchecking</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../forking-workflow/" class="btn btn-neutral float-left" title="How to contribute changes to repositories that belong to others" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../bare-repos/" class="btn btn-neutral float-right" title="Non-bare and bare repositories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
