@@ -41,7 +41,7 @@ contribute.
   - Then **everyone in your group** needs their GitHub account to be added as collaborator to the exercise repository:
     - Collaborators give their GitHub usernames to their chosen maintainer.
     - Maintainer gives the other group members the newly created GitHub repository URL.
-    - Maintainer adds participants as collaborators to their project (Settings -> Collaborators and teams -> Manage access -> Add people).
+    - Maintainer adds participants as collaborators to their project (Settings -> Collaborators -> Manage access -> Add people).
   ::::
 
   ::::{tab} Following on your own
