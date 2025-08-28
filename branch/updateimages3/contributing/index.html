@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to contribute changes to somebody else’s project &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Hooks" href="../hooks/" />
+    <link rel="prev" title="Distributed version control and forking workflow" href="../distributed/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../remotes/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../centralized/">Centralized workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../distributed/">Distributed version control and forking workflow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to contribute changes to somebody else’s project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-very-minor-changes">Contributing very minor changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-observe-an-issue-and-have-an-idea-how-to-fix-it">If you observe an issue and have an idea how to fix it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-have-an-idea-for-a-new-feature">If you have an idea for a new feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wip-work-in-progress-merge-requests-and-draft-pull-requests">WIP (work in progress) merge requests and draft pull requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#licenses-matter">Licenses matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-make-sure-that-you-don-t-merge-malicious-code">How to make sure that you don’t merge malicious code</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to contribute changes to somebody else’s project</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/contributing.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-contribute-changes-to-somebody-else-s-project">
+<h1>How to contribute changes to somebody else’s project<a class="headerlink" href="#how-to-contribute-changes-to-somebody-else-s-project" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Avoid frustration and surprises by first discussing and then coding.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>15 min teaching/discussion</p></li>
+</ul>
+</div>
+<section id="contributing-very-minor-changes">
+<h2>Contributing very minor changes<a class="headerlink" href="#contributing-very-minor-changes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Clone or fork+clone repository</p></li>
+<li><p>Create a branch</p></li>
+<li><p>Commit and push change</p></li>
+<li><p>Open a pull request or merge request</p></li>
+</ul>
+</section>
+<section id="if-you-observe-an-issue-and-have-an-idea-how-to-fix-it">
+<h2>If you observe an issue and have an idea how to fix it<a class="headerlink" href="#if-you-observe-an-issue-and-have-an-idea-how-to-fix-it" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>Describe the problem</p></li>
+<li><p>If you have a suggestion on how to fix it, describe your suggestion</p></li>
+<li><p>Possibly <strong>discuss and get feedback</strong></p></li>
+<li><p>If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it</p></li>
+<li><p>Submit your fix as pull request or merge request which references/closes the issue</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Inform others about an observed problem</strong></p></li>
+<li><p>Make it clear whether this issue is up for grabs or already being worked on</p></li>
+</ul>
+</div>
+</section>
+<section id="if-you-have-an-idea-for-a-new-feature">
+<h2>If you have an idea for a new feature<a class="headerlink" href="#if-you-have-an-idea-for-a-new-feature" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>In the issue, write a short proposal for your suggested change or new feature</p></li>
+<li><p>Motivate why and how you wish to do this</p></li>
+<li><p>Also indicate where you are unsure and where you would like feedback</p></li>
+<li><p><strong>Discuss and get feedback before you code</strong></p></li>
+<li><p>Once you start coding, indicate that you are working on it</p></li>
+<li><p>Once you are done, submit your new feature as pull request or merge request which references/closes the issue/proposal</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Get agreement and feedback before writing 5000 lines of code</strong> which might be rejected</p></li>
+<li><p>If we later wonder why something was done, we have the issue/proposal as
+reference and can read up on the reasoning behind a code change</p></li>
+</ul>
+</div>
+</section>
+<section id="wip-work-in-progress-merge-requests-and-draft-pull-requests">
+<h2>WIP (work in progress) merge requests and draft pull requests<a class="headerlink" href="#wip-work-in-progress-merge-requests-and-draft-pull-requests" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Convention: Pull requests or merge requests starting with “WIP” or “Draft” are not to be merged yet</p></li>
+<li><p>They are there to <strong>collect feedback on unfinished work</strong></p></li>
+<li><p>On GitHub you can create <a class="reference external" href="https://github.blog/2019-02-14-introducing-draft-pull-requests/">draft pull requests</a>
+which cannot be merged until marked ready for review.</p></li>
+<li><p>Also GitLab offers same mechanism (merge request starting with “WIP” or “Draft”)</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p>Collect feedback before it is finished and before it becomes more difficult to change</p></li>
+<li><p>Communicate to others what is partially done if it affects their work</p></li>
+</ul>
+</div>
+</section>
+<section id="licenses-matter">
+<h2>Licenses matter<a class="headerlink" href="#licenses-matter" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you submit code that is derivative work or code somebody else wrote, clarify license</p></li>
+<li><p>If you receive pull requests with a lot of code, <strong>clarify its license and
+copyright</strong> with the submitter, before merging</p></li>
+</ul>
+</section>
+<section id="how-to-make-sure-that-you-don-t-merge-malicious-code">
+<h2>How to make sure that you don’t merge malicious code<a class="headerlink" href="#how-to-make-sure-that-you-don-t-merge-malicious-code" title="Permalink to this heading"></a></h2>
+<p>(this is typically not a problem for most of us but can be a problem for some)</p>
+<ul class="simple">
+<li><p>Since commit hashes depend on all their parents you cannot modify the past
+without all future hashes changing</p></li>
+<li><p>Projects like <a class="reference external" href="https://github.com/torvalds/linux">https://github.com/torvalds/linux</a> or <a class="reference external" href="https://github.com/Homebrew/brew">https://github.com/Homebrew/brew</a>
+have to be extremely careful what they accept</p></li>
+<li><p>Browse the code changes before merging them</p></li>
+<li><p>If you get an extremely large changeset, ask for more information</p></li>
+<li><p>Possibly verify whether the submitter is not trying to impersonate somebody you know</p></li>
+<li><p>Git commits can be PGP signed to verify authenticity</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Communicate and discuss before coding massive changes.</p></li>
+<li><p><strong>Cross-reference discussions, proposals, and code changes</strong>.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../distributed/" class="btn btn-neutral float-left" title="Distributed version control and forking workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hooks/" class="btn btn-neutral float-right" title="Hooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
