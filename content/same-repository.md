@@ -90,7 +90,7 @@ contribute.
   :::{figure} img/centralized/unwatch.png
   :alt: Unwatching a repository
 
-  Unwatch a repository by clicking "Unwatch" in the repository view,
+  Unwatch a repository by clicking "Watch" in the repository view,
   then "Participating and @mentions" - this way, you will get
   notifications about your own interactions.
   :::
