@@ -81,7 +81,7 @@ This is also in the email template above but they need to:
 - Accept invitation from GitHub sent to their email address (that GitHub
   knows about).
 
-- "Unwatch" both these repositories by clicking the "Unwatch" button (top
+- "Unwatch" both these repositories by clicking the "Watch" button (top
    middle of the screen) and then select "Participating and mentions":
    - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise>
    - <https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded>
@@ -120,7 +120,7 @@ What you should do before the exercise starts:
    to "unwatch" both
    https://github.com/cr-workshop-exercises/centralized-workflow-exercise and
    https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
-   To "unwatch", go to the repository and click the "Unwatch" button (top
+   To "unwatch", go to the repository and click the "Watch" button (top
    middle of the screen) and then select "Participating and mentions".
 ```
 
