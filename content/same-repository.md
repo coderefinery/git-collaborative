@@ -115,7 +115,7 @@ contribute.
 - Learn about the value of draft pull requests.
 
 **Exercise tasks**:
-1. Open an issue where you describe the change you want to make. Note down the
+1. In the GitHub repository, open an issue where you describe the change you want to make. Note down the
    issue number since you will need it later.
 1. If you work locally and not on GitHub, you need to clone the repository to
    your computer before you can create a new branch (more details in "Solution
@@ -124,7 +124,7 @@ contribute.
 1. Make a change to the recipe book on the new branch and in the commit
    cross-reference the issue you opened (see the walk-through below
    for how to do that).
-1. Push your new branch (with the new commit) to the repository you
+1. If you work locally, push your new branch (with the new commit) to the repository you
    are working on.
 1. Open a pull request towards the main branch.
 1. Review somebody else's pull request and give constructive feedback. Merge their pull request.
