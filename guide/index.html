@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor guide &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="prev" title="List of exercises" href="../exercises/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-review/">Practicing code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forking-workflow/">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instructor guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#approximate-schedule">Approximate schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-exercises-within-exercise-groups">Preparing exercises within exercise groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-exercises-for-the-live-stream">Preparing exercises for the live stream</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-instructors-need-to-do-at-least-1-day-before-the-workshop">What instructors need to do at least 1 day before the workshop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-communicate-to-learners-at-least-1-day-before-the-workshop">What to communicate to learners at least 1 day before the workshop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-should-learners-request-access">How should learners request access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-add-learners-to-the-team-stream-exercise-participants">How to add learners to the team stream-exercise-participants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-we-teach-this-lesson">Why we teach this lesson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intended-learning-outcomes">Intended learning outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interesting-questions-you-might-get">Interesting questions you might get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timing">Timing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#typical-pitfalls">Typical pitfalls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#difference-between-pull-and-pull-requests">Difference between pull and pull requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-requests-are-from-branch-to-branch-not-from-commit-to-branch">Pull requests are from branch to branch, not from commit to branch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-practical-aspects">Other practical aspects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Instructor guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/guide.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instructor-guide">
+<h1>Instructor guide<a class="headerlink" href="#instructor-guide" title="Link to this heading"></a></h1>
+<section id="approximate-schedule">
+<h2>Approximate schedule<a class="headerlink" href="#approximate-schedule" title="Link to this heading"></a></h2>
+<p>Times here are in CE(S)T.</p>
+<ul class="simple">
+<li><p>08:50 - 09:00 (10 min) Soft start and icebreaker question</p></li>
+<li><p>09:00 - 09:15 (15 min) Recap Git, any HedgeDoc questions to highlight</p></li>
+<li><p>09:15 - 09:25 (10 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/concepts/">Concepts around collaboration</a></p>
+<ul>
+<li><p>Explain terms: Pull, push, clone, fork. Focus on pull and not fetch.</p></li>
+<li><p>Focus more on clone and less on generating from templates and importing.</p></li>
+</ul>
+</li>
+<li><p>09:25 - 10:00 (35 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/same-repository/">Collaborating within the same repository</a></p>
+<ul>
+<li><p>Exercise (incl preparation)</p></li>
+</ul>
+</li>
+<li><p>10:00 - 10:10 (10 min) Break</p></li>
+<li><p>10:10 - 10:30 (20 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/same-repository/">Collaborating within the same repository</a></p>
+<ul>
+<li><p>Demo and Q/A</p></li>
+</ul>
+</li>
+<li><p>10:30 - 11:00 (30 min)  <a class="reference external" href="https://coderefinery.github.io/git-collaborative/code-review/">Practicing code review</a></p></li>
+<li><p>11:00 - 12:00 (60 min) Break</p></li>
+<li><p>12:00 - 12:50 (50 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/distributed/">Distributed version control and forking workflow</a></p>
+<ul>
+<li><p>Concepts and what are exercise outcomes</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation">Exercise</a></p></li>
+</ul>
+</li>
+<li><p>12:50 - 13:00 (10 min) Break</p></li>
+<li><p>13:00 - 13:30 (30 min) Discussion, demonstration, Q&amp;A, feedback, what to expect next week</p></li>
+</ul>
+</section>
+<section id="preparing-exercises-within-exercise-groups">
+<h2>Preparing exercises within exercise groups<a class="headerlink" href="#preparing-exercises-within-exercise-groups" title="Link to this heading"></a></h2>
+<p>Exercise leads typically prepare exercise repositories for the exercise group
+(although the material speaks about “maintainer” who can also be one of the
+learners). Preparing the first exercise (centralized workflow) <strong>will take more
+time</strong> than preparing the second (forking workflow). Most preparation time is not
+the generating part but will go into communicating the URL to the exercise
+group, communicating their usernames, adding them as collaborators, and waiting
+until everybody accepts the GitHub invitation to join the newly created
+exercise repository.</p>
+</section>
+<section id="preparing-exercises-for-the-live-stream">
+<h2>Preparing exercises for the live stream<a class="headerlink" href="#preparing-exercises-for-the-live-stream" title="Link to this heading"></a></h2>
+<section id="what-instructors-need-to-do-at-least-1-day-before-the-workshop">
+<h3>What instructors need to do at least 1 day before the workshop<a class="headerlink" href="#what-instructors-need-to-do-at-least-1-day-before-the-workshop" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>This <strong>takes 30-60 minutes</strong> to set up. Allocate the time for this before the workshop.</p></li>
+<li><p>Make sure to remove all participants from a previous workshop from these two places:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a></p></li>
+<li><p><a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/people">https://github.com/orgs/cr-workshop-exercises/people</a></p></li>
+</ul>
+</li>
+<li><p>We create the exercises <strong>in an organization</strong> (not under your username) so
+that you can give others admin access to add collaborators. Also this way
+you can then fork yourself if needed.</p></li>
+<li><p>All exercise repositories can be created from
+<a class="reference external" href="https://github.com/coderefinery/recipe-book-template">https://github.com/coderefinery/recipe-book-template</a> by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--mirror</span></code> from the template followed by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--mirror</span></code> towards the exercise repository.</p></li>
+<li><p>We have created two versions of each <strong>a day in advance</strong> to signal which one might end up
+being discussed on recording/stream:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">centralized-workflow-exercise-recorded</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">centralized-workflow-exercise</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise-recorded</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise</span></code></p></li>
+</ul>
+</li>
+<li><p>Protect the default branch of the two <code class="docutils literal notranslate"><span class="pre">centralized-*</span></code> repositories (but this
+can also be done on stream as the very first step if you are sure you will remember as instructor).</p></li>
+</ul>
+</section>
+<section id="what-to-communicate-to-learners-at-least-1-day-before-the-workshop">
+<h3>What to communicate to learners at least 1 day before the workshop<a class="headerlink" href="#what-to-communicate-to-learners-at-least-1-day-before-the-workshop" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://coderefinery.github.io/2025-03-25-workshop/communication/#getting-ready-for-day-2-and-3-of-coderefinery-workshop">Example email from a previous workshop</a></p></li>
+</ul>
+</section>
+<section id="how-should-learners-request-access">
+<h3>How should learners request access<a class="headerlink" href="#how-should-learners-request-access" title="Link to this heading"></a></h3>
+<p>This is also in the email template above but they need to:</p>
+<ul class="simple">
+<li><p>Open an issue at <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md">https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md</a></p></li>
+<li><p>Accept invitation from GitHub sent to their email address (that GitHub
+knows about).</p></li>
+<li><p>“Unwatch” both these repositories by clicking the “Watch” button (top
+middle of the screen) and then select “Participating and mentions”:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise">https://github.com/cr-workshop-exercises/centralized-workflow-exercise</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="how-to-add-learners-to-the-team-stream-exercise-participants">
+<h3>How to add learners to the team stream-exercise-participants<a class="headerlink" href="#how-to-add-learners-to-the-team-stream-exercise-participants" title="Link to this heading"></a></h3>
+<p>You need to be “owner” of
+<a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a>
+to be able to add people to the team.</p>
+<ol class="arabic simple">
+<li><p>Check <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues">https://github.com/cr-workshop-exercises/access-requests/issues</a>.
+Any open issue means the person hasn’t been added yet.</p></li>
+<li><p>Assign one issue to yourself. This way other organizers know that this is being worked on.</p></li>
+<li><p>Add person to <a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Click on “Add member” -&gt; “Invite” -&gt; “Add (username) to stream-exercise-participants”</p></li>
+<li><p><strong>Do not add/invite the person anywhere else</strong>, not as collaborator to any
+exercise repo directly. Only add/invite them into the team
+“stream-exercise-participants”. Motivation: This way we give instructors the control over when the exercise can start. Otherwise
+learners might merge changes before the lesson and thus change the example and confuse instructors and learners.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Close the issue on <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues">https://github.com/cr-workshop-exercises/access-requests/issues</a> with the following comment (feel free to adapt it):</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Thanks! I have added you to the collaborative exercise team.
+
+What you should do before the exercise starts:
+
+1) You will get an invitation from GitHub to your email address (that GitHub
+   knows about). Please accept that invitation so that you can participate in
+   the collaborative exercise.
+
+2) To make sure you don&#39;t get too many emails during the exercise, don&#39;t forget
+   to &quot;unwatch&quot; both
+   https://github.com/cr-workshop-exercises/centralized-workflow-exercise and
+   https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
+   To &quot;unwatch&quot;, go to the repository and click the &quot;Watch&quot; button (top
+   middle of the screen) and then select &quot;Participating and mentions&quot;.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="why-we-teach-this-lesson">
+<h2>Why we teach this lesson<a class="headerlink" href="#why-we-teach-this-lesson" title="Link to this heading"></a></h2>
+<p>In order to collaborate efficiently using Git, it’s essential to have a solid
+understanding of how remotes work, and how to contribute changes through pull
+requests or merge requests. The <a class="reference external" href="https://coderefinery.github.io/git-intro/">git-intro lesson</a>
+teaches participants how to
+work efficiently with Git when there is only one developer (more precisely: how
+to work when there are no remote Git repositories yet in the picture). This
+lesson dives into the collaborative aspects of Git and focuses on the possible
+collaborative workflows enabled by web-based repository hosting platforms like
+GitHub.</p>
+<p>This lesson is meant to directly benefit workshop participants who have prior
+experience with Git, enabling them to put collaborative workflows involving
+code review directly into practice when they return to their normal work. For
+novice Git users (who may have learned a lot in the git-intro lesson) this
+lesson is somewhat challenging, but the lesson aims to introduce them to the
+concepts and give them confidence to start using these workflows later when
+they have gained some further experience in working with Git.</p>
+</section>
+<section id="intended-learning-outcomes">
+<h2>Intended learning outcomes<a class="headerlink" href="#intended-learning-outcomes" title="Link to this heading"></a></h2>
+<p>By the end of this lesson, learners should:</p>
+<ul class="simple">
+<li><p>Understand the concept of remotes</p></li>
+<li><p>Be able to describe the difference between local and remote branches</p></li>
+<li><p>Be able to describe the difference between centralized and forking workflows</p></li>
+<li><p>Know how to use pull requests or merge requests to submit changes to another projects</p></li>
+<li><p>Know how to reference issues in commits or pull/merge requests and how to auto-close issues</p></li>
+<li><p>Know how to update a fork</p></li>
+<li><p><strong>Be able to contribute in code review as submitter or reviewer</strong></p></li>
+</ul>
+</section>
+<section id="interesting-questions-you-might-get">
+<h2>Interesting questions you might get<a class="headerlink" href="#interesting-questions-you-might-get" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If participants run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> they might notice <code class="docutils literal notranslate"><span class="pre">origin/HEAD</span></code>.  This has been
+omitted from the figures to not overload the presentation. This pointer represents the
+default branch of the remote repository.</p></li>
+</ul>
+</section>
+<section id="timing">
+<h2>Timing<a class="headerlink" href="#timing" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The centralized collaboration episode is densest and introduces many new concepts,
+so at least an hour is required for it.</p></li>
+<li><p>The forking-workflow exercise repeats familiar concepts (only
+introduces forking and distributed workflows), and it takes maybe half the
+time of the first episode.</p></li>
+<li><p>The “How to contribute changes to somebody else’s project” episode can be
+covered relatively quickly and offers room for discussion if you have time left.
+However, this should not be skipped as this is perhaps the key learning outcome.</p></li>
+</ul>
+</section>
+<section id="typical-pitfalls">
+<h2>Typical pitfalls<a class="headerlink" href="#typical-pitfalls" title="Link to this heading"></a></h2>
+<section id="difference-between-pull-and-pull-requests">
+<h3>Difference between pull and pull requests<a class="headerlink" href="#difference-between-pull-and-pull-requests" title="Link to this heading"></a></h3>
+<p>The difference between pull and pull requests can be confusing, explain clearly
+that pull requests or merge requests are a different mechanism specific to
+GitHub, GitLab, etc.</p>
+</section>
+<section id="pull-requests-are-from-branch-to-branch-not-from-commit-to-branch">
+<h3>Pull requests are from branch to branch, not from commit to branch<a class="headerlink" href="#pull-requests-are-from-branch-to-branch-not-from-commit-to-branch" title="Link to this heading"></a></h3>
+<p>The behavior that additional commits to a branch from which a pull request has
+been created get appended to the pull request needs to be explained.</p>
+</section>
+</section>
+<section id="other-practical-aspects">
+<h2>Other practical aspects<a class="headerlink" href="#other-practical-aspects" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>In in-person workshops participants really have to sit next to someone, so
+that they can see the screens. From the beginning.</p></li>
+<li><p>Emphasize use of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> a lot, just like in the git-solo lesson.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../exercises/" class="btn btn-neutral float-left" title="List of exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

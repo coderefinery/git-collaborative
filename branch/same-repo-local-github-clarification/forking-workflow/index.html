@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to contribute changes to repositories that belong to others &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Hooks" href="../hooks/" />
+    <link rel="prev" title="Practicing code review" href="../code-review/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-review/">Practicing code review</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to contribute changes to repositories that belong to others</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-and-discussion">Help and discussion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#help-i-don-t-have-permissions-to-push-my-local-changes">Help! I don’t have permissions to push my local changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opening-a-pull-request-towards-the-upstream-repository">Opening a pull request towards the upstream repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-requests-can-be-coupled-with-automated-testing">Pull requests can be coupled with automated testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-update-your-fork-with-changes-from-upstream">How to update your fork with changes from upstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-approach-other-peoples-repositories-with-ideas-changes-and-requests">How to approach other people’s repositories with ideas, changes, and requests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to contribute changes to repositories that belong to others</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/forking-workflow.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-contribute-changes-to-repositories-that-belong-to-others">
+<h1>How to contribute changes to repositories that belong to others<a class="headerlink" href="#how-to-contribute-changes-to-repositories-that-belong-to-others" title="Link to this heading"></a></h1>
+<p>In this episode we prepare you to suggest and contribute changes to
+repositories that belong to others. These might be open source projects that
+you use in your work.</p>
+<p>We will see how Git and services like GitHub or GitLab can be used to suggest
+modification without having to ask for write access to the repository and
+accept modifications without having to grant write access to others.</p>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading"></a></h2>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Part of team/exercise room</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Following on your own</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p><strong>Maintainer (team lead)</strong>:</p>
+<ul class="simple">
+<li><p>Create an exercise repository
+called <code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise</span></code> by
+<a class="reference external" href="https://help.github.com/en/articles/creating-a-repository-from-a-template">generating from a template</a>
+using this template: <a class="reference external" href="https://github.com/coderefinery/recipe-book-template">https://github.com/coderefinery/recipe-book-template</a>.</p></li>
+<li><p>In this case we <strong>do not add collaborators</strong> to the repository (this is the point of this example).</p></li>
+<li><p>Share the link to the newly created repository with your group.</p></li>
+</ul>
+<p><strong>Learners in exercise team</strong>: Fork the newly created repository (not the
+“coderefinery” one) and then <strong>clone your fork</strong> (if you wish to work locally).</p>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>The instructors are the <strong>maintainers</strong>.  All watchers are
+<strong>collaborators</strong>.</p>
+<p>We create(d) these the day before hopefully.  <strong>Choose only one to
+work with</strong>:</p>
+<ul class="simple">
+<li><p>Not recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise">https://github.com/cr-workshop-exercises/forking-workflow-exercise</a> (this
+will not be shown on stream or recorded in our videos, but is be public on
+the internet until it is deleted)</p></li>
+<li><p>Recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded</a>
+(this will be shown on stream and recorded, <strong>your username and comments
+may appear in the recorded video on YouTube</strong>)</p></li>
+</ul>
+<p>Here we don’t need your GitHub usernames because the point of this exercise
+is to show that we can collaborate without granting write permissions.</p>
+<p>Learners following on their own: Fork one of these two repositories
+and then <strong>clone your fork</strong> to your computer (if you wish to work locally).</p>
+</div></div>
+</div>
+<div class="admonition-exercise-collaborating-within-the-same-repository-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Collaborating within the same repository (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from the previous episodes:</p>
+<ul class="simple">
+<li><p>Forking a repository (<a class="reference external" href="https://coderefinery.github.io/git-intro/browsing/">previous lesson</a>)</p></li>
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>Opening a pull request towards the upstream repository.</p></li>
+<li><p>Pull requests can be coupled with automated testing.</p></li>
+<li><p>Learning that your fork can get out of date.</p></li>
+<li><p>After the pull requests are merged, updating your fork with the changes.</p></li>
+<li><p>Learn how to approach other people’s repositories with ideas, changes, and requests.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Open an issue in the upstream exercise repository where you describe the
+change you want to make. Take note of the issue number.</p></li>
+<li><p>Create a new branch in your fork of the repository.</p></li>
+<li><p>Make a change to the recipe book on the new branch and in the commit cross-reference the issue you opened.
+See the walk-through below for how to do this.</p></li>
+<li><p>Open a pull request towards the upstream repository.</p></li>
+<li><p>Team leaders will merge the pull requests. For individual participants, the
+instructors and workshop organizers will review and merge the pull requests.
+During the review, pay attention to the automated test step (here for
+demonstration purposes, we test whether the recipe contains an ingredients
+and an instructions sections).</p></li>
+<li><p>After few pull requests are merged, update your fork with the changes.</p></li>
+<li><p>Check that in your fork you can see changes from other people’s pull requests.</p></li>
+</ol>
+</div>
+</section>
+<section id="help-and-discussion">
+<h2>Help and discussion<a class="headerlink" href="#help-and-discussion" title="Link to this heading"></a></h2>
+<section id="help-i-don-t-have-permissions-to-push-my-local-changes">
+<h3>Help! I don’t have permissions to push my local changes<a class="headerlink" href="#help-i-don-t-have-permissions-to-push-my-local-changes" title="Link to this heading"></a></h3>
+<p>Maybe you see an error like this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Please make sure you have the correct access rights
+and the repository exists.
+</pre></div>
+</div>
+<p>Or like this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>failed to push some refs to cr-workshop-exercises/forking-workflow-exercise.git
+</pre></div>
+</div>
+<p>In this case you probably try to push the changes not to your fork but to the original repository
+and in this exercise you do not have write access to the original repository.</p>
+<p>The simpler solution is to clone again but this time your fork.</p>
+<div class="admonition-recovery solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Recovery</p>
+<p>But if you want to keep your local changes, you can change the remote URL to point to your fork.
+Check where your remote points to with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">--verbose</span></code>.</p>
+<p>It should look like this (replace <code class="docutils literal notranslate"><span class="pre">USER</span></code> with your GitHub username):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>It should <strong>not</strong> look like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>In this case you can adjust “origin” to point to your fork with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:USER/forking-workflow-exercise.git
+</pre></div>
+</div>
+</div>
+</section>
+<section id="opening-a-pull-request-towards-the-upstream-repository">
+<h3>Opening a pull request towards the upstream repository<a class="headerlink" href="#opening-a-pull-request-towards-the-upstream-repository" title="Link to this heading"></a></h3>
+<p>We have learned in the previous episode that pull requests are always from
+branch to branch. But the branch can be in a different repository.</p>
+<p>When you open a pull request in a fork, by default GitHub will suggest to
+direct it towards the default branch of the upstream repository.</p>
+<p>This can be changed and it should always be verified, but in this case this is
+exactly what we want to do, from fork towards upstream:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/pull-request-form.png"><img alt="Screenshot of a pull request from fork towards upstream" class="with-border" src="../_images/pull-request-form.png" style="width: 100%;" />
+</a>
+</figure>
+</section>
+<section id="pull-requests-can-be-coupled-with-automated-testing">
+<h3>Pull requests can be coupled with automated testing<a class="headerlink" href="#pull-requests-can-be-coupled-with-automated-testing" title="Link to this heading"></a></h3>
+<p>We added an automated test here just for fun and so that you see that this is
+possible to do.</p>
+<p>In this exercise, the test is silly. It will check whether the recipe contains
+both an ingredients and an instructions section.</p>
+<p>In this example the test failed:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/all-checks-failed.png"><img alt="Screenshot of a failed test in a pull request" class="with-border" src="../_images/all-checks-failed.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Click on the “Details” link to see the details of the failed test:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/check-details.png"><img alt="Screenshot of details why the test failed" class="with-border" src="../_images/check-details.png" style="width: 60%;" />
+</a>
+</figure>
+<p><strong>How can this be useful?</strong></p>
+<ul class="simple">
+<li><p>The project can define what kind of tests are expected to pass before a pull
+request can be merged.</p></li>
+<li><p>The reviewer can see the results of the tests, without having to run them
+locally.</p></li>
+</ul>
+<p><strong>How does it work?</strong></p>
+<ul class="simple">
+<li><p>We added a GitHub Actions workflow
+to automatically run on each push or pull request towards the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p></li>
+</ul>
+<p>What tests or steps can you image for your project to run automatically with
+each pull request?</p>
+</section>
+<section id="how-to-update-your-fork-with-changes-from-upstream">
+<h3>How to update your fork with changes from upstream<a class="headerlink" href="#how-to-update-your-fork-with-changes-from-upstream" title="Link to this heading"></a></h3>
+<p>This used to be difficult but now it is two mouse clicks:
+Navigate to your fork and notice how GitHub tells you that your fork is behind.
+In my case, it is 9 commits behind upstream. To fix this, click on “Sync fork”
+and then “Update branch”:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/sync-fork.png"><img alt="Screenshot on GitHub fork page showing that the fork is behind" class="with-border" src="../_images/sync-fork.png" style="width: 80%;" />
+</a>
+</figure>
+<p>After the update my “branch is up to date” with the upstream repository:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/fork-after-update.png"><img alt="Screenshot on GitHub after fork has been updated" class="with-border" src="../_images/fork-after-update.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+<section id="how-to-approach-other-peoples-repositories-with-ideas-changes-and-requests">
+<h3>How to approach other people’s repositories with ideas, changes, and requests<a class="headerlink" href="#how-to-approach-other-peoples-repositories-with-ideas-changes-and-requests" title="Link to this heading"></a></h3>
+<p><strong>Contributing very minor changes</strong></p>
+<ul class="simple">
+<li><p>Clone or fork+clone repository</p></li>
+<li><p>Create a branch</p></li>
+<li><p>Commit and push change</p></li>
+<li><p>Open a pull request or merge request</p></li>
+</ul>
+<p><strong>If you observe an issue and have an idea how to fix it</strong></p>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>Describe the problem</p></li>
+<li><p>If you have a suggestion on how to fix it, describe your suggestion</p></li>
+<li><p>Possibly <strong>discuss and get feedback</strong></p></li>
+<li><p>If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it</p></li>
+<li><p>Submit your fix as pull request or merge request which references/closes the issue</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Inform others about an observed problem</strong></p></li>
+<li><p>Make it clear whether this issue is up for grabs or already being worked on</p></li>
+</ul>
+</div>
+<p><strong>If you have an idea for a new feature</strong></p>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>In the issue, write a short proposal for your suggested change or new feature</p></li>
+<li><p>Motivate why and how you wish to do this</p></li>
+<li><p>Also indicate where you are unsure and where you would like feedback</p></li>
+<li><p><strong>Discuss and get feedback before you code</strong></p></li>
+<li><p>Once you start coding, indicate that you are working on it</p></li>
+<li><p>Once you are done, submit your new feature as pull request or merge request which references/closes the issue/proposal</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Get agreement and feedback before writing 5000 lines of code</strong> which might be rejected</p></li>
+<li><p>If we later wonder why something was done, we have the issue/proposal as
+reference and can read up on the reasoning behind a code change</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>This forking workflow lets you propose changes to repositories for
+which <strong>you have no write access</strong>.</p></li>
+<li><p>This is the way that much modern open-source software works.</p></li>
+<li><p>You can now contribute to any project you can view.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../code-review/" class="btn btn-neutral float-left" title="Practicing code review" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hooks/" class="btn btn-neutral float-right" title="Hooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

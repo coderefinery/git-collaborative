@@ -1,0 +1,237 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick reference &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="List of exercises" href="../exercises/" />
+    <link rel="prev" title="Non-bare and bare repositories" href="../bare-repos/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-review/">Practicing code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forking-workflow/">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#other-cheatsheets">Other cheatsheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands-we-use">Commands we use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick reference</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/reference.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-reference">
+<h1>Quick reference<a class="headerlink" href="#quick-reference" title="Link to this heading"></a></h1>
+<section id="other-cheatsheets">
+<h2>Other cheatsheets<a class="headerlink" href="#other-cheatsheets" title="Link to this heading"></a></h2>
+<p>See the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro cheatsheet</a> for
+the basics.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ndpsoftware.com/git-cheatsheet.html">Interactive git cheatsheet</a></p></li>
+<li><p><a class="reference external" href="https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it-cheatsheet.pdf">Very detailed 2-page git
+cheatsheet</a></p></li>
+</ul>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h2>
+<dl class="simple glossary">
+<dt id="term-remote">remote<a class="headerlink" href="#term-remote" title="Link to this term"></a></dt><dd><p>Roughly, another git repository on another computer.  A
+repository can be linked to several other remotes.</p>
+</dd>
+<dt id="term-push">push<a class="headerlink" href="#term-push" title="Link to this term"></a></dt><dd><p>Send a branch from your current repository to another repository</p>
+</dd>
+<dt id="term-fetch">fetch<a class="headerlink" href="#term-fetch" title="Link to this term"></a></dt><dd><p>Update your view of another repository</p>
+</dd>
+<dt id="term-pull">pull<a class="headerlink" href="#term-pull" title="Link to this term"></a></dt><dd><p>Fetch (above) and then merge</p>
+</dd>
+<dt id="term-origin">origin<a class="headerlink" href="#term-origin" title="Link to this term"></a></dt><dd><p>Default name for a remote repository.</p>
+</dd>
+<dt id="term-origin-NAME">origin/NAME<a class="headerlink" href="#term-origin-NAME" title="Link to this term"></a></dt><dd><p>A branch name which represents a remote branch.</p>
+</dd>
+<dt id="term-main">main<a class="headerlink" href="#term-main" title="Link to this term"></a></dt><dd><p>Default name for main branch.</p>
+</dd>
+<dt id="term-merge">merge<a class="headerlink" href="#term-merge" title="Link to this term"></a></dt><dd><p>Combine the changes on two branches.</p>
+</dd>
+<dt id="term-conflict">conflict<a class="headerlink" href="#term-conflict" title="Link to this term"></a></dt><dd><p>When a merge has changes that affect the same lines,
+git can not automatically figure out what to do.  It presents the
+conflict to the user to resolve.</p>
+</dd>
+<dt id="term-issue">issue<a class="headerlink" href="#term-issue" title="Link to this term"></a></dt><dd><p>Feature of web repositories that allows discussion
+related to a repository.</p>
+</dd>
+<dt id="term-pull-request">pull request<a class="headerlink" href="#term-pull-request" title="Link to this term"></a></dt><dd><p>A GitHub/Gitlab feature that allows you to send a
+code suggestion using a branch, which allows one-button merging.  In
+Gitlab, called “<strong>merge request</strong>”.</p>
+</dd>
+<dt id="term-git-hook">git hook<a class="headerlink" href="#term-git-hook" title="Link to this term"></a></dt><dd><p>Code that can run before or after certain actions, for
+example to do tests before allowing you to commit.</p>
+</dd>
+<dt id="term-bare-repository">bare repository<a class="headerlink" href="#term-bare-repository" title="Link to this term"></a></dt><dd><p>A copy of a repository that only is only the <code class="docutils literal notranslate"><span class="pre">.git</span></code>
+directory: there are no files actually checked out.  Directory names
+usually like <code class="docutils literal notranslate"><span class="pre">something.git</span></code></p>
+</dd>
+</dl>
+</section>
+<section id="commands-we-use">
+<h2>Commands we use<a class="headerlink" href="#commands-we-use" title="Link to this heading"></a></h2>
+<p>This excludes most introduced in the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro
+cheatsheet</a>.</p>
+<p>Setup:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">URL</span> <span class="pre">[TARGET-DIRECTORY]</span></code>: Make a copy of existing
+repository at &lt;url&gt;, containing all history.</p></li>
+</ul>
+<p>Status:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>: Same as in basic git, list status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">[-v]</span></code>: List all remotes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code>: see a detailed graph of commits.  Create this command
+with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">alias.graph</span> <span class="pre">&quot;log</span> <span class="pre">--all</span> <span class="pre">--graph</span> <span class="pre">--decorate</span> <span class="pre">--oneline&quot;</span></code></p></li>
+</ul>
+<p>General work:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span> <span class="pre">BRANCH-NAME</span></code>: Make a branch active.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH:BRANCH]</span></code>: Send commits and
+update the branch on the remote.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH-NAME]</span></code>: Fetch and then merge
+automatically.  Can be convenient, but to be careful you can fetch
+and merge separately.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">[REMOTE-NAME]</span></code>: Get commits from the remote.  Doesn’t
+update local branches, but updates the remote tracking branches
+(like origin/NAME).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[BRANCH-NAME]</span></code>: Updates your current branch with
+changes from another branch.  By default, merges to the branch is is
+tracking by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">REMOTE-NAME</span> <span class="pre">URL</span></code>: Adds a new remote with a
+certain name.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../bare-repos/" class="btn btn-neutral float-left" title="Non-bare and bare repositories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../exercises/" class="btn btn-neutral float-right" title="List of exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

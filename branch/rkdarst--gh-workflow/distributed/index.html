@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Distributed version control and forking workflow &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="How to contribute changes to somebody else’s project" href="../contributing/" />
+    <link rel="prev" title="Centralized workflow" href="../centralized/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../remotes/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../centralized/">Centralized workflow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Distributed version control and forking workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#forking-layout">Forking layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-multiple-remotes">Working with multiple remotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-preparation">Exercise preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-part-1-creating-a-pull-request">Exercise: Part 1 - creating a pull request</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-a-fork-and-clone">Step A: Fork and clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-b-open-an-issue-as-a-change-proposal">Step B: Open an “issue” as a change proposal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-c-modify-and-commit">Step C: Modify and commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-d-push-your-changes-to-the-fork">Step D: Push your changes to the fork</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-e-open-a-pull-request">Step E: Open a pull request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-f-view-your-pull-request">Step F: View your pull request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-part-2-code-review-and-merging-changes">Exercise: Part 2 - code review and merging changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-part-3-updating-forks">Exercise: Part 3 - Updating forks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How to contribute changes to somebody else’s project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Distributed version control and forking workflow</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/distributed.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="distributed-version-control-and-forking-workflow">
+<h1>Distributed version control and forking workflow<a class="headerlink" href="#distributed-version-control-and-forking-workflow" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Get a mental representation of what is happening on GitHub/GitLab.</p></li>
+<li><p>Get comfortable with the forking workflow.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>30 min teaching</p></li>
+<li><p>30 min exercises</p></li>
+</ul>
+</div>
+<section id="forking-layout">
+<h2>Forking layout<a class="headerlink" href="#forking-layout" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/forking-overview.svg"><img alt="Forking workflow" src="../_images/forking-overview.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-text">Forking workflow.  <strong>Red</strong> is the central repository, where only
+owners have access.  <strong>Green</strong> are <em>forks</em> on GitHub (copy for a
+single user to work on).  <strong>Blue</strong> are local copies where contributors
+work on their own computer.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the <strong>forking layout</strong>, again we call one repository the “central”
+repository but people push to <strong>forks</strong> (their own copies of the
+repository on GitHub/GitLab/Bitbucket).</p>
+<p>Features:</p>
+<ul class="simple">
+<li><p><strong>Anybody can propose contributions without asking for advance permission</strong>
+(to public projects).</p></li>
+<li><p>Maintainer still has <strong>full control over what is merged</strong>.</p></li>
+<li><p>Contributors now have <strong>more than one remote</strong> to work with.</p></li>
+</ul>
+<p>This is used by almost all large (and small) open-source projects
+these days.  Real life examples:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/devdocs/dev/index.html">NumPy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab">JupyterLab</a></p></li>
+</ul>
+<div class="admonition-discussion-why-do-we-create-a-fork-and-not-only-a-clone discussion important admonition" id="discussion-0">
+<p class="admonition-title">Discussion: Why do we create a fork and not only a clone?</p>
+<ul class="simple">
+<li><p>It is not easy to show my changes on my computer to somebody else.</p></li>
+<li><p>The maintainer cannot pull from my laptop.</p></li>
+<li><p>The cloud provider is a trusted place to pull from and allows review before pulling.</p></li>
+<li><p>Backup.</p></li>
+</ul>
+</div>
+</section>
+<section id="working-with-multiple-remotes">
+<h2>Working with multiple remotes<a class="headerlink" href="#working-with-multiple-remotes" title="Permalink to this heading"></a></h2>
+<p>In the forking layout described above we work with <strong>multiple remotes</strong>,
+in this case <strong>two remotes</strong>: One remote refers to the “central” repository, and the other
+remote refers to the fork.</p>
+<ul>
+<li><p>There is nothing special about the name <code class="docutils literal notranslate"><span class="pre">origin</span></code>. The <code class="docutils literal notranslate"><span class="pre">origin</span></code> is an alias/placeholder (think of “sticky note” referring to an URL).</p></li>
+<li><p>We can name these aliases as we like.</p></li>
+<li><p>We can add and remove remotes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/project/project.git
+<span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>rm<span class="w"> </span>upstream
+
+<span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>group-repo<span class="w"> </span>https://example.com/exciting-project.git
+<span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>rm<span class="w"> </span>group-repo
+
+<span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/project/project.git
+<span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>downstream<span class="w"> </span>https://github.com/userX/project.git
+</pre></div>
+</div>
+</li>
+<li><p>To see all remotes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>We will work with a new repository for this exercise!</strong></p>
+<p>For this exercise we will fork a different repository compared to earlier today.
+Please step out of the repository and check that you fork the <strong>forking</strong>-workflow-exercise.</p>
+</div>
+</section>
+<section id="exercise-preparation">
+<h2>Exercise preparation<a class="headerlink" href="#exercise-preparation" title="Permalink to this heading"></a></h2>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Part of team/exercise room</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Following on your own</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p><strong>Maintainer (team lead)</strong>:</p>
+<ul class="simple">
+<li><p>Create an exercise repository by
+<a class="reference external" href="https://help.github.com/en/articles/creating-a-repository-from-a-template">generating from a template</a>
+using this template: <a class="reference external" href="https://github.com/coderefinery/template-forking-workflow-exercise">https://github.com/coderefinery/template-forking-workflow-exercise</a>
+called <code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise</span></code></p></li>
+<li><p>In this case we <strong>do not add collaborators</strong> to the repository (this is the point of this example).</p></li>
+<li><p>Share the link to the newly created repository with your group.</p></li>
+</ul>
+<p><strong>Learners in exercise team</strong>: Fork the newly created repository (not the
+“coderefinery” one) and then <strong>clone your fork</strong>.</p>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>The instructors are the <strong>maintainers</strong>.  All watchers are
+<strong>collaborators</strong>.</p>
+<p>We create(d) these the day before hopefully.  <strong>Choose only one to
+work with</strong>:</p>
+<ul class="simple">
+<li><p>Not recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise">https://github.com/cr-workshop-exercises/forking-workflow-exercise</a> (this
+will not be shown on stream or recorded in our videos, but is be public on
+the internet until it is deleted)</p></li>
+<li><p>Recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded</a>
+(this will be shown on stream and recorded, <strong>your username and comments
+may appear in the recorded video on YouTube</strong>)</p></li>
+</ul>
+<p>Here we don’t need your GitHub usernames because the point of this exercise
+is to show that we can collaborate without granting write permissions.</p>
+<p>Learners following on their own: Fork one of these two repositories
+and then <strong>clone your fork</strong> to your computer.</p>
+</div></div>
+</div>
+</section>
+<section id="exercise-part-1-creating-a-pull-request">
+<h2>Exercise: Part 1 - creating a pull request<a class="headerlink" href="#exercise-part-1-creating-a-pull-request" title="Permalink to this heading"></a></h2>
+<div class="admonition-distributed-1-fork-a-repository-and-create-a-pull-request exercise important admonition" id="exercise-0">
+<p class="admonition-title">Distributed-1: Fork a repository and create a pull request</p>
+<p>As an example we will collaboratively develop a cookbook for taco recipes,
+inspired by <a class="reference external" href="https://github.com/sinker/tacofancy">tacofancy</a>.</p>
+<p><strong>Objectives</strong>:</p>
+<ul class="simple">
+<li><p>Learn how to fork, modify the fork, and open a pull request towards the central repository.</p></li>
+<li><p>Learn how to update your fork with changes that others have already made to the
+forked repository.</p></li>
+</ul>
+<p><strong>Exercise</strong>:</p>
+<ul class="simple">
+<li><p>Maintainer prepares an exercise repository (see above; this will take 5-10 minutes).</p></li>
+<li><p><strong>Learners work on steps A-F</strong> (15-20 minutes).</p></li>
+<li><p>There are two optional steps after step E for those who want more.</p></li>
+<li><p>After step E you take a break or help others.
+Please ask questions both during group work and in the collaborative document.</p></li>
+<li><p><strong>We will review the pull requests together</strong>
+and then update forks.</p></li>
+</ul>
+</div>
+<p>Before and after each action you take, run the following informational
+commands.  Carefully observe what happens, especially in <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> - almost every time. As a reminder, to define <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.graph<span class="w"> </span><span class="s2">&quot;log --all --graph --decorate --oneline&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> - when you modify files.</p></li>
+</ul>
+<section id="step-a-fork-and-clone">
+<h3>Step A: Fork and clone<a class="headerlink" href="#step-a-fork-and-clone" title="Permalink to this heading"></a></h3>
+<p>First fork the exercise repository (please carefully check with your exercise group
+which repository you should fork).</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/how-to-fork.png" class="with-border" src="../_images/how-to-fork.png" />
+<figcaption>
+<p><span class="caption-text">How to fork.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Then <strong>clone your fork</strong> to your computer.  The repository URL
+should include your username.  <strong>Clone using the SSH path you get from
+the webpage, not the https URL</strong> from the web browser. The URL should start with
+<code class="docutils literal notranslate"><span class="pre">git&#64;github.com:</span></code>.  Otherwise, you won’t be able to push later.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Pictorial representation of this step</p>
+<p>Here is a pictorial representation of this part:</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/forking-1.svg" src="../_images/forking-1.svg" /><figcaption>
+<p><span class="caption-text">Forking followed by cloning.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This is how it looks after we fork:</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>A fork is basically a (bare) clone.</p></li>
+<li><p>The forked repo and the fork are in principle independent repositories.</p></li>
+<li><p>When forking we copy all commits, all branches.</p></li>
+</ul>
+<p>After we clone the fork we have three in principle independent repositories:</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id8">
+<img alt="../_images/github-local-01.svg" src="../_images/github-local-01.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-b-open-an-issue-as-a-change-proposal">
+<h3>Step B: Open an “issue” as a change proposal<a class="headerlink" href="#step-b-open-an-issue-as-a-change-proposal" title="Permalink to this heading"></a></h3>
+<p>Before we start any coding, open a new “Issue” on the central repository as a
+“proposal” where you describe your idea for a recipe with the possibility to
+collect feedback from others. After creating this issue note the issue number.
+We will later refer to this issue number.</p>
+<p>Discuss why it can be useful to open an issue before
+starting the actual coding.</p>
+</section>
+<section id="step-c-modify-and-commit">
+<h3>Step C: Modify and commit<a class="headerlink" href="#step-c-modify-and-commit" title="Permalink to this heading"></a></h3>
+<p>Before we do any modification, we create a new branch and switch to it: this is
+a good reflex and a good practice. Choose a branch name which is descriptive of
+its content. For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>myname-feature<span class="w">    </span><span class="c1"># describes both who it belongs to and the purpose</span>
+<span class="gp">$ </span>git<span class="w"> </span>switch<span class="w"> </span>myname-feature
+</pre></div>
+</div>
+<p><strong>On the new branch create a new file</strong> which will hold your recipe,
+for instance <code class="docutils literal notranslate"><span class="pre">traditional_coderefinery_tacos.md</span></code> (but change the name). You can get inspired
+<a class="reference external" href="https://github.com/sinker/tacofancy/tree/master/full_tacos">here</a>. Hopefully we all use different
+file names, otherwise we will experience conflicts later (which is also interesting!).</p>
+<p>There is also a file called <code class="docutils literal notranslate"><span class="pre">test.py</span></code> which will automatically verify whether your recipe contains the string
+“taco” (case insensitive). This is there to slowly introduce us to automated testing.</p>
+<p>Once you are happy with your recipe, commit the change and in your commit
+message <strong>reference the issue</strong> which you have opened earlier with “this is my
+commit message; closes #N” (use a more descriptive message and replace N by the
+actual issue number from step B).</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Pictorial representation of this step</p>
+<p>And here is a picture of what just happened:</p>
+<figure class="align-default" id="id9">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id10">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id11">
+<img alt="../_images/github-local-02.svg" src="../_images/github-local-02.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-d-push-your-changes-to-the-fork">
+<h3>Step D: Push your changes to the fork<a class="headerlink" href="#step-d-push-your-changes-to-the-fork" title="Permalink to this heading"></a></h3>
+<p>Now push your new branch to your fork. Your branch is probably called something
+else than “myname-feature”. Also verify where “origin” points to.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>myname-feature
+</pre></div>
+</div>
+<div class="warning dropdown admonition">
+<p class="admonition-title">If you get a password request for https://github.com when you try to push</p>
+<p>Probably you cloned with the HTTPS URL (see <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> to
+confirm).  You can change this to SSH by going to the repository page,
+clicking “Code”, copying the SSH URL (starts with <code class="docutils literal notranslate"><span class="pre">git&#64;github.com:</span></code>),
+and then updating the URL with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>REPOSITORY-URL
+</pre></div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Pictorial representation of this step</p>
+<figure class="align-default" id="id12">
+<img alt="../_images/github-remote-01.svg" src="../_images/github-remote-01.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id13">
+<img alt="../_images/github-remote-02.svg" src="../_images/github-remote-02.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id14">
+<img alt="../_images/github-local-03.svg" src="../_images/github-local-03.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-e-open-a-pull-request">
+<h3>Step E: Open a pull request<a class="headerlink" href="#step-e-open-a-pull-request" title="Permalink to this heading"></a></h3>
+<p>Then file a pull request from the branch on your fork towards the main branch on the central repository.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Pictorial representation for steps D and E</p>
+<figure class="align-default" id="id15">
+<img alt="../_images/forking-2.svg" src="../_images/forking-2.svg" /><figcaption>
+<p><span class="caption-text">Push followed by a pull request.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>A pull-request means: “please review my changes and if you agree, merge them with a mouse-click”.</p>
+<p>Once the pull-request is accepted, the change is merged:</p>
+<figure class="align-default" id="id16">
+<img alt="../_images/github-remote-03.svg" src="../_images/github-remote-03.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id17">
+<img alt="../_images/github-remote-02.svg" src="../_images/github-remote-02.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id18">
+<img alt="../_images/github-local-03.svg" src="../_images/github-local-03.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-f-view-your-pull-request">
+<h3>Step F: View your pull request<a class="headerlink" href="#step-f-view-your-pull-request" title="Permalink to this heading"></a></h3>
+<p>Go to the central repository, and list all pull requests and view your your pull request.
+Remember that the pull request is created on the original repostory.</p>
+<p><strong>Wait here</strong> until we integrate all pull requests into the central repo
+together.</p>
+<p>Observe how the issues automatically close after the pull requests are merged
+(provided the commit messages contain <a class="reference external" href="https://help.github.com/en/articles/closing-issues-using-keywords">the right keywords</a>).</p>
+<div class="admonition-optional-distributed-2-send-a-conflicting-pull-request exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) Distributed-2: Send a conflicting pull request</p>
+<p>If you complete parts A-E much earlier than others, try to open another pull request
+where you anticipate a conflict with your first pull request.</p>
+</div>
+<div class="admonition-optional-distributed-3-making-changes-to-your-pull-request-after-it-has-been-opened exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) Distributed-3: Making changes to your pull request after it has been opened.</p>
+<p>You can do that by pushing <strong>additional commits to the same branch</strong> where you opened the pull
+request from. Observe how they end up added to your pull request.</p>
+</div>
+</section>
+</section>
+<section id="exercise-part-2-code-review-and-merging-changes">
+<h2>Exercise: Part 2 - code review and merging changes<a class="headerlink" href="#exercise-part-2-code-review-and-merging-changes" title="Permalink to this heading"></a></h2>
+<p><strong>We do this step together</strong>. The instructor shows a submitted
+pull request, discusses what features to look at, and how to discuss and review.</p>
+<p>At the same time, maintainers can review open pull requests from their exercises groups.</p>
+<div class="admonition-optional-distributed-4-squash-merge-a-pull-request exercise important admonition" id="exercise-3">
+<p class="admonition-title">(optional) Distributed-4: Squash merge a pull request</p>
+<p>If you complete this exercise much earlier than others, create a new pull
+request with two or more commits.</p>
+<p>Then, when reviewing the change as maintainer, accept these with “Squash and
+merge” and later compare the source and target repositories/branches how they
+differ after the small commits got squashed into one.</p>
+</div>
+</section>
+<section id="exercise-part-3-updating-forks">
+<h2>Exercise: Part 3 - Updating forks<a class="headerlink" href="#exercise-part-3-updating-forks" title="Permalink to this heading"></a></h2>
+<p>We do this part <strong>after the contributions from all participants have been
+integrated</strong>.</p>
+<p>Once this is done, practice to update your fork with the
+merged changes from others and verify that you got the files created by other participants.</p>
+<p>Make sure that the contributions from other participants are not only on your
+local repository but really also end up in your fork.</p>
+<p>On GitHub it is possible to update the fork by pressing a button (see
+screenshot below):</p>
+<figure class="align-default" id="id19">
+<img alt="Updating the fork via GitHub web interface" src="../_images/fetch-and-merge.png" />
+<figcaption>
+<p><span class="caption-text">Updating the fork via GitHub web interface.</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="dropdown admonition">
+<p class="admonition-title">Updating the fork using the command line</p>
+<p>Remotes are aliases. We can use the URLs a remote directly.
+instead of aliases like <code class="docutils literal notranslate"><span class="pre">origin</span></code> or <code class="docutils literal notranslate"><span class="pre">upstream</span></code>.</p>
+<p>Here we pull from the central repo and push to our fork:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>switch<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>pull<span class="w"> </span>CENTRAL-REPOSITORY-URL<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>FORK-URL<span class="w"> </span>main
+</pre></div>
+</div>
+<p>Here is a pictorial representation of this part:</p>
+<figure class="align-default" id="id20">
+<img alt="../_images/forking-3.svg" src="../_images/forking-3.svg" /><figcaption>
+<p><span class="caption-text">Pull followed by push to a different remote.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Updating the fork using the command line (longer version)</p>
+<p>Below is a step by step recipe with pictorial representations which hopefully
+makes clear what happens in each step.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>central<span class="w"> </span>CENTRAL-REPOSITORY-URL
+<span class="gp">$ </span>git<span class="w"> </span>fetch<span class="w"> </span>central
+</pre></div>
+</div>
+<figure class="align-default" id="id21">
+<img alt="../_images/github-remote-03.svg" src="../_images/github-remote-03.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id22">
+<img alt="../_images/github-remote-02.svg" src="../_images/github-remote-02.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id23">
+<img alt="../_images/github-local-04.svg" src="../_images/github-local-04.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>switch<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>central/main
+</pre></div>
+</div>
+<figure class="align-default" id="id24">
+<img alt="../_images/github-remote-03.svg" src="../_images/github-remote-03.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id25">
+<img alt="../_images/github-remote-02.svg" src="../_images/github-remote-02.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id26">
+<img alt="../_images/github-local-05.svg" src="../_images/github-local-05.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+<figure class="align-default" id="id27">
+<img alt="../_images/github-remote-03.svg" src="../_images/github-remote-03.svg" /><figcaption>
+<p><span class="caption-text">central</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id28">
+<img alt="../_images/github-remote-04.svg" src="../_images/github-remote-04.svg" /><figcaption>
+<p><span class="caption-text">fork</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id29">
+<img alt="../_images/github-local-06.svg" src="../_images/github-local-06.svg" /><figcaption>
+<p><span class="caption-text">local</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<hr class="docutils" />
+<figure class="align-default">
+<img alt="../_images/remote.jpg" src="../_images/remote.jpg" />
+</figure>
+<ul class="simple">
+<li><p>Luke Skywalker: <em>You know, I did feel something. I could almost see the remote.</em></p></li>
+<li><p>Ben Kenobi: <em>That’s good. You’ve taken your first step into a larger world.</em></p></li>
+</ul>
+<p>[from Star Wars Episode IV - A New Hope]</p>
+<div class="admonition-discussion-always-create-a-feature-branch discussion important admonition" id="discussion-1">
+<p class="admonition-title">Discussion: Always create a feature branch</p>
+<p><strong>For each pull request create a new branch</strong>. Motivation:</p>
+<ul class="simple">
+<li><p>Limits the risk that commits get accidentally appended to an open pull
+request (remember: pull requests are from branch to branch, not from commit
+to branch).</p></li>
+<li><p>History-rewrite (rebased and/or squashed commits) on the central repository
+does not lead to a diverging branch on the fork.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../centralized/" class="btn btn-neutral float-left" title="Centralized workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="How to contribute changes to somebody else’s project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

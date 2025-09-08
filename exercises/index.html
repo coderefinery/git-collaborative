@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List of exercises &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Instructor guide" href="../guide/" />
+    <link rel="prev" title="Quick reference" href="../reference/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-review/">Practicing code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forking-workflow/">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">List of exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#full-list">Full list</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">List of exercises</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/exercises.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="list-of-exercises">
+<h1>List of exercises<a class="headerlink" href="#list-of-exercises" title="Link to this heading"></a></h1>
+<section id="full-list">
+<h2>Full list<a class="headerlink" href="#full-list" title="Link to this heading"></a></h2>
+<p>This is a list of all exercises and solutions in this lesson, mainly
+as a reference for helpers and instructors.  This list is
+automatically generated from all of the other pages in the lesson.
+Any single teaching event will probably cover only a subset of these,
+depending on their interests.</p>
+<section id="collaborating-within-the-same-repository">
+<h3>Collaborating within the same repository<a class="headerlink" href="#collaborating-within-the-same-repository" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../same-repository/#exercise-0">In same-repository.md:</a></p>
+<div class="admonition-exercise-collaborating-within-the-same-repository-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Collaborating within the same repository (25 min)</p>
+<p><strong>Technical requirements</strong> (from installation instructions):</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from the previous workshop days (not repeated here):</p>
+<ul class="simple">
+<li><p>Cloning a repository (<a class="reference external" href="https://coderefinery.github.io/git-intro/local-workflow/">previous lesson</a>)</p></li>
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Submit a pull request towards the main branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>If you create the changes locally, you will need to <strong>push</strong> them to the remote repository.</p></li>
+<li><p>Learning what a protected branch is and how to modify a protected branch: using a pull request.</p></li>
+<li><p>Cross-referencing issues and pull requests.</p></li>
+<li><p>Practice to review a pull request.</p></li>
+<li><p>Learn about the value of draft pull requests.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>In the GitHub repository, open an issue where you describe the change you want to make. Note down the
+issue number since you will need it later.</p></li>
+<li><p>If you work locally and not on GitHub, you need to clone the repository to
+your computer before you can create a new branch (more details in “Solution
+and hints” below).</p></li>
+<li><p>Create a new branch.</p></li>
+<li><p>Make a change to the recipe book on the new branch and in the commit
+cross-reference the issue you opened (see the walk-through below
+for how to do that).</p></li>
+<li><p>If you work locally, push your new branch (with the new commit) to the repository you
+are working on.</p></li>
+<li><p>Open a pull request towards the main branch.</p></li>
+<li><p>Review somebody else’s pull request and give constructive feedback. Merge their pull request.</p></li>
+<li><p>Try to create a new branch with some half-finished work and open a draft
+pull request. Verify that the draft pull request cannot be merged since it
+is not meant to be merged yet.</p></li>
+</ol>
+</div>
+</section>
+<section id="practicing-code-review">
+<h3>Practicing code review<a class="headerlink" href="#practicing-code-review" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../code-review/#exercise-0">In code-review.md:</a></p>
+<div class="admonition-exercise-practicing-code-review-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Practicing code review (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from previous episodes:</p>
+<ul class="simple">
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>As a reviewer, we will learn how to ask for changes in a pull request.</p></li>
+<li><p>As a reviewer, we will learn how to suggest a change in a pull request.</p></li>
+<li><p>As a submitter, we will learn how to modify a pull request without closing
+the incomplete one and opening a new one.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Create a new branch and one or few commits: in these improve something but also
+deliberately introduce a typo and also a larger mistake which we will want to fix during the code review.</p></li>
+<li><p>Open a pull request towards the main branch.</p></li>
+<li><p>As a reviewer to somebody else’s pull request, ask for an improvement and
+also directly suggest a change for the small typo. (Hint:
+suggestions are possible through the GitHub web interface, view of
+a pull request, “Files changed” view, after selecting some lines.
+Look for the “±” button.)</p></li>
+<li><p>As the submitter, learn how to accept the suggested change.  (Hint:
+GitHub web interface, “Files Changed” view.)</p></li>
+<li><p>As the submitter, improve the pull request without having to close and open
+a new one: by adding a new commit to the same branch. (Hint: push
+to the branch again.)</p></li>
+<li><p>Once the changes are addressed, merge the pull request.</p></li>
+</ol>
+</div>
+</section>
+<section id="how-to-contribute-changes-to-repositories-that-belong-to-others">
+<h3>How to contribute changes to repositories that belong to others<a class="headerlink" href="#how-to-contribute-changes-to-repositories-that-belong-to-others" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../forking-workflow/#exercise-0">In forking-workflow.md:</a></p>
+<div class="admonition-exercise-collaborating-within-the-same-repository-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Collaborating within the same repository (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from the previous episodes:</p>
+<ul class="simple">
+<li><p>Forking a repository (<a class="reference external" href="https://coderefinery.github.io/git-intro/browsing/">previous lesson</a>)</p></li>
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>Opening a pull request towards the upstream repository.</p></li>
+<li><p>Pull requests can be coupled with automated testing.</p></li>
+<li><p>Learning that your fork can get out of date.</p></li>
+<li><p>After the pull requests are merged, updating your fork with the changes.</p></li>
+<li><p>Learn how to approach other people’s repositories with ideas, changes, and requests.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Open an issue in the upstream exercise repository where you describe the
+change you want to make. Take note of the issue number.</p></li>
+<li><p>Create a new branch in your fork of the repository.</p></li>
+<li><p>Make a change to the recipe book on the new branch and in the commit cross-reference the issue you opened.
+See the walk-through below for how to do this.</p></li>
+<li><p>Open a pull request towards the upstream repository.</p></li>
+<li><p>Team leaders will merge the pull requests. For individual participants, the
+instructors and workshop organizers will review and merge the pull requests.
+During the review, pay attention to the automated test step (here for
+demonstration purposes, we test whether the recipe contains an ingredients
+and an instructions sections).</p></li>
+<li><p>After few pull requests are merged, update your fork with the changes.</p></li>
+<li><p>Check that in your fork you can see changes from other people’s pull requests.</p></li>
+</ol>
+</div>
+<p><a class="reference external" href="../forking-workflow/#solution-0">In forking-workflow.md:</a></p>
+<div class="admonition-recovery solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Recovery</p>
+<p>But if you want to keep your local changes, you can change the remote URL to point to your fork.
+Check where your remote points to with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">--verbose</span></code>.</p>
+<p>It should look like this (replace <code class="docutils literal notranslate"><span class="pre">USER</span></code> with your GitHub username):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>It should <strong>not</strong> look like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>In this case you can adjust “origin” to point to your fork with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:USER/forking-workflow-exercise.git
+</pre></div>
+</div>
+</div>
+</section>
+<section id="non-bare-and-bare-repositories">
+<h3>Non-bare and bare repositories<a class="headerlink" href="#non-bare-and-bare-repositories" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../bare-repos/#exercise-0">In bare-repos.md:</a></p>
+<div class="admonition-bare-1-create-and-use-a-bare-repository exercise important admonition" id="exercise-0">
+<p class="admonition-title">Bare-1: Create and use a bare repository</p>
+<ul>
+<li><p>Create a new local repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/path/to/example
+<span class="gp">$ </span>git<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Populate it with a file and a commit or two.</p></li>
+<li><p>Create one or two branches.</p></li>
+<li><p>Clone this repository on the same computer with either <code class="docutils literal notranslate"><span class="pre">--bare</span></code> or <code class="docutils literal notranslate"><span class="pre">--mirror</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>--bare<span class="w"> </span>/path/to/example<span class="w"> </span>/path/to/example-bare
+</pre></div>
+</div>
+</li>
+<li><p>Inspect the bare repository.</p></li>
+<li><p>Clone the bare repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>/path/to/example-bare<span class="w"> </span>/path/to/example-clone
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/path/to/example-clone
+</pre></div>
+</div>
+</li>
+<li><p>Inside the clone inspect <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code>.</p></li>
+<li><p>Inside the clone create a commit and push the commit to <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p></li>
+<li><p>The bare repository can be cloned several times and one can exercise pushing and pulling changes.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../reference/" class="btn btn-neutral float-left" title="Quick reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../guide/" class="btn btn-neutral float-right" title="Instructor guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

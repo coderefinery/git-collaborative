@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick reference &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="List of exercises" href="../exercises/" />
+    <link rel="prev" title="Non-bare and bare repositories" href="../bare-repos/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../remotes/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../centralized/">Centralized workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../distributed/">Distributed version control and forking workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How to contribute changes to somebody else’s project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#other-cheatsheets">Other cheatsheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands-we-use">Commands we use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick reference</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/reference.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-reference">
+<h1>Quick reference<a class="headerlink" href="#quick-reference" title="Permalink to this heading"></a></h1>
+<section id="other-cheatsheets">
+<h2>Other cheatsheets<a class="headerlink" href="#other-cheatsheets" title="Permalink to this heading"></a></h2>
+<p>See the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro cheatsheet</a> for
+the basics.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ndpsoftware.com/git-cheatsheet.html">Interactive git cheatsheet</a></p></li>
+<li><p><a class="reference external" href="https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it-cheatsheet.pdf">Very detailed 2-page git
+cheatsheet</a></p></li>
+</ul>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>remote</strong>: Roughly, another git repository on another computer.  A
+repository can be linked to several other remotes.</p></li>
+<li><p><strong>push</strong>: Send a branch from your current repository to another repository</p></li>
+<li><p><strong>fetch</strong>: Update your view of another repository</p></li>
+<li><p><strong>pull</strong>: Fetch (above) and then merge</p></li>
+<li><p><strong>origin</strong>: Default name for a remote repository.</p></li>
+<li><p><strong>origin/NAME</strong>: A branch name which represents a remote branch.</p></li>
+<li><p><strong>main</strong>: Default name for main branch.</p></li>
+<li><p><strong>merge</strong>: Combine the changes on two branches.</p></li>
+<li><p><strong>conflict</strong>: When a merge has changes that affect the same lines,
+git can not automatically figure out what to do.  It presents the
+conflict to the user to resolve.</p></li>
+<li><p><strong>issue</strong>: Feature of web repositories that allows discussion
+related to a repository.</p></li>
+<li><p><strong>pull request</strong>: A GitHub/Gitlab feature that allows you to send a
+code suggestion using a branch, which allows one-button merging.  In
+Gitlab, called “<strong>merge request</strong>”.</p></li>
+<li><p><strong>git hook</strong>: Code that can run before or after certain actions, for
+example to do tests before allowing you to commit.</p></li>
+<li><p><strong>bare repository</strong>: A copy of a repository that only is only the <code class="docutils literal notranslate"><span class="pre">.git</span></code>
+directory: there are no files actually checked out.  Directory names
+usually like <code class="docutils literal notranslate"><span class="pre">something.git</span></code></p></li>
+</ul>
+</section>
+<section id="commands-we-use">
+<h2>Commands we use<a class="headerlink" href="#commands-we-use" title="Permalink to this heading"></a></h2>
+<p>This excludes most introduced in the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro
+cheatsheet</a>.</p>
+<p>Setup:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">URL</span> <span class="pre">[TARGET-DIRECTORY]</span></code>: Make a copy of existing
+repository at &lt;url&gt;, containing all history.</p></li>
+</ul>
+<p>Status:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>: Same as in basic git, list status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">[-v]</span></code>: List all remotes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code>: see a detailed graph of commits.  Create this command
+with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">alias.graph</span> <span class="pre">&quot;log</span> <span class="pre">--all</span> <span class="pre">--graph</span> <span class="pre">--decorate</span> <span class="pre">--oneline&quot;</span></code></p></li>
+</ul>
+<p>General work:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span> <span class="pre">BRANCH-NAME</span></code>: Make a branch active.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH:BRANCH]</span></code>: Send commits and
+update the branch on the remote.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH-NAME]</span></code>: Fetch and then merge
+automatically.  Can be convenient, but to be careful you can fetch
+and merge separately.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">[REMOTE-NAME]</span></code>: Get commits from the remote.  Doesn’t
+update local branches, but updates the remote tracking branches
+(like origin/NAME).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[BRANCH-NAME]</span></code>: Updates your current branch with
+changes from another branch.  By default, merges to the branch is is
+tracking by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">REMOTE-NAME</span> <span class="pre">URL</span></code>: Adds a new remote with a
+certain name.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../bare-repos/" class="btn btn-neutral float-left" title="Non-bare and bare repositories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../exercises/" class="btn btn-neutral float-right" title="List of exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
