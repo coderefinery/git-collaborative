@@ -26,7 +26,7 @@ authors:
   given-names: "Anne"
 title: "Collaborative distributed version control"
 type: "data"
-abstract: "This lesson builds on "Introduction to version control" and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub."
+abstract: "This lesson builds on Introduction to version control and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub."
 version: 2026-03-30
 date-released: 2025-03-19
 url: "https://coderefinery.github.io/git-collaborative/"
