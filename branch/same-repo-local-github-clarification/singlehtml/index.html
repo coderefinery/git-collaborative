@@ -1,0 +1,1470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative distributed version control documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+
+  
+    <link rel="shortcut icon" href="_static/coderefinery.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+      <script src="_static/clipboard.min.js"></script>
+      <script src="_static/copybutton.js"></script>
+      <script src="_static/minipres.js"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-concepts">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-same-repository">Collaborating within the same repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-code-review">Practicing code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-forking-workflow">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-hooks">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-bare-repos">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-reference">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-exercises">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-guide">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Collaborative distributed version control  documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/index" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="collaborative-distributed-version-control">
+<h1>Collaborative distributed version control<a class="headerlink" href="#collaborative-distributed-version-control" title="Link to this heading"></a></h1>
+<p>We have learned how to work with a Git repository used by a single person. What
+about sharing and collaborating?</p>
+<ul class="simple">
+<li><p>Share the folder using email or using some file sharing service:
+This would lead to many back and forth emails and would be difficult
+to keep all copies synchronized.</p></li>
+<li><p>One person’s repository on the web: Allows one person to keep track of
+more projects, gain visibility, feedback, and recognition.</p></li>
+<li><p><strong>Common repository for a group</strong>: Everyone can directly update the same repository.
+Good for small groups.</p></li>
+<li><p>Forks or copies with different owners: Anyone can suggest changes, even without
+advance permission. Maintainers approve what they agree with.</p></li>
+</ul>
+<p>Being able to share more easily (going down the above list) is
+<em>transformative</em> (easier to change something, that is you are not the sole owner)
+because it allows projects to scale to a new level.</p>
+<p>We will <strong>discover and exercise the most typical workflows when collaborating</strong>
+using services like GitHub.</p>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<ol class="arabic simple">
+<li><p>Basic understanding of Git.</p></li>
+<li><p>You need a <a class="reference external" href="https://github.com">GitHub</a> account.</p></li>
+</ol>
+<p>We will do this exercise on <a class="reference external" href="https://github.com">GitHub</a> but also
+<a class="reference external" href="https://gitlab.com">GitLab</a> and
+<a class="reference external" href="https://bitbucket.org">Bitbucket</a> allow similar workflows and
+basically everything that we will discuss is transferable. With this
+material and these exercises we do not endorse the company
+<a class="reference external" href="https://github.com">GitHub</a>. We have chosen to demonstrate a
+number of concepts using examples with
+<a class="reference external" href="https://github.com">GitHub</a> because it is currently the most
+popular web platform for hosting Git repositories and the chance is
+high that you will interact with
+<a class="reference external" href="https://github.com">GitHub</a>-based repositories even if you choose
+to host your Git repository on another platform.</p>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-concepts"></span><section id="concepts-around-collaboration">
+<h2>Concepts around collaboration<a class="headerlink" href="#concepts-around-collaboration" title="Link to this heading"></a></h2>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Be able to decide whether to divide work at the branch level or at the repository level.</p></li>
+</ul>
+</div>
+<section id="commits-branches-repositories-forks-clones">
+<h3>Commits, branches, repositories, forks, clones<a class="headerlink" href="#commits-branches-repositories-forks-clones" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-repository" title="(in Introduction to version control with Git)"><span class="xref std std-term">repository</span></a>: The project, contains all data and history (commits, branches, tags).</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-commit" title="(in Introduction to version control with Git)"><span class="xref std std-term">commit</span></a>: Snapshot of the project, gets a unique identifier (e.g. <code class="docutils literal notranslate"><span class="pre">c7f0e8bfc718be04525847fc7ac237f470add76e</span></code>).</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-branch" title="(in Introduction to version control with Git)"><span class="xref std std-term">branch</span></a>: Independent development line. The main development line is often called <code class="docutils literal notranslate"><span class="pre">main</span></code>. Technically, a branch in Git
+is implemented as a pointer to a commit (imagine a sticky note with a branch name on it).</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-tag" title="(in Introduction to version control with Git)"><span class="xref std std-term">tag</span></a>: A pointer to one commit, to be able to refer to it later. Like a <a class="reference external" href="https://en.wikipedia.org/wiki/Commemorative_plaque">commemorative plaque</a>
+that you attach to a particular commit (e.g. <code class="docutils literal notranslate"><span class="pre">phd-printed</span></code> or <code class="docutils literal notranslate"><span class="pre">paper-submitted</span></code>).</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-clone" title="(in Introduction to version control with Git)"><span class="xref std std-term">cloning</span></a>: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-intro/reference/#term-fork" title="(in Introduction to version control with Git)"><span class="xref std std-term">forking</span></a>: Taking a copy of a repository (which is typically not yours) - your
+copy (fork) stays on GitHub/GitLab and you can make changes to your copy.</p></li>
+</ul>
+</section>
+<section id="cloning-a-repository">
+<h3>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Link to this heading"></a></h3>
+<p>In order to make a complete copy a whole repository, the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command
+can be used. When cloning, all the files, of all or selected branches, of a
+repository are copied in one operation. Cloning of a repository is of relevance
+in a few different situations:</p>
+<ul class="simple">
+<li><p>Working on your own, cloning is the operation that you can use to create
+multiple instances of a repository on, for instance, a personal computer, a
+server, and a supercomputer.</p></li>
+<li><p>The parent repository could be a repository that you or your colleague own. A
+common use case for cloning is when working together within a smaller team
+where everyone has read and write access to the same Git repository.</p></li>
+<li><p>Alternatively, cloning can be made from a public repository of a code that
+you would like to use. Perhaps you have no intention to change the code, but
+would like to stay in tune with the latest developments, also in-between
+releases of new versions of the code.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="with-border reference internal image-reference" href="_images/forkandclone.png"><img alt="Forking and cloning" class="with-border" src="_images/forkandclone.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Forking and cloning</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="forking-a-repository">
+<h3>Forking a repository<a class="headerlink" href="#forking-a-repository" title="Link to this heading"></a></h3>
+<p>When a fork is made on GitHub/GitLab a complete copy, of all or selected
+branches, of the repository is made. The copy will reside under a different
+account on GitHub/GitLab. Forking of a repository is of high relevance when
+working with a Git repository to which you do not have write access.</p>
+<ul class="simple">
+<li><p>In the fork repository commits can be made to the default branch (<code class="docutils literal notranslate"><span class="pre">main</span></code> or
+<code class="docutils literal notranslate"><span class="pre">master</span></code>), and to other branches.</p></li>
+<li><p>The commits that are made within the branches of the fork repository can be
+contributed back to the parent repository by means of <strong>pull or merge requests</strong>.</p></li>
+</ul>
+</section>
+<section id="synchronizing-changes-between-repositories">
+<h3>Synchronizing changes between repositories<a class="headerlink" href="#synchronizing-changes-between-repositories" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Repositories that are forked or cloned <strong>do not automatically synchronize themselves</strong>.</p></li>
+<li><p>We need a mechanism to communicate changes between the repositories.</p></li>
+<li><p>We will <strong>pull</strong> or <strong>fetch</strong> updates <strong>from</strong> remote repositories (we will soon discuss the difference between pull and fetch).</p></li>
+<li><p>We will <strong>push</strong> updates <strong>to</strong> remote repositories.</p></li>
+<li><p>We will learn how to suggest changes within repositories on GitHub and across repositories (<strong>pull requests</strong>).</p></li>
+<li><p>A main difference between cloning a repository and forking a repository is that the former
+is a general operation for generating copies of a repository to different computers,
+whereas forking is a particular operation implemented on GitHub/GitLab.</p></li>
+</ul>
+</section>
+<section id="should-we-clone-or-fork">
+<h3>Should we clone or fork?<a class="headerlink" href="#should-we-clone-or-fork" title="Link to this heading"></a></h3>
+<p>Should we all work inside one repository and clone? Or should we all work on forks?</p>
+<ul class="simple">
+<li><p>For most small or medium-sized research projects you probably want to <strong>work by
+cloning a repository</strong> that all research group has write access to (we will
+exercise this in the next section).</p></li>
+<li><p>It’s only when you want to contribute to a project that you don’t have write
+access to that you need to use <strong>forks</strong> (we will practice this as well).</p></li>
+</ul>
+</section>
+<section id="generating-from-templates">
+<h3>Generating from templates<a class="headerlink" href="#generating-from-templates" title="Link to this heading"></a></h3>
+<p>A repository can be marked as <strong>template</strong> and new repositories can be
+<strong>generated</strong> from it, like using a cookie-cutter.</p>
+<p>The newly created repository will start with a new (“flattened”) history, only one commit, and not
+inherit the history of the template.</p>
+<figure class="align-default" id="id2">
+<a class="with-border reference internal image-reference" href="_images/generate.png"><img alt="Generating from a template" class="with-border" src="_images/generate.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Generating from a template.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<span id="document-same-repository"></span><section id="collaborating-within-the-same-repository">
+<h2>Collaborating within the same repository<a class="headerlink" href="#collaborating-within-the-same-repository" title="Link to this heading"></a></h2>
+<p>In this episode, we will learn how to collaborate within the same repository.
+We will learn how to cross-reference issues and pull requests, how to review
+pull requests, and how to use draft pull requests.</p>
+<p>This exercise will form a good basis for collaboration that is suitable for
+most research groups.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you read or hear <strong>pull request</strong>, please think of a <strong>change proposal</strong>.</p>
+</div>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading"></a></h3>
+<p>In this exercise, we will contribute to a repository via a <strong>pull request</strong>.
+This means that you propose some change, and then it can be discussed and
+accepted (sometimes after requesting further improvements).</p>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<p>First, we need to get access to some repository to which we will
+contribute.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Part of team/exercise room</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Following on your own</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ul>
+<li><p>Form not too large groups (4-5 persons).</p></li>
+<li><p>Each group needs to appoint someone who will host the shared
+GitHub repository: the <em>maintainer</em>.
+This is typically the exercise lead (if available).  Everyone else
+is a <em>collaborator</em>.</p></li>
+<li><p>The <strong>maintainer</strong> (one person per group) generates a new repository
+called <code class="docutils literal notranslate"><span class="pre">centralized-workflow-exercise</span></code>
+from the template <a class="reference external" href="https://github.com/coderefinery/recipe-book-template">https://github.com/coderefinery/recipe-book-template</a>
+(There is no need to tick <em>“Include all branches”</em> for this exercise):</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/generate_repo.png"><img alt="Screenshot of generating the exercise repository" src="_images/generate_repo.png" style="width: 100%;" />
+</a>
+</figure>
+</li>
+<li><p>Then <strong>everyone in your group</strong> needs their GitHub account to be added as collaborator to the exercise repository:</p>
+<ul class="simple">
+<li><p>Collaborators give their GitHub usernames to their chosen maintainer.</p></li>
+<li><p>Maintainer gives the other group members the newly created GitHub repository URL.</p></li>
+<li><p>Maintainer adds participants as collaborators to their project (Settings -&gt; Collaborators -&gt; Manage access -&gt; Add people).</p></li>
+</ul>
+</li>
+</ul>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>The instructors are the <strong>maintainers</strong>.  All watchers are
+<strong>collaborators</strong>.  This exercise is only possible during our
+livestream courses.
+The preparation typically happens already 1-2 days before.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">If you have not requested access</p>
+<p>If you have not yet requested access, could you please <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues/new/choose">open an
+issue in this
+repository</a>.
+Wait a
+minute for staff to add you, then wait for the invite email to arrive and
+accept the invitation from the email and “unwatch” repositories (below).</p>
+</div>
+<p><strong>Choose only one to work with</strong> (you must have requested access already, see above)</p>
+<ul class="simple">
+<li><p>Not recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise">https://github.com/cr-workshop-exercises/centralized-workflow-exercise</a>
+(this will not be shown on stream or recorded in our videos, but is public
+on the internet until it is deleted)</p></li>
+<li><p>Recorded: <a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded</a> (this will be shown on stream and recorded, <strong>your username and comments may appear in the recorded video on YouTube</strong>)</p></li>
+</ul>
+</div></div>
+<ul>
+<li><p><strong>Don’t forget to accept the invitation</strong></p>
+<ul class="simple">
+<li><p>Check <a class="reference external" href="https://github.com/settings/organizations/">https://github.com/settings/organizations/</a></p></li>
+<li><p>Alternatively check the inbox for the email account you registered with
+GitHub. GitHub emails you an invitation link, but if you don’t receive it
+you can go to your GitHub notifications in the top right corner. The
+maintainer can also “copy invite link” and share it within the group.</p></li>
+</ul>
+</li>
+<li><p><strong>Watching and unwatching repositories</strong></p>
+<ul class="simple">
+<li><p>Now that you are a collaborator, you get notified about new issues and pull
+requests via email.</p></li>
+<li><p>If you do not wish this, you can “unwatch” a repository (top of
+the project page).</p></li>
+<li><p>However, we recommend watching repositories you are interested
+in. You can learn things from experts just by watching the
+activity that come through a popular project.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="Unwatching a repository" src="_images/unwatch.png" />
+<figcaption>
+<p><span class="caption-text">Unwatch a repository by clicking “Watch” in the repository view,
+then “Participating and &#64;mentions” - this way, you will get
+notifications about your own interactions.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</div>
+<div class="admonition-exercise-collaborating-within-the-same-repository-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Collaborating within the same repository (25 min)</p>
+<p><strong>Technical requirements</strong> (from installation instructions):</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from the previous workshop days (not repeated here):</p>
+<ul class="simple">
+<li><p>Cloning a repository (<a class="reference external" href="https://coderefinery.github.io/git-intro/local-workflow/">previous lesson</a>)</p></li>
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Submit a pull request towards the main branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>If you create the changes locally, you will need to <strong>push</strong> them to the remote repository.</p></li>
+<li><p>Learning what a protected branch is and how to modify a protected branch: using a pull request.</p></li>
+<li><p>Cross-referencing issues and pull requests.</p></li>
+<li><p>Practice to review a pull request.</p></li>
+<li><p>Learn about the value of draft pull requests.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>In the GitHub repository, open an issue where you describe the change you want to make. Note down the
+issue number since you will need it later.</p></li>
+<li><p>If you work locally and not on GitHub, you need to clone the repository to
+your computer before you can create a new branch (more details in “Solution
+and hints” below).</p></li>
+<li><p>Create a new branch.</p></li>
+<li><p>Make a change to the recipe book on the new branch and in the commit
+cross-reference the issue you opened (see the walk-through below
+for how to do that).</p></li>
+<li><p>If you work locally, push your new branch (with the new commit) to the repository you
+are working on.</p></li>
+<li><p>Open a pull request towards the main branch.</p></li>
+<li><p>Review somebody else’s pull request and give constructive feedback. Merge their pull request.</p></li>
+<li><p>Try to create a new branch with some half-finished work and open a draft
+pull request. Verify that the draft pull request cannot be merged since it
+is not meant to be merged yet.</p></li>
+</ol>
+</div>
+</section>
+<section id="solution-and-hints">
+<h3>Solution and hints<a class="headerlink" href="#solution-and-hints" title="Link to this heading"></a></h3>
+<section id="opening-an-issue">
+<h4>(1) Opening an issue<a class="headerlink" href="#opening-an-issue" title="Link to this heading"></a></h4>
+<p>This is done through the GitHub web interface.  For example, you could
+give the name of the recipe you want to add (so that others don’t add
+the same one).  It is the “Issues” tab.</p>
+</section>
+<section id="create-a-new-branch">
+<h4>(2) Create a new branch.<a class="headerlink" href="#create-a-new-branch" title="Link to this heading"></a></h4>
+<p>If on GitHub, you can make the branch in the web interface
+(<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/" title="(in Introduction to version control with Git)"><span>Recording changes</span></a>).  If working locally, you need to follow
+<a class="reference external" href="https://coderefinery.github.io/git-intro/local-workflow/" title="(in Introduction to version control with Git)"><span>Cloning a Git repository and working locally</span></a>.</p>
+</section>
+<section id="make-a-change-adding-the-recipe">
+<h4>(3) Make a change adding the recipe<a class="headerlink" href="#make-a-change-adding-the-recipe" title="Link to this heading"></a></h4>
+<p>Add a new file with the recipe in it.  Commit the file. In the commit
+message, include the note about the issue number, saying that this
+will close that issue (right below here we show how).</p>
+<section id="cross-referencing-issues-and-pull-requests">
+<h5>Cross-referencing issues and pull requests<a class="headerlink" href="#cross-referencing-issues-and-pull-requests" title="Link to this heading"></a></h5>
+<p>Each issue and each pull request gets a number and you can cross-reference them.</p>
+<p>When you open an issue, note down the issue number (in this case it is <code class="docutils literal notranslate"><span class="pre">#2</span></code>):</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/issue-number.png"><img alt="Each issue gets a number" class="with-border" src="_images/issue-number.png" style="width: 60%;" />
+</a>
+</figure>
+<p>You can reference this issue number in a commit message or in a pull request, like in this
+commit message:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>this is the new recipe; fixes #2
+</pre></div>
+</div>
+<p>If you forget to do that in your commit message, you can also reference the issue
+in the pull request description. And instead of <code class="docutils literal notranslate"><span class="pre">fixes</span></code> you can also use <code class="docutils literal notranslate"><span class="pre">closes</span></code> or <code class="docutils literal notranslate"><span class="pre">resolves</span></code>
+or <code class="docutils literal notranslate"><span class="pre">fix</span></code> or <code class="docutils literal notranslate"><span class="pre">close</span></code> or <code class="docutils literal notranslate"><span class="pre">resolve</span></code> (case insensitive).</p>
+<p>Here are all the keywords that GitHub recognizes:
+<a class="reference external" href="https://help.github.com/en/articles/closing-issues-using-keywords">https://help.github.com/en/articles/closing-issues-using-keywords</a></p>
+<p>Then observe what happens in the issue once your commit gets merged: it will
+automatically close the issue and create a link between the issue and the
+commit. This is very useful for tracking what changes were made in response to
+which issue and to know from when <strong>until when precisely</strong> the issue was open.</p>
+</section>
+</section>
+<section id="push-to-github-as-a-new-branch">
+<h4>(4) Push to GitHub as a new branch<a class="headerlink" href="#push-to-github-as-a-new-branch" title="Link to this heading"></a></h4>
+<p>This is only necessary if you created the changes locally. If you created the
+changes directly on GitHub, you can skip this step.</p>
+<p>Push the branch to the repository. You should end up with a branch
+visible in the GitHub web view (if you are unsure how, see
+<a class="reference external" href="https://coderefinery.github.io/git-intro/local-workflow/" title="(in Introduction to version control with Git)"><span>Cloning a Git repository and working locally</span></a>).</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-VlMgQ29kZQ==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-VlMgQ29kZQ==" name="VlMgQ29kZQ==" role="tab" tabindex="0">VS Code</button><button aria-controls="panel-1-Q29tbWFuZCBsaW5l" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Q29tbWFuZCBsaW5l" name="Q29tbWFuZCBsaW5l" role="tab" tabindex="-1">Command line</button></div><div aria-labelledby="tab-1-VlMgQ29kZQ==" class="sphinx-tabs-panel group-tab" id="panel-1-VlMgQ29kZQ==" name="VlMgQ29kZQ==" role="tabpanel" tabindex="0"><p>In VS Code, you can “publish the branch” to the remote repository by clicking
+the cloud icon in the bottom left corner of the window:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/vscode-publish-branch.png"><img alt="Publishing a branch in VS Code" class="with-border" src="_images/vscode-publish-branch.png" style="width: 60%;" />
+</a>
+</figure>
+</div><div aria-labelledby="tab-1-Q29tbWFuZCBsaW5l" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Q29tbWFuZCBsaW5l" name="Q29tbWFuZCBsaW5l" role="tabpanel" tabindex="0"><p>If you have a local branch <code class="docutils literal notranslate"><span class="pre">my-branch</span></code> and you want to push it to the remote
+and make it visible there, first verify what your remote is:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:USER/centralized-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:USER/centralized-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>In this case the remote is called <code class="docutils literal notranslate"><span class="pre">origin</span></code> and refers to the address
+git&#64;github.com:USER/centralized-workflow-exercise.git.  Both can be used
+interchangeably. Make sure it points to the right repository, ideally a
+repository that you can write to.</p>
+<p>Now that you have a remote, you can push your branch to it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>my-branch
+</pre></div>
+</div>
+<p>This will create a new branch on the remote repository with the same name as
+your local branch.</p>
+<p>You can also do this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>my-branch
+</pre></div>
+</div>
+<p>This will connect the local branch and the remote branch so that in the future
+you can just type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> without specifying the branch name
+(but this depends on your Git configuration).</p>
+<p><strong>Troubleshooting</strong></p>
+<p>If you don’t have a remote yet, you can add it with (adjust <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> to your repository address):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>ADDRESS
+</pre></div>
+</div>
+<p>ADDRESS is the part that you copy from here:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/clone-address.png"><img alt="Copying the clone address from GitHub" class="with-border" src="_images/clone-address.png" style="width: 60%;" />
+</a>
+</figure>
+<p>If the remote points to the wrong place, you can change it with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>NEWADDRESS
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="open-a-pull-request-towards-the-main-branch">
+<h4>(5) Open a pull request towards the main branch<a class="headerlink" href="#open-a-pull-request-towards-the-main-branch" title="Link to this heading"></a></h4>
+<p>This is done through the GitHub web interface.  We saw this
+in a <a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>.</p>
+</section>
+<section id="reviewing-pull-requests">
+<h4>(6) Reviewing pull requests<a class="headerlink" href="#reviewing-pull-requests" title="Link to this heading"></a></h4>
+<p>You review through the GitHub web interface.</p>
+<p>Checklist for reviewing a pull request:</p>
+<ul class="simple">
+<li><p>Be kind, on the other side is a human who has put effort into this.</p></li>
+<li><p>Be constructive: if you see a problem, suggest a solution.</p></li>
+<li><p>Towards which branch is this directed?</p></li>
+<li><p>Is the title descriptive?</p></li>
+<li><p>Is the description informative?</p></li>
+<li><p>Scroll down to see commits.</p></li>
+<li><p>Scroll down to see the changes.</p></li>
+<li><p>If you get incredibly many changes, also consider the license or copyright
+and ask where all that code is coming from.</p></li>
+<li><p>Again, be kind and constructive.</p></li>
+<li><p>Later we will learn how to suggest changes directly in the pull request.</p></li>
+</ul>
+<p>If someone is new, it’s often nice to say something encouraging in the
+comments before merging (even if it’s just “thanks”).  If all is good
+and there’s not much else to say, you could merge directly.</p>
+</section>
+<section id="draft-pull-requests">
+<h4>(7) Draft pull requests<a class="headerlink" href="#draft-pull-requests" title="Link to this heading"></a></h4>
+<p>Try to create a draft pull request:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/draft-pr.png"><img alt="Creating a draft pull request" class="with-border" src="_images/draft-pr.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Verify that the draft pull request cannot be merged until it is marked as ready
+for review:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/draft-pr-wip.png"><img alt="Draft pull request cannot be merged" class="with-border" src="_images/draft-pr-wip.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Draft pull requests can be useful for:</p>
+<ul class="simple">
+<li><p><strong>Feedback</strong>: You can open a pull request early to get feedback on your work without
+signaling that it is ready to merge.</p></li>
+<li><p><strong>Information</strong>: They can help communicating to others that a change is coming up and in
+progress.</p></li>
+</ul>
+</section>
+<section id="what-is-a-protected-branch-and-how-to-modify-it">
+<h4>What is a protected branch? And how to modify it?<a class="headerlink" href="#what-is-a-protected-branch-and-how-to-modify-it" title="Link to this heading"></a></h4>
+<p>A protected branch on GitHub or GitLab is a branch that cannot (accidentally)
+deleted or force-pushed to. It is also possible to require that a branch cannot
+be directly pushed to or modified, but that changes must be submitted via a
+pull request.</p>
+<p>To protect a branch in your own repository, go to “Settings” -&gt; “Branches”.</p>
+</section>
+<section id="summary">
+<h4>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>We used all the same pieces that we’ve learned previously.</p></li>
+<li><p>But we successfully contributed to a <strong>collaborative project</strong>!</p></li>
+<li><p>The pull request allowed us to contribute without changing directly:
+this is very good when it’s not mainly our project.</p></li>
+</ul>
+<div class="admonition-let-s-clarify-typical-questions discussion important admonition" id="discussion-0">
+<p class="admonition-title">Let’s clarify typical questions</p>
+<p><strong>What is the difference between <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> and a pull request?</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> is a command that fetches changes from a remote repository and
+merges them into the current branch.</p></li>
+<li><p>Pull request: change proposal. It might have been named this way because
+after you accept a pull request, internally it git pulls the changes from
+the branch containing the change proposal.</p></li>
+</ul>
+<p><strong>What is the difference between a pull request and an issue?</strong></p>
+<ul class="simple">
+<li><p>Pull request is a mechanism to suggest and review changes.</p></li>
+<li><p>An issue is a place where we note and discuss problems or ideas.</p></li>
+<li><p>Both get a number and they can reference each other but that’s all they have in common.</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue">Linking a pull request to an issue</a></p></li>
+</ul>
+<p><strong>What is the practical difference between branch + pull and fork + pull?</strong></p>
+<ul class="simple">
+<li><p>The practical difference between branch + pull and fork + pull lies in how collaboration is structured in a Git-based workflow.</p></li>
+<li><p>Branch + Pull (Single Repository Contribution) : Used when contributing to a repository where you have direct write access.</p></li>
+<li><p>Process:</p>
+<ol class="arabic simple">
+<li><p>Clone the main repository.</p></li>
+<li><p>Create a new branch in the same repository.</p></li>
+<li><p>Make changes and commit them.</p></li>
+<li><p>Push the branch to the same repository.</p></li>
+<li><p>Open a Pull Request from your branch to the main branch.</p></li>
+</ol>
+</li>
+<li><p>Fork + Pull (External Contribution): Used when contributing to a repository where you do not have write access.</p></li>
+<li><p>Process:</p>
+<ol class="arabic simple">
+<li><p>Fork the repository (create your own copy under your GitHub account).</p></li>
+<li><p>Clone your forked repository locally.</p></li>
+<li><p>Create a new branch in your fork.</p></li>
+<li><p>Make changes and commit them.</p></li>
+<li><p>Push the branch to your fork.</p></li>
+<li><p>Open a Pull Request from your fork to the original repository.</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<span id="document-code-review"></span><section id="practicing-code-review">
+<h2>Practicing code review<a class="headerlink" href="#practicing-code-review" title="Link to this heading"></a></h2>
+<p>In this episode we will practice the <strong>code review process</strong>. We will learn how to
+ask for changes in a pull request, how to suggest a change in a pull request,
+and how to modify a pull request.</p>
+<p>This will enable research groups to work more collaboratively and to not only
+improve the code quality but also to <strong>learn from each other</strong>.</p>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading"></a></h3>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<p>We can continue in the same exercise repository which we have used in the
+previous episode.</p>
+</div>
+<div class="admonition-exercise-practicing-code-review-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Practicing code review (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from previous episodes:</p>
+<ul class="simple">
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>As a reviewer, we will learn how to ask for changes in a pull request.</p></li>
+<li><p>As a reviewer, we will learn how to suggest a change in a pull request.</p></li>
+<li><p>As a submitter, we will learn how to modify a pull request without closing
+the incomplete one and opening a new one.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Create a new branch and one or few commits: in these improve something but also
+deliberately introduce a typo and also a larger mistake which we will want to fix during the code review.</p></li>
+<li><p>Open a pull request towards the main branch.</p></li>
+<li><p>As a reviewer to somebody else’s pull request, ask for an improvement and
+also directly suggest a change for the small typo. (Hint:
+suggestions are possible through the GitHub web interface, view of
+a pull request, “Files changed” view, after selecting some lines.
+Look for the “±” button.)</p></li>
+<li><p>As the submitter, learn how to accept the suggested change.  (Hint:
+GitHub web interface, “Files Changed” view.)</p></li>
+<li><p>As the submitter, improve the pull request without having to close and open
+a new one: by adding a new commit to the same branch. (Hint: push
+to the branch again.)</p></li>
+<li><p>Once the changes are addressed, merge the pull request.</p></li>
+</ol>
+</div>
+</section>
+<section id="help-and-discussion">
+<h3>Help and discussion<a class="headerlink" href="#help-and-discussion" title="Link to this heading"></a></h3>
+<p>From here on out, we don’t give detailed steps to the solution.  You
+need to combine what you know, and the extra info below, in order to
+solve the above.</p>
+<section id="how-to-ask-for-changes-in-a-pull-request">
+<h4>How to ask for changes in a pull request<a class="headerlink" href="#how-to-ask-for-changes-in-a-pull-request" title="Link to this heading"></a></h4>
+<p>Technically, there are at least two common ways to ask for changes in a pull
+request.</p>
+<p>Either in the comment field of the pull request:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/comment.png"><img alt="Screenshot of a pull request comment field" class="with-border" src="_images/comment.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Or by using the “Review changes”:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/files-changed.png"><img alt="Screenshot of a pull request navigating to the &quot;Review changes&quot; tab" class="with-border" src="_images/files-changed.png" style="width: 100%;" />
+</a>
+</figure>
+<p>And always please be kind and constructive in your comments. Remember that the
+goal is not gate-keeping but <strong>collaborative learning</strong>.</p>
+</section>
+<section id="how-to-suggest-a-change-in-a-pull-request-as-a-reviewer">
+<h4>How to suggest a change in a pull request as a reviewer<a class="headerlink" href="#how-to-suggest-a-change-in-a-pull-request-as-a-reviewer" title="Link to this heading"></a></h4>
+<p>If you see a very small problem that is easy to fix, you can suggest a change
+as a reviewer.</p>
+<p>Instead of asking the submitter to fix the tiny problem, you can suggest a change by
+clicking on the plus sign next to the line number in the “Files changed” tab:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/leave-comment.png"><img alt="Screenshot of leaving a comment to a line in a pull request" class="with-border" src="_images/leave-comment.png" style="width: 100%;" />
+</a>
+</figure>
+<p>Here you can comment on specific lines or even line ranges.</p>
+<p>But now the interesting part is to click on the “Add a suggestion” symbol (the
+one that looks like plus and minus). Now you can fix the tiny problem (in this
+case a typo) and then click on the “Add single comment” button:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/add-suggestion.png"><img alt="Sequence of clicks to add a suggestion to a line in a pull request" class="with-border" src="_images/add-suggestion.png" style="width: 60%;" />
+</a>
+</figure>
+<p>The result is this and the submitter can accept the change with a single click:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/commit-suggestion.png"><img alt="Screenshot of a pull request with a suggested change" class="with-border" src="_images/commit-suggestion.png" style="width: 60%;" />
+</a>
+</figure>
+<p>After accepting with “Commit suggestion”, the improvement gets added to the
+pull request as a new commit.</p>
+</section>
+<section id="how-to-modify-a-pull-request-to-address-the-review-comments">
+<h4>How to modify a pull request to address the review comments<a class="headerlink" href="#how-to-modify-a-pull-request-to-address-the-review-comments" title="Link to this heading"></a></h4>
+<p>If the reviewer asks for changes, it is not necessary to close the pull request
+and later open a new one. It can even be counter-productive to do so: This can
+fragment the discussion and the history of the pull request and can make it
+harder to understand the context of the changes.</p>
+<p>A much better mechanism is to recognize that pull requests are not implemented
+from a specific commit to a specific branch, but <strong>always from a branch to a
+branch</strong>.</p>
+<p>This means that you can make amendments to the pull request by adding new
+commits to the same source branch. This way the pull request will be updated
+automatically and the reviewer can see the new changes and comment on them.</p>
+<p>The fact that pull requests are from branch to branch also strongly suggests
+that it is a good practice to <strong>create a new branch for each pull request</strong>.
+Otherwise you could accidentally modify an open pull request by adding new
+commits to the source branch.</p>
+</section>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Our process isn’t just about code now.  It’s about discussion and
+working together to make the whole process better.</p></li>
+<li><p>GitHub (or GitLab) discussions and reviewing are quite powerful and can make
+small changes easy.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-forking-workflow"></span><section id="how-to-contribute-changes-to-repositories-that-belong-to-others">
+<h2>How to contribute changes to repositories that belong to others<a class="headerlink" href="#how-to-contribute-changes-to-repositories-that-belong-to-others" title="Link to this heading"></a></h2>
+<p>In this episode we prepare you to suggest and contribute changes to
+repositories that belong to others. These might be open source projects that
+you use in your work.</p>
+<p>We will see how Git and services like GitHub or GitLab can be used to suggest
+modification without having to ask for write access to the repository and
+accept modifications without having to grant write access to others.</p>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading"></a></h3>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Part of team/exercise room</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Following on your own</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p><strong>Maintainer (team lead)</strong>:</p>
+<ul class="simple">
+<li><p>Create an exercise repository
+called <code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise</span></code> by
+<a class="reference external" href="https://help.github.com/en/articles/creating-a-repository-from-a-template">generating from a template</a>
+using this template: <a class="reference external" href="https://github.com/coderefinery/recipe-book-template">https://github.com/coderefinery/recipe-book-template</a>.</p></li>
+<li><p>In this case we <strong>do not add collaborators</strong> to the repository (this is the point of this example).</p></li>
+<li><p>Share the link to the newly created repository with your group.</p></li>
+</ul>
+<p><strong>Learners in exercise team</strong>: Fork the newly created repository (not the
+“coderefinery” one) and then <strong>clone your fork</strong> (if you wish to work locally).</p>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>The instructors are the <strong>maintainers</strong>.  All watchers are
+<strong>collaborators</strong>.</p>
+<p>We create(d) these the day before hopefully.  <strong>Choose only one to
+work with</strong>:</p>
+<ul class="simple">
+<li><p>Not recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise">https://github.com/cr-workshop-exercises/forking-workflow-exercise</a> (this
+will not be shown on stream or recorded in our videos, but is be public on
+the internet until it is deleted)</p></li>
+<li><p>Recorded:
+<a class="reference external" href="https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/forking-workflow-exercise-recorded</a>
+(this will be shown on stream and recorded, <strong>your username and comments
+may appear in the recorded video on YouTube</strong>)</p></li>
+</ul>
+<p>Here we don’t need your GitHub usernames because the point of this exercise
+is to show that we can collaborate without granting write permissions.</p>
+<p>Learners following on their own: Fork one of these two repositories
+and then <strong>clone your fork</strong> to your computer (if you wish to work locally).</p>
+</div></div>
+</div>
+<div class="admonition-exercise-collaborating-within-the-same-repository-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Collaborating within the same repository (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from the previous episodes:</p>
+<ul class="simple">
+<li><p>Forking a repository (<a class="reference external" href="https://coderefinery.github.io/git-intro/browsing/">previous lesson</a>)</p></li>
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>Opening a pull request towards the upstream repository.</p></li>
+<li><p>Pull requests can be coupled with automated testing.</p></li>
+<li><p>Learning that your fork can get out of date.</p></li>
+<li><p>After the pull requests are merged, updating your fork with the changes.</p></li>
+<li><p>Learn how to approach other people’s repositories with ideas, changes, and requests.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Open an issue in the upstream exercise repository where you describe the
+change you want to make. Take note of the issue number.</p></li>
+<li><p>Create a new branch in your fork of the repository.</p></li>
+<li><p>Make a change to the recipe book on the new branch and in the commit cross-reference the issue you opened.
+See the walk-through below for how to do this.</p></li>
+<li><p>Open a pull request towards the upstream repository.</p></li>
+<li><p>Team leaders will merge the pull requests. For individual participants, the
+instructors and workshop organizers will review and merge the pull requests.
+During the review, pay attention to the automated test step (here for
+demonstration purposes, we test whether the recipe contains an ingredients
+and an instructions sections).</p></li>
+<li><p>After few pull requests are merged, update your fork with the changes.</p></li>
+<li><p>Check that in your fork you can see changes from other people’s pull requests.</p></li>
+</ol>
+</div>
+</section>
+<section id="help-and-discussion">
+<h3>Help and discussion<a class="headerlink" href="#help-and-discussion" title="Link to this heading"></a></h3>
+<section id="help-i-don-t-have-permissions-to-push-my-local-changes">
+<h4>Help! I don’t have permissions to push my local changes<a class="headerlink" href="#help-i-don-t-have-permissions-to-push-my-local-changes" title="Link to this heading"></a></h4>
+<p>Maybe you see an error like this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Please make sure you have the correct access rights
+and the repository exists.
+</pre></div>
+</div>
+<p>Or like this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>failed to push some refs to cr-workshop-exercises/forking-workflow-exercise.git
+</pre></div>
+</div>
+<p>In this case you probably try to push the changes not to your fork but to the original repository
+and in this exercise you do not have write access to the original repository.</p>
+<p>The simpler solution is to clone again but this time your fork.</p>
+<div class="admonition-recovery solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Recovery</p>
+<p>But if you want to keep your local changes, you can change the remote URL to point to your fork.
+Check where your remote points to with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">--verbose</span></code>.</p>
+<p>It should look like this (replace <code class="docutils literal notranslate"><span class="pre">USER</span></code> with your GitHub username):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:USER/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>It should <strong>not</strong> look like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>--verbose
+
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (fetch)</span>
+<span class="go">origin	git@github.com:cr-workshop-exercises/forking-workflow-exercise.git (push)</span>
+</pre></div>
+</div>
+<p>In this case you can adjust “origin” to point to your fork with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:USER/forking-workflow-exercise.git
+</pre></div>
+</div>
+</div>
+</section>
+<section id="opening-a-pull-request-towards-the-upstream-repository">
+<h4>Opening a pull request towards the upstream repository<a class="headerlink" href="#opening-a-pull-request-towards-the-upstream-repository" title="Link to this heading"></a></h4>
+<p>We have learned in the previous episode that pull requests are always from
+branch to branch. But the branch can be in a different repository.</p>
+<p>When you open a pull request in a fork, by default GitHub will suggest to
+direct it towards the default branch of the upstream repository.</p>
+<p>This can be changed and it should always be verified, but in this case this is
+exactly what we want to do, from fork towards upstream:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/pull-request-form.png"><img alt="Screenshot of a pull request from fork towards upstream" class="with-border" src="_images/pull-request-form.png" style="width: 100%;" />
+</a>
+</figure>
+</section>
+<section id="pull-requests-can-be-coupled-with-automated-testing">
+<h4>Pull requests can be coupled with automated testing<a class="headerlink" href="#pull-requests-can-be-coupled-with-automated-testing" title="Link to this heading"></a></h4>
+<p>We added an automated test here just for fun and so that you see that this is
+possible to do.</p>
+<p>In this exercise, the test is silly. It will check whether the recipe contains
+both an ingredients and an instructions section.</p>
+<p>In this example the test failed:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/all-checks-failed.png"><img alt="Screenshot of a failed test in a pull request" class="with-border" src="_images/all-checks-failed.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Click on the “Details” link to see the details of the failed test:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/check-details.png"><img alt="Screenshot of details why the test failed" class="with-border" src="_images/check-details.png" style="width: 60%;" />
+</a>
+</figure>
+<p><strong>How can this be useful?</strong></p>
+<ul class="simple">
+<li><p>The project can define what kind of tests are expected to pass before a pull
+request can be merged.</p></li>
+<li><p>The reviewer can see the results of the tests, without having to run them
+locally.</p></li>
+</ul>
+<p><strong>How does it work?</strong></p>
+<ul class="simple">
+<li><p>We added a GitHub Actions workflow
+to automatically run on each push or pull request towards the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p></li>
+</ul>
+<p>What tests or steps can you image for your project to run automatically with
+each pull request?</p>
+</section>
+<section id="how-to-update-your-fork-with-changes-from-upstream">
+<h4>How to update your fork with changes from upstream<a class="headerlink" href="#how-to-update-your-fork-with-changes-from-upstream" title="Link to this heading"></a></h4>
+<p>This used to be difficult but now it is two mouse clicks:
+Navigate to your fork and notice how GitHub tells you that your fork is behind.
+In my case, it is 9 commits behind upstream. To fix this, click on “Sync fork”
+and then “Update branch”:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/sync-fork.png"><img alt="Screenshot on GitHub fork page showing that the fork is behind" class="with-border" src="_images/sync-fork.png" style="width: 80%;" />
+</a>
+</figure>
+<p>After the update my “branch is up to date” with the upstream repository:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="_images/fork-after-update.png"><img alt="Screenshot on GitHub after fork has been updated" class="with-border" src="_images/fork-after-update.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+<section id="how-to-approach-other-peoples-repositories-with-ideas-changes-and-requests">
+<h4>How to approach other people’s repositories with ideas, changes, and requests<a class="headerlink" href="#how-to-approach-other-peoples-repositories-with-ideas-changes-and-requests" title="Link to this heading"></a></h4>
+<p><strong>Contributing very minor changes</strong></p>
+<ul class="simple">
+<li><p>Clone or fork+clone repository</p></li>
+<li><p>Create a branch</p></li>
+<li><p>Commit and push change</p></li>
+<li><p>Open a pull request or merge request</p></li>
+</ul>
+<p><strong>If you observe an issue and have an idea how to fix it</strong></p>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>Describe the problem</p></li>
+<li><p>If you have a suggestion on how to fix it, describe your suggestion</p></li>
+<li><p>Possibly <strong>discuss and get feedback</strong></p></li>
+<li><p>If you are working on the fix, indicate it in the issue so that others know that somebody is working on it and who is working on it</p></li>
+<li><p>Submit your fix as pull request or merge request which references/closes the issue</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Inform others about an observed problem</strong></p></li>
+<li><p>Make it clear whether this issue is up for grabs or already being worked on</p></li>
+</ul>
+</div>
+<p><strong>If you have an idea for a new feature</strong></p>
+<ul class="simple">
+<li><p>Open an issue in the repository you wish to contribute to</p></li>
+<li><p>In the issue, write a short proposal for your suggested change or new feature</p></li>
+<li><p>Motivate why and how you wish to do this</p></li>
+<li><p>Also indicate where you are unsure and where you would like feedback</p></li>
+<li><p><strong>Discuss and get feedback before you code</strong></p></li>
+<li><p>Once you start coding, indicate that you are working on it</p></li>
+<li><p>Once you are done, submit your new feature as pull request or merge request which references/closes the issue/proposal</p></li>
+</ul>
+<div class="admonition-motivation admonition">
+<p class="admonition-title">Motivation</p>
+<ul class="simple">
+<li><p><strong>Get agreement and feedback before writing 5000 lines of code</strong> which might be rejected</p></li>
+<li><p>If we later wonder why something was done, we have the issue/proposal as
+reference and can read up on the reasoning behind a code change</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>This forking workflow lets you propose changes to repositories for
+which <strong>you have no write access</strong>.</p></li>
+<li><p>This is the way that much modern open-source software works.</p></li>
+<li><p>You can now contribute to any project you can view.</p></li>
+</ul>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-hooks"></span><section id="hooks">
+<h2>Hooks<a class="headerlink" href="#hooks" title="Link to this heading"></a></h2>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Learn how to couple scripts to Git repository events.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>10 min teaching/demonstration</p></li>
+</ul>
+</div>
+<p>Sometimes you would like Git events (commits, pushes, etc.) to <strong>trigger scripts</strong>
+which take care of some tasks.  <strong>Hooks are scripts that are executed
+before/after certain Git events</strong>.  They can be used to enforce nearly any kind of
+policy for your project.  There are client-side and server-side hooks.</p>
+<section id="client-side-hooks">
+<h3>Client-side hooks<a class="headerlink" href="#client-side-hooks" title="Link to this heading"></a></h3>
+<p>You can find and edit them here:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>.git/hooks/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code>: before commit message editor (example: make sure tests pass)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prepare-commit-msg</span></code>: before commit message editor (example: modify default messages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commit-msg</span></code>: after commit message editor (example: validate commit message pattern)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-commit</span></code>: after commit process (example: notification)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-rebase</span></code>: before rebase anything (example: disallow rebasing published commits)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-rewrite</span></code>: run by commands that rewrite commits</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-checkout</span></code>: after successful <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> (example: generating documentation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-merge</span></code>: after successful merge</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-push</span></code>: runs during <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> before any objects have been transferred</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-auto-gc</span></code>: invoked just before the garbage collection takes place</p></li>
+</ul>
+<p>See also <a class="reference external" href="https://pre-commit.com">https://pre-commit.com</a>,
+a framework for managing and maintaining multi-language pre-commit hooks.</p>
+<p>Example for a <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hook which checks whether a Python code is <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>-compliant
+using <a class="reference external" href="http://pycodestyle.pycqa.org">pycodestyle</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># ignore errors due to too long lines</span>
+pycodestyle<span class="w"> </span>--ignore<span class="o">=</span>E501<span class="w"> </span>myproject/
+</pre></div>
+</div>
+</section>
+<section id="server-side-hooks">
+<h3>Server-side hooks<a class="headerlink" href="#server-side-hooks" title="Link to this heading"></a></h3>
+<p>You can typically edit them through a web interface on GitHub/GitLab.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pre-receive</span></code>: before accepting any references</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code>: like <code class="docutils literal notranslate"><span class="pre">pre-receive</span></code> but runs once per pushed branch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">post-receive</span></code>: after entire process is completed</p></li>
+<li><p>Typical use:</p>
+<ul>
+<li><p>Maintenance work</p></li>
+<li><p>Automated tests</p></li>
+<li><p>Refreshing of documentation/website</p></li>
+<li><p>Sanity checks</p></li>
+<li><p>Code style checks</p></li>
+<li><p>Email notification</p></li>
+<li><p>Rebuilding software packages</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="actions-workflows-and-continuous-integration-services">
+<h3>Actions, workflows, and continuous integration services<a class="headerlink" href="#actions-workflows-and-continuous-integration-services" title="Link to this heading"></a></h3>
+<p>GitHub and GitLab let you define workflows/actions/recipes which are triggered
+by e.g. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> or by a release (tag creation).  They can be customized and
+almost any automation you can think of becomes possible.</p>
+<p>These services use hooks under the hood. These days, project are more likely to
+use these higher-level services rather than Git hooks directly.</p>
+<p>You can read more about these services here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/actions">GitHub Actions</a></p></li>
+<li><p><a class="reference external" href="https://docs.gitlab.com/ee/ci/">GitLab CI</a></p></li>
+</ul>
+<p>In our projects we use these services to:</p>
+<ul class="simple">
+<li><p>Build websites</p></li>
+<li><p>Build documentation</p></li>
+<li><p>Run tests</p></li>
+<li><p>Create containers</p></li>
+<li><p>Package and upload packages</p></li>
+<li><p>Spellchecking</p></li>
+</ul>
+</section>
+</section>
+<span id="document-bare-repos"></span><section id="non-bare-and-bare-repositories">
+<h2>Non-bare and bare repositories<a class="headerlink" href="#non-bare-and-bare-repositories" title="Link to this heading"></a></h2>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Understanding the difference between non-bare and bare repositories.</p></li>
+<li><p>Being able to create a common repository for a group on our local computer or server.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>10 min teaching/demonstration</p></li>
+</ul>
+</div>
+<section id="non-bare-repository">
+<h3>Non-bare repository<a class="headerlink" href="#non-bare-repository" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>A <strong>non-bare repository</strong> contains <code class="docutils literal notranslate"><span class="pre">.git/</span></code> as well as a snapshot of your
+tracked files that you can directly edit called <strong>the working tree</strong> (the
+actual files you can edit).</p></li>
+<li><p><strong>This is where we edit and commit changes</strong>.</p></li>
+<li><p>When we create a repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>, it is a non-bare, “normal”, repository.</p></li>
+</ul>
+</section>
+<section id="bare-repository">
+<h3>Bare repository<a class="headerlink" href="#bare-repository" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>A <strong>bare repository</strong> contains only the <code class="docutils literal notranslate"><span class="pre">.git/</span></code> part, no files you can directly edit.</p></li>
+<li><p>By convention the names of bare repositories end with <code class="docutils literal notranslate"><span class="pre">.git</span></code> to emphasize this.</p></li>
+<li><p>We never do actual editing work inside a bare repository.</p></li>
+<li><p>GitHub, GitLab, etc. store a bare repository.</p></li>
+<li><p>You can also create a bare repository on your computer/server to store your private repository.</p></li>
+</ul>
+<p>If we have enough time, the instructor demonstrates how to create a bare
+repository on the local computer:</p>
+<div class="admonition-bare-1-create-and-use-a-bare-repository exercise important admonition" id="exercise-0">
+<p class="admonition-title">Bare-1: Create and use a bare repository</p>
+<ul>
+<li><p>Create a new local repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/path/to/example
+<span class="gp">$ </span>git<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Populate it with a file and a commit or two.</p></li>
+<li><p>Create one or two branches.</p></li>
+<li><p>Clone this repository on the same computer with either <code class="docutils literal notranslate"><span class="pre">--bare</span></code> or <code class="docutils literal notranslate"><span class="pre">--mirror</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>--bare<span class="w"> </span>/path/to/example<span class="w"> </span>/path/to/example-bare
+</pre></div>
+</div>
+</li>
+<li><p>Inspect the bare repository.</p></li>
+<li><p>Clone the bare repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>/path/to/example-bare<span class="w"> </span>/path/to/example-clone
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/path/to/example-clone
+</pre></div>
+</div>
+</li>
+<li><p>Inside the clone inspect <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code>.</p></li>
+<li><p>Inside the clone create a commit and push the commit to <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p></li>
+<li><p>The bare repository can be cloned several times and one can exercise pushing and pulling changes.</p></li>
+</ul>
+</div>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>We do programming work inside non-bare repositories.</p></li>
+<li><p>We can create a local common bare repository where we can push to and pull from.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-reference"></span><section id="quick-reference">
+<h2>Quick reference<a class="headerlink" href="#quick-reference" title="Link to this heading"></a></h2>
+<section id="other-cheatsheets">
+<h3>Other cheatsheets<a class="headerlink" href="#other-cheatsheets" title="Link to this heading"></a></h3>
+<p>See the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro cheatsheet</a> for
+the basics.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ndpsoftware.com/git-cheatsheet.html">Interactive git cheatsheet</a></p></li>
+<li><p><a class="reference external" href="https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it-cheatsheet.pdf">Very detailed 2-page git
+cheatsheet</a></p></li>
+</ul>
+</section>
+<section id="glossary">
+<h3>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h3>
+<dl class="simple glossary">
+<dt id="term-remote">remote<a class="headerlink" href="#term-remote" title="Link to this term"></a></dt><dd><p>Roughly, another git repository on another computer.  A
+repository can be linked to several other remotes.</p>
+</dd>
+<dt id="term-push">push<a class="headerlink" href="#term-push" title="Link to this term"></a></dt><dd><p>Send a branch from your current repository to another repository</p>
+</dd>
+<dt id="term-fetch">fetch<a class="headerlink" href="#term-fetch" title="Link to this term"></a></dt><dd><p>Update your view of another repository</p>
+</dd>
+<dt id="term-pull">pull<a class="headerlink" href="#term-pull" title="Link to this term"></a></dt><dd><p>Fetch (above) and then merge</p>
+</dd>
+<dt id="term-origin">origin<a class="headerlink" href="#term-origin" title="Link to this term"></a></dt><dd><p>Default name for a remote repository.</p>
+</dd>
+<dt id="term-origin-NAME">origin/NAME<a class="headerlink" href="#term-origin-NAME" title="Link to this term"></a></dt><dd><p>A branch name which represents a remote branch.</p>
+</dd>
+<dt id="term-main">main<a class="headerlink" href="#term-main" title="Link to this term"></a></dt><dd><p>Default name for main branch.</p>
+</dd>
+<dt id="term-merge">merge<a class="headerlink" href="#term-merge" title="Link to this term"></a></dt><dd><p>Combine the changes on two branches.</p>
+</dd>
+<dt id="term-conflict">conflict<a class="headerlink" href="#term-conflict" title="Link to this term"></a></dt><dd><p>When a merge has changes that affect the same lines,
+git can not automatically figure out what to do.  It presents the
+conflict to the user to resolve.</p>
+</dd>
+<dt id="term-issue">issue<a class="headerlink" href="#term-issue" title="Link to this term"></a></dt><dd><p>Feature of web repositories that allows discussion
+related to a repository.</p>
+</dd>
+<dt id="term-pull-request">pull request<a class="headerlink" href="#term-pull-request" title="Link to this term"></a></dt><dd><p>A GitHub/Gitlab feature that allows you to send a
+code suggestion using a branch, which allows one-button merging.  In
+Gitlab, called “<strong>merge request</strong>”.</p>
+</dd>
+<dt id="term-git-hook">git hook<a class="headerlink" href="#term-git-hook" title="Link to this term"></a></dt><dd><p>Code that can run before or after certain actions, for
+example to do tests before allowing you to commit.</p>
+</dd>
+<dt id="term-bare-repository">bare repository<a class="headerlink" href="#term-bare-repository" title="Link to this term"></a></dt><dd><p>A copy of a repository that only is only the <code class="docutils literal notranslate"><span class="pre">.git</span></code>
+directory: there are no files actually checked out.  Directory names
+usually like <code class="docutils literal notranslate"><span class="pre">something.git</span></code></p>
+</dd>
+</dl>
+</section>
+<section id="commands-we-use">
+<h3>Commands we use<a class="headerlink" href="#commands-we-use" title="Link to this heading"></a></h3>
+<p>This excludes most introduced in the <a class="reference external" href="https://coderefinery.github.io/git-intro/reference/">git-intro
+cheatsheet</a>.</p>
+<p>Setup:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">URL</span> <span class="pre">[TARGET-DIRECTORY]</span></code>: Make a copy of existing
+repository at &lt;url&gt;, containing all history.</p></li>
+</ul>
+<p>Status:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>: Same as in basic git, list status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">[-v]</span></code>: List all remotes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code>: see a detailed graph of commits.  Create this command
+with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">alias.graph</span> <span class="pre">&quot;log</span> <span class="pre">--all</span> <span class="pre">--graph</span> <span class="pre">--decorate</span> <span class="pre">--oneline&quot;</span></code></p></li>
+</ul>
+<p>General work:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span> <span class="pre">BRANCH-NAME</span></code>: Make a branch active.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH:BRANCH]</span></code>: Send commits and
+update the branch on the remote.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">[REMOTE-NAME]</span> <span class="pre">[BRANCH-NAME]</span></code>: Fetch and then merge
+automatically.  Can be convenient, but to be careful you can fetch
+and merge separately.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">[REMOTE-NAME]</span></code>: Get commits from the remote.  Doesn’t
+update local branches, but updates the remote tracking branches
+(like origin/NAME).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[BRANCH-NAME]</span></code>: Updates your current branch with
+changes from another branch.  By default, merges to the branch is is
+tracking by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">REMOTE-NAME</span> <span class="pre">URL</span></code>: Adds a new remote with a
+certain name.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-exercises"></span><section id="list-of-exercises">
+<h2>List of exercises<a class="headerlink" href="#list-of-exercises" title="Link to this heading"></a></h2>
+<section id="full-list">
+<h3>Full list<a class="headerlink" href="#full-list" title="Link to this heading"></a></h3>
+<p>This is a list of all exercises and solutions in this lesson, mainly
+as a reference for helpers and instructors.  This list is
+automatically generated from all of the other pages in the lesson.
+Any single teaching event will probably cover only a subset of these,
+depending on their interests.</p>
+</section>
+</section>
+<span id="document-guide"></span><section id="instructor-guide">
+<h2>Instructor guide<a class="headerlink" href="#instructor-guide" title="Link to this heading"></a></h2>
+<section id="approximate-schedule">
+<h3>Approximate schedule<a class="headerlink" href="#approximate-schedule" title="Link to this heading"></a></h3>
+<p>Times here are in CE(S)T.</p>
+<ul class="simple">
+<li><p>08:50 - 09:00 (10 min) Soft start and icebreaker question</p></li>
+<li><p>09:00 - 09:15 (15 min) Recap Git, any HedgeDoc questions to highlight</p></li>
+<li><p>09:15 - 09:25 (10 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/concepts/">Concepts around collaboration</a></p>
+<ul>
+<li><p>Explain terms: Pull, push, clone, fork. Focus on pull and not fetch.</p></li>
+<li><p>Focus more on clone and less on generating from templates and importing.</p></li>
+</ul>
+</li>
+<li><p>09:25 - 10:00 (35 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/same-repository/">Collaborating within the same repository</a></p>
+<ul>
+<li><p>Exercise (incl preparation)</p></li>
+</ul>
+</li>
+<li><p>10:00 - 10:10 (10 min) Break</p></li>
+<li><p>10:10 - 10:30 (20 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/same-repository/">Collaborating within the same repository</a></p>
+<ul>
+<li><p>Demo and Q/A</p></li>
+</ul>
+</li>
+<li><p>10:30 - 11:00 (30 min)  <a class="reference external" href="https://coderefinery.github.io/git-collaborative/code-review/">Practicing code review</a></p></li>
+<li><p>11:00 - 12:00 (60 min) Break</p></li>
+<li><p>12:00 - 12:50 (50 min) <a class="reference external" href="https://coderefinery.github.io/git-collaborative/distributed/">Distributed version control and forking workflow</a></p>
+<ul>
+<li><p>Concepts and what are exercise outcomes</p></li>
+<li><p><a class="reference external" href="https://coderefinery.github.io/git-collaborative/distributed/#exercise-preparation">Exercise</a></p></li>
+</ul>
+</li>
+<li><p>12:50 - 13:00 (10 min) Break</p></li>
+<li><p>13:00 - 13:30 (30 min) Discussion, demonstration, Q&amp;A, feedback, what to expect next week</p></li>
+</ul>
+</section>
+<section id="preparing-exercises-within-exercise-groups">
+<h3>Preparing exercises within exercise groups<a class="headerlink" href="#preparing-exercises-within-exercise-groups" title="Link to this heading"></a></h3>
+<p>Exercise leads typically prepare exercise repositories for the exercise group
+(although the material speaks about “maintainer” who can also be one of the
+learners). Preparing the first exercise (centralized workflow) <strong>will take more
+time</strong> than preparing the second (forking workflow). Most preparation time is not
+the generating part but will go into communicating the URL to the exercise
+group, communicating their usernames, adding them as collaborators, and waiting
+until everybody accepts the GitHub invitation to join the newly created
+exercise repository.</p>
+</section>
+<section id="preparing-exercises-for-the-live-stream">
+<h3>Preparing exercises for the live stream<a class="headerlink" href="#preparing-exercises-for-the-live-stream" title="Link to this heading"></a></h3>
+<section id="what-instructors-need-to-do-at-least-1-day-before-the-workshop">
+<h4>What instructors need to do at least 1 day before the workshop<a class="headerlink" href="#what-instructors-need-to-do-at-least-1-day-before-the-workshop" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>This <strong>takes 30-60 minutes</strong> to set up. Allocate the time for this before the workshop.</p></li>
+<li><p>Make sure to remove all participants from a previous workshop from these two places:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a></p></li>
+<li><p><a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/people">https://github.com/orgs/cr-workshop-exercises/people</a></p></li>
+</ul>
+</li>
+<li><p>We create the exercises <strong>in an organization</strong> (not under your username) so
+that you can give others admin access to add collaborators. Also this way
+you can then fork yourself if needed.</p></li>
+<li><p>All exercise repositories can be created from
+<a class="reference external" href="https://github.com/coderefinery/recipe-book-template">https://github.com/coderefinery/recipe-book-template</a> by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--mirror</span></code> from the template followed by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--mirror</span></code> towards the exercise repository.</p></li>
+<li><p>We have created two versions of each <strong>a day in advance</strong> to signal which one might end up
+being discussed on recording/stream:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">centralized-workflow-exercise-recorded</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">centralized-workflow-exercise</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise-recorded</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forking-workflow-exercise</span></code></p></li>
+</ul>
+</li>
+<li><p>Protect the default branch of the two <code class="docutils literal notranslate"><span class="pre">centralized-*</span></code> repositories (but this
+can also be done on stream as the very first step if you are sure you will remember as instructor).</p></li>
+</ul>
+</section>
+<section id="what-to-communicate-to-learners-at-least-1-day-before-the-workshop">
+<h4>What to communicate to learners at least 1 day before the workshop<a class="headerlink" href="#what-to-communicate-to-learners-at-least-1-day-before-the-workshop" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://coderefinery.github.io/2025-03-25-workshop/communication/#getting-ready-for-day-2-and-3-of-coderefinery-workshop">Example email from a previous workshop</a></p></li>
+</ul>
+</section>
+<section id="how-should-learners-request-access">
+<h4>How should learners request access<a class="headerlink" href="#how-should-learners-request-access" title="Link to this heading"></a></h4>
+<p>This is also in the email template above but they need to:</p>
+<ul class="simple">
+<li><p>Open an issue at <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md">https://github.com/cr-workshop-exercises/access-requests/issues/new?template=access-request.md</a></p></li>
+<li><p>Accept invitation from GitHub sent to their email address (that GitHub
+knows about).</p></li>
+<li><p>“Unwatch” both these repositories by clicking the “Watch” button (top
+middle of the screen) and then select “Participating and mentions”:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise">https://github.com/cr-workshop-exercises/centralized-workflow-exercise</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded">https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="how-to-add-learners-to-the-team-stream-exercise-participants">
+<h4>How to add learners to the team stream-exercise-participants<a class="headerlink" href="#how-to-add-learners-to-the-team-stream-exercise-participants" title="Link to this heading"></a></h4>
+<p>You need to be “owner” of
+<a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a>
+to be able to add people to the team.</p>
+<ol class="arabic simple">
+<li><p>Check <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues">https://github.com/cr-workshop-exercises/access-requests/issues</a>.
+Any open issue means the person hasn’t been added yet.</p></li>
+<li><p>Assign one issue to yourself. This way other organizers know that this is being worked on.</p></li>
+<li><p>Add person to <a class="reference external" href="https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants">https://github.com/orgs/cr-workshop-exercises/teams/stream-exercise-participants</a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Click on “Add member” -&gt; “Invite” -&gt; “Add (username) to stream-exercise-participants”</p></li>
+<li><p><strong>Do not add/invite the person anywhere else</strong>, not as collaborator to any
+exercise repo directly. Only add/invite them into the team
+“stream-exercise-participants”. Motivation: This way we give instructors the control over when the exercise can start. Otherwise
+learners might merge changes before the lesson and thus change the example and confuse instructors and learners.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Close the issue on <a class="reference external" href="https://github.com/cr-workshop-exercises/access-requests/issues">https://github.com/cr-workshop-exercises/access-requests/issues</a> with the following comment (feel free to adapt it):</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Thanks! I have added you to the collaborative exercise team.
+
+What you should do before the exercise starts:
+
+1) You will get an invitation from GitHub to your email address (that GitHub
+   knows about). Please accept that invitation so that you can participate in
+   the collaborative exercise.
+
+2) To make sure you don&#39;t get too many emails during the exercise, don&#39;t forget
+   to &quot;unwatch&quot; both
+   https://github.com/cr-workshop-exercises/centralized-workflow-exercise and
+   https://github.com/cr-workshop-exercises/centralized-workflow-exercise-recorded.
+   To &quot;unwatch&quot;, go to the repository and click the &quot;Watch&quot; button (top
+   middle of the screen) and then select &quot;Participating and mentions&quot;.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="why-we-teach-this-lesson">
+<h3>Why we teach this lesson<a class="headerlink" href="#why-we-teach-this-lesson" title="Link to this heading"></a></h3>
+<p>In order to collaborate efficiently using Git, it’s essential to have a solid
+understanding of how remotes work, and how to contribute changes through pull
+requests or merge requests. The <a class="reference external" href="https://coderefinery.github.io/git-intro/">git-intro lesson</a>
+teaches participants how to
+work efficiently with Git when there is only one developer (more precisely: how
+to work when there are no remote Git repositories yet in the picture). This
+lesson dives into the collaborative aspects of Git and focuses on the possible
+collaborative workflows enabled by web-based repository hosting platforms like
+GitHub.</p>
+<p>This lesson is meant to directly benefit workshop participants who have prior
+experience with Git, enabling them to put collaborative workflows involving
+code review directly into practice when they return to their normal work. For
+novice Git users (who may have learned a lot in the git-intro lesson) this
+lesson is somewhat challenging, but the lesson aims to introduce them to the
+concepts and give them confidence to start using these workflows later when
+they have gained some further experience in working with Git.</p>
+</section>
+<section id="intended-learning-outcomes">
+<h3>Intended learning outcomes<a class="headerlink" href="#intended-learning-outcomes" title="Link to this heading"></a></h3>
+<p>By the end of this lesson, learners should:</p>
+<ul class="simple">
+<li><p>Understand the concept of remotes</p></li>
+<li><p>Be able to describe the difference between local and remote branches</p></li>
+<li><p>Be able to describe the difference between centralized and forking workflows</p></li>
+<li><p>Know how to use pull requests or merge requests to submit changes to another projects</p></li>
+<li><p>Know how to reference issues in commits or pull/merge requests and how to auto-close issues</p></li>
+<li><p>Know how to update a fork</p></li>
+<li><p><strong>Be able to contribute in code review as submitter or reviewer</strong></p></li>
+</ul>
+</section>
+<section id="interesting-questions-you-might-get">
+<h3>Interesting questions you might get<a class="headerlink" href="#interesting-questions-you-might-get" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>If participants run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> they might notice <code class="docutils literal notranslate"><span class="pre">origin/HEAD</span></code>.  This has been
+omitted from the figures to not overload the presentation. This pointer represents the
+default branch of the remote repository.</p></li>
+</ul>
+</section>
+<section id="timing">
+<h3>Timing<a class="headerlink" href="#timing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The centralized collaboration episode is densest and introduces many new concepts,
+so at least an hour is required for it.</p></li>
+<li><p>The forking-workflow exercise repeats familiar concepts (only
+introduces forking and distributed workflows), and it takes maybe half the
+time of the first episode.</p></li>
+<li><p>The “How to contribute changes to somebody else’s project” episode can be
+covered relatively quickly and offers room for discussion if you have time left.
+However, this should not be skipped as this is perhaps the key learning outcome.</p></li>
+</ul>
+</section>
+<section id="typical-pitfalls">
+<h3>Typical pitfalls<a class="headerlink" href="#typical-pitfalls" title="Link to this heading"></a></h3>
+<section id="difference-between-pull-and-pull-requests">
+<h4>Difference between pull and pull requests<a class="headerlink" href="#difference-between-pull-and-pull-requests" title="Link to this heading"></a></h4>
+<p>The difference between pull and pull requests can be confusing, explain clearly
+that pull requests or merge requests are a different mechanism specific to
+GitHub, GitLab, etc.</p>
+</section>
+<section id="pull-requests-are-from-branch-to-branch-not-from-commit-to-branch">
+<h4>Pull requests are from branch to branch, not from commit to branch<a class="headerlink" href="#pull-requests-are-from-branch-to-branch-not-from-commit-to-branch" title="Link to this heading"></a></h4>
+<p>The behavior that additional commits to a branch from which a pull request has
+been created get appended to the pull request needs to be explained.</p>
+</section>
+</section>
+<section id="other-practical-aspects">
+<h3>Other practical aspects<a class="headerlink" href="#other-practical-aspects" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>In in-person workshops participants really have to sit next to someone, so
+that they can see the screens. From the beginning.</p></li>
+<li><p>Emphasize use of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">graph</span></code> a lot, just like in the git-solo lesson.</p></li>
+</ul>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

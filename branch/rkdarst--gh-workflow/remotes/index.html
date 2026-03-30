@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concepts around collaboration &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Centralized workflow" href="../centralized/" />
+    <link rel="prev" title="Collaborative distributed version control" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Concepts around collaboration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commits-branches-repositories-forks-clones">Commits, branches, repositories, forks, clones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloning-a-repository">Cloning a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forking-a-repository">Forking a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-from-templates-and-importing">Generating from templates and importing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synchronizing-changes-between-repositories">Synchronizing changes between repositories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../centralized/">Centralized workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../distributed/">Distributed version control and forking workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How to contribute changes to somebody else’s project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Concepts around collaboration</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/remotes.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="concepts-around-collaboration">
+<h1>Concepts around collaboration<a class="headerlink" href="#concepts-around-collaboration" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Be able to decide whether to divide work at the branch level or at the repository level.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>15 min teaching</p></li>
+</ul>
+</div>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Someone has given you access to a repository online and you want to contribute?</p></li>
+<li><p>We will learn how to make a copy and send changes back.</p></li>
+<li><p>Then, we make a “pull request” that allows a review.</p></li>
+<li><p>Once we know how code review works, we will be able to propose changes
+to repositories of others and review changes submitted by external
+contributors.</p></li>
+</ul>
+</section>
+<section id="commits-branches-repositories-forks-clones">
+<h2>Commits, branches, repositories, forks, clones<a class="headerlink" href="#commits-branches-repositories-forks-clones" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>repository</strong>: The project, contains all data and history (commits, branches, tags).</p></li>
+<li><p><strong>commit</strong>: Snapshot of the project, gets a unique identifier (e.g. <code class="docutils literal notranslate"><span class="pre">c7f0e8bfc718be04525847fc7ac237f470add76e</span></code>).</p></li>
+<li><p><strong>branch</strong>: Independent development line. The main development line is often called <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p><strong>tag</strong>: A pointer to one commit, to be able to refer to it later. Like a <a class="reference external" href="https://en.wikipedia.org/wiki/Commemorative_plaque">commemorative plaque</a>
+that you attach to a particular commit (e.g. <code class="docutils literal notranslate"><span class="pre">phd-printed</span></code> or <code class="docutils literal notranslate"><span class="pre">paper-submitted</span></code>).</p></li>
+<li><p><strong>cloning</strong>: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.</p></li>
+<li><p><strong>forking</strong>: Taking a copy of a repository (which is typically not yours) - your
+copy (fork) stays on GitHub/GitLab and you can make changes to your copy.</p></li>
+</ul>
+</section>
+<section id="cloning-a-repository">
+<h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this heading"></a></h2>
+<p>In order to make a complete copy a whole repository, the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command can be used. When cloning, all the files, of all or selected branches, of a repository are copied in one operation. Cloning of a repository is of relevance in a few different situations:</p>
+<ul class="simple">
+<li><p>Working on your own, cloning is the operation that you can use to create multiple instances of a repository on, for instance, a personal computer, a server, and a supercomputer.</p></li>
+<li><p>The parent repository could be a repository that you or your colleague own. A common use case for cloning is when working together within a smaller team where everyone has read and write access to the same git repository.</p></li>
+<li><p>Alternatively, cloning can be made from a public repository of a code that you would like to use. Perhaps you have no intention to work on the code, but would like to stay in tune with the latest developments, also in-between releases of new versions of the code.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="with-border reference internal image-reference" href="../_images/clone.png"><img alt="Cloning" class="with-border" src="../_images/clone.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Cloning</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="forking-a-repository">
+<h2>Forking a repository<a class="headerlink" href="#forking-a-repository" title="Permalink to this heading"></a></h2>
+<p>When a fork is made on GitHub/GitLab a complete copy, of all or selected branches, of the repository is made. The copy will reside under a different account on GitHub/GitLab. Forking of a repository is of high relevance when working with a git repository to which you do not have write access.</p>
+<ul class="simple">
+<li><p>In the fork repository commits can be made to the base branch (<code class="docutils literal notranslate"><span class="pre">main</span></code> or <code class="docutils literal notranslate"><span class="pre">master</span></code>), and to other branches.</p></li>
+<li><p>The commits that are made within the branches of the fork repository can be contributed back to the parent repository by means of pull or merge requests.</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<a class="with-border reference internal image-reference" href="../_images/fork.png"><img alt="Forking" class="with-border" src="../_images/fork.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Forking</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="generating-from-templates-and-importing">
+<h2>Generating from templates and importing<a class="headerlink" href="#generating-from-templates-and-importing" title="Permalink to this heading"></a></h2>
+<p>There are two more ways to create “copies” of repositories into your user space:</p>
+<ul class="simple">
+<li><p>A repository can be marked as <strong>template</strong> and new repositories can be
+<strong>generated</strong> from it, like using a cookie-cutter.
+The newly created repository will start with a new history, only one commit, and not
+inherit the history of the template.</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<a class="with-border reference internal image-reference" href="../_images/generate.png"><img alt="Generating from a template" class="with-border" src="../_images/generate.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Generating from a template.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>You can <strong>import</strong> a repository from another hosting service or web address.
+This will preserve the history of the imported project.</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<a class="with-border reference internal image-reference" href="../_images/import.png"><img alt="Importing a repository" class="with-border" src="../_images/import.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Importing a repository.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<div class="admonition-discussion discussion important admonition" id="discussion-0">
+<p class="admonition-title">Discussion</p>
+<ul class="simple">
+<li><p>Visit one of the repositories/projects that you have used recently and try to find out
+how many forks exist and where they are.</p></li>
+<li><p>In which situations could it be useful to start from a “template” repository by generating?</p></li>
+</ul>
+</div>
+</section>
+<section id="synchronizing-changes-between-repositories">
+<h2>Synchronizing changes between repositories<a class="headerlink" href="#synchronizing-changes-between-repositories" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>We need a mechanism to communicate changes between the repositories.</p></li>
+<li><p>We will <strong>pull</strong> or <strong>fetch</strong> updates <strong>from</strong> remote repositories (we will soon discuss the difference between pull and fetch).</p></li>
+<li><p>We will <strong>push</strong> updates <strong>to</strong> remote repositories.</p></li>
+<li><p>We will learn how to suggest changes within repositories on GitHub and across repositories (<strong>pull request</strong>).</p></li>
+<li><p>Repositories that are forked or cloned do not automatically synchronize themselves:
+We will learn how to update forks (by pulling from the “central” repository).</p></li>
+<li><p>A main difference between cloning a repository and forking a repository is that the former is a general operation for generating copies of a repository to different computers, whereas forking is a particular operation implemented on GitHub/GitLab.</p></li>
+</ul>
+<figure class="align-default" id="id5">
+<a class="with-border reference internal image-reference" href="../_images/forkandclone.png"><img alt="Forking and cloning" class="with-border" src="../_images/forkandclone.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Forking and cloning</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Collaborative distributed version control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../centralized/" class="btn btn-neutral float-right" title="Centralized workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
