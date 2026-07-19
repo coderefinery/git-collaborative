@@ -66,7 +66,7 @@ Shell crash course <https://youtu.be/xbTTDLA3txI>
 reference
 exercises
 guide
-PDF version <https://coderefinery.github.io/git-collaborative/lesson.pdf>
+PDF version <https://coderefinery.github.io/git-collaborative/coderefinery-git-collaborative.pdf>
 ```
 
 ```{toctree}
