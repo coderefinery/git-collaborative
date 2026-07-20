@@ -18,6 +18,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Collaborative distributed version control"
+html_title = project
 copyright = "CodeRefinery contributors"
 author = "CodeRefinery contributors"
 github_user = "coderefinery"
