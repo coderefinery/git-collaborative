@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practicing code review &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="How to contribute changes to repositories that belong to others" href="../forking-workflow/" />
+    <link rel="prev" title="Collaborating within the same repository" href="../same-repository/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../same-repository/">Collaborating within the same repository</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Practicing code review</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-and-discussion">Help and discussion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-ask-for-changes-in-a-pull-request">How to ask for changes in a pull request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-suggest-a-change-in-a-pull-request-as-a-reviewer">How to suggest a change in a pull request as a reviewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-modify-a-pull-request-to-address-the-review-comments">How to modify a pull request to address the review comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../forking-workflow/">How to contribute changes to repositories that belong to others</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/git-collaborative/lesson.pdf">PDF version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Practicing code review</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/code-review.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="practicing-code-review">
+<h1>Practicing code review<a class="headerlink" href="#practicing-code-review" title="Link to this heading"></a></h1>
+<p>In this episode we will practice the <strong>code review process</strong>. We will learn how to
+ask for changes in a pull request, how to suggest a change in a pull request,
+and how to modify a pull request.</p>
+<p>This will enable research groups to work more collaboratively and to not only
+improve the code quality but also to <strong>learn from each other</strong>.</p>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading"></a></h2>
+<div class="admonition-exercise-preparation prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Exercise preparation</p>
+<p>We can continue in the same exercise repository which we have used in the
+previous episode.</p>
+</div>
+<div class="admonition-exercise-practicing-code-review-25-min exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise: Practicing code review (25 min)</p>
+<p><strong>Technical requirements</strong>:</p>
+<ul class="simple">
+<li><p>If you create the commits locally: <a class="reference external" href="https://coderefinery.github.io/installation/ssh/">Being able to authenticate to GitHub</a></p></li>
+</ul>
+<p><strong>What is familiar</strong> from previous episodes:</p>
+<ul class="simple">
+<li><p>Creating a branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Committing a change on the new branch (<a class="reference external" href="https://coderefinery.github.io/git-intro/commits/">previous lesson</a>)</p></li>
+<li><p>Opening and merging pull requests (<a class="reference external" href="https://coderefinery.github.io/git-intro/merging/">previous lesson</a>)</p></li>
+</ul>
+<p><strong>What will be new</strong> in this exercise:</p>
+<ul class="simple">
+<li><p>As a reviewer, we will learn how to ask for changes in a pull request.</p></li>
+<li><p>As a reviewer, we will learn how to suggest a change in a pull request.</p></li>
+<li><p>As a submitter, we will learn how to modify a pull request without closing
+the incomplete one and opening a new one.</p></li>
+</ul>
+<p><strong>Exercise tasks</strong>:</p>
+<ol class="arabic simple">
+<li><p>Create a new branch and one or few commits: in these improve something but also
+deliberately introduce a typo and also a larger mistake which we will want to fix during the code review.</p></li>
+<li><p>Open a pull request towards the main branch.</p></li>
+<li><p>As a reviewer to somebody else’s pull request, ask for an improvement and
+also directly suggest a change for the small typo. (Hint:
+suggestions are possible through the GitHub web interface, view of
+a pull request, “Files changed” view, after selecting some lines.
+Look for the “±” button.)</p></li>
+<li><p>As the submitter, learn how to accept the suggested change.  (Hint:
+GitHub web interface, “Files Changed” view.)</p></li>
+<li><p>As the submitter, improve the pull request without having to close and open
+a new one: by adding a new commit to the same branch. (Hint: push
+to the branch again.)</p></li>
+<li><p>Once the changes are addressed, merge the pull request.</p></li>
+</ol>
+</div>
+</section>
+<section id="help-and-discussion">
+<h2>Help and discussion<a class="headerlink" href="#help-and-discussion" title="Link to this heading"></a></h2>
+<p>From here on out, we don’t give detailed steps to the solution.  You
+need to combine what you know, and the extra info below, in order to
+solve the above.</p>
+<section id="how-to-ask-for-changes-in-a-pull-request">
+<h3>How to ask for changes in a pull request<a class="headerlink" href="#how-to-ask-for-changes-in-a-pull-request" title="Link to this heading"></a></h3>
+<p>Technically, there are at least two common ways to ask for changes in a pull
+request.</p>
+<p>Either in the comment field of the pull request:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/comment.png"><img alt="Screenshot of a pull request comment field" class="with-border" src="../_images/comment.png" style="width: 60%;" />
+</a>
+</figure>
+<p>Or by using the “Review changes”:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/files-changed.png"><img alt="Screenshot of a pull request navigating to the &quot;Review changes&quot; tab" class="with-border" src="../_images/files-changed.png" style="width: 100%;" />
+</a>
+</figure>
+<p>And always please be kind and constructive in your comments. Remember that the
+goal is not gate-keeping but <strong>collaborative learning</strong>.</p>
+</section>
+<section id="how-to-suggest-a-change-in-a-pull-request-as-a-reviewer">
+<h3>How to suggest a change in a pull request as a reviewer<a class="headerlink" href="#how-to-suggest-a-change-in-a-pull-request-as-a-reviewer" title="Link to this heading"></a></h3>
+<p>If you see a very small problem that is easy to fix, you can suggest a change
+as a reviewer.</p>
+<p>Instead of asking the submitter to fix the tiny problem, you can suggest a change by
+clicking on the plus sign next to the line number in the “Files changed” tab:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/leave-comment.png"><img alt="Screenshot of leaving a comment to a line in a pull request" class="with-border" src="../_images/leave-comment.png" style="width: 100%;" />
+</a>
+</figure>
+<p>Here you can comment on specific lines or even line ranges.</p>
+<p>But now the interesting part is to click on the “Add a suggestion” symbol (the
+one that looks like plus and minus). Now you can fix the tiny problem (in this
+case a typo) and then click on the “Add single comment” button:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/add-suggestion.png"><img alt="Sequence of clicks to add a suggestion to a line in a pull request" class="with-border" src="../_images/add-suggestion.png" style="width: 60%;" />
+</a>
+</figure>
+<p>The result is this and the submitter can accept the change with a single click:</p>
+<figure class="align-default">
+<a class="with-border reference internal image-reference" href="../_images/commit-suggestion.png"><img alt="Screenshot of a pull request with a suggested change" class="with-border" src="../_images/commit-suggestion.png" style="width: 60%;" />
+</a>
+</figure>
+<p>After accepting with “Commit suggestion”, the improvement gets added to the
+pull request as a new commit.</p>
+</section>
+<section id="how-to-modify-a-pull-request-to-address-the-review-comments">
+<h3>How to modify a pull request to address the review comments<a class="headerlink" href="#how-to-modify-a-pull-request-to-address-the-review-comments" title="Link to this heading"></a></h3>
+<p>If the reviewer asks for changes, it is not necessary to close the pull request
+and later open a new one. It can even be counter-productive to do so: This can
+fragment the discussion and the history of the pull request and can make it
+harder to understand the context of the changes.</p>
+<p>A much better mechanism is to recognize that pull requests are not implemented
+from a specific commit to a specific branch, but <strong>always from a branch to a
+branch</strong>.</p>
+<p>This means that you can make amendments to the pull request by adding new
+commits to the same source branch. This way the pull request will be updated
+automatically and the reviewer can see the new changes and comment on them.</p>
+<p>The fact that pull requests are from branch to branch also strongly suggests
+that it is a good practice to <strong>create a new branch for each pull request</strong>.
+Otherwise you could accidentally modify an open pull request by adding new
+commits to the source branch.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Our process isn’t just about code now.  It’s about discussion and
+working together to make the whole process better.</p></li>
+<li><p>GitHub (or GitLab) discussions and reviewing are quite powerful and can make
+small changes easy.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../same-repository/" class="btn btn-neutral float-left" title="Collaborating within the same repository" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../forking-workflow/" class="btn btn-neutral float-right" title="How to contribute changes to repositories that belong to others" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

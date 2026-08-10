@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative distributed version control &mdash; Collaborative distributed version control  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Concepts around collaboration" href="remotes/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Collaborative distributed version control
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="remotes/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centralized/">Centralized workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributed/">Distributed version control and forking workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/">How to contribute changes to somebody else’s project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Collaborative distributed version control</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Collaborative distributed version control</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-collaborative/blob/main/content/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="collaborative-distributed-version-control">
+<span id="index"></span><h1>Collaborative distributed version control<a class="headerlink" href="#collaborative-distributed-version-control" title="Permalink to this heading"></a></h1>
+<p>We have learned how to make a Git repository for a single person. What
+about sharing?</p>
+<ul class="simple">
+<li><p>Share the folder using email or using some file sharing service:
+This would lead to many back and forth emails and would be difficult
+keep all copies synchronized.</p></li>
+<li><p>One person’s repository on the web: allows one person to keep track of
+more projects, gain visibility, feedback, and recognition.</p></li>
+<li><p>Common repository for a group: everyone can directly update the same repository.
+Good for small groups.</p></li>
+<li><p>Forks or copies with different owners: anyone can suggest changes, even without
+advance permission. Maintainers approve what they agree with.</p></li>
+</ul>
+<p>Being able to share more easily (going down the above list) is
+<em>transformative</em> (easier to change something, that is you are not the sole owner)
+because it allows projects to scale to a new level.
+<strong>This can’t be done without proper tools.</strong></p>
+<p><strong>In this lesson we will learn how to keep repositories in sync and how to
+work with remote repositories on GitHub and other services.</strong> We will
+discover and exercise the centralized as well as the forking workflows,
+and finally look into how to automate tasks using Git hooks.</p>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<ol class="arabic simple">
+<li><p>Basic understanding of Git.</p></li>
+<li><p>You need a <a class="reference external" href="https://github.com">GitHub</a> account.</p></li>
+</ol>
+<p>We will do this exercise on <a class="reference external" href="https://github.com">GitHub</a> but also
+<a class="reference external" href="https://gitlab.com">GitLab</a> and
+<a class="reference external" href="https://bitbucket.org">Bitbucket</a> allow similar workflows and
+basically everything that we will discuss is transferable. With this
+material and these exercises we do not endorse the company
+<a class="reference external" href="https://github.com">GitHub</a>. We have chosen to demonstrate a
+number of concepts using examples with
+<a class="reference external" href="https://github.com">GitHub</a> because it is currently the most
+popular web platform for hosting Git repositories and the chance is
+high that you will interact with
+<a class="reference external" href="https://github.com">GitHub</a>-based repositories even if you choose
+to host your Git repository on another platform.</p>
+<p>We also encourage course participants to use our <a class="reference external" href="https://source.coderefinery.org">Nordic research
+software repository platform</a>,
+for more information see
+<a class="reference external" href="http://coderefinery.org/repository/">https://coderefinery.org/repository/</a>.</p>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="remotes/">Concepts around collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centralized/">Centralized workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributed/">Distributed version control and forking workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/">How to contribute changes to somebody else’s project</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hooks/">Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bare-repos/">Non-bare and bare repositories</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor guide</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="remotes/" class="btn btn-neutral float-right" title="Concepts around collaboration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
