@@ -75,5 +75,5 @@ PDF version <https://coderefinery.github.io/git-collaborative/coderefinery-git-c
 
 All lessons <https://coderefinery.org/lessons/core/>
 CodeRefinery <https://coderefinery.org/>
-Reusing <https://coderefinery.org/lessons/reusing/>
+reusing
 ```
