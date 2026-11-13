@@ -26,12 +26,21 @@ authors:
   given-names: Anne
 title: Collaborative distributed version control - CodeRefinery lesson
 type: dataset
-abstract: This lesson builds on Introduction to version control and we apply branching
+abstract: 'This lesson builds on Introduction to version control and we apply branching
   and learn about pull requests (merge requests), forks, and collaboration using Git
   and GitHub.
-version: '2026-08-10'
+
+  '
+version: '2026-11-13'
 doi: 10.5281/zenodo.16925120
-date-released: '2026-08-10'
+date-released: '2026-11-13'
 url: https://coderefinery.github.io/git-collaborative
 license: CC-BY-4.0
 repository-code: https://github.com/coderefinery/git-collaborative
+contact:
+- family-names: Hemanadhan
+  given-names: Myneni
+  orcid: https://orcid.org/0000-0003-2498-3841
+- family-names: Iusan
+  given-names: Diana
+  orcid: https://orcid.org/0000-0001-7467-9317

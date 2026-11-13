@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "LearningResource",
     "@id": "https://coderefinery.github.io/git-collaborative",
-    "description": "This lesson builds on Introduction to version control and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub.",
+    "description": "This lesson builds on Introduction to version control and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub.\n",
     "keywords": "version control, git, collaboration",
     "name": "Collaborative distributed version control - CodeRefinery lesson",
     "author": [
@@ -55,17 +55,17 @@
             "name": "Anne Fouilloux"
         }
     ],
-    "about": "This lesson builds on Introduction to version control and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub.",
-    "audience": "",
+    "about": "This lesson builds on Introduction to version control and we apply branching and learn about pull requests (merge requests), forks, and collaboration using Git and GitHub.\n",
+    "audience": "Researchers",
     "competencyRequired": "",
     "educationalLevel": "Beginner",
     "identifier": "https://doi.org/10.5281/zenodo.16925120",
     "inLanguage": "en-UK",
     "learningResourceType": "lesson",
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "teaches": "",
+    "teaches": "Learn how to collaborate effectively using Git repositories.  Understand how to clone repositories, push and pull changes,  work with branches, resolve merge conflicts, and contribute to shared projects using pull requests. Explore collaborative Git workflows, code review practices, and strategies for managing contributions from multiple developers.\n",
     "url": "https://coderefinery.github.io/git-collaborative",
-    "accessibilitySummary": "",
+    "accessibilitySummary": "Short image descriptions are present",
     "isPartOf": "https://coderefinery.org",
-    "version": "2026-08-10"
+    "version": "2026-11-13"
 }
