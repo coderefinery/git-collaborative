@@ -38,9 +38,9 @@ url: https://coderefinery.github.io/git-collaborative
 license: CC-BY-4.0
 repository-code: https://github.com/coderefinery/git-collaborative
 contact:
-- family-names: Hemanadhan
-  given-names: Myneni
-  orcid: https://orcid.org/0000-0003-2498-3841
 - family-names: Iusan
   given-names: Diana
   orcid: https://orcid.org/0000-0001-7467-9317
+- family-names: Hemanadhan
+  given-names: Myneni
+  orcid: https://orcid.org/0000-0003-2498-3841
